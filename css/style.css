@@ -1,0 +1,2627 @@
+/* WELCOME PAGE - INDEX */
+
+.element-welcome {
+    background-color: var(--dark-green);
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.element-welcome .frame {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100vh;
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.element-welcome .vector {
+    width: 100%;
+    height: auto;
+}
+
+.container-welcome {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20% 10%;
+    gap: 15%;
+    z-index: 2;
+}
+.element-welcome .div-text-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    z-index: 2;
+}
+
+.element-welcome .frame-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 17px;
+    position: relative;
+}
+
+.element-welcome .text-wrapper {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: var(--heading-heading-2-font-family);
+    font-weight: var(--heading-heading-2-font-weight);
+    color: var(--neutral-white);
+    font-size: var(--heading-heading-2-font-size);
+    text-align: center;
+    letter-spacing: var(--heading-heading-2-letter-spacing);
+    line-height: var(--heading-heading-2-line-height);
+    font-style: var(--heading-heading-2-font-style);
+}
+
+.element-welcome .p {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutral-white);
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 23.4px;
+}
+
+.element-welcome .button-login {
+    width: 327px;
+    gap: 10px;
+    padding: 16px 146px;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.element-welcome .button {
+    width: 100%;
+    margin-top: -2px;
+    margin-left: -20px;
+    margin-right: -20px;
+    font-family: var(--body-normal-bold-font-family);
+    font-weight: var(--body-normal-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-normal-bold-letter-spacing);
+    line-height: var(--body-normal-bold-line-height);
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-style: var(--body-normal-bold-font-style);
+}
+
+.element-welcome .group {
+    position: absolute;
+    top: 241px;
+    left: calc(50% - 116px);
+    width: 233px;
+    height: 182px;
+}
+
+.element-welcome .group-wrapper {
+    display: flex;
+}
+
+.element-welcome .group-2 {
+    min-height: 150px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.element-welcome .group-3 {
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 34px);
+    width: 69px;
+    height: 37px;
+}
+
+/* PRODUCT PAGE */
+
+.element-product {
+    background-color: #ffffff;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.element-product .details-scan {
+    z-index: 1;
+    max-width: 600px;
+    width: 100%;
+    height: 2135px;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.element-product .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 397px;
+    display: flex;
+    background-image: url(/meatazores/assets/bg-degustacao.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.element-product .rectangle {
+    width: 402px;
+    height: 108px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 85%);
+}
+
+.element-product .bg {
+    position: absolute;
+    top: 280px;
+    left: 0;
+    width: 100%;
+    height: 92%;
+    display: flex;
+    background-color: #ffffff;
+    border-radius: 32px 32px 0px 0px;
+    box-shadow: 0px -10px 40px #647a9a1a;
+}
+
+.element-product .div {
+    margin-top: 12px;
+    width: 52.4px;
+    height: 5px;
+    margin-left: 170px;
+    background-color: #e3ebeb;
+    border-radius: 16px;
+}
+
+.element-product .detail-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 31px;
+    position: absolute;
+    top: 320px;
+    padding-bottom: 40px;
+    padding-left: 14px;
+    padding-right: 20px;
+}
+
+.element-product .top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .frame {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #014838;
+    font-size: 26px;
+    letter-spacing: 0;
+    line-height: 35.1px;
+    white-space: nowrap;
+}
+
+.element-product .p {
+    position: relative;
+    width: fit-content;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: var(--dark);
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 27px;
+    white-space: nowrap;
+}
+
+.element-product .div-2 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.element-product .span {
+    color: #738189;
+    line-height: 23.2px;
+}
+
+.element-product .text-wrapper-2 {
+    font-family: var(--body-normal-medium-font-family);
+    font-weight: var(--body-normal-medium-font-weight);
+    color: #032628;
+    line-height: var(--body-normal-medium-line-height);
+    font-style: var(--body-normal-medium-font-style);
+    letter-spacing: var(--body-normal-medium-letter-spacing);
+    font-size: var(--body-normal-medium-font-size);
+}
+
+.element-product .frame-2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .text-wrapper-3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-product .text-wrapper-4 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+}
+
+.element-product .separator {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.element-product .frame-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .creators {
+    position: relative;
+    width: 100%;
+    height: 26px;
+}
+
+.element-product .text-wrapper-5 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-product .nutritions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 16px 51px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .frame-4 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.element-product .fats {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    flex-grow: 1;
+    align-items: center;
+    position: relative;
+}
+
+.element-product .icon {
+    position: relative;
+    width: 41.92px;
+    height: 40px;
+}
+
+.element-product .frame-5 {
+    display: flex;
+    flex-direction: column;
+    width: 84px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .text-wrapper-6 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 17.4px;
+    white-space: nowrap;
+}
+
+.element-product .text-wrapper-7 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-right: -15px;
+    margin-top: -3px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    color: #0a2533;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 23.2px;
+    white-space: nowrap;
+}
+
+.element-product .div-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .uil-venus-wrapper {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 9px;
+    position: relative;
+    background-color: var(--neutralgrey-4);
+    border-radius: 8px;
+}
+
+.element-product .hicon-linear-award {
+    position: relative;
+    width: 22px;
+    height: 22px;
+}
+
+.element-product .frame-6 {
+    display: inline-flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .text-wrapper-8 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -3px;
+    font-family: var(--body-normal-regular-font-family);
+    font-weight: var(--body-normal-regular-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-regular-font-size);
+    letter-spacing: var(--body-normal-regular-letter-spacing);
+    line-height: var(--body-normal-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-regular-font-style);
+}
+
+.element-product .fats-2 {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    position: relative;
+    flex: 1;
+}
+
+.element-product .frame-7 {
+    display: flex;
+    width: 102px;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .text-wrapper-9 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    margin-top: -3px;
+    font-family: var(--body-normal-regular-font-family);
+    font-weight: var(--body-normal-regular-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-regular-font-size);
+    letter-spacing: var(--body-normal-regular-letter-spacing);
+    line-height: var(--body-normal-regular-line-height);
+    font-style: var(--body-normal-regular-font-style);
+}
+
+.element-product .text-wrapper-10 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    margin-right: -16px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 17.4px;
+    white-space: nowrap;
+}
+
+.element-product .fats-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 51px;
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+}
+
+.element-product .text-wrapper-11 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    margin-right: -41px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 12px;
+    letter-spacing: 0;
+    line-height: 17.4px;
+    white-space: nowrap;
+}
+
+.element-product .frame-8 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .frame-9 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .group {
+    position: relative;
+    width: 100%;
+    height: 66px;
+    margin-right: -4px;
+    margin-bottom: 16px;
+}
+
+.element-product .text-wrapper-12 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+
+.element-product .frame-wrapper {
+    position: relative;
+    width: 100%;
+    height: 49px;
+}
+
+.element-product .frame-10 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+}
+
+.element-product .text-wrapper-13 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+    font-weight: 600;
+}
+
+.element-product .frame-11 {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .fats-3 {
+    display: inline-flex;
+    height: 28px;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 8px;
+    flex: 0 0 auto;
+    background-color: #f1f5f5;
+    border-radius: 25px;
+    align-items: center;
+    position: relative;
+}
+
+.element-product .hugeicons-eco-power {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.element-product .img {
+    position: absolute;
+    width: 80.4%;
+    height: 83.33%;
+    top: 8.33%;
+    left: 12.5%;
+}
+
+.element-product .bem-estar-animal {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: #014838;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-product .fats-4 {
+    display: inline-flex;
+    height: 28px;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background-color: #f1f5f5;
+    border-radius: 25px;
+    align-items: center;
+    position: relative;
+}
+
+.element-product .vector {
+    position: absolute;
+    width: 66.67%;
+    height: 94.44%;
+    top: 5.56%;
+    left: 16.67%;
+}
+
+.element-product .sabor-intenso-e {
+    position: relative;
+    width: 100%;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+
+.element-product .frame-12 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 8px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .text-wrapper-14 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 26px;
+    white-space: nowrap;
+}
+
+.element-product .longevidade {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+.element-product .text-wrapper-15 {
+    font-weight: 700;
+}
+
+.element-product .text-wrapper-16 {
+    font-family: 'Sofia Pro-Regular', Helvetica;
+}
+
+.element-product .creators-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .text-wrapper-17 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84.48px;
+    margin-top: -1px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-product .frame-13 {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .clip-path-group {
+    position: relative;
+    width: 70px;
+    height: auto;
+}
+
+.element-product .frame-14 {
+    flex-direction: column;
+    width: 272.22px;
+    gap: 2px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .text-wrapper-18 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: var(--body-normal-medium-font-family);
+    font-weight: var(--body-normal-medium-font-weight);
+    color: var(--neutraldark);
+    font-size: var(--body-normal-medium-font-size);
+    letter-spacing: var(--body-normal-medium-letter-spacing);
+    line-height: var(--body-normal-medium-line-height);
+    font-style: var(--body-normal-medium-font-style);
+    font-weight: bold;
+}
+
+.element-product .text-wrapper-19 {
+    position: relative;
+    align-self: stretch;
+    font-family: var(--body-small-regular-font-family);
+    font-weight: var(--body-small-regular-font-weight);
+    color: var(--neutralgrey-1);
+    font-size: var(--body-small-regular-font-size);
+    letter-spacing: var(--body-small-regular-letter-spacing);
+    line-height: var(--body-small-regular-line-height);
+    font-style: var(--body-small-regular-font-style);
+}
+
+.element-product .button-arrow-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 5px 13px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 8px;
+}
+
+.element-product .text-wrapper-20 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 600;
+    color: #0a2533;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 21.6px;
+    white-space: nowrap;
+}
+
+.element-product .content {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .div-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .frame-15 {
+    width: 342.7px;
+    gap: 14px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .image-wrapper {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: #e8e8e8;
+    border-radius: 16px;
+}
+
+.element-product .image-2 {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 73px;
+    height: 73px;
+}
+
+.element-product .frame-16 {
+    flex-direction: column;
+    width: 272.22px;
+    gap: 2px;
+    margin-right: -18.52px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-product .text-wrapper-21 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
+
+.element-product .separator-2 {
+    margin-bottom: -1px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.element-product .content-2 {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .frame-17 {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-product .vuesax-bold-star {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.element-product .text-wrapper-22 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-product .frame-18 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-product .text-wrapper-23 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 500;
+    color: #474747;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
+
+.element-product .button-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 146px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 9px;
+}
+
+.element-product .button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: var(--body-normal-bold-font-family);
+    font-weight: var(--body-normal-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-normal-bold-letter-spacing);
+    line-height: var(--body-normal-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-bold-font-style);
+}
+
+.scanning {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 402px;
+    height: 108px;
+    z-index: 2;
+    display: flex;
+}
+
+.header {
+    flex: 1;
+    width: 100%;
+    position: relative;
+    background-color: transparent;
+}
+
+.button-love {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 82.93%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f5f5;
+}
+
+.img-wrapper {
+    position: relative;
+    display: flex;
+}
+
+.heart {
+}
+
+.button-cancel {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 6.4%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #ffffff;
+    box-shadow: var(--card-shadow);
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f5f5;
+}
+
+.close-square {
+    width: 30px;
+    height: auto;
+}
+
+/* PRODUCER PAGE - MANUEL LUCAS */
+
+.element-producer {
+    background-color: #ffffff;
+    overflow-y: auto;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.element-producer .image-3 {
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 210px;
+    position: absolute;
+    width: 100%;
+}
+
+.element-producer .image-4 {
+    top: 11px;
+    left: 0;
+    height: 199px;
+    position: absolute;
+    width: 100%;
+    object-fit: cover;
+}
+
+.element-producer .rectangle-2 {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 402px;
+    height: 93px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 85%);
+}
+
+.element-producer .frame-19 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    align-items: flex-start;
+    gap: 28px;
+    position: absolute;
+    top: 174px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.element-producer .header-2 {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .clip-path-group-2 {
+    position: relative;
+    width: 99.02px;
+    height: 96.87px;
+}
+
+.element-producer .frame-20 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+    flex: 1;
+    flex-grow: 1;
+}
+
+.element-producer .produtor-de-carne {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: 13px;
+    white-space: nowrap;
+}
+
+.element-producer .text-wrapper-24 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.element-producer .info {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .location-wrapper {
+    display: flex;
+    width: 292px;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    margin-right: -43.02px;
+}
+
+.element-producer .location {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-producer .hugeicons-eco-power-2 {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.element-producer .text-wrapper-25 {
+    position: relative;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--grayscalegrayscale-60);
+    font-size: 12px;
+    letter-spacing: 0.06px;
+    line-height: 14.4px;
+    white-space: nowrap;
+}
+
+.element-producer .group-2 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 128px;
+}
+
+.element-producer .frame-21 {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 4px;
+    display: flex;
+    position: relative;
+}
+
+.element-producer .text-wrapper-26 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 600;
+    color: var(--neutraldark);
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: 21.6px;
+    white-space: nowrap;
+}
+
+.element-producer .text-wrapper-27 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+}
+
+.element-producer .separator-3 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.element-producer .frame-22 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .creators-3 {
+    position: relative;
+    width: 100%;
+    height: 26px;
+}
+
+.element-producer .frame-23 {
+    display: flex;
+    width: 192px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-producer .text-wrapper-28 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-producer .nutritions-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .frame-24 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .text-wrapper-29 {
+    position: relative;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17.4px;
+    white-space: nowrap;
+}
+
+.element-producer .text-wrapper-30 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-normal-regular-font-family);
+    font-weight: var(--body-normal-regular-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-regular-font-size);
+    letter-spacing: var(--body-normal-regular-letter-spacing);
+    line-height: var(--body-normal-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-regular-font-style);
+}
+
+.element-producer .div-4 {
+    flex-direction: column;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-producer .frame-25 {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-producer .fats-5 {
+    display: inline-flex;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 8px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #f1f5f5;
+    border-radius: 25px;
+}
+
+.element-producer .group-3 {
+    position: absolute;
+    width: 80.4%;
+    height: 83.33%;
+    top: 8.33%;
+    left: 12.5%;
+}
+
+.element-producer .bem-estar-animal-2 {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: #014838;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-producer .vector-2 {
+    position: absolute;
+    width: 76%;
+    height: 94.44%;
+    top: 5.56%;
+    left: 16.67%;
+}
+
+.element-producer .creators-4 {
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+.element-producer .text-wrapper-31 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-producer .text-wrapper-32 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+}
+
+.element-producer .content-3 {
+    width: 100%;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-producer .frame-26 {
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    display: flex;
+    position: relative;
+}
+
+.element-producer .frame-27 {
+    width: 342.7px;
+    gap: 14px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-producer .group-4 {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    background-color: #d9e7b8;
+    border-radius: 16px;
+}
+
+.element-producer .image-5 {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 73px;
+    height: 73px;
+}
+
+.element-producer .frame-28 {
+    flex-direction: column;
+    width: 272.22px;
+    gap: 2px;
+    margin-right: -18.52px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-producer .text-wrapper-33 {
+    align-self: stretch;
+    font-family: var(--body-normal-medium-font-family);
+    font-weight: var(--body-normal-medium-font-weight);
+    line-height: var(--body-normal-medium-line-height);
+    position: relative;
+    margin-top: -1px;
+    color: var(--neutraldark);
+    font-size: var(--body-normal-medium-font-size);
+    letter-spacing: var(--body-normal-medium-letter-spacing);
+    font-style: var(--body-normal-medium-font-style);
+    font-weight: bold;
+}
+
+.element-producer .text-wrapper-34 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
+
+.element-producer .button-arrow-right-2 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 5px 13px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 8px;
+}
+
+.element-producer .text-wrapper-35 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 600;
+    color: #0a2533;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 21.6px;
+    white-space: nowrap;
+}
+
+.element-producer .iconly-light-arrow-2 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://c.animaapp.com/mkrplbbpJqKSTj/img/iconly-light-arrow---right.svg);
+    background-size: 100% 100%;
+}
+
+.element-producer .separator-4 {
+    margin-bottom: -1px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.element-producer .content-4 {
+    gap: 16px;
+    align-self: stretch;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-producer .frame-29 {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-producer .vuesax-bold-star-2 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.element-producer .text-wrapper-36 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-producer .frame-30 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-producer .text-wrapper-37 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 500;
+    color: #474747;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 146px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 9px;
+}
+
+.button-2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -2px;
+    margin-left: -45px;
+    margin-right: -45px;
+    font-family: var(--body-normal-bold-font-family);
+    font-weight: var(--body-normal-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-normal-bold-letter-spacing);
+    line-height: var(--body-normal-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-bold-font-style);
+}
+
+.element-producer .status-bar {
+    position: fixed;
+    width: 100%;
+    height: 7.91%;
+    top: -47.47%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element-producer .iphone-x-status-bars {
+    margin-top: -0.4px;
+    height: 44px;
+    margin-left: -1px;
+    width: 375px;
+    position: relative;
+}
+
+.element-producer .battery {
+    position: absolute;
+    top: 17px;
+    left: 336px;
+    width: 24px;
+    height: 11px;
+}
+
+.element-producer .wifi {
+    position: absolute;
+    top: 17px;
+    right: 44px;
+    width: 15px;
+    height: 11px;
+}
+
+.element-producer .cellular-connection {
+    position: absolute;
+    top: 18px;
+    right: 64px;
+    width: 17px;
+    height: 11px;
+}
+
+.element-producer .time-style {
+    position: absolute;
+    top: 13px;
+    left: 21px;
+    width: 54px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.element-producer .time {
+    margin-top: 2px;
+    height: 17px;
+    width: 54px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    color: var(--mainblack);
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.28px;
+    line-height: normal;
+}
+
+.element-producer .text-wrapper-38 {
+    color: #22172a;
+    letter-spacing: -0.04px;
+}
+
+.element-producer .scanning-2 {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 201px);
+    width: 400px;
+    height: 108px;
+    display: flex;
+}
+
+.element-producer .header-3 {
+    flex: 1;
+    width: 400px;
+    position: relative;
+}
+
+.element-producer .heart-wrapper {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 82.93%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.element-producer .heart-2 {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    display: flex;
+}
+
+.element-producer .heart-3 {
+    margin-top: 3px;
+    width: 20.26px;
+    height: 18px;
+    margin-left: 2.7px;
+}
+
+.element-producer .uil-arrow-left-wrapper {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 6.4%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #ffffff;
+    box-shadow: var(--card-shadow);
+}
+
+.element-producer .uil-arrow-left {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+.element-producer .vector-3 {
+    position: absolute;
+    width: 49.98%;
+    height: 50.04%;
+    top: 24.98%;
+    left: 25.02%;
+}
+
+/* PAGE CATRINA - RAÇA */
+.element-catrina {
+    background-color: #ffffff;
+    overflow-y: auto;
+    width: 100vw;
+
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+.element-catrina .image-6 {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 212px;
+    background-image: url(/meatazores/assets/bg-catrina.jpg);
+    background-size: cover;
+}
+
+.element-catrina .frame-31 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 28px;
+    position: absolute;
+    top: 174px;
+    padding-bottom: 40px;
+    max-width: 600px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.element-catrina .frame-32 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 21px;
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.element-catrina .header-4 {
+    display: flex;
+    width: 100%px;
+    height: 67.13px;
+    align-items: flex-end;
+    gap: 12px;
+    position: relative;
+}
+
+.element-catrina .group-5 {
+    position: relative;
+    width: 75px;
+    height: 75px;
+    margin-top: -8.17px;
+    background-color: #d9e7b8;
+    border-radius: 16px;
+}
+
+.element-catrina .image-7 {
+    position: absolute;
+    top: 2px;
+    left: 1px;
+    width: 73px;
+    height: 73px;
+}
+
+.element-catrina .frame-33 {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-catrina .ra-a-bovina {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 10px;
+    letter-spacing: 0;
+    line-height: 13px;
+    white-space: nowrap;
+}
+
+.element-catrina .text-wrapper-39 {
+    position: relative;
+    width: 199px;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+}
+
+.element-catrina .group-6 {
+    position: relative;
+    width: 100%;
+    height: 94px;
+}
+
+.element-catrina .frame-34 {
+    display: flex;
+    flex-direction: column;
+    width: 100%px;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+}
+
+.element-catrina .text-wrapper-40 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 600;
+    color: var(--neutraldark);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 21.6px;
+}
+
+.element-catrina .div-5 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+}
+
+.element-catrina .separator-5 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 1px;
+    object-fit: cover;
+}
+
+.element-catrina .group-7 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: auto;
+}
+
+.element-catrina .text-wrapper-41 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-catrina .text-wrapper-42 {
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: #48515e;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 16.9px;
+}
+
+.element-catrina .text-wrapper-43 {
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+}
+
+.element-catrina .ramogrande {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    height: 239.93px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.element-catrina .frame-35 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .historicamente-a {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 14px;
+}
+
+.element-catrina .text-wrapper-44 {
+    line-height: 18px;
+}
+
+.element-catrina .text-wrapper-45 {
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.element-catrina .text-wrapper-46 {
+    position: relative;
+    align-self: stretch;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--neutralgrey-1);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18px;
+}
+
+.element-catrina .frame-36 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 4px 4px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .fats-6 {
+    display: inline-flex;
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    padding: 4px 8px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #f1f5f5;
+    border-radius: 25px;
+}
+
+.element-catrina .hugeicons-eco-power-3 {
+    position: relative;
+    width: 18px;
+    height: 18px;
+}
+
+.element-catrina .group-8 {
+    position: absolute;
+    width: 80.4%;
+    height: 83.33%;
+    top: 8.33%;
+    left: 12.5%;
+}
+
+.element-catrina .bem-estar-animal-3 {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: #014838;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-catrina .frame-37 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .creators-5 {
+    position: relative;
+    width: 100%;
+    height: 26px;
+}
+
+.element-catrina .frame-38 {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-catrina .text-wrapper-47 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    margin-right: -29px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-catrina .nutritions-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .frame-39 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .text-wrapper-48 {
+    position: relative;
+    width: fit-content;
+    font-family: 'Sofia Pro-Regular', Helvetica;
+    font-weight: 400;
+    color: var(--gray-2);
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 17.4px;
+    white-space: nowrap;
+}
+
+.element-catrina .text-wrapper-49 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: var(--body-normal-regular-font-family);
+    font-weight: var(--body-normal-regular-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-regular-font-size);
+    letter-spacing: var(--body-normal-regular-letter-spacing);
+    line-height: var(--body-normal-regular-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-regular-font-style);
+}
+
+.element-catrina .group-9 {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+}
+
+.element-catrina .frame-40 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-catrina .text-wrapper-50 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -1px;
+    margin-right: -9px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-catrina .creators-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .text-wrapper-51 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84.48px;
+    margin-top: -1px;
+    font-family: var(--body-xlarge-bold-font-family);
+    font-weight: var(--body-xlarge-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-xlarge-bold-font-size);
+    letter-spacing: var(--body-xlarge-bold-letter-spacing);
+    line-height: var(--body-xlarge-bold-line-height);
+    font-style: var(--body-xlarge-bold-font-style);
+}
+
+.element-catrina .frame-41 {
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    gap: 14px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-catrina .clip-path-group-3 {
+    position: relative;
+    width: 69.22px;
+    height: 62.7px;
+}
+
+.element-catrina .frame-42 {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.element-catrina .text-wrapper-52 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+
+    font-family: var(--body-normal-medium-font-family);
+    font-weight: var(--body-normal-medium-font-weight);
+    color: var(--neutraldark);
+    font-size: var(--body-normal-medium-font-size);
+    letter-spacing: var(--body-normal-medium-letter-spacing);
+    line-height: var(--body-normal-medium-line-height);
+    font-style: var(--body-normal-medium-font-style);
+    font-family: 'sofia-pro', Helvetica;
+    font-weight: bold;
+}
+
+.element-catrina .text-wrapper-53 {
+    position: relative;
+    align-self: stretch;
+    font-family: var(--body-small-regular-font-family);
+    font-weight: var(--body-small-regular-font-weight);
+    color: var(--neutralgrey-1);
+    font-size: var(--body-small-regular-font-size);
+    letter-spacing: var(--body-small-regular-letter-spacing);
+    line-height: var(--body-small-regular-line-height);
+    font-style: var(--body-small-regular-font-style);
+}
+
+.element-catrina .button-arrow-right-3 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 5px 13px;
+    position: relative;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 8px;
+}
+
+.element-catrina .text-wrapper-54 {
+    position: relative;
+    width: fit-content;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 600;
+    color: #0a2533;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 21.6px;
+    white-space: nowrap;
+}
+
+.element-catrina .iconly-light-arrow-3 {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    background-image: url(https://c.animaapp.com/mkrplbbpJqKSTj/img/iconly-light-arrow---right.svg);
+    background-size: 100% 100%;
+}
+
+.element-catrina .content-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .frame-43 {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 4px;
+    position: relative;
+    flex: 0 0 auto;
+}
+
+.element-catrina .vuesax-bold-star-3 {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.element-catrina .text-wrapper-55 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    font-family: 'Sofia Pro-Bold', Helvetica;
+    font-weight: 700;
+    color: #0a2533;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+}
+
+.element-catrina .frame-44 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.element-catrina .text-wrapper-56 {
+    position: relative;
+    align-self: stretch;
+    margin-top: -1px;
+    font-family: 'Sofia Pro-SemiBold', Helvetica;
+    font-weight: 500;
+    color: #474747;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 18.3px;
+}
+
+.element-catrina .button-login-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 11px 146px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+    background-color: #cef17b;
+    border-radius: 9px;
+}
+
+.element-catrina .button-3 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin-top: -2px;
+    margin-left: -45px;
+    margin-right: -45px;
+    font-family: var(--body-normal-bold-font-family);
+    font-weight: var(--body-normal-bold-font-weight);
+    color: #0a2533;
+    font-size: var(--body-normal-bold-font-size);
+    text-align: center;
+    letter-spacing: var(--body-normal-bold-letter-spacing);
+    line-height: var(--body-normal-bold-line-height);
+    white-space: nowrap;
+    font-style: var(--body-normal-bold-font-style);
+}
+
+.element-catrina .iphone-x-status-bars-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 6.32%;
+    top: -37.94%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.element-catrina .iphone-x-status-bars-2 {
+    margin-top: -0.6px;
+    height: 44px;
+    margin-left: -1px;
+    width: 375px;
+    position: relative;
+}
+
+.element-catrina .battery-2 {
+    position: absolute;
+    top: 17px;
+    left: 336px;
+    width: 24px;
+    height: 11px;
+}
+
+.element-catrina .wifi-2 {
+    position: absolute;
+    top: 17px;
+    right: 44px;
+    width: 15px;
+    height: 11px;
+}
+
+.element-catrina .cellular-connection-2 {
+    position: absolute;
+    top: 18px;
+    right: 64px;
+    width: 17px;
+    height: 11px;
+}
+
+.element-catrina .time-wrapper {
+    position: absolute;
+    top: 13px;
+    left: 21px;
+    width: 54px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+}
+
+.element-catrina .span-wrapper {
+    margin-top: 2px;
+    height: 17px;
+    width: 54px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    color: var(--mainblack);
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: -0.28px;
+    line-height: normal;
+}
+
+.element-catrina .text-wrapper-57 {
+    color: #22172a;
+    letter-spacing: -0.04px;
+}
+
+.element-catrina .scanning-3 {
+    position: fixed;
+    top: 0;
+    left: calc(50% - 201px);
+    width: 400px;
+    height: 108px;
+    display: flex;
+}
+
+.element-catrina .header-5 {
+    flex: 1;
+    width: 400px;
+    position: relative;
+}
+
+.element-catrina .button-love-2 {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 82.93%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+}
+
+.element-catrina .heart-4 {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+    display: flex;
+}
+
+.element-catrina .heart-5 {
+    margin-top: 3px;
+    width: 20.26px;
+    height: 18px;
+    margin-left: 2.7px;
+}
+
+.element-catrina .button-cancel-2 {
+    position: absolute;
+    width: 43px;
+    height: 43px;
+    top: 20px;
+    left: 6.4%;
+    background-color: var(--neutraltrue-white);
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #ffffff;
+    box-shadow: var(--card-shadow);
+}
+
+.element-catrina .vector-wrapper {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    left: 20%;
+}
+
+.element-catrina .vector-4 {
+    position: absolute;
+    width: 49.98%;
+    height: 50.04%;
+    top: 24.98%;
+    left: 25.02%;
+}
+
+/* CUSTOM */
+
+.heading-xl {
+    color: #0a2533;
+    /* Body/XLarge - Bold */
+    font-family: 'Sofia Pro';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; /* 26px */
+}

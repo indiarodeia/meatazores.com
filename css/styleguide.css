@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Light Az.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Regular Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Regular Italic Az.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Medium Az.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Semi Bold Az.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Bold Az.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Black Az.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sofia Pro';
+    src: url('../font/Sofia Pro Black Italic Az.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+:root {
+    --dark-green: rgba(1, 72, 56, 1);
+    --neutral-white: rgba(255, 255, 255, 1);
+    --heading-heading-2-font-family: 'Sofia Pro', Helvetica;
+    --heading-heading-2-font-weight: 700;
+    --heading-heading-2-font-size: 28px;
+    --heading-heading-2-letter-spacing: 0px;
+    --heading-heading-2-line-height: 130%;
+    --heading-heading-2-font-style: normal;
+    --body-normal-bold-font-family: 'Sofia Pro', Helvetica;
+    --body-normal-bold-font-weight: 700;
+    --body-normal-bold-font-size: 16px;
+    --body-normal-bold-letter-spacing: 0px;
+    --body-normal-bold-line-height: 135%;
+    --body-normal-bold-font-style: normal;
+    :root {
+        --dark: rgba(10, 37, 51, 1);
+        --neutralgrey-1: rgba(72, 82, 95, 1);
+        --neutralgrey-4: rgba(230, 235, 242, 1);
+        --gray-2: rgba(79, 79, 79, 1);
+        --primary: rgba(45, 38, 75, 1);
+        --neutralgrey-2: rgba(151, 162, 176, 1);
+        --neutraldark: rgba(10, 37, 51, 1);
+        --yellow-01: rgba(255, 187, 13, 1);
+        --grey-01: rgba(167, 174, 193, 1);
+        --mainblack: rgba(34, 23, 42, 1);
+        --neutraltrue-white: rgba(255, 255, 255, 1);
+        --cta: rgba(53, 53, 53, 1);
+        --white: rgba(255, 255, 255, 1);
+        --grayscalegrayscale-60: rgba(156, 164, 171, 1);
+        --body-normal-medium-font-family: 'Sofia Pro', Helvetica;
+        --body-normal-medium-font-weight: 500;
+        --body-normal-medium-font-size: 16px;
+        --body-normal-medium-letter-spacing: 0px;
+        --body-normal-medium-line-height: 135%;
+        --body-normal-medium-font-style: normal;
+        --body-normal-regular-font-family: 'Sofia Pro', Helvetica;
+        --body-normal-regular-font-weight: 400;
+        --body-normal-regular-font-size: 16px;
+        --body-normal-regular-letter-spacing: 0px;
+        --body-normal-regular-line-height: 145%;
+        --body-normal-regular-font-style: normal;
+        --body-xlarge-bold-font-family: 'Sofia Pro', Helvetica;
+        --body-xlarge-bold-font-weight: 700;
+        --body-xlarge-bold-font-size: 20px;
+        --body-xlarge-bold-letter-spacing: 0px;
+        --body-xlarge-bold-line-height: 130%;
+        --body-xlarge-bold-font-style: normal;
+        --body-small-regular-font-family: 'Sofia Pro', Helvetica;
+        --body-small-regular-font-weight: 400;
+        --body-small-regular-font-size: 16px;
+        --body-small-regular-letter-spacing: 0px;
+        --body-small-regular-line-height: 145%;
+        --body-small-regular-font-style: normal;
+        --body-normal-bold-font-family: 'Sofia Pro', Helvetica;
+        --body-normal-bold-font-weight: 700;
+        --body-normal-bold-font-size: 16px;
+        --body-normal-bold-letter-spacing: 0px;
+        --body-normal-bold-line-height: 135%;
+        --body-normal-bold-font-style: normal;
+        --heading-heading-3-font-family: 'Sofia Pro', Helvetica;
+        --heading-heading-3-font-weight: 700;
+        --heading-heading-3-font-size: 24px;
+        --heading-heading-3-letter-spacing: 0px;
+        --heading-heading-3-line-height: 135%;
+        --heading-heading-3-font-style: normal;
+        --card-shadow: 0px 2px 16px 0px rgba(6, 51, 54, 0.1);
+    }
+}
