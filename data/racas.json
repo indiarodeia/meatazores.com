@@ -5,6 +5,8 @@
       "nome": "Ramo Grande DOP",
       "tipo": "Raça bovina autóctone dos Açores",
       "localizacao": "Açores, com forte ligação à ilha Terceira",
+      "logo": "assets/logo-ramo-grande-dop.png",
+      "logoAlt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
       "descricao_curta": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
       "hero": "assets/bg-ramo-grande-dop.jpg",
       "imagem": "assets/ramo-grande-dop.png",
@@ -21,6 +23,95 @@
       "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"],
       "produtores_associados": ["emiliano-meneses"],
       "galeria": ["assets/ramo-grande-dop-pasto.jpg"]
+    }
+  ,
+    {
+      "id": "catrina",
+      "nome": "Catrina",
+      "tipo": "Raça bovina autóctone portuguesa",
+      "localizacao": "Ilha Terceira, Açores",
+      "descricao_curta": "Raça bovina autóctone portuguesa com raízes na ilha Terceira, intimamente ligada ao património genético, cultural e paisagístico dos Açores.",
+      "hero": "assets/bg-catrina.jpg",
+      "imagem": "assets/catrina.png",
+      "introducao": "A Catrina tem as suas raízes na ilha Terceira, estando intimamente ligada ao património genético, cultural e paisagístico dos Açores. Está particularmente bem adaptada a zonas de média e alta altitude.",
+      "origem_territorio": "A história da Catrina está ligada ao mundo rural terceirense desde os primeiros tempos do povoamento. Estima-se que raças portuguesas introduzidas nos Açores por volta de 1427 tenham estado na base genética das populações bovinas açorianas. A Catrina diferenciou-se das restantes populações, mantendo características próprias associadas ao regime de criação e ao contexto rural da Terceira.",
+      "valor_patrimonial": "As raças autóctones são um ativo vivo, património cultural e genético. Preservá-las é essencial não só por integrarem o ecossistema da região e contribuírem para o equilíbrio da biodiversidade animal, mas também pelo seu papel na sustentabilidade ambiental e socioeconómica, na valorização de boas práticas alimentares e na preservação de atividades culturais.",
+      "caracteristicas": [
+        "Raça bovina autóctone portuguesa",
+        "Raízes na ilha Terceira",
+        "Adaptada a zonas de média e alta altitude",
+        "Porte pequeno",
+        "Perfil longilíneo",
+        "Temperamento nervoso",
+        "Muito rústica",
+        "Andamentos fáceis, enérgicos e corretos",
+        "Efetivo registado muito reduzido, cerca de 75 animais"
+      ],
+      "secoes_extra": [
+        {
+          "titulo": "Utilização tradicional",
+          "texto": "Historicamente, a Catrina foi reconhecida pela sua aptidão múltipla, sendo utilizada na produção de leite, no trabalho agrícola e em atividades de lazer e tradição, incluindo manifestações taurinas e corridas à corda."
+        },
+        {
+          "titulo": "Sistema de criação",
+          "texto": "Criada maioritariamente em regime extensivo, em pastagens tradicionais de média e alta altitude, com elevado aproveitamento forrageiro e enquadramento em sistemas de produção de baixo impacto ambiental."
+        },
+        {
+          "titulo": "Conservação",
+          "texto": "O efetivo registado é de cerca de 75 animais, um número muito reduzido. Este contexto reforça a importância de divulgar a raça e apoiar quem a mantém viva no território."
+        },
+        {
+          "titulo": "Curiosidade: porque se chama Catrina?",
+          "texto": "A origem do nome Catrina apresenta várias teorias. Uma das versões recolhidas no meio rural aponta para um touro conhecido como \"Catrina Velho\", ligado ao Porto Judeu, que teria sido usado para cobrir vacas locais. As crias passaram a ser designadas por \"Catrinas\"."
+        }
+      ],
+      "pecas_associadas": ["catrina-19-anos"],
+      "produtores_associados": ["manuel-lucas"],
+      "galeria": ["assets/img-catrina.jpg"]
+    }
+  ,
+    {
+      "id": "aberdeen-angus",
+      "nome": "Aberdeen-Angus",
+      "tipo": "Raça bovina de carne",
+      "localizacao": "Origem escocesa, com presença em Portugal",
+      "descricao_curta": "Raça bovina de aptidão carne, reconhecida pela qualidade da carne, precocidade, rusticidade, facilidade de maneio e boa adaptação a diferentes sistemas de produção.",
+      "hero": "assets/bg-aberdeen-angus.jpg",
+      "imagem": "assets/aberdeen-angus.png",
+      "introducao": "A Aberdeen-Angus é uma raça bovina de aptidão carne, de médio porte, reconhecida internacionalmente pela qualidade da carne. É uma raça precoce, rústica, de fácil maneio e bem adaptada a diferentes condições de criação.",
+      "origem_territorio": "A Aberdeen-Angus é uma raça nativa da Escócia, associada à região nordeste do país, incluindo os condados de Aberdeenshire e Angus. A sua expansão internacional tornou-a uma das raças de carne mais reconhecidas a nível mundial.",
+      "valor_patrimonial": "A Aberdeen-Angus é hoje uma referência na produção de carne de qualidade. A sua presença na Meat Azores permite valorizar a rastreabilidade, a origem e o modo de criação de cada peça, aproximando o consumidor da história do animal, do produtor e do restaurante onde a carne é servida.",
+      "caracteristicas": [
+        "Raça bovina de aptidão carne",
+        "Médio porte",
+        "Precoce",
+        "Rústica",
+        "Naturalmente mocha, sem cornos",
+        "Pelagem preta, com variedade vermelha",
+        "Bom temperamento",
+        "Fácil maneio em condições de campo",
+        "Facilidade de parto",
+        "Boa adaptação a diferentes condições de criação",
+        "Uniformidade na qualidade da carcaça e da carne",
+        "Carne valorizada pelo marmoreio, sabor, suculência e tenrura"
+      ],
+      "secoes_extra": [
+        {
+          "titulo": "Qualidade da carne",
+          "texto": "A carne Aberdeen-Angus é reconhecida pela sua qualidade, marmoreio, sabor, suculência e tenrura. A raça tem também facilidade de acabamento, com boa distribuição de gordura e aptidão para sistemas de produção à base de pastagem e forragem."
+        },
+        {
+          "titulo": "Sistema de produção",
+          "texto": "A rusticidade, a precocidade e o fácil acabamento tornam a Aberdeen-Angus adequada a regimes de produção extensivos e sustentáveis, incluindo sistemas com forte componente de pastagem."
+        },
+        {
+          "titulo": "Presença na Meat Azores",
+          "texto": "Esta página será atualizada quando existir uma peça Aberdeen-Angus associada a um restaurante parceiro. Até lá, funciona como ficha informativa da raça dentro da aplicação."
+        }
+      ],
+      "pecas_associadas": [],
+      "produtores_associados": [],
+      "galeria": ["assets/aberdeen-angus-pasto.jpg"]
     }
   ]
 }

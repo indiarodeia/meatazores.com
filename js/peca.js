@@ -2,6 +2,7 @@
   'use strict';
 
   const PECAS_JSON = 'data/pecas.json';
+  const ASSETS_EM_FALTA = new Set();
 
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
@@ -38,6 +39,63 @@
   function esconderSecao(id) {
     const el = document.getElementById(id);
     if (el) el.hidden = true;
+  }
+
+  function isUrlExterno(url) {
+    return /^https?:\/\//i.test(String(url || ''));
+  }
+
+  function renderWebsiteButton(url) {
+    if (!url) return '';
+    return (
+      '<a href="' + esc(url) + '" class="button-arrow-right peca-website-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar website (abre num novo separador)">' +
+        '<span class="text-wrapper-20">Visitar website</span>' +
+        '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
+      '</a>'
+    );
+  }
+
+  function configurarLink(el, url) {
+    if (!el || !url) return;
+    el.href = url;
+    if (isUrlExterno(url)) {
+      el.target = '_blank';
+      el.rel = 'noopener noreferrer';
+    } else {
+      el.removeAttribute('target');
+      el.removeAttribute('rel');
+    }
+  }
+
+  function assetExiste(src) {
+    if (!src) return Promise.resolve(false);
+    if (ASSETS_EM_FALTA.has(src)) return Promise.resolve(false);
+    return fetch(src, { method: 'HEAD' })
+      .then(function (resp) { return resp.ok; })
+      .catch(function () { return false; });
+  }
+
+  function setBackgroundSeExistir(el, src) {
+    if (!el) return;
+    assetExiste(src).then(function (existe) {
+      el.style.backgroundImage = existe ? 'url("' + src + '")' : 'none';
+    });
+  }
+
+  function carregarImagensDiferidas(scope) {
+    var imagens = (scope || document).querySelectorAll('img[data-src]');
+    imagens.forEach(function (img) {
+      var src = img.getAttribute('data-src');
+      assetExiste(src).then(function (existe) {
+        if (existe) {
+          img.src = src;
+        } else {
+          var wrapper = img.closest('.image-wrapper');
+          if (wrapper) wrapper.hidden = true;
+          else img.hidden = true;
+        }
+      });
+    });
   }
 
   function renderCaracteristicas(items) {
@@ -100,27 +158,31 @@
   }
 
   function renderCertificacaoDop(cert) {
+    var logoHtml = cert.logo
+      ? '<img class="certificacao-dop__logo" src="' + esc(cert.logo) + '" alt="' + esc(cert.logoAlt || '') + '" onerror="this.hidden=true" />'
+      : '';
+
     var criteriosHtml = cert.criterios.map(function (c) {
       return (
-        '<div class="frame-4">' +
-          '<div class="fats">' +
-            '<div class="frame-5">' +
-              '<div class="text-wrapper-6">' + esc(c.label) + '</div>' +
-              '<div class="text-wrapper-8">' + esc(c.valor) + '</div>' +
-            '</div>' +
-          '</div>' +
+        '<div class="certificacao-dop__item">' +
+          '<span class="certificacao-dop__label">' + esc(c.label) + '</span>' +
+          '<span class="certificacao-dop__value">' + esc(c.valor) + '</span>' +
         '</div>'
       );
     }).join('');
 
     return (
-      '<div class="frame-4" style="margin-bottom: 16px;">' +
-        '<div class="text-wrapper-8" style="font-weight: 600;">' + esc(cert.estado) + '</div>' +
-      '</div>' +
-      '<div class="text-wrapper-8" style="font-size: 1.4em; font-weight: 700; margin-bottom: 12px;">' + esc(cert.codigoAnimal) + '</div>' +
-      '<p class="text-wrapper-12" style="margin-bottom: 16px;">' + esc(cert.texto) + '</p>' +
-      '<div class="nutritions">' + criteriosHtml + '</div>' +
-      (cert.nota ? '<p class="text-wrapper-12" style="margin-top: 16px;">' + esc(cert.nota) + '</p>' : '')
+      '<div class="certificacao-dop">' +
+        '<div class="certificacao-dop__header">' +
+          logoHtml +
+          '<div class="certificacao-dop__title">' + esc(cert.titulo) + '</div>' +
+        '</div>' +
+        '<div class="certificacao-dop__badge">' + esc(cert.estado) + '</div>' +
+        '<div class="certificacao-dop__codigo">' + esc(cert.codigoAnimal) + '</div>' +
+        '<p class="certificacao-dop__text">' + esc(cert.texto) + '</p>' +
+        '<div class="certificacao-dop__grid">' + criteriosHtml + '</div>' +
+        (cert.nota ? '<p class="certificacao-dop__note">' + esc(cert.nota) + '</p>' : '') +
+      '</div>'
     );
   }
 
@@ -149,24 +211,26 @@
 
   function renderProdutorCard(produtor) {
     const img = produtor.imagem
-      ? '<img class="clip-path-group" src="' + esc(produtor.imagem) + '" alt="Fotografia do produtor ' + esc(produtor.nome) + '" />'
+      ? '<img class="clip-path-group" data-src="' + esc(produtor.imagem) + '" alt="Fotografia do produtor ' + esc(produtor.nome) + '" />'
       : '';
+    const href = 'produtor.html?id=' + esc(produtor.id);
     return (
       img +
       '<div class="frame-14">' +
         '<div class="text-wrapper-18">' + esc(produtor.nome) + '</div>' +
         '<p class="text-wrapper-21">' + esc(produtor.descricao) + '</p>' +
-        '<a href="produtor.html?id=' + esc(produtor.id) + '" class="button-arrow-right" aria-label="Conhecer o produtor ' + esc(produtor.nome) + '">' +
+        '<a href="' + href + '" class="button-arrow-right" aria-label="Conhecer o produtor ' + esc(produtor.nome) + '">' +
           '<span class="text-wrapper-20">Conhecer o produtor</span>' +
           '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
         '</a>' +
+        renderWebsiteButton(produtor.website) +
       '</div>'
     );
   }
 
   function renderRestauranteCard(restaurante) {
     const img = restaurante.imagem
-      ? '<div class="image-wrapper"><img class="image-2" src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(restaurante.nome) + '" onerror="this.parentElement.hidden=true" /></div>'
+      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(restaurante.nome) + '" /></div>'
       : '';
     return (
       img +
@@ -177,13 +241,14 @@
           '<span class="text-wrapper-20">Conhecer o restaurante</span>' +
           '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
         '</a>' +
+        renderWebsiteButton(restaurante.website) +
       '</div>'
     );
   }
 
   function renderRacaCard(raca) {
     const img = raca.imagem
-      ? '<div class="image-wrapper"><img class="image-2" src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
+      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
       : '';
     return (
       img +
@@ -198,6 +263,25 @@
     );
   }
 
+  function renderSelecionadorCard(selecionador) {
+    const img = selecionador.imagem
+      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(selecionador.imagem) + '" alt="Imagem de ' + esc(selecionador.nome) + '" /></div>'
+      : '';
+    const href = selecionador.link || (selecionador.id ? 'parceiro.html?id=' + esc(selecionador.id) : '#');
+    return (
+      img +
+      '<div class="frame-16">' +
+        '<div class="text-wrapper-18">' + esc(selecionador.nome) + '</div>' +
+        (selecionador.descricao ? '<p class="text-wrapper-21">' + esc(selecionador.descricao) + '</p>' : '') +
+        '<a href="' + href + '" class="button-arrow-right" aria-label="Conhecer o selecionador ' + esc(selecionador.nome) + '">' +
+          '<span class="text-wrapper-20">Conhecer parceiro</span>' +
+          '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
+        '</a>' +
+        renderWebsiteButton(selecionador.website) +
+      '</div>'
+    );
+  }
+
   function preencherPeca(peca) {
     document.title = peca.titulo + (peca.subtitulo ? ' | ' + peca.subtitulo : '') + ' | Meat Azores';
 
@@ -205,7 +289,7 @@
     if (metaDesc && peca.descricao) metaDesc.setAttribute('content', peca.descricao);
 
     const imgEl = document.querySelector('.element-product .image');
-    if (imgEl && peca.imagem_bg) imgEl.style.backgroundImage = 'url(' + peca.imagem_bg + ')';
+    if (imgEl && peca.imagem_bg) setBackgroundSeExistir(imgEl, peca.imagem_bg);
 
     if (peca.secao_titulo) setText('sec-esta-peca', peca.secao_titulo);
 
@@ -219,8 +303,15 @@
 
     const selecionadoWrapper = document.getElementById('peca-selecionado-wrapper');
     if (selecionadoWrapper) {
-      if (peca.selecionado_por) setText('peca-selecionado-por', peca.selecionado_por);
-      else selecionadoWrapper.hidden = true;
+      var selecionadoEl = document.getElementById('peca-selecionado-por');
+      if (peca.selecionador && peca.selecionador.nome && selecionadoEl) {
+        var linkSelecionador = peca.selecionador.link || ('parceiro.html?id=' + esc(peca.selecionador.id));
+        selecionadoEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkSelecionador) + '">' + esc(peca.selecionador.nome) + '</a>';
+      } else if (peca.selecionado_por) {
+        setText('peca-selecionado-por', peca.selecionado_por);
+      } else {
+        selecionadoWrapper.hidden = true;
+      }
     }
 
     const confeccionadoWrapper = document.getElementById('peca-confeccionado-wrapper');
@@ -250,8 +341,12 @@
       esconderSecao('sec-criacao-secao');
     }
 
-    if (peca.o_que_esperar && peca.o_que_esperar.length) {
+    if (peca.mostrar_o_que_esperar === false) {
+      esconderSecao('sec-esperar-secao');
+    } else if (Array.isArray(peca.o_que_esperar) && peca.o_que_esperar.length) {
       setHTML('peca-o-que-esperar', renderOQueEsperar(peca.o_que_esperar));
+    } else if (peca.o_que_esperar && peca.o_que_esperar.mostrar !== false && peca.o_que_esperar.items && peca.o_que_esperar.items.length) {
+      setHTML('peca-o-que-esperar', renderOQueEsperar(peca.o_que_esperar.items));
     } else {
       esconderSecao('sec-esperar-secao');
     }
@@ -276,6 +371,12 @@
       esconderSecao('sec-produtor-secao');
     }
 
+    if (peca.selecionador) {
+      setHTML('peca-selecionador', renderSelecionadorCard(peca.selecionador));
+    } else {
+      esconderSecao('sec-selecionador-secao');
+    }
+
     if (peca.raca) {
       setHTML('peca-raca', renderRacaCard(peca.raca));
     } else {
@@ -293,27 +394,29 @@
       setText('peca-feedback-texto', peca.feedback.texto);
       const btnFeedback = document.getElementById('btn-feedback');
       const btnHeaderFeedback = document.getElementById('btn-header-feedback');
-      const labelBotao = (peca.feedback.botao || 'Avaliar a experiência') + ' (abre num novo separador)';
+      const labelBotao = peca.feedback.botao || 'Avaliar a experiência';
       if (btnFeedback) {
         if (peca.feedback.url) {
-          btnFeedback.href = peca.feedback.url;
+          configurarLink(btnFeedback, peca.feedback.url);
         } else {
           btnFeedback.hidden = true;
         }
         if (peca.feedback.botao) btnFeedback.textContent = peca.feedback.botao;
-        btnFeedback.setAttribute('aria-label', labelBotao);
+        btnFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(peca.feedback.url) ? ' (abre num novo separador)' : ''));
       }
       if (btnHeaderFeedback) {
         if (peca.feedback.url) {
-          btnHeaderFeedback.href = peca.feedback.url;
+          configurarLink(btnHeaderFeedback, peca.feedback.url);
         } else {
           btnHeaderFeedback.hidden = true;
         }
-        btnHeaderFeedback.setAttribute('aria-label', labelBotao);
+        btnHeaderFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(peca.feedback.url) ? ' (abre num novo separador)' : ''));
       }
     } else {
       esconderSecao('sec-feedback-secao');
     }
+
+    carregarImagensDiferidas(document);
   }
 
   function init() {

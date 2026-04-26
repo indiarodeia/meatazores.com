@@ -10,23 +10,64 @@
       "descricao": "Esta é uma degustação rara: carne proveniente de uma fêmea Catrina com um percurso longo e completo, criada em regime extensivo. A experiência não se trata apenas de um prato, trata-se de reconhecer tempo, território e património vivo.",
       "imagem_bg": "assets/bg-degustacao.jpg",
       "caracteristicas": [
-        { "icone": "assets/icon-1.svg", "label": "Identificação", "valor": "PT593418923" },
-        { "icone": "assets/icon-2.svg", "label": "Classificação", "valor": "O-4" },
-        { "icone": "assets/icon-3.svg", "label": "Sexo", "valor": "Fêmea" },
-        { "icone": "assets/icon-4.svg", "label": "Idade", "valor": "19 anos" },
-        { "icone": "assets/icon-5.svg", "label": "Livro Genealógico", "valor": "0044" },
-        { "icone": "assets/icon-6.svg", "label": "Pelagem", "valor": "Tipo Sara" },
-        { "icone": "assets/icon-7.svg", "label": "Peso a frio", "valor": "211kg" },
-        { "icone": "assets/icon-8.svg", "label": "Último parto registado", "valor": "19/08/2023" }
+        {
+          "icone": "assets/icon-1.svg",
+          "label": "Identificação",
+          "valor": "PT593418923"
+        },
+        {
+          "icone": "assets/icon-2.svg",
+          "label": "Classificação",
+          "valor": "O-4"
+        },
+        {
+          "icone": "assets/icon-3.svg",
+          "label": "Sexo",
+          "valor": "Fêmea"
+        },
+        {
+          "icone": "assets/icon-4.svg",
+          "label": "Idade",
+          "valor": "19 anos"
+        },
+        {
+          "icone": "assets/icon-5.svg",
+          "label": "Livro Genealógico",
+          "valor": "0044"
+        },
+        {
+          "icone": "assets/icon-6.svg",
+          "label": "Pelagem",
+          "valor": "Tipo Sara"
+        },
+        {
+          "icone": "assets/icon-7.svg",
+          "label": "Peso a frio",
+          "valor": "211kg"
+        },
+        {
+          "icone": "assets/icon-8.svg",
+          "label": "Último parto registado",
+          "valor": "19/08/2023"
+        }
       ],
       "criacao": {
         "descricao": "Pastoreio em área de aproximadamente 38 alqueires. No último ano, esteve a pastar sozinha.",
         "alimentacao_regular": [
-          { "icone": "assets/erva.svg", "texto": "Erva fresca" },
-          { "icone": "assets/erva.svg", "texto": "Erva de rolo" }
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Erva fresca"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Erva de rolo"
+          }
         ],
         "fase_acabamento": [
-          { "icone": "assets/farinha.svg", "texto": "Farinha de Milho" }
+          {
+            "icone": "assets/farinha.svg",
+            "texto": "Farinha de Milho"
+          }
         ]
       },
       "o_que_esperar": [
@@ -41,9 +82,18 @@
       "peca_rara": {
         "titulo": "Porque é uma peça rara?",
         "bullets": [
-          { "label": "Longevidade funcional", "texto": "vida reprodutiva ativa e regular ao longo dos anos" },
-          { "label": "Finalidade zootécnica", "texto": "produção de carne" },
-          { "label": "Animal fundador", "texto": "reconhecida como base genética relevante do efetivo, pelo contributo para a fixação de características produtivas e adaptativas transmitidas às gerações seguintes" }
+          {
+            "label": "Longevidade funcional",
+            "texto": "vida reprodutiva ativa e regular ao longo dos anos"
+          },
+          {
+            "label": "Finalidade zootécnica",
+            "texto": "produção de carne"
+          },
+          {
+            "label": "Animal fundador",
+            "texto": "reconhecida como base genética relevante do efetivo, pelo contributo para a fixação de características produtivas e adaptativas transmitidas às gerações seguintes"
+          }
         ],
         "nota_final": {
           "prefixo": "A manutenção da capacidade reprodutiva em idade avançada coloca-a",
@@ -73,56 +123,171 @@
       "titulo": "Ramo Grande DOP · Peter Café Sport",
       "subtitulo": "Peça de origem certificada",
       "secao_titulo": "Esta peça",
-      "selecionado_por": "Talho Rocha",
+      "selecionado_por": "Rocha - Talho e Mercado",
+      "selecionador": {
+        "id": "talho-rocha",
+        "tipo": "parceiro",
+        "nome": "Rocha - Talho e Mercado",
+        "descricao": "Talho e mercado familiar na Agualva, Ilha Terceira, com ligação à seleção de carne local, restauração e distribuição.",
+        "imagem": "assets/logo-rocha.svg",
+        "website": "https://talhorocha.com",
+        "link": "parceiro.html?id=talho-rocha"
+      },
       "confeccionado_por": "Peter Café Sport, Faial",
       "descricao": "Esta peça provém de uma vaca Ramo Grande DOP criada na ilha Terceira, numa exploração familiar onde a ligação a esta raça atravessa gerações. Com 10 anos de idade e 8 crias ao longo da sua vida produtiva, representa mais do que uma peça de carne: representa património genético, maneio tradicional e a continuidade de uma forma açoriana de criar gado.",
       "imagem_bg": "assets/bg-ramo-grande-dop-peter.jpg",
       "certificacaoDop": {
         "titulo": "Certificação Carne Ramo Grande DOP",
+        "logo": "assets/logo-ramo-grande-dop.png",
+        "logoAlt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
         "designacaoOficial": "Carne Ramo Grande DOP",
         "estado": "Certificação DOP confirmada",
         "codigoAnimal": "PT717001037",
         "texto": "Esta peça provém de um animal Ramo Grande DOP com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
         "criterios": [
-          { "label": "Raça",                            "valor": "Ramo Grande DOP",                              "estado": "confirmado" },
-          { "label": "Código único do animal",          "valor": "PT717001037",                                  "estado": "confirmado" },
-          { "label": "Origem geográfica",               "valor": "Açores",                                       "estado": "confirmado" },
-          { "label": "Nascido, criado e abatido nos Açores", "valor": "Confirmado",                              "estado": "confirmado" },
-          { "label": "Sistema de criação",              "valor": "Pastoreio em exploração familiar",             "estado": "confirmado" },
-          { "label": "Alimentação",                     "valor": "Pastagem com trevos, luzerna, azevém e capim", "estado": "confirmado" },
-          { "label": "Fase de acabamento",              "valor": "Farinha de milho e azevém fresco",             "estado": "confirmado" },
-          { "label": "Categoria",                       "valor": "Vaca, fêmea com 8 crias",                      "estado": "confirmado" },
-          { "label": "Peso a frio",                     "valor": "406,10 kg",                                    "estado": "confirmado" },
-          { "label": "Classificação da carcaça",        "valor": "R.4.",                                         "estado": "confirmado" },
-          { "label": "Data de abate",                   "valor": "10/04/2026",                                   "estado": "confirmado" }
+          {
+            "label": "Raça",
+            "valor": "Ramo Grande DOP",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Código único do animal",
+            "valor": "PT717001037",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Origem geográfica",
+            "valor": "Açores",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Nascido, criado e abatido nos Açores",
+            "valor": "Confirmado",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Sistema de criação",
+            "valor": "Pastoreio em exploração familiar",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Alimentação",
+            "valor": "Pastagem com trevos, luzerna, azevém e capim",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Fase de acabamento",
+            "valor": "Farinha de milho e azevém fresco",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Categoria",
+            "valor": "Vaca, fêmea com 8 crias",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Peso a frio",
+            "valor": "406,10 kg",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Classificação da carcaça",
+            "valor": "R.4.",
+            "estado": "confirmado"
+          },
+          {
+            "label": "Data de abate",
+            "valor": "10/04/2026",
+            "estado": "confirmado"
+          }
         ],
         "nota": "Os dados de certificação e rastreabilidade são associados ao código único do animal."
       },
       "caracteristicas": [
-        { "icone": "assets/icon-1.svg", "label": "Identificação",   "valor": "PT717001037" },
-        { "icone": "assets/icon-5.svg", "label": "Raça",            "valor": "Ramo Grande DOP" },
-        { "icone": "assets/icon-3.svg", "label": "Sexo",            "valor": "Fêmea" },
-        { "icone": "assets/icon-4.svg", "label": "Idade",           "valor": "10 anos" },
-        { "icone": "assets/icon-7.svg", "label": "Peso a frio",     "valor": "406,10 kg" },
-        { "icone": "assets/icon-2.svg", "label": "Classificação",   "valor": "R.4." },
-        { "icone": "assets/icon-6.svg", "label": "pH",              "valor": "5,56" },
-        { "icone": "assets/icon-8.svg", "label": "Data de abate",   "valor": "10/04/2026" },
-        { "icone": "assets/icon-3.svg", "label": "Número de crias", "valor": "8" },
-        { "icone": "assets/icon-7.svg", "label": "Avaliação",       "valor": "3.550 €" },
-        { "icone": "assets/icon-6.svg", "label": "Situação",        "valor": "Aprovado" }
+        {
+          "icone": "assets/icon-1.svg",
+          "label": "Identificação",
+          "valor": "PT717001037"
+        },
+        {
+          "icone": "assets/icon-5.svg",
+          "label": "Raça",
+          "valor": "Ramo Grande DOP"
+        },
+        {
+          "icone": "assets/icon-3.svg",
+          "label": "Sexo",
+          "valor": "Fêmea"
+        },
+        {
+          "icone": "assets/icon-4.svg",
+          "label": "Idade",
+          "valor": "10 anos"
+        },
+        {
+          "icone": "assets/icon-7.svg",
+          "label": "Peso a frio",
+          "valor": "406,10 kg"
+        },
+        {
+          "icone": "assets/icon-2.svg",
+          "label": "Classificação",
+          "valor": "R.4."
+        },
+        {
+          "icone": "assets/icon-6.svg",
+          "label": "pH da carne",
+          "valor": "5,56"
+        },
+        {
+          "icone": "assets/icon-8.svg",
+          "label": "Data de abate",
+          "valor": "10/04/2026"
+        },
+        {
+          "icone": "assets/icon-3.svg",
+          "label": "Número de crias",
+          "valor": "8"
+        },
+        {
+          "icone": "assets/icon-7.svg",
+          "label": "Avaliação",
+          "valor": "3.550 €"
+        }
       ],
       "criacao": {
         "descricao": "Exploração familiar na ilha Terceira, com cerca de 30 cabeças e aproximadamente 100 alqueires, maioritariamente propriedade da exploração. Cada animal dispõe, em média, de cerca de 3.000 m² de pasto.",
         "alimentacao_regular": [
-          { "icone": "assets/erva.svg", "texto": "Pastagem com leguminosas" },
-          { "icone": "assets/erva.svg", "texto": "Trevos" },
-          { "icone": "assets/erva.svg", "texto": "Luzerna" },
-          { "icone": "assets/erva.svg", "texto": "Azevém" },
-          { "icone": "assets/erva.svg", "texto": "Capim" }
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Pastagem com leguminosas"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Trevos"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Luzerna"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Azevém"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Capim"
+          }
         ],
         "fase_acabamento": [
-          { "icone": "assets/farinha.svg", "texto": "Farinha de milho" },
-          { "icone": "assets/erva.svg",    "texto": "Azevém fresco" }
+          {
+            "icone": "assets/farinha.svg",
+            "texto": "Farinha de milho"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Azevém fresco"
+          }
         ]
       },
       "o_que_esperar": [
@@ -131,6 +296,7 @@
         "Valorização de uma raça DOP açoriana",
         "Peça com história familiar e produtiva"
       ],
+      "mostrar_o_que_esperar": false,
       "terroir": {
         "titulo": "É uma carne com origem e território",
         "texto": "Criada em pastagens da ilha Terceira, esta peça expressa a ligação entre o animal, o produtor e o território. A alimentação, o maneio e o tempo de criação fazem parte da identidade desta carne e da sua relação com a Ramo Grande DOP."
@@ -138,12 +304,30 @@
       "peca_rara": {
         "titulo": "Porque é uma peça especial?",
         "bullets": [
-          { "label": null, "texto": "Vaca Ramo Grande DOP com 10 anos" },
-          { "label": null, "texto": "8 crias ao longo da sua vida produtiva" },
-          { "label": null, "texto": "Exploração familiar com ligação geracional à raça" },
-          { "label": null, "texto": "O trisavô de Emiliano Meneses já criava Ramo Grande DOP" },
-          { "label": null, "texto": "Último animal criado pelo pai de Emiliano Meneses" },
-          { "label": null, "texto": "Selecionada para o Peter Café Sport, no Faial" }
+          {
+            "label": null,
+            "texto": "Vaca Ramo Grande DOP com 10 anos"
+          },
+          {
+            "label": null,
+            "texto": "8 crias ao longo da sua vida produtiva"
+          },
+          {
+            "label": null,
+            "texto": "Exploração familiar com ligação geracional à raça"
+          },
+          {
+            "label": null,
+            "texto": "O trisavô de Emiliano Meneses já criava Ramo Grande DOP"
+          },
+          {
+            "label": null,
+            "texto": "Último animal criado pelo pai de Emiliano Meneses"
+          },
+          {
+            "label": null,
+            "texto": "Selecionada para o Peter Café Sport, no Faial"
+          }
         ],
         "nota_final": null
       },
@@ -163,13 +347,13 @@
         "id": "peter-cafe-sport",
         "nome": "Peter Café Sport",
         "descricao": "Destino gastronómico desta peça Ramo Grande DOP, no Faial.",
-        "imagem": "assets/peter-cafe-sport.jpg"
+        "imagem": "assets/peter-cafe-sport.png"
       },
       "feedback": {
-        "titulo": "Conheça a origem desta peça",
-        "url": null,
-        "texto": "Através da Meat Azores, esta peça chega ao consumidor com informação sobre a sua origem, produtor, raça, alimentação e dados técnicos. Uma forma de ligar produtores, restaurantes e consumidores através da rastreabilidade.",
-        "botao": "Ver origem completa"
+        "titulo": "Conheça a Meat Azores",
+        "url": "about.html",
+        "texto": "A Meat Azores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+        "botao": "Saber mais sobre a Meat Azores"
       }
     }
   ]

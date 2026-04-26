@@ -3,12 +3,18 @@
 
   const PRODUTORES_JSON = 'data/produtores.json';
   const PECAS_JSON = 'data/pecas.json';
+  const RACAS_JSON = 'data/racas.json';
+  const ASSETS_EM_FALTA = new Set([
+    'assets/emiliano-meneses-01.jpg',
+    'assets/emiliano-meneses-antiga-02.jpg'
+  ]);
 
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
   }
 
   function mostrarErro(mensagem) {
+    esconderSecao('produtor-hero-wrapper');
     const main = document.querySelector('.frame-19');
     if (!main) return;
     main.innerHTML =
@@ -41,6 +47,41 @@
     if (el) el.hidden = true;
   }
 
+  function assetExiste(src) {
+    if (!src) return Promise.resolve(false);
+    if (ASSETS_EM_FALTA.has(src)) return Promise.resolve(false);
+    return fetch(src, { method: 'HEAD' })
+      .then(function (resp) { return resp.ok; })
+      .catch(function () { return false; });
+  }
+
+  function setImagemSeExistir(img, src, onMissing) {
+    if (!img || !src) {
+      if (onMissing) onMissing();
+      return;
+    }
+    assetExiste(src).then(function (existe) {
+      if (existe) img.src = src;
+      else if (onMissing) onMissing();
+    });
+  }
+
+  function carregarImagensDiferidas(scope) {
+    var imagens = (scope || document).querySelectorAll('img[data-src]');
+    imagens.forEach(function (img) {
+      var src = img.getAttribute('data-src');
+      assetExiste(src).then(function (existe) {
+        if (existe) {
+          img.src = src;
+        } else {
+          var wrapper = img.closest('.group-4');
+          if (wrapper) wrapper.hidden = true;
+          else img.hidden = true;
+        }
+      });
+    });
+  }
+
   function renderNumeros(numeros) {
     return numeros.map(function (item) {
       return (
@@ -54,7 +95,7 @@
 
   function renderPecaCard(peca) {
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" onerror="this.parentElement.hidden=true" /></div>'
+      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -64,6 +105,25 @@
           (peca.subtitulo ? '<p class="text-wrapper-34">' + esc(peca.subtitulo) + '</p>' : '') +
           '<a href="peca.html?id=' + esc(peca.id) + '" class="button-arrow-right-2" aria-label="Ver peça ' + esc(peca.titulo) + '">' +
             '<span class="text-wrapper-35">Ver peça</span>' +
+            '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
+          '</a>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderRacaCard(raca) {
+    const imgHtml = raca.imagem
+      ? '<div class="group-4"><img class="image-5" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
+      : '';
+    return (
+      '<div class="frame-27">' +
+        imgHtml +
+        '<div class="frame-28">' +
+          '<div class="text-wrapper-33">' + esc(raca.nome) + '</div>' +
+          (raca.descricao_curta ? '<p class="text-wrapper-34">' + esc(raca.descricao_curta) + '</p>' : '') +
+          '<a href="raca.html?id=' + esc(raca.id) + '" class="button-arrow-right-2" aria-label="Conhecer a raça ' + esc(raca.nome) + '">' +
+            '<span class="text-wrapper-35">Conhecer a raça</span>' +
             '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
           '</a>' +
         '</div>' +
@@ -86,22 +146,21 @@
       wrapper.style.cssText = 'width: calc(50% - 4px); flex-shrink: 0; aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; background: #e8e8e8;';
 
       var img = document.createElement('img');
-      img.src = src;
       img.alt = nomeProdutor + ', fotografia ' + (i + 1);
       img.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
 
-      img.onerror = function () {
+      wrapper.appendChild(img);
+      container.appendChild(wrapper);
+
+      setImagemSeExistir(img, src, function () {
         wrapper.hidden = true;
         falhas++;
         if (falhas === total) esconderSecao('sec-galeria-secao');
-      };
-
-      wrapper.appendChild(img);
-      container.appendChild(wrapper);
+      });
     });
   }
 
-  function preencherProdutor(produtor, todasAsPecas) {
+  function preencherProdutor(produtor, todasAsPecas, todasAsRacas) {
     document.title = produtor.nome + ' | ' + produtor.tipo + ' | Meat Azores';
 
     var metaDesc = document.querySelector('meta[name="description"]');
@@ -113,9 +172,8 @@
     var heroImg = document.getElementById('produtor-hero');
     if (heroImg) {
       if (produtor.hero) {
-        heroImg.src = produtor.hero;
         heroImg.alt = 'Imagem de capa do produtor ' + produtor.nome;
-        heroImg.onerror = function () { esconderSecao('produtor-hero-wrapper'); };
+        setImagemSeExistir(heroImg, produtor.hero, function () { esconderSecao('produtor-hero-wrapper'); });
       } else {
         esconderSecao('produtor-hero-wrapper');
       }
@@ -125,9 +183,8 @@
     var thumbImg = document.getElementById('produtor-thumb');
     if (thumbImg) {
       if (produtor.thumb) {
-        thumbImg.src = produtor.thumb;
         thumbImg.alt = 'Fotografia do produtor ' + produtor.nome;
-        thumbImg.onerror = function () { this.hidden = true; };
+        setImagemSeExistir(thumbImg, produtor.thumb, function () { thumbImg.hidden = true; });
       } else {
         thumbImg.hidden = true;
       }
@@ -184,11 +241,27 @@
         .filter(Boolean);
       if (pecas.length) {
         setHTML('produtor-pecas', pecas.map(renderPecaCard).join(''));
+        carregarImagensDiferidas(document.getElementById('produtor-pecas'));
       } else {
         esconderSecao('sec-pecas-secao');
       }
     } else {
       esconderSecao('sec-pecas-secao');
+    }
+
+    // Raças associadas
+    if (produtor.racas_associadas && produtor.racas_associadas.length) {
+      var racas = produtor.racas_associadas
+        .map(function (id) { return todasAsRacas.find(function (r) { return r.id === id; }); })
+        .filter(Boolean);
+      if (racas.length) {
+        setHTML('produtor-racas', racas.map(renderRacaCard).join(''));
+        carregarImagensDiferidas(document.getElementById('produtor-racas'));
+      } else {
+        esconderSecao('sec-racas-secao');
+      }
+    } else {
+      esconderSecao('sec-racas-secao');
     }
 
     // Galeria
@@ -210,14 +283,17 @@
       }),
       fetch(PECAS_JSON)
         .then(function (r) { return r.json(); })
-        .catch(function () { return { pecas: [] }; })
+        .catch(function () { return { pecas: [] }; }),
+      fetch(RACAS_JSON)
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { racas: [] }; })
     ]).then(function (resultados) {
       var produtor = resultados[0].produtores.find(function (p) { return p.id === id; });
       if (!produtor) {
         mostrarErro('O produtor solicitado não foi encontrado. Por favor, verifique o endereço utilizado.');
         return;
       }
-      preencherProdutor(produtor, resultados[1].pecas || []);
+      preencherProdutor(produtor, resultados[1].pecas || [], resultados[2].racas || []);
     }).catch(function (err) {
       console.error('[produtor.js]', err);
       mostrarErro('Não foi possível carregar os dados deste produtor. Tente novamente mais tarde.');

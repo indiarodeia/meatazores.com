@@ -1,0 +1,25 @@
+{
+  "parceiros": [
+    {
+      "id": "talho-rocha",
+      "nome": "Rocha - Talho e Mercado",
+      "tipo": "Talho e mercado",
+      "papel": "Selecionador",
+      "localizacao": "Agualva, Ilha Terceira, Açores",
+      "website": "https://talhorocha.com",
+      "descricao_curta": "Talho e mercado familiar na Agualva, Ilha Terceira, com ligação à seleção de carne local, restauração e distribuição.",
+      "texto_principal": "O Rocha - Talho e Mercado junta tradição, proximidade e atenção ao produto. Com 36 anos de talho e 25 anos de mercado, é uma casa familiar da Agualva, na ilha Terceira, hoje continuada por uma nova geração. Na Meat Azores, o Talho Rocha assume o papel de selecionador, ligando produtores, peças especiais, restaurantes e consumidores através de uma seleção cuidada e rastreável.",
+      "pontos": [
+        "36 anos de talho",
+        "25 anos de mercado",
+        "Agualva, Ilha Terceira",
+        "Clientes particulares, restauração e distribuição",
+        "Seleção cuidada de carne local",
+        "Ligação entre produtor, talho, restaurante e consumidor"
+      ],
+      "imagem": "assets/talho-rocha.jpg",
+      "logo": "assets/logo-rocha.svg",
+      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"]
+    }
+  ]
+}

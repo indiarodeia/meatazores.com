@@ -3,12 +3,14 @@
 
   const RESTAURANTES_JSON = 'data/restaurantes.json';
   const PECAS_JSON = 'data/pecas.json';
+  const ASSETS_EM_FALTA = new Set();
 
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
   }
 
   function mostrarErro(mensagem) {
+    esconderSecao('restaurante-hero-wrapper');
     const main = document.querySelector('.frame-19');
     if (!main) return;
     main.innerHTML =
@@ -41,9 +43,44 @@
     if (el) el.hidden = true;
   }
 
+  function assetExiste(src) {
+    if (!src) return Promise.resolve(false);
+    if (ASSETS_EM_FALTA.has(src)) return Promise.resolve(false);
+    return fetch(src, { method: 'HEAD' })
+      .then(function (resp) { return resp.ok; })
+      .catch(function () { return false; });
+  }
+
+  function setImagemSeExistir(img, src, onMissing) {
+    if (!img || !src) {
+      if (onMissing) onMissing();
+      return;
+    }
+    assetExiste(src).then(function (existe) {
+      if (existe) img.src = src;
+      else if (onMissing) onMissing();
+    });
+  }
+
+  function carregarImagensDiferidas(scope) {
+    var imagens = (scope || document).querySelectorAll('img[data-src]');
+    imagens.forEach(function (img) {
+      var src = img.getAttribute('data-src');
+      assetExiste(src).then(function (existe) {
+        if (existe) {
+          img.src = src;
+        } else {
+          var wrapper = img.closest('.group-4');
+          if (wrapper) wrapper.hidden = true;
+          else img.hidden = true;
+        }
+      });
+    });
+  }
+
   function renderPecaCard(peca) {
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" onerror="this.parentElement.hidden=true" /></div>'
+      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -72,9 +109,8 @@
     var heroImg = document.getElementById('restaurante-hero');
     if (heroImg) {
       if (restaurante.hero) {
-        heroImg.src = restaurante.hero;
         heroImg.alt = 'Imagem de capa de ' + restaurante.nome;
-        heroImg.onerror = function () { esconderSecao('restaurante-hero-wrapper'); };
+        setImagemSeExistir(heroImg, restaurante.hero, function () { esconderSecao('restaurante-hero-wrapper'); });
       } else {
         esconderSecao('restaurante-hero-wrapper');
       }
@@ -84,9 +120,8 @@
     var imagemEl = document.getElementById('restaurante-imagem');
     if (imagemEl) {
       if (restaurante.imagem && restaurante.imagem !== restaurante.hero) {
-        imagemEl.src = restaurante.imagem;
         imagemEl.alt = 'Fotografia de ' + restaurante.nome;
-        imagemEl.onerror = function () { this.hidden = true; };
+        setImagemSeExistir(imagemEl, restaurante.imagem, function () { imagemEl.hidden = true; });
       } else {
         imagemEl.hidden = true;
       }
@@ -114,6 +149,7 @@
         .filter(Boolean);
       if (pecas.length) {
         setHTML('restaurante-pecas', pecas.map(renderPecaCard).join(''));
+        carregarImagensDiferidas(document.getElementById('restaurante-pecas'));
       } else {
         esconderSecao('sec-pecas-secao');
       }

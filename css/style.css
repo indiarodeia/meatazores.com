@@ -5,10 +5,11 @@
     width: 100%;
     position: relative;
     margin: 0 auto;
-    height: 100%;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .element-welcome .frame {
@@ -24,19 +25,22 @@
 
 .element-welcome .vector {
     width: 100%;
-    height: auto;
+    min-width: 430px;
+
+    object-fit: cover;
 }
 
 .container-welcome {
-    width: 100%;
-    height: 100%;
+    width: min(100%, 430px);
+    max-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 20% 10%;
-    gap: 15%;
+    padding: 20% 32px;
+    gap: clamp(64px, 12vh, 118px);
     z-index: 2;
+    box-sizing: border-box;
 }
 .element-welcome .div-text-button {
     display: flex;
@@ -168,7 +172,7 @@
     width: 100%;
     height: 397px;
     display: flex;
-    background-image: url(/meatazores/assets/bg-degustacao.jpg);
+    background-image: url(../assets/bg-degustacao.jpg);
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -1093,6 +1097,159 @@
     height: auto;
 }
 
+/* CERTIFICAÇÃO DOP */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.element-product .certificacao-dop {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(10, 37, 51, 0.08);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.element-product .certificacao-dop__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.element-product .certificacao-dop__logo {
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+.element-product .certificacao-dop__title {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--neutraldark);
+}
+
+.element-product .certificacao-dop__badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    background-color: rgba(1, 72, 56, 0.1);
+    border-radius: 20px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--dark-green);
+    width: fit-content;
+}
+
+.element-product .certificacao-dop__codigo {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--neutraldark);
+    letter-spacing: 0.04em;
+}
+
+.element-product .certificacao-dop__text {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--neutralgrey-1);
+    line-height: 1.65;
+    margin: 0;
+}
+
+.element-product .certificacao-dop__grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid var(--neutralgrey-4);
+}
+
+.element-product .certificacao-dop__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--neutralgrey-4);
+}
+
+.element-product .certificacao-dop__label {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--neutralgrey-2);
+    flex: 0 0 auto;
+    max-width: 52%;
+}
+
+.element-product .certificacao-dop__value {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--neutraldark);
+    text-align: right;
+    flex: 1;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.element-product .certificacao-dop__note {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--neutralgrey-2);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (min-width: 600px) {
+    .element-product .certificacao-dop__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .element-product .certificacao-dop__item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+    .element-product .certificacao-dop__label {
+        max-width: 100%;
+    }
+    .element-product .certificacao-dop__value {
+        text-align: left;
+    }
+}
+
+/* LOGOTIPO DE RAÇA */
+
+.element-producer #raca-logo-container {
+    margin-top: 12px;
+}
+
+.element-producer .raca-logo {
+    max-width: 140px;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
 /* PRODUCER PAGE - MANUEL LUCAS */
 
 .element-producer {
@@ -1247,7 +1404,6 @@
     position: relative;
     align-self: stretch;
     width: 100%;
-    height: 128px;
 }
 
 .element-producer .frame-21 {
@@ -1310,7 +1466,6 @@
 
 .element-producer .frame-23 {
     display: flex;
-    width: 192px;
     align-items: flex-start;
     position: relative;
 }
@@ -1588,8 +1743,17 @@
     position: relative;
     width: 16px;
     height: 16px;
-    background-image: url(https://c.animaapp.com/mkrplbbpJqKSTj/img/iconly-light-arrow---right.svg);
-    background-size: 100% 100%;
+    background-image: none;
+}
+
+.element-producer .iconly-light-arrow-2::before {
+    content: '\203A';
+    position: absolute;
+    inset: -3px 0 0 0;
+    color: #0a2533;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 16px;
 }
 
 .element-producer .separator-4 {
@@ -2371,8 +2535,17 @@
     position: relative;
     width: 16px;
     height: 16px;
-    background-image: url(https://c.animaapp.com/mkrplbbpJqKSTj/img/iconly-light-arrow---right.svg);
-    background-size: 100% 100%;
+    background-image: none;
+}
+
+.element-catrina .iconly-light-arrow-3::before {
+    content: '\203A';
+    position: absolute;
+    inset: -3px 0 0 0;
+    color: #0a2533;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
+    line-height: 16px;
 }
 
 .element-catrina .content-5 {
@@ -2624,4 +2797,864 @@
     font-style: normal;
     font-weight: 700;
     line-height: 130%; /* 26px */
+}
+
+/* DYNAMIC PAGES - LIGHT MOBILE POLISH */
+
+body:has(#peca-titulo) .element-product,
+body:has(#produtor-nome) .element-producer,
+body:has(#raca-nome) .element-producer,
+body:has(#restaurante-nome) .element-producer {
+    --ma-ink: #0a2533;
+    --ma-muted: #5f6f7a;
+    --ma-line: rgba(10, 37, 51, 0.08);
+    --ma-trust: #014838;
+    --ma-cta: #cef17b;
+    --ma-card-radius: 16px;
+    --ma-card-shadow: 0 10px 28px rgba(10, 37, 51, 0.08);
+}
+
+body:has(#peca-titulo) .element-product .detail-content,
+body:has(#produtor-nome) .element-producer .frame-19,
+body:has(#raca-nome) .element-producer .frame-19,
+body:has(#restaurante-nome) .element-producer .frame-19 {
+    gap: 24px;
+}
+
+body:has(#peca-titulo) .element-product .detail-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body:has(#peca-titulo) .element-product .text-wrapper,
+body:has(#produtor-nome) .element-producer .text-wrapper-24,
+body:has(#raca-nome) .element-producer .text-wrapper-24,
+body:has(#restaurante-nome) .element-producer .text-wrapper-24 {
+    color: var(--ma-trust);
+    font-family: 'Sofia Pro', Helvetica;
+    line-height: 1.22;
+    white-space: normal;
+}
+
+body:has(#peca-titulo) .element-product .p,
+body:has(#peca-titulo) .element-product .heading-xl,
+body:has(#peca-titulo) .element-product .text-wrapper-14,
+body:has(#peca-titulo) .element-product .text-wrapper-18,
+body:has(#peca-titulo) .element-product .text-wrapper-22,
+body:has(#produtor-nome) .element-producer .heading-xl,
+body:has(#produtor-nome) .element-producer .text-wrapper-26,
+body:has(#produtor-nome) .element-producer .text-wrapper-31,
+body:has(#produtor-nome) .element-producer .text-wrapper-33,
+body:has(#raca-nome) .element-producer .heading-xl,
+body:has(#raca-nome) .element-producer .text-wrapper-26,
+body:has(#raca-nome) .element-producer .text-wrapper-31,
+body:has(#raca-nome) .element-producer .text-wrapper-33,
+body:has(#restaurante-nome) .element-producer .heading-xl,
+body:has(#restaurante-nome) .element-producer .text-wrapper-26,
+body:has(#restaurante-nome) .element-producer .text-wrapper-31,
+body:has(#restaurante-nome) .element-producer .text-wrapper-33 {
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+}
+
+body:has(#peca-titulo) .element-product .text-wrapper-4,
+body:has(#peca-titulo) .element-product .text-wrapper-12,
+body:has(#peca-titulo) .element-product .sabor-intenso-e,
+body:has(#peca-titulo) .element-product .longevidade,
+body:has(#peca-titulo) .element-product .text-wrapper-21,
+body:has(#peca-titulo) .element-product .text-wrapper-23,
+body:has(#produtor-nome) .element-producer .text-wrapper-27,
+body:has(#produtor-nome) .element-producer .text-wrapper-30,
+body:has(#produtor-nome) .element-producer .text-wrapper-32,
+body:has(#produtor-nome) .element-producer .text-wrapper-34,
+body:has(#raca-nome) .element-producer .text-wrapper-27,
+body:has(#raca-nome) .element-producer .text-wrapper-30,
+body:has(#raca-nome) .element-producer .text-wrapper-32,
+body:has(#raca-nome) .element-producer .text-wrapper-34,
+body:has(#restaurante-nome) .element-producer .text-wrapper-27,
+body:has(#restaurante-nome) .element-producer .text-wrapper-30,
+body:has(#restaurante-nome) .element-producer .text-wrapper-32,
+body:has(#restaurante-nome) .element-producer .text-wrapper-34 {
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+    line-height: 1.42;
+}
+
+body:has(#peca-titulo) .element-product .span,
+body:has(#peca-titulo) .element-product .text-wrapper-6,
+body:has(#produtor-nome) .element-producer .produtor-de-carne,
+body:has(#produtor-nome) .element-producer .text-wrapper-25,
+body:has(#produtor-nome) .element-producer .text-wrapper-29,
+body:has(#raca-nome) .element-producer .produtor-de-carne,
+body:has(#raca-nome) .element-producer .text-wrapper-25,
+body:has(#raca-nome) .element-producer .text-wrapper-29,
+body:has(#restaurante-nome) .element-producer .produtor-de-carne,
+body:has(#restaurante-nome) .element-producer .text-wrapper-25,
+body:has(#restaurante-nome) .element-producer .text-wrapper-29 {
+    color: var(--ma-muted);
+}
+
+body:has(#produtor-nome) .element-producer .header-2,
+body:has(#raca-nome) .element-producer .header-2,
+body:has(#restaurante-nome) .element-producer .header-2 {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 20px;
+    box-shadow: var(--ma-card-shadow);
+    padding: 12px;
+}
+
+body:has(#produtor-nome) .element-producer .clip-path-group-2,
+body:has(#raca-nome) .element-producer .clip-path-group-2,
+body:has(#restaurante-nome) .element-producer .clip-path-group-2,
+body:has(#produtor-nome) .element-producer .image-4,
+body:has(#raca-nome) .element-producer .image-4,
+body:has(#restaurante-nome) .element-producer .image-4,
+body:has(#peca-titulo) .element-product .clip-path-group,
+body:has(#peca-titulo) .element-product .image-wrapper,
+body:has(#peca-titulo) .element-product .image-2,
+body:has(#produtor-nome) .element-producer .group-4,
+body:has(#produtor-nome) .element-producer .image-5,
+body:has(#raca-nome) .element-producer .group-4,
+body:has(#raca-nome) .element-producer .image-5,
+body:has(#restaurante-nome) .element-producer .group-4,
+body:has(#restaurante-nome) .element-producer .image-5 {
+    border-radius: var(--ma-card-radius);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+body:has(#peca-titulo) .element-product .frame-13,
+body:has(#peca-titulo) .element-product .frame-15,
+body:has(#produtor-nome) .element-producer .frame-27,
+body:has(#raca-nome) .element-producer .frame-27,
+body:has(#restaurante-nome) .element-producer .frame-27 {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: var(--ma-card-radius);
+    box-shadow: 0 8px 22px rgba(10, 37, 51, 0.06);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+body:has(#peca-titulo) .element-product .frame-14,
+body:has(#peca-titulo) .element-product .frame-16,
+body:has(#produtor-nome) .element-producer .frame-28,
+body:has(#raca-nome) .element-producer .frame-28,
+body:has(#restaurante-nome) .element-producer .frame-28 {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    margin-right: 0;
+    gap: 4px;
+}
+
+body:has(#peca-titulo) .element-product .text-wrapper-18,
+body:has(#peca-titulo) .element-product .text-wrapper-21,
+body:has(#produtor-nome) .element-producer .text-wrapper-33,
+body:has(#produtor-nome) .element-producer .text-wrapper-34,
+body:has(#raca-nome) .element-producer .text-wrapper-33,
+body:has(#raca-nome) .element-producer .text-wrapper-34,
+body:has(#restaurante-nome) .element-producer .text-wrapper-33,
+body:has(#restaurante-nome) .element-producer .text-wrapper-34 {
+    white-space: normal;
+}
+
+body:has(#peca-titulo) .element-product .certificacao-dop {
+    border: 1px solid rgba(1, 72, 56, 0.1);
+    border-radius: var(--ma-card-radius);
+    box-shadow: var(--ma-card-shadow);
+}
+
+body:has(#peca-titulo) .element-product .certificacao-dop__badge,
+body:has(#produtor-nome) .element-producer .produtor-de-carne,
+body:has(#raca-nome) .element-producer .produtor-de-carne,
+body:has(#restaurante-nome) .element-producer .produtor-de-carne {
+    color: var(--ma-trust);
+    background: rgba(1, 72, 56, 0.08);
+    border-radius: 999px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-de-carne,
+body:has(#raca-nome) .element-producer .produtor-de-carne,
+body:has(#restaurante-nome) .element-producer .produtor-de-carne {
+    padding: 4px 9px;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: normal;
+}
+
+body:has(#peca-titulo) .element-product .button-arrow-right,
+body:has(#peca-titulo) .element-product .button-login,
+body:has(#produtor-nome) .element-producer .button-arrow-right-2,
+body:has(#raca-nome) .element-producer .button-arrow-right-2,
+body:has(#restaurante-nome) .element-producer .button-arrow-right-2,
+body:has(#parceiro-nome) .element-producer .button-arrow-right-2 {
+    background-color: var(--ma-cta);
+    border-radius: 10px;
+    box-shadow: 0 5px 14px rgba(206, 241, 123, 0.28);
+}
+
+body:has(#peca-titulo) .element-product .separator,
+body:has(#peca-titulo) .element-product .separator-2,
+body:has(#produtor-nome) .element-producer .separator-3,
+body:has(#produtor-nome) .element-producer .separator-4,
+body:has(#raca-nome) .element-producer .separator-3,
+body:has(#raca-nome) .element-producer .separator-4,
+body:has(#restaurante-nome) .element-producer .separator-3,
+body:has(#restaurante-nome) .element-producer .separator-4 {
+    opacity: 0.42;
+}
+
+body:has(#peca-titulo) .element-product .content,
+body:has(#peca-titulo) .element-product .creators-2,
+body:has(#produtor-nome) .element-producer .content-3,
+body:has(#raca-nome) .element-producer .content-3,
+body:has(#restaurante-nome) .element-producer .content-3 {
+    gap: 14px;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas[hidden] {
+    display: none;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    padding-bottom: 4px;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__header .heading-xl {
+    margin: 0;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__ver-todas {
+    flex: 0 0 auto;
+    color: var(--ma-trust);
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__lista {
+    display: flex;
+    gap: 12px;
+    width: calc(100% + 20px);
+    margin-right: -20px;
+    padding: 2px 20px 12px 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__lista::-webkit-scrollbar {
+    display: none;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__card {
+    display: flex;
+    flex: 0 0 132px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    min-height: 156px;
+    padding: 12px 10px 14px;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(10, 37, 51, 0.07);
+    box-sizing: border-box;
+    color: var(--ma-ink);
+    text-align: center;
+    text-decoration: none;
+    scroll-snap-align: start;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
+    background: #d9e7b8;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__img {
+    display: block;
+    width: 88px;
+    height: 88px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__img[hidden] {
+    display: none;
+}
+
+body:has(#raca-nome) .element-producer .outras-racas__nome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 38px;
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 430px) {
+    body:has(#peca-titulo) .element-product .text-wrapper {
+        font-size: 24px;
+    }
+
+    body:has(#peca-titulo) .element-product .p {
+        font-size: 18px;
+    }
+
+    body:has(#peca-titulo) .element-product .button-login {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* APP BOTTOM NAVIGATION AND SIMPLE INDEX PAGES */
+
+body:has(.ma-bottom-nav) {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+}
+
+body:has(.ma-bottom-nav) .element-welcome {
+    min-height: 100vh;
+}
+
+body:has(.ma-bottom-nav) .detail-content,
+body:has(.ma-bottom-nav) .element-producer .frame-19 {
+    padding-bottom: calc(128px + env(safe-area-inset-bottom));
+}
+
+.ma-bottom-nav {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    align-items: end;
+    width: min(100%, 430px);
+    min-height: 74px;
+    padding: 9px 12px calc(10px + env(safe-area-inset-bottom));
+    background: #fff;
+    border: 1px solid rgba(10, 37, 51, 0.08);
+    border-bottom: 0;
+    border-radius: 24px 24px 0 0;
+    box-shadow: 0 -10px 28px rgba(10, 37, 51, 0.12);
+    transform: translateX(-50%);
+    box-sizing: border-box;
+}
+
+.ma-bottom-nav__item {
+    display: flex;
+    min-width: 0;
+    height: 56px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: #6f7d85;
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+}
+
+.ma-bottom-nav__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+
+.ma-bottom-nav__icon svg {
+    width: 23px;
+    height: 23px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.ma-bottom-nav__label {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.ma-bottom-nav__item.is-active {
+    color: #014838;
+}
+
+.ma-bottom-nav__item--scan {
+    transform: translateY(-16px);
+}
+
+.ma-bottom-nav__item--scan .ma-bottom-nav__icon {
+    width: 58px;
+    height: 58px;
+    color: #fff;
+    background: #014838;
+    border: 5px solid #fff;
+    border-radius: 999px;
+    box-shadow: 0 10px 24px rgba(1, 72, 56, 0.28);
+}
+
+.ma-bottom-nav__item--scan .ma-bottom-nav__icon svg {
+    width: 27px;
+    height: 27px;
+    stroke-width: 2.1;
+}
+
+.ma-bottom-nav__item--scan .ma-bottom-nav__label {
+    margin-top: -2px;
+    color: #014838;
+}
+
+.app-page {
+    --ma-ink: #0a2533;
+    --ma-muted: #5f6f7a;
+    --ma-line: rgba(10, 37, 51, 0.08);
+    --ma-trust: #014838;
+    --ma-cta: #cef17b;
+    width: min(100%, 430px);
+    min-height: 100vh;
+    margin: 0 auto;
+    padding: 28px 20px 128px;
+    background: #f7faf7;
+    box-sizing: border-box;
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+}
+
+.app-page--center {
+    display: flex;
+    align-items: center;
+}
+
+.app-page__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.app-page__logo {
+    width: 124px;
+    max-width: 42vw;
+    height: auto;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: #014838;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.app-page__eyebrow {
+    margin: 0;
+    padding: 5px 10px;
+    color: var(--ma-trust);
+    background: rgba(1, 72, 56, 0.08);
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.app-page__title {
+    margin: 0;
+    color: var(--ma-ink);
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: 0;
+}
+
+.app-page__text,
+.app-card p {
+    margin: 0;
+    color: var(--ma-ink);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+.catalog-section,
+.app-card,
+.app-message {
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 18px;
+    box-shadow: 0 10px 28px rgba(10, 37, 51, 0.08);
+}
+
+.catalog-section {
+    padding: 16px 0 18px;
+}
+
+.catalog-section__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 14px;
+}
+
+.catalog-section__header h2,
+.app-card h2 {
+    margin: 0;
+    color: var(--ma-ink);
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.catalog-grid {
+    display: flex;
+    gap: 12px;
+    padding: 2px 16px 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+    -webkit-overflow-scrolling: touch;
+}
+
+.catalog-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.catalog-card {
+    display: flex;
+    flex: 0 0 142px;
+    min-height: 188px;
+    flex-direction: column;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 10px 14px;
+    color: var(--ma-ink);
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 18px;
+    box-shadow: 0 8px 22px rgba(10, 37, 51, 0.07);
+    text-align: center;
+    text-decoration: none;
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+.catalog-card__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 96px;
+    height: 96px;
+    background: #d9e7b8;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.catalog-card__img {
+    display: block;
+    width: 92px;
+    height: 92px;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+.catalog-card__img[hidden] {
+    display: none;
+}
+
+.catalog-card__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-width: 0;
+}
+
+.catalog-card__title {
+    color: var(--ma-ink);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.22;
+}
+
+.catalog-card__meta {
+    color: var(--ma-muted);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.app-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 18px;
+    margin-bottom: 14px;
+}
+
+.app-link {
+    color: var(--ma-trust);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.app-message {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.app-message__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    color: #fff;
+    background: #014838;
+    border-radius: 20px;
+    box-shadow: 0 10px 24px rgba(1, 72, 56, 0.22);
+}
+
+.app-message__icon svg {
+    width: 32px;
+    height: 32px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.1;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.app-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 18px;
+    color: #0a2533;
+    background: #cef17b;
+    border-radius: 14px;
+    box-shadow: 0 5px 14px rgba(206, 241, 123, 0.28);
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1;
+    text-decoration: none;
+}
+
+/* SCROLL STABILITY FOR DYNAMIC PAGES */
+
+html:has(.ma-bottom-nav),
+body:has(.ma-bottom-nav) {
+    height: auto;
+    min-height: 100%;
+}
+
+body:has(#peca-titulo) .element-product .details-scan {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 320px;
+}
+
+body:has(#peca-titulo) .element-product .detail-content {
+    position: relative;
+    top: auto;
+}
+
+body:has(#peca-titulo) .element-product .bg {
+    bottom: 0;
+    height: auto;
+}
+
+body:has(#produtor-nome) .element-producer,
+body:has(#raca-nome) .element-producer,
+body:has(#restaurante-nome) .element-producer,
+body:has(#parceiro-nome) .element-producer {
+    align-items: flex-start;
+}
+
+body:has(#produtor-nome) .element-producer .frame-19,
+body:has(#raca-nome) .element-producer .frame-19,
+body:has(#restaurante-nome) .element-producer .frame-19,
+body:has(#parceiro-nome) .element-producer .frame-19 {
+    position: relative;
+    top: auto;
+    padding-top: 174px;
+}
+
+body:has(#parceiro-nome) .element-producer {
+    --ma-ink: #0a2533;
+    --ma-muted: #5f6f7a;
+    --ma-line: rgba(10, 37, 51, 0.08);
+    --ma-trust: #014838;
+    --ma-cta: #cef17b;
+    --ma-card-radius: 16px;
+    --ma-card-shadow: 0 10px 28px rgba(10, 37, 51, 0.08);
+}
+
+body:has(#parceiro-nome) .element-producer .frame-19 {
+    gap: 24px;
+}
+
+body:has(#parceiro-hero-wrapper[hidden]) .element-producer .frame-19 {
+    padding-top: 28px;
+}
+
+body:has(#parceiro-nome) .element-producer .header-2 {
+    align-items: center;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 20px;
+    box-shadow: var(--ma-card-shadow);
+    padding: 12px;
+}
+
+body:has(#parceiro-nome) .element-producer .text-wrapper-24 {
+    color: var(--ma-trust);
+    font-family: 'Sofia Pro', Helvetica;
+    line-height: 1.22;
+    white-space: normal;
+}
+
+body:has(#parceiro-nome) .element-producer .heading-xl,
+body:has(#parceiro-nome) .element-producer .text-wrapper-26,
+body:has(#parceiro-nome) .element-producer .text-wrapper-31,
+body:has(#parceiro-nome) .element-producer .text-wrapper-33 {
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+}
+
+body:has(#parceiro-nome) .element-producer .text-wrapper-27,
+body:has(#parceiro-nome) .element-producer .text-wrapper-30,
+body:has(#parceiro-nome) .element-producer .text-wrapper-32,
+body:has(#parceiro-nome) .element-producer .text-wrapper-34 {
+    color: var(--ma-ink);
+    font-family: 'Sofia Pro', Helvetica;
+    line-height: 1.42;
+}
+
+body:has(#parceiro-nome) .element-producer .produtor-de-carne,
+body:has(#parceiro-nome) .element-producer .text-wrapper-25,
+body:has(#parceiro-nome) .element-producer .text-wrapper-29 {
+    color: var(--ma-muted);
+}
+
+body:has(#parceiro-nome) .element-producer .produtor-de-carne {
+    padding: 4px 9px;
+    color: var(--ma-trust);
+    background: rgba(1, 72, 56, 0.08);
+    border-radius: 999px;
+    font-size: 11px;
+    line-height: 1.2;
+    white-space: normal;
+}
+
+body:has(#parceiro-nome) .element-producer .clip-path-group-2,
+body:has(#parceiro-nome) .element-producer .image-4,
+body:has(#parceiro-nome) .element-producer .group-4,
+body:has(#parceiro-nome) .element-producer .image-5 {
+    border-radius: var(--ma-card-radius);
+    object-fit: cover;
+    overflow: hidden;
+}
+
+body:has(#parceiro-nome) .element-producer .frame-27 {
+    width: 100%;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: var(--ma-card-radius);
+    box-shadow: 0 8px 22px rgba(10, 37, 51, 0.06);
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+body:has(#parceiro-nome) .element-producer .frame-28 {
+    flex: 1;
+    width: auto;
+    min-width: 0;
+    margin-right: 0;
+    gap: 4px;
+}
+
+body:has(#peca-titulo) .element-product .frame-13,
+body:has(#peca-titulo) .element-product .frame-15 {
+    gap: 16px;
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 10px 26px rgba(10, 37, 51, 0.08);
+}
+
+body:has(#peca-titulo) .element-product .clip-path-group,
+body:has(#peca-titulo) .element-product .image-wrapper {
+    flex: 0 0 86px;
+    width: 86px;
+    height: 86px;
+}
+
+body:has(#peca-titulo) .element-product .image-2 {
+    top: 4px;
+    left: 4px;
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+}
+
+body:has(#peca-titulo) .element-product .frame-14,
+body:has(#peca-titulo) .element-product .frame-16 {
+    gap: 7px;
+}
+
+body:has(#peca-titulo) .element-product .peca-inline-link {
+    color: #032628;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+body:has(#peca-titulo) .element-product .peca-website-link {
+    color: var(--ma-trust);
+    background: rgba(1, 72, 56, 0.07);
+    box-shadow: none;
 }

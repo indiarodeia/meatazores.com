@@ -6,11 +6,13 @@
       "tipo": "Restaurante / destino gastronómico",
       "localizacao": "Faial, Açores",
       "descricao_curta": "Destino gastronómico da peça Ramo Grande DOP · Peter Café Sport, selecionada através da Meat Azores.",
-      "hero": "assets/peter-cafe-sport.jpg",
-      "imagem": "assets/peter-cafe-sport.jpg",
+      "hero": "assets/peter-cafe-sport.png",
+      "imagem": "assets/peter-cafe-sport.png",
       "texto_principal": "O Peter Café Sport, no Faial, é o destino gastronómico desta peça Ramo Grande DOP selecionada através da Meat Azores. Através da rastreabilidade, o consumidor pode conhecer a origem da carne, o produtor e os dados técnicos associados à peça servida.",
       "cta": "Conheça a origem da peça Ramo Grande DOP · Peter Café Sport.",
-      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"]
+      "pecas_associadas": [
+        "ramo-grande-dop-peter-cafe-sport"
+      ]
     }
   ]
 }

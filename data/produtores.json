@@ -26,6 +26,36 @@
         "assets/emiliano-meneses-antiga-01.jpg",
         "assets/emiliano-meneses-antiga-02.jpg"
       ]
+    },
+    {
+      "id": "manuel-lucas",
+      "nome": "Manuel Lucas",
+      "tipo": "Produtor de gado Catrina",
+      "localizacao": "Vila Nova, Terceira",
+      "descricao_curta": "Produtor de gado Catrina da ilha Terceira, dedicado à criação em regime extensivo e à valorização de uma raça autóctone portuguesa com raízes na Terceira.",
+      "hero": "assets/bg-manuel.jpg",
+      "thumb": "assets/thumb-manuel.png",
+      "historia": "A exploração começou de forma gradual e com aprendizagem prática. A vaca que marcou a primeira degustação Meat Azores foi comprada ao seu tio, João Ângelo, e foi a segunda vaca da exploração. A primeira tentativa não resultou e a decisão de continuar acabou por definir o caminho do produtor. Ao longo destes anos, a prioridade manteve-se: criar com tempo, consistência e respeito pelo animal e pelo território.",
+      "exploracao": "Produtor desde 2003, Manuel Lucas dedica-se à criação de bovinos Catrina em regime extensivo, com uma gestão assente no pasto e no respeito pelo ritmo natural dos animais. A manada é mantida com maneio simples e consistente, valorizando a origem e a qualidade do que se produz na ilha.",
+      "numeros": [
+        { "label": "Rebanho", "valor": "16 animais" },
+        { "label": "Raça criada", "valor": "Catrina" },
+        { "label": "Área de pastoreio", "valor": "38 alqueires" },
+        { "label": "Sistema de produção", "valor": "Extensivo" },
+        { "label": "Média de abates por ano", "valor": "2" },
+        { "label": "Produtor desde", "valor": "2003" }
+      ],
+      "alimentacao": [
+        { "label": "Alimentação regular", "valor": "Erva fresca" },
+        { "label": "Alimentação regular", "valor": "Erva de rolo" },
+        { "label": "Fase de acabamento", "valor": "Farinha de milho" }
+      ],
+      "maneio_alimentacao": "A alimentação regular assenta em erva fresca e erva de rolo. Na fase de acabamento, é complementada com farinha de milho, mantendo uma ligação direta ao maneio tradicional e ao aproveitamento dos recursos disponíveis.",
+      "ligacao_raca": "A ligação de Manuel Lucas à Catrina reforça a importância de preservar raças autóctones raras, valorizando produtores que mantêm vivo este património genético, cultural e rural da ilha Terceira.",
+      "nota_especial": "A Catrina tem um efetivo muito reduzido, o que torna particularmente importante o trabalho dos produtores que continuam a criar e preservar esta raça.",
+      "pecas_associadas": ["catrina-19-anos"],
+      "racas_associadas": ["catrina"],
+      "galeria": ["assets/img-catrina.jpg"]
     }
   ]
 }

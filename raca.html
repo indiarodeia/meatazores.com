@@ -50,6 +50,7 @@
                             </div>
                         </div>
                     </div>
+                    <div id="raca-logo-container" hidden></div>
                 </div>
             </header>
 
@@ -105,6 +106,9 @@
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
 
+            <!-- Secções extra (opcional, preenchido por JS) -->
+            <div id="raca-secoes-extra"></div>
+
             <!-- Peças associadas -->
             <section id="sec-pecas-secao" class="content-3" aria-labelledby="sec-pecas">
                 <div class="div-4">
@@ -135,6 +139,15 @@
                 <div id="raca-galeria" style="display: flex; flex-wrap: wrap; gap: 8px; width: 100%;"></div>
             </section>
 
+            <!-- Outras raças -->
+            <section id="sec-outras-racas-secao" class="outras-racas" aria-labelledby="sec-outras-racas" hidden>
+                <div class="outras-racas__header">
+                    <h2 id="sec-outras-racas" class="heading-xl">Outras raças</h2>
+                    <a href="#" class="outras-racas__ver-todas" aria-label="Ver todas as raças">Ver todas</a>
+                </div>
+                <div id="raca-outras-racas" class="outras-racas__lista" aria-label="Lista de outras raças"></div>
+            </section>
+
         </main>
 
         <!-- Barra de ações -->
@@ -151,6 +164,7 @@
     </div>
 
     <script src="js/raca.js"></script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>
