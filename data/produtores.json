@@ -1,0 +1,31 @@
+{
+  "produtores": [
+    {
+      "id": "emiliano-meneses",
+      "nome": "Emiliano Meneses",
+      "tipo": "Criador de Ramo Grande DOP",
+      "localizacao": "Ilha Terceira, Açores",
+      "descricao_curta": "Criador de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
+      "hero": "assets/bg-emiliano-meneses.jpg",
+      "thumb": "assets/thumb-emiliano-meneses.png",
+      "historia": "A exploração de Emiliano Meneses é marcada por uma ligação antiga à Ramo Grande DOP. A história familiar remonta ao seu trisavô, que já criava esta raça, mantendo viva uma tradição profundamente ligada à agricultura e à pecuária da ilha Terceira.",
+      "exploracao": "Com cerca de 30 cabeças e uma área aproximada de 100 alqueires, maioritariamente propriedade da exploração, o maneio privilegia o espaço, o pasto e a relação próxima com os animais. Cada animal dispõe, em média, de cerca de 3.000 m² de pastagem.",
+      "numeros": [
+        { "label": "Rebanho (efetivo)", "valor": "30 cabeças" },
+        { "label": "Área de pastoreio", "valor": "100 alqueires" },
+        { "label": "Pasto por animal", "valor": "3.000 m²" },
+        { "label": "Localização", "valor": "Ilha Terceira, Açores" }
+      ],
+      "maneio_alimentacao": "As pastagens incluem trevos, luzerna, azevém e capim, elementos que fazem parte da alimentação natural dos animais e refletem a riqueza agrícola da ilha. Na fase de acabamento, a alimentação é complementada com farinha de milho e azevém fresco.",
+      "ligacao_raca_titulo": "Ligação à Ramo Grande DOP",
+      "ligacao_raca": "A ligação da família de Emiliano Meneses à Ramo Grande DOP atravessa gerações. Esta continuidade representa conhecimento prático, património agrícola e uma forma de criação profundamente ligada ao território.",
+      "nota_especial": "O animal selecionado para o Peter Café Sport tem um significado especial: foi o último animal criado pelo pai de Emiliano Meneses, tornando esta peça também uma memória familiar.",
+      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"],
+      "galeria": [
+        "assets/emiliano-meneses-01.jpg",
+        "assets/emiliano-meneses-antiga-01.jpg",
+        "assets/emiliano-meneses-antiga-02.jpg"
+      ]
+    }
+  ]
+}

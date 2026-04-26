@@ -1,0 +1,26 @@
+{
+  "racas": [
+    {
+      "id": "ramo-grande-dop",
+      "nome": "Ramo Grande DOP",
+      "tipo": "Raça bovina autóctone dos Açores",
+      "localizacao": "Açores, com forte ligação à ilha Terceira",
+      "descricao_curta": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
+      "hero": "assets/bg-ramo-grande-dop.jpg",
+      "imagem": "assets/ramo-grande-dop.png",
+      "introducao": "A Ramo Grande DOP é uma raça bovina autóctone dos Açores, com uma ligação particularmente forte à ilha Terceira. Representa uma parte importante do património agrícola açoriano e da história das explorações familiares que mantiveram esta raça presente no território.",
+      "origem_territorio": "A Ramo Grande DOP está associada à história rural da ilha Terceira e à forma como várias gerações de produtores açorianos trabalharam a terra, o pasto e o gado. A sua valorização passa também por comunicar a origem, o maneio e os produtores que mantêm viva esta ligação.",
+      "valor_patrimonial": "Mais do que uma raça bovina, a Ramo Grande DOP representa continuidade, identidade agrícola e memória familiar. Ao tornar a sua origem visível, a Meat Azores contribui para aproximar o consumidor do território e das pessoas que estão por trás do produto.",
+      "caracteristicas": [
+        "Raça bovina autóctone dos Açores",
+        "Forte ligação à ilha Terceira",
+        "Valor patrimonial e cultural",
+        "Associada a explorações familiares e maneio tradicional",
+        "Produto com denominação de origem protegida"
+      ],
+      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"],
+      "produtores_associados": ["emiliano-meneses"],
+      "galeria": ["assets/ramo-grande-dop-pasto.jpg"]
+    }
+  ]
+}
