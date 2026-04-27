@@ -1,12 +1,21 @@
 (function () {
   'use strict';
 
-  const ACTIVE_PIECE = 'ramo-grande-dop-peter-cafe-sport';
+  const DEFAULT_PECA_ID = 'ramo-grande-dop-peter-cafe-sport';
+
+  function getHomePecaId() {
+    try {
+      return localStorage.getItem('ma_peca_ativa') || DEFAULT_PECA_ID;
+    } catch (e) {
+      return DEFAULT_PECA_ID;
+    }
+  }
+
   const ITEMS = [
     {
       key: 'home',
       label: 'Home',
-      href: 'index.html?peca=' + ACTIVE_PIECE,
+      href: null,
       paths: ['/', '/index.html', '/peca.html', '/restaurante.html', '/parceiro.html'],
       icon: '<path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1v-9.5Z" />'
     },
@@ -68,6 +77,9 @@
 
     var pathname = normalizarPath(window.location.pathname);
     if (pathname === '/' || pathname === '/index.html') return;
+
+    var homeItem = ITEMS.find(function (i) { return i.key === 'home'; });
+    if (homeItem) homeItem.href = 'peca.html?id=' + getHomePecaId();
 
     var nav = document.createElement('nav');
     nav.className = 'ma-bottom-nav';

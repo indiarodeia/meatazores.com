@@ -587,16 +587,14 @@
 .element-product .group {
     position: relative;
     width: 100%;
-    height: 66px;
     margin-right: -4px;
     margin-bottom: 16px;
 }
 
 .element-product .text-wrapper-12 {
-    position: absolute;
-    top: 30px;
-    left: 0;
+    position: relative;
     width: 100%;
+    margin-top: 6px;
     font-family: 'Sofia Pro-Regular', Helvetica;
     font-weight: 400;
     color: var(--neutralgrey-1);
@@ -608,7 +606,6 @@
 .element-product .frame-wrapper {
     position: relative;
     width: 100%;
-    height: 49px;
 }
 
 .element-product .frame-10 {
@@ -634,7 +631,8 @@
 }
 
 .element-product .frame-11 {
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 5px;
     position: relative;
@@ -684,14 +682,10 @@
 }
 
 .element-product .fats-4 {
-    display: inline-flex;
-    height: 28px;
-    justify-content: center;
-    gap: 4px;
-    padding: 4px 8px;
-    background-color: #f1f5f5;
-    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 5px;
     position: relative;
 }
 
@@ -1069,9 +1063,6 @@
 .img-wrapper {
     position: relative;
     display: flex;
-}
-
-.heart {
 }
 
 .button-cancel {
@@ -2810,7 +2801,7 @@ body:has(#restaurante-nome) .element-producer {
     --ma-line: rgba(10, 37, 51, 0.08);
     --ma-trust: #014838;
     --ma-cta: #cef17b;
-    --ma-card-radius: 16px;
+    --ma-card-radius: 22px;
     --ma-card-shadow: 0 10px 28px rgba(10, 37, 51, 0.08);
 }
 
@@ -2920,7 +2911,6 @@ body:has(#raca-nome) .element-producer .group-4,
 body:has(#raca-nome) .element-producer .image-5,
 body:has(#restaurante-nome) .element-producer .group-4,
 body:has(#restaurante-nome) .element-producer .image-5 {
-    border-radius: var(--ma-card-radius);
     object-fit: cover;
     overflow: hidden;
 }
@@ -2935,7 +2925,7 @@ body:has(#restaurante-nome) .element-producer .frame-27 {
     border: 1px solid var(--ma-line);
     border-radius: var(--ma-card-radius);
     box-shadow: 0 8px 22px rgba(10, 37, 51, 0.06);
-    padding: 12px;
+    padding: 20px 14px;
     box-sizing: border-box;
 }
 
@@ -3343,55 +3333,53 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
     line-height: 1.2;
 }
 
-.catalog-grid {
+.catalog-list {
     display: flex;
+    flex-direction: column;
     gap: 12px;
-    padding: 2px 16px 10px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-}
-
-.catalog-grid::-webkit-scrollbar {
-    display: none;
 }
 
 .catalog-card {
     display: flex;
-    flex: 0 0 142px;
-    min-height: 188px;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 11px;
-    padding: 12px 10px 14px;
+    gap: 14px;
+    padding: 14px 16px;
     color: var(--ma-ink);
     background: #fff;
     border: 1px solid var(--ma-line);
     border-radius: 18px;
-    box-shadow: 0 8px 22px rgba(10, 37, 51, 0.07);
-    text-align: center;
+    box-shadow: 0 6px 20px rgba(10, 37, 51, 0.07);
     text-decoration: none;
-    scroll-snap-align: start;
     box-sizing: border-box;
+    transition: box-shadow 0.15s ease;
+}
+
+.catalog-card:active {
+    box-shadow: 0 2px 8px rgba(10, 37, 51, 0.06);
 }
 
 .catalog-card__thumb {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 96px;
-    height: 96px;
+    flex-shrink: 0;
+    width: 72px;
+    height: 72px;
     background: #d9e7b8;
-    border-radius: 16px;
+    border-radius: 14px;
     overflow: hidden;
+}
+
+.catalog-card__thumb--round {
+    border-radius: 50%;
+    background: #e4ede1;
 }
 
 .catalog-card__img {
     display: block;
-    width: 92px;
-    height: 92px;
-    border-radius: 14px;
+    width: 72px;
+    height: 72px;
     object-fit: cover;
 }
 
@@ -3402,23 +3390,39 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
 .catalog-card__body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 5px;
+    align-items: flex-start;
+    gap: 3px;
     min-width: 0;
+    flex: 1;
 }
 
 .catalog-card__title {
     color: var(--ma-ink);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 800;
     line-height: 1.22;
 }
 
 .catalog-card__meta {
     color: var(--ma-muted);
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    line-height: 1.25;
+    line-height: 1.3;
+}
+
+.catalog-card__location {
+    color: var(--ma-muted);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.catalog-card__arrow {
+    flex-shrink: 0;
+    color: var(--ma-muted);
+    font-size: 20px;
+    line-height: 1;
+    margin-left: 4px;
 }
 
 .app-card {
@@ -3433,6 +3437,108 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
     color: var(--ma-trust);
     font-weight: 800;
     text-decoration: none;
+}
+
+.app-social {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.app-social__link {
+    display: inline-flex;
+    align-items: center;
+    padding: 7px 14px;
+    color: var(--ma-trust);
+    background: rgba(1, 72, 56, 0.08);
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.15s ease;
+}
+
+.app-social__link:active {
+    background: rgba(1, 72, 56, 0.16);
+}
+
+/* Galeria — botão thumbnail */
+.galeria-thumb {
+    width: 100%;
+    flex-shrink: 0;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #e8e8e8;
+    border: none;
+    padding: 0;
+    cursor: zoom-in;
+    display: block;
+}
+
+@media (min-width: 420px) {
+    .galeria-thumb {
+        width: calc(50% - 4px);
+    }
+}
+
+.galeria-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.galeria-thumb:active img {
+    transform: scale(0.97);
+}
+
+/* Lightbox */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: zoom-out;
+}
+
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox__img {
+    max-width: 100%;
+    max-height: 88vh;
+    border-radius: 8px;
+    object-fit: contain;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.lightbox__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    line-height: 1;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
 }
 
 .app-message {
@@ -3529,7 +3635,7 @@ body:has(#parceiro-nome) .element-producer {
     --ma-line: rgba(10, 37, 51, 0.08);
     --ma-trust: #014838;
     --ma-cta: #cef17b;
-    --ma-card-radius: 16px;
+    --ma-card-radius: 22px;
     --ma-card-shadow: 0 10px 28px rgba(10, 37, 51, 0.08);
 }
 
@@ -3594,7 +3700,6 @@ body:has(#parceiro-nome) .element-producer .clip-path-group-2,
 body:has(#parceiro-nome) .element-producer .image-4,
 body:has(#parceiro-nome) .element-producer .group-4,
 body:has(#parceiro-nome) .element-producer .image-5 {
-    border-radius: var(--ma-card-radius);
     object-fit: cover;
     overflow: hidden;
 }
@@ -3620,8 +3725,8 @@ body:has(#parceiro-nome) .element-producer .frame-28 {
 body:has(#peca-titulo) .element-product .frame-13,
 body:has(#peca-titulo) .element-product .frame-15 {
     gap: 16px;
-    padding: 16px;
-    border-radius: 18px;
+    padding: 20px;
+    border-radius: 22px;
     box-shadow: 0 10px 26px rgba(10, 37, 51, 0.08);
 }
 
@@ -3630,6 +3735,11 @@ body:has(#peca-titulo) .element-product .image-wrapper {
     flex: 0 0 86px;
     width: 86px;
     height: 86px;
+    border-radius: 16px;
+}
+
+body:has(#peca-titulo) .element-product .image-wrapper--raca {
+    background-color: #d9e7b8;
 }
 
 body:has(#peca-titulo) .element-product .image-2 {
@@ -3638,6 +3748,7 @@ body:has(#peca-titulo) .element-product .image-2 {
     width: 78px;
     height: 78px;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 body:has(#peca-titulo) .element-product .frame-14,

@@ -4,10 +4,6 @@
   const PRODUTORES_JSON = 'data/produtores.json';
   const PECAS_JSON = 'data/pecas.json';
   const RACAS_JSON = 'data/racas.json';
-  const ASSETS_EM_FALTA = new Set([
-    'assets/emiliano-meneses-01.jpg',
-    'assets/emiliano-meneses-antiga-02.jpg'
-  ]);
 
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
@@ -47,38 +43,30 @@
     if (el) el.hidden = true;
   }
 
-  function assetExiste(src) {
-    if (!src) return Promise.resolve(false);
-    if (ASSETS_EM_FALTA.has(src)) return Promise.resolve(false);
-    return fetch(src, { method: 'HEAD' })
-      .then(function (resp) { return resp.ok; })
-      .catch(function () { return false; });
-  }
-
   function setImagemSeExistir(img, src, onMissing) {
     if (!img || !src) {
       if (onMissing) onMissing();
       return;
     }
-    assetExiste(src).then(function (existe) {
-      if (existe) img.src = src;
-      else if (onMissing) onMissing();
-    });
+    img.onerror = function () {
+      img.onerror = null;
+      if (onMissing) onMissing();
+    };
+    img.src = src;
   }
 
   function carregarImagensDiferidas(scope) {
     var imagens = (scope || document).querySelectorAll('img[data-src]');
     imagens.forEach(function (img) {
       var src = img.getAttribute('data-src');
-      assetExiste(src).then(function (existe) {
-        if (existe) {
-          img.src = src;
-        } else {
-          var wrapper = img.closest('.group-4');
-          if (wrapper) wrapper.hidden = true;
-          else img.hidden = true;
-        }
-      });
+      if (!src) return;
+      img.onerror = function () {
+        img.onerror = null;
+        var wrapper = img.closest('.group-4');
+        if (wrapper) wrapper.hidden = true;
+        else img.hidden = true;
+      };
+      img.src = src;
     });
   }
 
@@ -142,18 +130,25 @@
     var falhas = 0;
 
     imagens.forEach(function (src, i) {
-      var wrapper = document.createElement('div');
-      wrapper.style.cssText = 'width: calc(50% - 4px); flex-shrink: 0; aspect-ratio: 4/3; overflow: hidden; border-radius: 8px; background: #e8e8e8;';
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'galeria-thumb';
+      btn.setAttribute('aria-label', 'Ver fotografia ' + (i + 1) + ' de ' + nomeProdutor + ' em tamanho maior');
 
       var img = document.createElement('img');
       img.alt = nomeProdutor + ', fotografia ' + (i + 1);
-      img.style.cssText = 'width: 100%; height: 100%; object-fit: cover; display: block;';
 
-      wrapper.appendChild(img);
-      container.appendChild(wrapper);
+      btn.appendChild(img);
+      container.appendChild(btn);
+
+      btn.addEventListener('click', function () {
+        if (window.MA && window.MA.abrirLightbox) {
+          window.MA.abrirLightbox(src, img.alt);
+        }
+      });
 
       setImagemSeExistir(img, src, function () {
-        wrapper.hidden = true;
+        btn.hidden = true;
         falhas++;
         if (falhas === total) esconderSecao('sec-galeria-secao');
       });

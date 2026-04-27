@@ -2,7 +2,7 @@
   'use strict';
 
   const PECAS_JSON = 'data/pecas.json';
-  const FALLBACK_URL = 'degustacao.html';
+  const FALLBACK_URL = 'peca.html?id=ramo-grande-dop-peter-cafe-sport';
 
   function getPecaFromURL() {
     return new URLSearchParams(window.location.search).get('peca');
@@ -31,6 +31,7 @@
         });
 
         if (existe) {
+          try { localStorage.setItem('ma_peca_ativa', pecaId); } catch (e) {}
           setCtaHref('peca.html?id=' + encodeURIComponent(pecaId));
         }
       })

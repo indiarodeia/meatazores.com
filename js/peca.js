@@ -86,15 +86,13 @@
     var imagens = (scope || document).querySelectorAll('img[data-src]');
     imagens.forEach(function (img) {
       var src = img.getAttribute('data-src');
-      assetExiste(src).then(function (existe) {
-        if (existe) {
-          img.src = src;
-        } else {
-          var wrapper = img.closest('.image-wrapper');
-          if (wrapper) wrapper.hidden = true;
-          else img.hidden = true;
-        }
-      });
+      img.onerror = function () {
+        var wrapper = img.closest('.image-wrapper');
+        if (wrapper) wrapper.hidden = true;
+        else img.hidden = true;
+        img.onerror = null;
+      };
+      img.src = src;
     });
   }
 
@@ -248,7 +246,7 @@
 
   function renderRacaCard(raca) {
     const img = raca.imagem
-      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
+      ? '<div class="image-wrapper image-wrapper--raca"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
       : '';
     return (
       img +
@@ -263,25 +261,6 @@
     );
   }
 
-  function renderSelecionadorCard(selecionador) {
-    const img = selecionador.imagem
-      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(selecionador.imagem) + '" alt="Imagem de ' + esc(selecionador.nome) + '" /></div>'
-      : '';
-    const href = selecionador.link || (selecionador.id ? 'parceiro.html?id=' + esc(selecionador.id) : '#');
-    return (
-      img +
-      '<div class="frame-16">' +
-        '<div class="text-wrapper-18">' + esc(selecionador.nome) + '</div>' +
-        (selecionador.descricao ? '<p class="text-wrapper-21">' + esc(selecionador.descricao) + '</p>' : '') +
-        '<a href="' + href + '" class="button-arrow-right" aria-label="Conhecer o selecionador ' + esc(selecionador.nome) + '">' +
-          '<span class="text-wrapper-20">Conhecer parceiro</span>' +
-          '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
-        '</a>' +
-        renderWebsiteButton(selecionador.website) +
-      '</div>'
-    );
-  }
-
   function preencherPeca(peca) {
     document.title = peca.titulo + (peca.subtitulo ? ' | ' + peca.subtitulo : '') + ' | Meat Azores';
 
@@ -289,7 +268,7 @@
     if (metaDesc && peca.descricao) metaDesc.setAttribute('content', peca.descricao);
 
     const imgEl = document.querySelector('.element-product .image');
-    if (imgEl && peca.imagem_bg) setBackgroundSeExistir(imgEl, peca.imagem_bg);
+    if (imgEl && peca.imagem_bg) imgEl.style.backgroundImage = 'url("' + peca.imagem_bg + '")';
 
     if (peca.secao_titulo) setText('sec-esta-peca', peca.secao_titulo);
 
@@ -305,8 +284,13 @@
     if (selecionadoWrapper) {
       var selecionadoEl = document.getElementById('peca-selecionado-por');
       if (peca.selecionador && peca.selecionador.nome && selecionadoEl) {
-        var linkSelecionador = peca.selecionador.link || ('parceiro.html?id=' + esc(peca.selecionador.id));
-        selecionadoEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkSelecionador) + '">' + esc(peca.selecionador.nome) + '</a>';
+        var linkSelecionador = peca.selecionador.link || (peca.selecionador.id ? 'parceiro.html?id=' + esc(peca.selecionador.id) : null);
+        if (linkSelecionador) {
+          var extAttr = isUrlExterno(linkSelecionador) ? ' target="_blank" rel="noopener noreferrer"' : '';
+          selecionadoEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkSelecionador) + '"' + extAttr + '>' + esc(peca.selecionador.nome) + '</a>';
+        } else {
+          selecionadoEl.textContent = peca.selecionador.nome;
+        }
       } else if (peca.selecionado_por) {
         setText('peca-selecionado-por', peca.selecionado_por);
       } else {
@@ -371,12 +355,6 @@
       esconderSecao('sec-produtor-secao');
     }
 
-    if (peca.selecionador) {
-      setHTML('peca-selecionador', renderSelecionadorCard(peca.selecionador));
-    } else {
-      esconderSecao('sec-selecionador-secao');
-    }
-
     if (peca.raca) {
       setHTML('peca-raca', renderRacaCard(peca.raca));
     } else {
@@ -391,6 +369,10 @@
 
     if (peca.feedback) {
       if (peca.feedback.titulo) setText('sec-feedback', peca.feedback.titulo);
+      if (peca.feedback.mostrar_estrela === false) {
+        var starEl = document.querySelector('.vuesax-bold-star');
+        if (starEl) starEl.hidden = true;
+      }
       setText('peca-feedback-texto', peca.feedback.texto);
       const btnFeedback = document.getElementById('btn-feedback');
       const btnHeaderFeedback = document.getElementById('btn-header-feedback');

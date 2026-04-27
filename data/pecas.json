@@ -125,13 +125,9 @@
       "secao_titulo": "Esta peça",
       "selecionado_por": "Rocha - Talho e Mercado",
       "selecionador": {
-        "id": "talho-rocha",
-        "tipo": "parceiro",
         "nome": "Rocha - Talho e Mercado",
-        "descricao": "Talho e mercado familiar na Agualva, Ilha Terceira, com ligação à seleção de carne local, restauração e distribuição.",
-        "imagem": "assets/logo-rocha.svg",
-        "website": "https://talhorocha.com",
-        "link": "parceiro.html?id=talho-rocha"
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
       },
       "confeccionado_por": "Peter Café Sport, Faial",
       "descricao": "Esta peça provém de uma vaca Ramo Grande DOP criada na ilha Terceira, numa exploração familiar onde a ligação a esta raça atravessa gerações. Com 10 anos de idade e 8 crias ao longo da sua vida produtiva, representa mais do que uma peça de carne: representa património genético, maneio tradicional e a continuidade de uma forma açoriana de criar gado.",
@@ -145,16 +141,6 @@
         "codigoAnimal": "PT717001037",
         "texto": "Esta peça provém de um animal Ramo Grande DOP com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
         "criterios": [
-          {
-            "label": "Raça",
-            "valor": "Ramo Grande DOP",
-            "estado": "confirmado"
-          },
-          {
-            "label": "Código único do animal",
-            "valor": "PT717001037",
-            "estado": "confirmado"
-          },
           {
             "label": "Origem geográfica",
             "valor": "Açores",
@@ -178,26 +164,6 @@
           {
             "label": "Fase de acabamento",
             "valor": "Farinha de milho e azevém fresco",
-            "estado": "confirmado"
-          },
-          {
-            "label": "Categoria",
-            "valor": "Vaca, fêmea com 8 crias",
-            "estado": "confirmado"
-          },
-          {
-            "label": "Peso a frio",
-            "valor": "406,10 kg",
-            "estado": "confirmado"
-          },
-          {
-            "label": "Classificação da carcaça",
-            "valor": "R.4.",
-            "estado": "confirmado"
-          },
-          {
-            "label": "Data de abate",
-            "valor": "10/04/2026",
             "estado": "confirmado"
           }
         ],
@@ -351,6 +317,7 @@
       },
       "feedback": {
         "titulo": "Conheça a Meat Azores",
+        "mostrar_estrela": false,
         "url": "about.html",
         "texto": "A Meat Azores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
         "botao": "Saber mais sobre a Meat Azores"
