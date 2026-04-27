@@ -25,8 +25,6 @@
 
 .element-welcome .vector {
     width: 100%;
-    min-width: 430px;
-
     object-fit: cover;
 }
 
@@ -86,9 +84,10 @@
 }
 
 .element-welcome .button-login {
-    width: 327px;
+    width: 100%;
+    max-width: 327px;
     gap: 10px;
-    padding: 16px 146px;
+    padding: 16px 24px;
     flex: 0 0 auto;
     background-color: #cef17b;
     border-radius: 16px;
@@ -96,13 +95,11 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    box-sizing: border-box;
 }
 
 .element-welcome .button {
     width: 100%;
-    margin-top: -2px;
-    margin-left: -20px;
-    margin-right: -20px;
     font-family: var(--body-normal-bold-font-family);
     font-weight: var(--body-normal-bold-font-weight);
     color: #0a2533;
@@ -2913,6 +2910,10 @@ body:has(#restaurante-nome) .element-producer .group-4,
 body:has(#restaurante-nome) .element-producer .image-5 {
     object-fit: cover;
     overflow: hidden;
+}
+
+body:has(#produtor-nome) .element-producer .clip-path-group-2 {
+    border-radius: 16px;
 }
 
 body:has(#peca-titulo) .element-product .frame-13,
