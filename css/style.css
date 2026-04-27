@@ -3132,7 +3132,7 @@ body:has(#raca-nome) .element-producer .outras-racas__nome {
 /* APP BOTTOM NAVIGATION AND SIMPLE INDEX PAGES */
 
 body:has(.ma-bottom-nav) {
-    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+    padding-bottom: calc(150px + env(safe-area-inset-bottom));
 }
 
 body:has(.ma-bottom-nav) .element-welcome {
@@ -3140,26 +3140,29 @@ body:has(.ma-bottom-nav) .element-welcome {
 }
 
 body:has(.ma-bottom-nav) .detail-content,
-body:has(.ma-bottom-nav) .element-producer .frame-19 {
-    padding-bottom: calc(128px + env(safe-area-inset-bottom));
+body:has(.ma-bottom-nav) .element-producer .frame-19,
+body:has(.ma-bottom-nav) .app-page {
+    padding-bottom: calc(150px + env(safe-area-inset-bottom));
 }
 
 .ma-bottom-nav {
     position: fixed;
     left: 50%;
+    right: auto;
     bottom: 0;
-    z-index: 20;
+    z-index: 9999;
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     align-items: end;
     width: min(100%, 430px);
+    margin: 0;
     min-height: 74px;
-    padding: 9px 12px calc(10px + env(safe-area-inset-bottom));
+    padding: 9px 12px max(10px, env(safe-area-inset-bottom));
     background: #fff;
     border: 1px solid rgba(10, 37, 51, 0.08);
     border-bottom: 0;
-    border-radius: 24px 24px 0 0;
-    box-shadow: 0 -10px 28px rgba(10, 37, 51, 0.12);
+    border-radius: 28px 28px 0 0;
+    box-shadow: 0 -12px 32px rgba(9, 36, 32, 0.10);
     transform: translateX(-50%);
     box-sizing: border-box;
 }
@@ -3211,17 +3214,17 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
 }
 
 .ma-bottom-nav__item--scan {
-    transform: translateY(-16px);
+    transform: none;
 }
 
 .ma-bottom-nav__item--scan .ma-bottom-nav__icon {
-    width: 58px;
-    height: 58px;
+    width: 42px;
+    height: 42px;
     color: #fff;
     background: #014838;
-    border: 5px solid #fff;
+    border: 0;
     border-radius: 999px;
-    box-shadow: 0 10px 24px rgba(1, 72, 56, 0.28);
+    box-shadow: 0 6px 16px rgba(1, 72, 56, 0.18);
 }
 
 .ma-bottom-nav__item--scan .ma-bottom-nav__icon svg {
@@ -3500,7 +3503,7 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
 .lightbox {
     position: fixed;
     inset: 0;
-    z-index: 1000;
+    z-index: 10000;
     background: rgba(0, 0, 0, 0.9);
     display: flex;
     align-items: center;
@@ -3508,6 +3511,8 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
     padding: 20px;
     box-sizing: border-box;
     cursor: zoom-out;
+    overflow: hidden;
+    touch-action: none;
 }
 
 .lightbox[hidden] {
@@ -3515,12 +3520,19 @@ body:has(.ma-bottom-nav) .element-producer .frame-19 {
 }
 
 .lightbox__img {
-    max-width: 100%;
-    max-height: 88vh;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100vh - 120px);
     border-radius: 8px;
     object-fit: contain;
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
     cursor: default;
+}
+
+body.is-lightbox-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    touch-action: none;
 }
 
 .lightbox__close {
