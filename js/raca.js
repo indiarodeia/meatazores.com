@@ -4,6 +4,16 @@
   const RACAS_JSON = 'data/racas.json';
   const PECAS_JSON = 'data/pecas.json';
   const PRODUTORES_JSON = 'data/produtores.json';
+
+  const EMOJI_FICHA_RAPIDA = {
+    'Origem': '📍',
+    'Aptidão': '🐄',
+    'Porte': '📏',
+    'Pelagem': '🎨',
+    'Sistema comum': '🌾',
+    'Presença na Meat Azores': '⭐'
+  };
+
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
   }
@@ -20,7 +30,7 @@
   }
 
   function esc(str) {
-    return String(str)
+    return String(str == null ? '' : str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
@@ -40,6 +50,11 @@
   function esconderSecao(id) {
     const el = document.getElementById(id);
     if (el) el.hidden = true;
+  }
+
+  function mostrarSecao(id) {
+    const el = document.getElementById(id);
+    if (el) el.hidden = false;
   }
 
   function setImagemSeExistir(img, src, onMissing) {
@@ -69,9 +84,23 @@
     });
   }
 
+  function renderFichaRapida(itens) {
+    return itens.map(function (item) {
+      var emoji = EMOJI_FICHA_RAPIDA[item.label] || '•';
+      var bandeira = item.bandeira ? '<span class="raca-ficha-rapida__bandeira" aria-hidden="true">' + esc(item.bandeira) + '</span> ' : '';
+      return (
+        '<div class="raca-ficha-rapida__card">' +
+          '<span class="raca-ficha-rapida__icon" aria-hidden="true">' + esc(emoji) + '</span>' +
+          '<span class="raca-ficha-rapida__label">' + esc(item.label) + '</span>' +
+          '<span class="raca-ficha-rapida__valor">' + bandeira + esc(item.valor) + '</span>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
   function renderCaracteristicas(items) {
     return items.map(function (item) {
-      return '<div class="frame-24" role="listitem"><div class="text-wrapper-30">• ' + esc(item) + '</div></div>';
+      return '<li class="raca-caracteristicas__item">' + esc(item) + '</li>';
     }).join('');
   }
 
@@ -200,6 +229,20 @@
     });
   }
 
+  function montarHistoriaTexto(raca) {
+    if (raca.historia) return raca.historia;
+    var partes = [];
+    if (raca.introducao) partes.push(raca.introducao);
+    if (raca.origem_territorio) partes.push(raca.origem_territorio);
+    return partes.join('\n\n');
+  }
+
+  function montarContextoTexto(raca) {
+    if (raca.contexto_meatazores) return raca.contexto_meatazores;
+    if (raca.valor_patrimonial) return raca.valor_patrimonial;
+    return '';
+  }
+
   function preencherRaca(raca, todasAsPecas, todosProdutores, todasAsRacas) {
     document.title = raca.nome + ' | Meat Azores';
 
@@ -254,25 +297,20 @@
     // Sobre
     setText('raca-descricao-curta', raca.descricao_curta);
 
-    // Introdução
-    if (raca.introducao) {
-      setText('raca-introducao', raca.introducao);
+    // Ficha rápida
+    if (Array.isArray(raca.ficha_rapida) && raca.ficha_rapida.length) {
+      setHTML('raca-ficha-rapida', renderFichaRapida(raca.ficha_rapida));
+      mostrarSecao('sec-ficha-rapida-secao');
     } else {
-      esconderSecao('sec-introducao-secao');
+      esconderSecao('sec-ficha-rapida-secao');
     }
 
-    // Origem e ligação ao território
-    if (raca.origem_territorio) {
-      setText('raca-origem-territorio', raca.origem_territorio);
+    // História e origem (com fallback para introducao + origem_territorio)
+    var historiaTexto = montarHistoriaTexto(raca);
+    if (historiaTexto) {
+      setText('raca-historia', historiaTexto);
     } else {
-      esconderSecao('sec-origem-secao');
-    }
-
-    // Valor patrimonial e cultural
-    if (raca.valor_patrimonial) {
-      setText('raca-valor-patrimonial', raca.valor_patrimonial);
-    } else {
-      esconderSecao('sec-valor-secao');
+      esconderSecao('sec-historia-secao');
     }
 
     // Características gerais
@@ -282,7 +320,23 @@
       esconderSecao('sec-caracteristicas-secao');
     }
 
-    // Secções extra
+    // Carne e contexto Meat Azores (com fallback para valor_patrimonial)
+    var contextoTexto = montarContextoTexto(raca);
+    if (contextoTexto) {
+      setText('raca-contexto', contextoTexto);
+    } else {
+      esconderSecao('sec-contexto-secao');
+    }
+
+    // Nota educativa (opcional)
+    if (raca.nota_educativa) {
+      setText('raca-nota-educativa', raca.nota_educativa);
+      mostrarSecao('sec-nota-educativa');
+    } else {
+      esconderSecao('sec-nota-educativa');
+    }
+
+    // Secções extra (preserva conteúdo rico das raças existentes)
     if (raca.secoes_extra && raca.secoes_extra.length) {
       setHTML('raca-secoes-extra', renderSecoesExtra(raca.secoes_extra));
     }

@@ -60,7 +60,7 @@
                 </div>
             </header>
 
-            <!-- Sobre a raça -->
+            <!-- Sobre a raça (descrição curta) -->
             <section class="group-2" aria-labelledby="sec-sobre">
                 <div class="frame-21">
                     <h2 id="sec-sobre" class="text-wrapper-26">Sobre a raça</h2>
@@ -68,34 +68,20 @@
                 </div>
             </section>
 
-            <img class="separator-3" src="assets/separator.svg" alt="" />
-
-            <!-- Introdução -->
-            <section id="sec-introducao-secao" class="frame-22" aria-labelledby="sec-introducao">
-                <div class="creators-4">
-                    <h2 id="sec-introducao" class="text-wrapper-31">Introdução</h2>
-                </div>
-                <p class="text-wrapper-32" id="raca-introducao"></p>
+            <!-- Ficha rápida -->
+            <section id="sec-ficha-rapida-secao" class="raca-ficha-rapida" aria-labelledby="sec-ficha-rapida" hidden>
+                <h2 id="sec-ficha-rapida" class="raca-ficha-rapida__title">Ficha rápida</h2>
+                <div id="raca-ficha-rapida" class="raca-ficha-rapida__grid"></div>
             </section>
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
 
-            <!-- Origem e ligação ao território -->
-            <section id="sec-origem-secao" class="frame-22" aria-labelledby="sec-origem">
+            <!-- História / origem -->
+            <section id="sec-historia-secao" class="frame-22" aria-labelledby="sec-historia">
                 <div class="creators-4">
-                    <h2 id="sec-origem" class="text-wrapper-31">Origem e ligação ao território</h2>
+                    <h2 id="sec-historia" class="text-wrapper-31">História e origem</h2>
                 </div>
-                <p class="text-wrapper-32" id="raca-origem-territorio"></p>
-            </section>
-
-            <img class="separator-3" src="assets/separator.svg" alt="" />
-
-            <!-- Valor patrimonial e cultural -->
-            <section id="sec-valor-secao" class="frame-22" aria-labelledby="sec-valor">
-                <div class="creators-4">
-                    <h2 id="sec-valor" class="text-wrapper-31">Valor patrimonial e cultural</h2>
-                </div>
-                <p class="text-wrapper-32" id="raca-valor-patrimonial"></p>
+                <p class="text-wrapper-32" id="raca-historia"></p>
             </section>
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
@@ -104,15 +90,29 @@
             <section id="sec-caracteristicas-secao" class="frame-22" aria-labelledby="sec-caracteristicas">
                 <div class="creators-3">
                     <div class="frame-23">
-                        <h2 id="sec-caracteristicas" class="heading-xl">Características gerais</h2>
+                        <h2 id="sec-caracteristicas" class="heading-xl">Características</h2>
                     </div>
                 </div>
-                <div id="raca-caracteristicas"></div>
+                <ul id="raca-caracteristicas" class="raca-caracteristicas" role="list"></ul>
             </section>
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
 
-            <!-- Secções extra (opcional, preenchido por JS) -->
+            <!-- Carne e contexto Meat Azores -->
+            <section id="sec-contexto-secao" class="frame-22" aria-labelledby="sec-contexto">
+                <div class="creators-4">
+                    <h2 id="sec-contexto" class="text-wrapper-31">Na Meat Azores</h2>
+                </div>
+                <p class="text-wrapper-32" id="raca-contexto"></p>
+            </section>
+
+            <!-- Nota educativa (opcional) -->
+            <aside id="sec-nota-educativa" class="raca-nota-educativa" aria-label="Nota educativa" hidden>
+                <span class="raca-nota-educativa__icon" aria-hidden="true">ℹ️</span>
+                <p class="raca-nota-educativa__texto" id="raca-nota-educativa"></p>
+            </aside>
+
+            <!-- Secções extra (opcional, preenchido por JS — preserva conteúdo de raças existentes) -->
             <div id="raca-secoes-extra"></div>
 
             <!-- Peças associadas -->

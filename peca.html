@@ -55,6 +55,12 @@
                         <span class="span">Confeccionado por </span>
                         <span class="text-wrapper-2" id="peca-confeccionado-por"></span>
                     </p>
+
+                    <!-- Cruzamento (apenas para animais cruzados) -->
+                    <p class="peca-cruzamento" id="peca-cruzamento-wrapper" hidden>
+                        <span class="peca-cruzamento__label">Cruzamento:</span>
+                        <span class="peca-cruzamento__valor" id="peca-cruzamento-valor"></span>
+                    </p>
                 </div>
 
                 <!-- Secção principal da peça -->
@@ -71,6 +77,9 @@
                         <h2 id="sec-caracteristicas" class="heading-xl">Características</h2>
                     </div>
                     <div class="nutritions" id="peca-caracteristicas"></div>
+
+                    <!-- Nota discreta: dados oficiais em atualização -->
+                    <p class="peca-dados-matadouro-nota" id="peca-dados-matadouro-nota" hidden></p>
                 </section>
 
                 <img class="separator" src="assets/separator.svg" alt="" />
@@ -102,6 +111,17 @@
                     <p class="longevidade" id="peca-rara-conteudo"></p>
                 </section>
 
+                <!-- Citação -->
+                <section id="sec-citacao-secao" class="peca-citacao" aria-label="Citação" hidden>
+                    <blockquote class="peca-citacao__texto" id="peca-citacao"></blockquote>
+                </section>
+
+                <!-- Disponibilidade -->
+                <section id="sec-disponibilidade-secao" class="peca-disponibilidade" aria-labelledby="sec-disponibilidade" hidden>
+                    <h2 id="sec-disponibilidade" class="peca-disponibilidade__titulo">Disponibilidade</h2>
+                    <p class="peca-disponibilidade__texto" id="peca-disponibilidade"></p>
+                </section>
+
                 <img class="separator" src="assets/separator.svg" alt="" />
 
                 <!-- Certificação DOP -->
@@ -118,11 +138,11 @@
                     <div class="frame-13" id="peca-produtor"></div>
                 </section>
 
-                <!-- Raça -->
+                <!-- Raça (ou Raças associadas, se cruzamento) -->
                 <section id="sec-raca-secao" class="content" aria-label="Raça">
                     <div class="creators-2">
                         <div class="div-wrapper">
-                            <h2 class="heading-xl">Raça</h2>
+                            <h2 class="heading-xl" id="sec-raca-titulo">Raça</h2>
                         </div>
                         <div class="frame-15" id="peca-raca"></div>
                     </div>

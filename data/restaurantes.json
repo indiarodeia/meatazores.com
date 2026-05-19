@@ -13,6 +13,21 @@
       "pecas_associadas": [
         "ramo-grande-dop-peter-cafe-sport"
       ]
+    },
+    {
+      "id": "restaurante-rocha",
+      "nome": "Restaurante Rocha",
+      "tipo": "Restaurante",
+      "localizacao": "Porto Judeu, Angra do Heroísmo, Ilha Terceira, Açores",
+      "website": "https://www.restauranterocha.pt/",
+      "descricao_curta": "Restaurante no Porto Judeu, Ilha Terceira, associado à primeira experiência Meat Azores com uma peça selecionada para ser trabalhada até esgotar.",
+      "hero": "assets/bg-restaurante-rocha.jpg",
+      "imagem": "assets/restaurante-rocha.jpg",
+      "texto_principal": "O Restaurante Rocha recebe esta peça como parte de uma experiência focada na origem, no aproveitamento consciente e na valorização da carne açoriana. Ao ligar o restaurante ao produtor, ao talho e ao animal, a Meat Azores permite que o consumidor conheça melhor a história da carne que chega à mesa.",
+      "cta": "Conheça a origem da peça Brahman x Holstein-Frísia · Restaurante Rocha.",
+      "pecas_associadas": [
+        "brahman-holstein-frisia-restaurante-rocha"
+      ]
     }
   ]
 }

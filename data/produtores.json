@@ -56,6 +56,26 @@
       "pecas_associadas": ["catrina-19-anos"],
       "racas_associadas": ["catrina"],
       "galeria": ["assets/img-catrina.jpg"]
+    },
+    {
+      "id": "antonio-azera",
+      "nome": "António Azera",
+      "tipo": "Produtor ligado a exploração de leite",
+      "localizacao": "Quatro Ribeiras, Ilha Terceira, Açores",
+      "descricao_curta": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
+      "hero": "assets/bg-antonio-azera.jpg",
+      "thumb": "assets/antonio-azera.jpg",
+      "historia": "António Azera representa uma ligação familiar antiga à criação de gado na ilha Terceira. A relação da família com a pecuária atravessa várias gerações, estando atualmente na quinta geração ligada ao trabalho com gado.\n\nNa sua exploração de leite, nas Quatro Ribeiras, o maneio reflete uma prática próxima do território, com animais criados em regime extensivo e uma forte ligação ao pasto, ao mar e à tradição pecuária local.",
+      "numeros": [
+        { "label": "Geração ligada ao gado", "valor": "5.ª geração" },
+        { "label": "Tipo de exploração", "valor": "Exploração de leite" },
+        { "label": "Localização", "valor": "Quatro Ribeiras, Ilha Terceira" },
+        { "label": "Pasto por animal", "valor": "Média de 7 alqueires" }
+      ],
+      "citacao": "Na altura em que não havia adubos nem rações, dizia-se que o melhor gado da ilha era o das Quatro Ribeiras.",
+      "pecas_associadas": ["brahman-holstein-frisia-restaurante-rocha"],
+      "racas_associadas": ["brahman", "holstein-frisia"],
+      "galeria": []
     }
   ]
 }

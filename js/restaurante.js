@@ -135,6 +135,17 @@
     // Sobre
     setText('restaurante-descricao-curta', restaurante.descricao_curta);
 
+    // Botão website
+    var websiteBtn = document.getElementById('restaurante-website');
+    if (websiteBtn) {
+      if (restaurante.website) {
+        websiteBtn.href = restaurante.website;
+        websiteBtn.hidden = false;
+      } else {
+        websiteBtn.hidden = true;
+      }
+    }
+
     // Texto principal
     if (restaurante.texto_principal) {
       setText('restaurante-texto-principal', restaurante.texto_principal);

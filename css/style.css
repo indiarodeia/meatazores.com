@@ -3084,7 +3084,6 @@ body:has(#raca-nome) .element-producer .outras-racas__thumb {
     justify-content: center;
     width: 92px;
     height: 92px;
-    background: #d9e7b8;
     border-radius: 16px;
     overflow: hidden;
 }
@@ -3370,7 +3369,6 @@ body:has(.ma-bottom-nav) .app-page {
     flex-shrink: 0;
     width: 72px;
     height: 72px;
-    background: #d9e7b8;
     border-radius: 14px;
     overflow: hidden;
 }
@@ -3782,3 +3780,284 @@ body:has(#peca-titulo) .element-product .peca-website-link {
     background: rgba(1, 72, 56, 0.07);
     box-shadow: none;
 }
+
+/* RAÇA - FICHA RÁPIDA, CARACTERÍSTICAS, NOTA EDUCATIVA */
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida[hidden] {
+    display: none;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__title {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--ma-ink);
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(10, 37, 51, 0.05);
+    min-height: 92px;
+    box-sizing: border-box;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__icon {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__label {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--ma-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__valor {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--ma-ink);
+}
+
+body:has(#raca-nome) .element-producer .raca-ficha-rapida__bandeira {
+    font-size: 16px;
+    margin-right: 2px;
+}
+
+body:has(#raca-nome) .element-producer .raca-caracteristicas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+body:has(#raca-nome) .element-producer .raca-caracteristicas__item {
+    position: relative;
+    padding: 10px 14px 10px 32px;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 12px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.4;
+    color: var(--ma-ink);
+}
+
+body:has(#raca-nome) .element-producer .raca-caracteristicas__item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ma-trust);
+    transform: translateY(-50%);
+}
+
+body:has(#raca-nome) .element-producer .raca-nota-educativa {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 16px;
+    background: rgba(1, 72, 56, 0.06);
+    border: 1px solid rgba(1, 72, 56, 0.12);
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+body:has(#raca-nome) .element-producer .raca-nota-educativa[hidden] {
+    display: none;
+}
+
+body:has(#raca-nome) .element-producer .raca-nota-educativa__icon {
+    flex: 0 0 auto;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+body:has(#raca-nome) .element-producer .raca-nota-educativa__texto {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ma-ink);
+}
+
+body:has(#raca-nome) .element-producer #raca-historia,
+body:has(#raca-nome) .element-producer #raca-contexto {
+    white-space: pre-line;
+}
+
+/* PEÇA - CRUZAMENTO, CITAÇÃO, DISPONIBILIDADE, DADOS MATADOURO */
+
+body:has(#peca-titulo) .element-product .peca-cruzamento {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+    padding: 6px 12px;
+    background: rgba(1, 72, 56, 0.08);
+    border: 1px solid rgba(1, 72, 56, 0.18);
+    border-radius: 999px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 13px;
+    color: var(--ma-trust);
+    width: auto;
+    align-self: flex-start;
+}
+
+body:has(#peca-titulo) .element-product .peca-cruzamento[hidden] {
+    display: none;
+}
+
+body:has(#peca-titulo) .element-product .peca-cruzamento__label {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+body:has(#peca-titulo) .element-product .peca-cruzamento__valor {
+    font-weight: 700;
+}
+
+body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 12px 0 0;
+    padding: 10px 12px;
+    background: rgba(10, 37, 51, 0.04);
+    border-left: 3px solid rgba(10, 37, 51, 0.18);
+    border-radius: 6px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--ma-muted);
+}
+
+body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota[hidden] {
+    display: none;
+}
+
+body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota__icon {
+    flex: 0 0 auto;
+    line-height: 1.2;
+}
+
+body:has(#peca-titulo) .element-product .peca-citacao,
+body:has(#produtor-nome) .element-producer .peca-citacao {
+    margin: 0;
+    padding: 18px 20px;
+    background: rgba(1, 72, 56, 0.05);
+    border-left: 4px solid var(--ma-trust);
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body:has(#peca-titulo) .element-product .peca-citacao[hidden],
+body:has(#produtor-nome) .element-producer .peca-citacao[hidden] {
+    display: none;
+}
+
+body:has(#peca-titulo) .element-product .peca-citacao__texto,
+body:has(#produtor-nome) .element-producer .peca-citacao__texto {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--ma-ink);
+}
+
+body:has(#peca-titulo) .element-product .peca-disponibilidade {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 16px 18px;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(10, 37, 51, 0.05);
+    box-sizing: border-box;
+}
+
+body:has(#peca-titulo) .element-product .peca-disponibilidade[hidden] {
+    display: none;
+}
+
+body:has(#peca-titulo) .element-product .peca-disponibilidade__titulo {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--ma-ink);
+}
+
+body:has(#peca-titulo) .element-product .peca-disponibilidade__texto {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ma-ink);
+}
+
+/* Multi-card layout para raças associadas */
+body:has(#peca-titulo) .element-product .peca-raca-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+}
+
+body:has(#peca-titulo) .element-product .peca-raca-card + .peca-raca-card {
+    border-top: 1px solid var(--ma-line);
+}
+
+body:has(#peca-titulo) .element-product #peca-descricao {
+    white-space: pre-line;
+}
+
+body:has(#peca-titulo) .element-product #peca-disponibilidade {
+    white-space: pre-line;
+}
+
+

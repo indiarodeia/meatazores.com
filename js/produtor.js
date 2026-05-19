@@ -222,6 +222,15 @@
       esconderSecao('sec-ligacao-secao');
     }
 
+    // Citação (opcional)
+    if (produtor.citacao) {
+      setText('produtor-citacao', '“' + produtor.citacao + '”');
+      var citEl = document.getElementById('sec-citacao-secao');
+      if (citEl) citEl.hidden = false;
+    } else {
+      esconderSecao('sec-citacao-secao');
+    }
+
     // Nota especial
     if (produtor.nota_especial) {
       setText('produtor-nota-especial', produtor.nota_especial);

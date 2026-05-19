@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Light Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Light Az.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Regular Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Regular Az.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -16,15 +16,7 @@
 
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Regular Italic Az.otf') format('opentype');
-    font-weight: 400;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Medium Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Medium Az.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -32,7 +24,7 @@
 
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Semi Bold Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Semi Bold Az.woff2') format('woff2');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -40,7 +32,7 @@
 
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Bold Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Bold Az.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -48,17 +40,9 @@
 
 @font-face {
     font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Black Az.otf') format('opentype');
+    src: url('../font/Sofia Pro Black Az.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Sofia Pro';
-    src: url('../font/Sofia Pro Black Italic Az.otf') format('opentype');
-    font-weight: 900;
-    font-style: italic;
     font-display: swap;
 }
 

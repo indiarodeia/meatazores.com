@@ -2,6 +2,7 @@
   'use strict';
 
   const PECAS_JSON = 'data/pecas.json';
+  const RACAS_JSON = 'data/racas.json';
   const ASSETS_EM_FALTA = new Set();
 
   function getIdFromURL() {
@@ -19,7 +20,7 @@
   }
 
   function esc(str) {
-    return String(str)
+    return String(str == null ? '' : str)
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;')
@@ -39,6 +40,11 @@
   function esconderSecao(id) {
     const el = document.getElementById(id);
     if (el) el.hidden = true;
+  }
+
+  function mostrarSecao(id) {
+    const el = document.getElementById(id);
+    if (el) el.hidden = false;
   }
 
   function isUrlExterno(url) {
@@ -133,8 +139,18 @@
   }
 
   function renderCriacao(criacao) {
-    const regular = criacao.alimentacao_regular.map(renderAlimentacaoItem).join('');
-    const acabamento = criacao.fase_acabamento.map(renderAlimentacaoItem).join('');
+    const regular = (criacao.alimentacao_regular || []).map(renderAlimentacaoItem).join('');
+    const acabamento = (criacao.fase_acabamento || []).map(renderAlimentacaoItem).join('');
+    const seccaoAcabamento = acabamento
+      ? (
+        '<div class="frame-wrapper">' +
+          '<div class="frame-10">' +
+            '<h3 class="text-wrapper-13">Fase de Acabamento</h3>' +
+            '<div class="fats-4">' + acabamento + '</div>' +
+          '</div>' +
+        '</div>'
+      )
+      : '';
     return (
       '<div class="group">' +
         '<h2 id="sec-criacao-alimentacao" class="heading-xl">Criação e Alimentação</h2>' +
@@ -146,12 +162,7 @@
           '<div class="frame-11">' + regular + '</div>' +
         '</div>' +
       '</div>' +
-      '<div class="frame-wrapper">' +
-        '<div class="frame-10">' +
-          '<h3 class="text-wrapper-13">Fase de Acabamento</h3>' +
-          '<div class="fats-4">' + acabamento + '</div>' +
-        '</div>' +
-      '</div>'
+      seccaoAcabamento
     );
   }
 
@@ -248,20 +259,43 @@
     const img = raca.imagem
       ? '<div class="image-wrapper image-wrapper--raca"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
       : '';
+    const descricao = raca.descricao || raca.descricao_curta || '';
     return (
-      img +
-      '<div class="frame-16">' +
-        '<div class="text-wrapper-18">' + esc(raca.nome) + '</div>' +
-        '<p class="text-wrapper-21">' + esc(raca.descricao) + '</p>' +
-        '<a href="raca.html?id=' + esc(raca.id) + '" class="button-arrow-right" aria-label="Conhecer a raça ' + esc(raca.nome) + '">' +
-          '<span class="text-wrapper-20">Conhecer a raça</span>' +
-          '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
-        '</a>' +
+      '<div class="peca-raca-card">' +
+        img +
+        '<div class="frame-16">' +
+          '<div class="text-wrapper-18">' + esc(raca.nome) + '</div>' +
+          (descricao ? '<p class="text-wrapper-21">' + esc(descricao) + '</p>' : '') +
+          '<a href="raca.html?id=' + esc(raca.id) + '" class="button-arrow-right" aria-label="Conhecer a raça ' + esc(raca.nome) + '">' +
+            '<span class="text-wrapper-20">Conhecer a raça</span>' +
+            '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
+          '</a>' +
+        '</div>' +
       '</div>'
     );
   }
 
-  function preencherPeca(peca) {
+  function renderDadosMatadouroNota(dados) {
+    return (
+      '<span class="peca-dados-matadouro-nota__icon" aria-hidden="true">ℹ️</span> ' +
+      '<span>Dados técnicos oficiais em atualização.</span>'
+    );
+  }
+
+  function resolverRacas(peca, todasAsRacas) {
+    // Suporta: 1) peca.racas array de IDs (novo), 2) peca.raca objecto único (existente)
+    if (Array.isArray(peca.racas) && peca.racas.length) {
+      return peca.racas
+        .map(function (id) { return todasAsRacas.find(function (r) { return r.id === id; }); })
+        .filter(Boolean);
+    }
+    if (peca.raca) {
+      return [peca.raca];
+    }
+    return [];
+  }
+
+  function preencherPeca(peca, todasAsRacas) {
     document.title = peca.titulo + (peca.subtitulo ? ' | ' + peca.subtitulo : '') + ' | Meat Azores';
 
     const metaDesc = document.querySelector('meta[name="description"]');
@@ -304,12 +338,34 @@
       else confeccionadoWrapper.hidden = true;
     }
 
+    // Cruzamento (label/badge visível, apenas para animais cruzados)
+    const cruzamentoWrapper = document.getElementById('peca-cruzamento-wrapper');
+    if (cruzamentoWrapper) {
+      if (peca.cruzamento) {
+        setText('peca-cruzamento-valor', peca.cruzamento);
+        cruzamentoWrapper.hidden = false;
+      } else {
+        cruzamentoWrapper.hidden = true;
+      }
+    }
+
     setText('peca-descricao', peca.descricao);
 
     if (peca.caracteristicas && peca.caracteristicas.length) {
       setHTML('peca-caracteristicas', renderCaracteristicas(peca.caracteristicas));
     } else {
       esconderSecao('sec-caracteristicas-secao');
+    }
+
+    // Nota dados oficiais em atualização
+    const notaDadosEl = document.getElementById('peca-dados-matadouro-nota');
+    if (notaDadosEl) {
+      if (peca.dados_matadouro && peca.dados_matadouro.pendente) {
+        notaDadosEl.innerHTML = renderDadosMatadouroNota(peca.dados_matadouro);
+        notaDadosEl.hidden = false;
+      } else {
+        notaDadosEl.hidden = true;
+      }
     }
 
     if (peca.certificacaoDop) {
@@ -349,16 +405,36 @@
       esconderSecao('sec-rara-secao');
     }
 
+    // Citação
+    if (peca.citacao) {
+      setText('peca-citacao', '“' + peca.citacao + '”');
+      mostrarSecao('sec-citacao-secao');
+    } else {
+      esconderSecao('sec-citacao-secao');
+    }
+
+    // Disponibilidade
+    if (peca.disponibilidade) {
+      setText('peca-disponibilidade', peca.disponibilidade);
+      mostrarSecao('sec-disponibilidade-secao');
+    } else {
+      esconderSecao('sec-disponibilidade-secao');
+    }
+
     if (peca.produtor) {
       setHTML('peca-produtor', renderProdutorCard(peca.produtor));
     } else {
       esconderSecao('sec-produtor-secao');
     }
 
-    if (peca.raca) {
-      setHTML('peca-raca', renderRacaCard(peca.raca));
-    } else {
+    // Raça / Raças associadas
+    var racasResolvidas = resolverRacas(peca, todasAsRacas || []);
+    var racaTituloEl = document.getElementById('sec-raca-titulo');
+    if (racasResolvidas.length === 0) {
       esconderSecao('sec-raca-secao');
+    } else {
+      if (racaTituloEl) racaTituloEl.textContent = racasResolvidas.length > 1 ? 'Raças associadas' : 'Raça';
+      setHTML('peca-raca', racasResolvidas.map(renderRacaCard).join(''));
     }
 
     if (peca.restaurante) {
@@ -409,23 +485,27 @@
       return;
     }
 
-    fetch(PECAS_JSON)
-      .then(function (resp) {
+    Promise.all([
+      fetch(PECAS_JSON).then(function (resp) {
         if (!resp.ok) throw new Error('Erro HTTP ' + resp.status);
         return resp.json();
-      })
-      .then(function (dados) {
-        const peca = dados.pecas.find(function (p) { return p.id === id; });
-        if (!peca) {
-          mostrarErro('A peça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.');
-          return;
-        }
-        preencherPeca(peca);
-      })
-      .catch(function (err) {
-        console.error('[peca.js]', err);
-        mostrarErro('Não foi possível carregar os dados desta peça. Tente novamente mais tarde.');
-      });
+      }),
+      fetch(RACAS_JSON)
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { racas: [] }; })
+    ]).then(function (resultados) {
+      const dados = resultados[0];
+      const racas = resultados[1].racas || [];
+      const peca = dados.pecas.find(function (p) { return p.id === id; });
+      if (!peca) {
+        mostrarErro('A peça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.');
+        return;
+      }
+      preencherPeca(peca, racas);
+    }).catch(function (err) {
+      console.error('[peca.js]', err);
+      mostrarErro('Não foi possível carregar os dados desta peça. Tente novamente mais tarde.');
+    });
   }
 
   document.addEventListener('DOMContentLoaded', init);
