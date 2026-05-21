@@ -3,13 +3,28 @@
     {
       "id": "peter-cafe-sport",
       "nome": "Peter Café Sport",
-      "tipo": "Restaurante / destino gastronómico",
-      "localizacao": "Faial, Açores",
-      "descricao_curta": "Destino gastronómico da peça Ramo Grande DOP · Peter Café Sport, selecionada através da Meat Azores.",
+      "tipo": {
+        "pt": "Restaurante / destino gastronómico",
+        "en": "Restaurant / gastronomic destination"
+      },
+      "localizacao": {
+        "pt": "Faial, Açores",
+        "en": "Faial, Azores"
+      },
+      "descricao_curta": {
+        "pt": "Destino gastronómico da peça Ramo Grande DOP · Peter Café Sport, selecionada através da MeatAzores.",
+        "en": "Gastronomic destination of the Ramo Grande DOP · Peter Café Sport piece, selected through MeatAzores."
+      },
       "hero": "assets/peter-cafe-sport.png",
       "imagem": "assets/peter-cafe-sport.png",
-      "texto_principal": "O Peter Café Sport, no Faial, é o destino gastronómico desta peça Ramo Grande DOP selecionada através da Meat Azores. Através da rastreabilidade, o consumidor pode conhecer a origem da carne, o produtor e os dados técnicos associados à peça servida.",
-      "cta": "Conheça a origem da peça Ramo Grande DOP · Peter Café Sport.",
+      "texto_principal": {
+        "pt": "O Peter Café Sport, no Faial, é o destino gastronómico desta peça Ramo Grande DOP selecionada através da MeatAzores. Através da rastreabilidade, o consumidor pode conhecer a origem da carne, o produtor e os dados técnicos associados à peça servida.",
+        "en": "Peter Café Sport, on Faial Island, is the gastronomic destination of this Ramo Grande DOP piece selected through MeatAzores. Through traceability, the consumer can learn about the origin of the meat, the producer and the technical data associated with the piece served."
+      },
+      "cta": {
+        "pt": "Conheça a origem da peça Ramo Grande DOP · Peter Café Sport.",
+        "en": "Discover the origin of the Ramo Grande DOP · Peter Café Sport piece."
+      },
       "pecas_associadas": [
         "ramo-grande-dop-peter-cafe-sport"
       ]
@@ -17,14 +32,29 @@
     {
       "id": "restaurante-rocha",
       "nome": "Restaurante Rocha",
-      "tipo": "Restaurante",
-      "localizacao": "Porto Judeu, Angra do Heroísmo, Ilha Terceira, Açores",
+      "tipo": {
+        "pt": "Restaurante",
+        "en": "Restaurant"
+      },
+      "localizacao": {
+        "pt": "Porto Judeu, Angra do Heroísmo, Ilha Terceira",
+        "en": "Porto Judeu, Angra do Heroísmo, Terceira Island"
+      },
       "website": "https://www.restauranterocha.pt/",
-      "descricao_curta": "Restaurante no Porto Judeu, Ilha Terceira, associado à primeira experiência Meat Azores com uma peça selecionada para ser trabalhada até esgotar.",
+      "descricao_curta": {
+        "pt": "Restaurante no Porto Judeu, Ilha Terceira, associado à primeira experiência MeatAzores com uma peça selecionada para ser trabalhada até esgotar.",
+        "en": "Restaurant in Porto Judeu, Terceira Island, associated with the first MeatAzores experience with a piece selected to be served until sold out."
+      },
       "hero": "assets/bg-restaurante-rocha.jpg",
       "imagem": "assets/restaurante-rocha.jpg",
-      "texto_principal": "O Restaurante Rocha recebe esta peça como parte de uma experiência focada na origem, no aproveitamento consciente e na valorização da carne açoriana. Ao ligar o restaurante ao produtor, ao talho e ao animal, a Meat Azores permite que o consumidor conheça melhor a história da carne que chega à mesa.",
-      "cta": "Conheça a origem da peça Brahman x Holstein-Frísia · Restaurante Rocha.",
+      "texto_principal": {
+        "pt": "O Restaurante Rocha recebe esta peça como parte de uma experiência focada na origem, no aproveitamento consciente e na valorização da carne açoriana. Ao ligar o restaurante ao produtor, ao talho e ao animal, a MeatAzores permite que o consumidor conheça melhor a história da carne que chega à mesa.",
+        "en": "Restaurante Rocha receives this piece as part of an experience focused on origin, conscious use and the valuation of Azorean meat. By linking the restaurant to the producer, the butcher and the animal, MeatAzores allows the consumer to better know the story of the meat that reaches the table."
+      },
+      "cta": {
+        "pt": "Conheça a origem da peça Brahman x Holstein-Frísia · Restaurante Rocha.",
+        "en": "Discover the origin of the Brahman x Holstein-Friesian · Restaurante Rocha piece."
+      },
       "pecas_associadas": [
         "brahman-holstein-frisia-restaurante-rocha"
       ]

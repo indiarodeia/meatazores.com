@@ -115,70 +115,113 @@
       },
       "feedback": {
         "url": "https://us16.list-manage.com/survey?u=c62a3f7be2b0eff368aa1394e&id=0d9fdff0dd&attribution=false",
-        "texto": "Esta degustação é especial e esta é a estreia do projeto Meat Azores. O seu feedback ajuda-nos a melhorar a experiência e a dar mais visibilidade a raças e produtores que importam para a ilha."
+        "texto": "Esta degustação é especial e esta é a estreia do projeto MeatAzores. O seu feedback ajuda-nos a melhorar a experiência e a dar mais visibilidade a raças e produtores que importam para a ilha."
       }
     },
     {
       "id": "ramo-grande-dop-peter-cafe-sport",
-      "titulo": "Ramo Grande DOP · Peter Café Sport",
-      "subtitulo": "Peça de origem certificada",
-      "secao_titulo": "Esta peça",
+      "titulo": {
+        "pt": "Ramo Grande DOP · Peter Café Sport",
+        "en": "Ramo Grande DOP · Peter Café Sport"
+      },
+      "subtitulo": {
+        "pt": "Peça de origem certificada",
+        "en": "Piece of certified origin"
+      },
+      "secao_titulo": {
+        "pt": "Esta peça",
+        "en": "This piece"
+      },
       "selecionado_por": "Rocha - Talho e Mercado",
       "selecionador": {
         "nome": "Rocha - Talho e Mercado",
         "link": "https://talhorocha.com",
         "mostrar_card": false
       },
-      "confeccionado_por": "Peter Café Sport, Faial",
-      "descricao": "Esta peça provém de uma vaca Ramo Grande DOP criada na ilha Terceira, numa exploração familiar onde a ligação a esta raça atravessa gerações. Com 10 anos de idade e 8 crias ao longo da sua vida produtiva, representa mais do que uma peça de carne: representa património genético, maneio tradicional e a continuidade de uma forma açoriana de criar gado.",
+      "confeccionado_por": {
+        "pt": "Peter Café Sport, Faial",
+        "en": "Peter Café Sport, Faial"
+      },
+      "descricao": {
+        "pt": "Esta peça provém de uma vaca Ramo Grande DOP, raça bovina autóctone dos Açores, criada na ilha Terceira, numa exploração familiar onde a ligação a esta raça atravessa gerações. Com 10 anos de idade e 8 crias ao longo da sua vida produtiva, representa mais do que uma peça de carne: representa património genético, maneio tradicional e a continuidade de uma forma açoriana de criar gado.",
+        "en": "This piece comes from a Ramo Grande DOP cow — an autochthonous Azorean bovine breed — raised on Terceira Island, on a family farm where the connection to this breed spans generations. At 10 years old and with 8 offspring during her productive life, she represents more than a piece of meat: she represents genetic heritage, traditional husbandry and the continuity of an Azorean way of raising cattle."
+      },
       "imagem_bg": "assets/bg-ramo-grande-dop-peter.jpg",
       "certificacaoDop": {
-        "titulo": "Certificação Carne Ramo Grande DOP",
+        "titulo": {
+          "pt": "Certificação Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef Certification"
+        },
         "logo": "assets/logo-ramo-grande-dop.png",
-        "logoAlt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
-        "designacaoOficial": "Carne Ramo Grande DOP",
-        "estado": "Certificação DOP confirmada",
+        "logoAlt": {
+          "pt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
+          "en": "Official logo of the Ramo Grande DOP Bovine Breed"
+        },
+        "designacaoOficial": {
+          "pt": "Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef"
+        },
+        "estado": {
+          "pt": "Certificação DOP confirmada",
+          "en": "DOP certification confirmed"
+        },
         "codigoAnimal": "PT717001037",
-        "texto": "Esta peça provém de um animal Ramo Grande DOP com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
+        "texto": {
+          "pt": "Esta peça provém de um animal Ramo Grande DOP com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
+          "en": "This piece comes from a Ramo Grande DOP animal with identified origin, raised in the Azores and accompanied by technical traceability data. The unique animal code allows associating the piece with its productive path, the producer, the slaughter and the carcass classification."
+        },
         "criterios": [
           {
-            "label": "Origem geográfica",
+            "label": {
+              "pt": "Origem geográfica",
+              "en": "Geographical origin"
+            },
             "valor": "Açores",
             "estado": "confirmado"
           },
           {
-            "label": "Nascido, criado e abatido nos Açores",
+            "label": {
+              "pt": "Nascido, criado e abatido nos Açores",
+              "en": "Born, raised and slaughtered in the Azores"
+            },
             "valor": "Confirmado",
             "estado": "confirmado"
           },
           {
-            "label": "Sistema de criação",
+            "label": {
+              "pt": "Sistema de criação",
+              "en": "Raising system"
+            },
             "valor": "Pastoreio em exploração familiar",
             "estado": "confirmado"
           },
           {
-            "label": "Alimentação",
+            "label": {
+              "pt": "Alimentação",
+              "en": "Feeding"
+            },
             "valor": "Pastagem com trevos, luzerna, azevém e capim",
             "estado": "confirmado"
           },
           {
-            "label": "Fase de acabamento",
+            "label": {
+              "pt": "Fase de acabamento",
+              "en": "Finishing phase"
+            },
             "valor": "Farinha de milho e azevém fresco",
             "estado": "confirmado"
           }
         ],
-        "nota": "Os dados de certificação e rastreabilidade são associados ao código único do animal."
+        "nota": {
+          "pt": "Os dados de certificação e rastreabilidade são associados ao código único do animal.",
+          "en": "Certification and traceability data are associated with the animal's unique code."
+        }
       },
       "caracteristicas": [
         {
           "icone": "assets/icon-1.svg",
           "label": "Identificação",
           "valor": "PT717001037"
-        },
-        {
-          "icone": "assets/icon-5.svg",
-          "label": "Raça",
-          "valor": "Ramo Grande DOP"
         },
         {
           "icone": "assets/icon-3.svg",
@@ -214,11 +257,6 @@
           "icone": "assets/icon-3.svg",
           "label": "Número de crias",
           "valor": "8"
-        },
-        {
-          "icone": "assets/icon-7.svg",
-          "label": "Avaliação",
-          "valor": "3.550 €"
         }
       ],
       "criacao": {
@@ -264,35 +302,62 @@
       ],
       "mostrar_o_que_esperar": false,
       "terroir": {
-        "titulo": "É uma carne com origem e território",
-        "texto": "Criada em pastagens da ilha Terceira, esta peça expressa a ligação entre o animal, o produtor e o território. A alimentação, o maneio e o tempo de criação fazem parte da identidade desta carne e da sua relação com a Ramo Grande DOP."
+        "titulo": {
+          "pt": "É uma carne com origem e território",
+          "en": "A meat with origin and territory"
+        },
+        "texto": {
+          "pt": "Criada em pastagens da ilha Terceira, esta peça expressa a ligação entre o animal, o produtor e o território. A alimentação, o maneio e o tempo de criação fazem parte da identidade desta carne e da sua relação com a Ramo Grande DOP.",
+          "en": "Raised in pastures of Terceira Island, this piece expresses the link between animal, producer and territory. Feeding, husbandry and raising time are part of the identity of this meat and its relationship with Ramo Grande DOP."
+        }
       },
       "peca_rara": {
-        "titulo": "Porque é uma peça especial?",
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
         "bullets": [
           {
             "label": null,
-            "texto": "Vaca Ramo Grande DOP com 10 anos"
+            "texto": {
+              "pt": "Vaca Ramo Grande DOP com 10 anos",
+              "en": "10-year-old Ramo Grande DOP cow"
+            }
           },
           {
             "label": null,
-            "texto": "8 crias ao longo da sua vida produtiva"
+            "texto": {
+              "pt": "8 crias ao longo da sua vida produtiva",
+              "en": "8 offspring throughout her productive life"
+            }
           },
           {
             "label": null,
-            "texto": "Exploração familiar com ligação geracional à raça"
+            "texto": {
+              "pt": "Exploração familiar com ligação geracional à raça",
+              "en": "Family farm with generational link to the breed"
+            }
           },
           {
             "label": null,
-            "texto": "O trisavô de Emiliano Meneses já criava Ramo Grande DOP"
+            "texto": {
+              "pt": "O trisavô de Emiliano Meneses já criava Ramo Grande DOP",
+              "en": "Emiliano Meneses's great-great-grandfather already raised Ramo Grande DOP"
+            }
           },
           {
             "label": null,
-            "texto": "Último animal criado pelo pai de Emiliano Meneses"
+            "texto": {
+              "pt": "Último animal criado pelo pai de Emiliano Meneses",
+              "en": "Last animal raised by Emiliano Meneses's father"
+            }
           },
           {
             "label": null,
-            "texto": "Selecionada para o Peter Café Sport, no Faial"
+            "texto": {
+              "pt": "Selecionada para o Peter Café Sport, no Faial",
+              "en": "Selected for Peter Café Sport, on Faial"
+            }
           }
         ],
         "nota_final": null
@@ -300,7 +365,7 @@
       "produtor": {
         "id": "emiliano-meneses",
         "nome": "Emiliano Meneses",
-        "descricao": "Criador de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
+        "descricao": "Produtor de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
         "imagem": "assets/thumb-emiliano-meneses.png"
       },
       "raca": {
@@ -316,71 +381,211 @@
         "imagem": "assets/peter-cafe-sport.png"
       },
       "feedback": {
-        "titulo": "Conheça a Meat Azores",
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
         "mostrar_estrela": false,
         "url": "about.html",
-        "texto": "A Meat Azores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
-        "botao": "Saber mais sobre a Meat Azores"
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
       }
     },
     {
       "id": "brahman-holstein-frisia-restaurante-rocha",
       "estado": "provisorio",
-      "titulo": "Brahman x Holstein-Frísia · Restaurante Rocha",
-      "subtitulo": "Primeiro animal selecionado para o Restaurante Rocha",
-      "secao_titulo": "Esta peça",
+      "titulo": {
+        "pt": "Brahman x Holstein-Frísia · Restaurante Rocha",
+        "en": "Brahman x Holstein-Friesian · Restaurante Rocha"
+      },
+      "subtitulo": {
+        "pt": "Primeiro animal selecionado para o Restaurante Rocha",
+        "en": "First animal selected for Restaurante Rocha"
+      },
+      "secao_titulo": {
+        "pt": "Esta peça",
+        "en": "This piece"
+      },
       "selecionador": {
         "nome": "Talho Rocha",
         "link": "https://talhorocha.com",
         "mostrar_card": false
       },
-      "confeccionado_por": "Restaurante Rocha, Porto Judeu",
-      "descricao": "Esta peça provém de uma fêmea cruzada de Brahman x Holstein-Frísia, criada pelo Sr. António Azera na freguesia das Quatro Ribeiras, junto ao mar, na ilha Terceira.\n\nCom 4 anos de idade, foi criada numa exploração de leite em regime extensivo, junto das vacas leiteiras. Produzia cerca de 2 litros de leite por dia, não sendo viável para produção leiteira, e deu uma cria em 2024.\n\nA carne distingue-se pela cor rosada/vermelho-rubi, pela concentração de marmoreio e pela tonalidade dourada da gordura, resultando numa carne saborosa e suculenta.",
+      "confeccionado_por": {
+        "pt": "Restaurante Rocha, Porto Judeu",
+        "en": "Restaurante Rocha, Porto Judeu"
+      },
+      "descricao": {
+        "pt": "Esta peça provém de uma fêmea cruzada de Brahman x Holstein-Frísia, criada pelo Sr. António Azera na freguesia das Quatro Ribeiras, junto ao mar, na ilha Terceira.\n\nCom 4 anos de idade, foi criada numa exploração de leite em regime extensivo, junto das vacas leiteiras. Produzia cerca de 2 litros de leite por dia, não sendo viável para produção leiteira, e deu uma cria em 2024.\n\nA carne distingue-se pela cor rosada/vermelho-rubi, pela concentração de marmoreio e pela tonalidade dourada da gordura, resultando numa carne saborosa e suculenta.",
+        "en": "This piece comes from a crossbred Brahman x Holstein-Friesian female, raised by Mr. António Azera in the parish of Quatro Ribeiras, by the sea, on Terceira Island.\n\nAt 4 years old, she was raised on a dairy farm under an extensive regime, alongside dairy cows. She produced about 2 litres of milk per day, not viable for dairy production, and had one offspring in 2024.\n\nThe meat is distinguished by its rosé/ruby-red colour, the concentration of marbling and the golden hue of the fat, resulting in flavourful and juicy meat."
+      },
       "imagem_bg": "assets/bg-brahman-holstein-frisia-rocha.jpg",
-      "cruzamento": "Brahman x Holstein-Frísia",
-      "racas": ["brahman", "holstein-frisia"],
+      "cruzamento": {
+        "pt": "Brahman x Holstein-Frísia",
+        "en": "Brahman x Holstein-Friesian"
+      },
+      "racas": [
+        "brahman",
+        "holstein-frisia"
+      ],
       "caracteristicas": [
-        { "icone": "assets/icon-5.svg", "label": "Cruzamento", "valor": "Brahman x Holstein-Frísia" },
-        { "icone": "assets/icon-3.svg", "label": "Sexo", "valor": "Fêmea" },
-        { "icone": "assets/icon-4.svg", "label": "Idade", "valor": "4 anos" },
-        { "icone": "assets/icon-1.svg", "label": "Origem", "valor": "Quatro Ribeiras, Ilha Terceira" },
-        { "icone": "assets/icon-6.svg", "label": "Produtor", "valor": "António Azera" },
-        { "icone": "assets/icon-2.svg", "label": "Sistema de criação", "valor": "Regime extensivo" },
-        { "icone": "assets/icon-2.svg", "label": "Tipo de exploração", "valor": "Exploração de leite" },
-        { "icone": "assets/icon-7.svg", "label": "Produção de leite", "valor": "~2 litros/dia" },
-        { "icone": "assets/icon-3.svg", "label": "Cria", "valor": "1 (em 2024)" },
-        { "icone": "assets/icon-8.svg", "label": "Temperamento", "valor": "Agressivo" },
-        { "icone": "assets/icon-7.svg", "label": "Peso referido", "valor": "~415 kg" }
+        {
+          "icone": "assets/icon-5.svg",
+          "label": "Cruzamento",
+          "valor": "Brahman x Holstein-Frísia"
+        },
+        {
+          "icone": "assets/icon-3.svg",
+          "label": "Sexo",
+          "valor": "Fêmea"
+        },
+        {
+          "icone": "assets/icon-4.svg",
+          "label": "Idade",
+          "valor": "4 anos"
+        },
+        {
+          "icone": "assets/icon-1.svg",
+          "label": "Origem",
+          "valor": "Quatro Ribeiras, Ilha Terceira"
+        },
+        {
+          "icone": "assets/icon-6.svg",
+          "label": "Produtor",
+          "valor": "António Azera"
+        },
+        {
+          "icone": "assets/icon-2.svg",
+          "label": "Sistema de criação",
+          "valor": "Regime extensivo"
+        },
+        {
+          "icone": "assets/icon-2.svg",
+          "label": "Tipo de exploração",
+          "valor": "Exploração de leite"
+        },
+        {
+          "icone": "assets/icon-7.svg",
+          "label": "Produção de leite",
+          "valor": "~2 litros/dia"
+        },
+        {
+          "icone": "assets/icon-3.svg",
+          "label": "Cria",
+          "valor": "1 (em 2024)"
+        },
+        {
+          "icone": "assets/icon-8.svg",
+          "label": "Temperamento",
+          "valor": "Agressivo"
+        },
+        {
+          "icone": "assets/icon-7.svg",
+          "label": "Peso referido",
+          "valor": "~415 kg"
+        }
       ],
       "criacao": {
         "descricao": "Criada numa exploração de leite nas Quatro Ribeiras, esta fêmea beneficiava de um regime extensivo e de uma área média de cerca de 7 alqueires por cabeça. O maneio reflete a realidade de muitas explorações leiteiras da ilha Terceira, onde o pasto, os silos e a alimentação complementar fazem parte do quotidiano produtivo.",
         "alimentacao_regular": [
-          { "icone": "assets/erva.svg", "texto": "Azevém" },
-          { "icone": "assets/erva.svg", "texto": "Silo de milho" },
-          { "icone": "assets/erva.svg", "texto": "Silo de erva" },
-          { "icone": "assets/farinha.svg", "texto": "Ração de leite" }
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Azevém"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Silo de milho"
+          },
+          {
+            "icone": "assets/erva.svg",
+            "texto": "Silo de erva"
+          },
+          {
+            "icone": "assets/farinha.svg",
+            "texto": "Ração de leite"
+          }
         ],
         "fase_acabamento": []
       },
       "mostrar_o_que_esperar": false,
       "peca_rara": {
-        "titulo": "Porque é uma peça especial?",
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
         "bullets": [
-          { "label": null, "texto": "Primeiro animal selecionado para o Restaurante Rocha" },
-          { "label": null, "texto": "Fêmea cruzada de Brahman x Holstein-Frísia" },
-          { "label": null, "texto": "Criada nas Quatro Ribeiras, junto ao mar" },
-          { "label": null, "texto": "Proveniente de uma família ligada ao gado há cinco gerações" },
-          { "label": null, "texto": "Criada numa exploração leiteira tradicional da ilha Terceira" },
-          { "label": null, "texto": "Animal valorizado através de uma proposta de aproveitamento consciente da carne" },
-          { "label": null, "texto": "Carne descrita pela cor rosada/vermelho-rubi, marmoreio e gordura dourada" }
+          {
+            "label": null,
+            "texto": {
+              "pt": "Primeiro animal selecionado para o Restaurante Rocha",
+              "en": "First animal selected for Restaurante Rocha"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Fêmea cruzada de Brahman x Holstein-Frísia",
+              "en": "Crossbred Brahman x Holstein-Friesian female"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Criada nas Quatro Ribeiras, junto ao mar",
+              "en": "Raised in Quatro Ribeiras, by the sea"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Proveniente de uma família ligada ao gado há cinco gerações",
+              "en": "From a family linked to cattle for five generations"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Criada numa exploração leiteira tradicional da ilha Terceira",
+              "en": "Raised on a traditional dairy farm of Terceira Island"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Animal valorizado através de uma proposta de aproveitamento consciente da carne",
+              "en": "Animal valued through a proposal of conscious meat use"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Carne descrita pela cor rosada/vermelho-rubi, marmoreio e gordura dourada",
+              "en": "Meat described by its rosé/ruby-red colour, marbling and golden fat"
+            }
+          }
         ],
         "nota_final": null
       },
-      "citacao": "Na altura em que não havia adubos nem rações, dizia-se que o melhor gado da ilha era o das Quatro Ribeiras.",
-      "disponibilidade": "Esta carne estará disponível no Restaurante Rocha até esgotar, sendo trabalhada pela cozinha em diferentes cortes e preparações.",
+      "citacao": {
+        "pt": "Na altura em que não havia adubos nem rações, dizia-se que o melhor gado da ilha era o das Quatro Ribeiras.",
+        "en": "In a time when there were no fertilizers or feed, it was said that the best cattle on the island were those from Quatro Ribeiras."
+      },
+      "disponibilidade": {
+        "pt": "Esta carne estará disponível no Restaurante Rocha até esgotar, sendo trabalhada pela cozinha em diferentes cortes e preparações.",
+        "en": "This meat will be available at Restaurante Rocha until sold out, prepared by the kitchen in different cuts and preparations."
+      },
       "dados_matadouro": {
         "pendente": true,
-        "nota": "Dados oficiais a atualizar após consulta da tabela do matadouro com a data de abate.",
+        "nota": {
+          "pt": "Dados oficiais a atualizar após consulta da tabela do matadouro com a data de abate.",
+          "en": "Official data to be updated after consulting the slaughterhouse table with the slaughter date."
+        },
         "campos": [
           "Identificação oficial do animal",
           "Data de abate",
@@ -407,11 +612,20 @@
         "website": "https://www.restauranterocha.pt/"
       },
       "feedback": {
-        "titulo": "Conheça a Meat Azores",
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
         "mostrar_estrela": false,
         "url": "about.html",
-        "texto": "A Meat Azores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
-        "botao": "Saber mais sobre a Meat Azores"
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
       }
     }
   ]

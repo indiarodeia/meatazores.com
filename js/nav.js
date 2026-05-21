@@ -3,12 +3,32 @@
 
   const DEFAULT_PECA_ID = 'ramo-grande-dop-peter-cafe-sport';
 
+  var I = (window.MA && window.MA.i18n) || {};
+  var label = I.label || function (s) { return s; };
+  var withLang = I.withLang || function (u) { return u; };
+
+  // Tradução específica para "Raças" no nav (deve ser "Breeds" não "Breeds" do nav)
+  var NAV_LABELS = {
+    home: { pt: 'Home', en: 'Home' },
+    racas: { pt: 'Raças', en: 'Breeds' },
+    scan: { pt: 'Scan', en: 'Scan' },
+    produtores: { pt: 'Produtores', en: 'Producers' },
+    about: { pt: 'About', en: 'About' }
+  };
+
   function getHomePecaId() {
     try {
       return localStorage.getItem('ma_peca_ativa') || DEFAULT_PECA_ID;
     } catch (e) {
       return DEFAULT_PECA_ID;
     }
+  }
+
+  function navLabel(key) {
+    var entry = NAV_LABELS[key];
+    if (!entry) return '';
+    var l = (I.getLang ? I.getLang() : 'pt');
+    return entry[l] || entry.pt;
   }
 
   const ITEMS = [
@@ -61,13 +81,15 @@
     var active = isActive(item, pathname);
     var className = 'ma-bottom-nav__item ma-bottom-nav__item--' + item.key + (active ? ' is-active' : '');
     var aria = active ? ' aria-current="page"' : '';
+    var href = withLang(item.href);
+    var labelTxt = navLabel(item.key);
 
     return (
-      '<a class="' + className + '" href="' + item.href + '"' + aria + '>' +
+      '<a class="' + className + '" href="' + href + '"' + aria + '>' +
         '<span class="ma-bottom-nav__icon" aria-hidden="true">' +
           '<svg viewBox="0 0 24 24" focusable="false">' + item.icon + '</svg>' +
         '</span>' +
-        '<span class="ma-bottom-nav__label">' + item.label + '</span>' +
+        '<span class="ma-bottom-nav__label">' + labelTxt + '</span>' +
       '</a>'
     );
   }
@@ -81,9 +103,11 @@
     var homeItem = ITEMS.find(function (i) { return i.key === 'home'; });
     if (homeItem) homeItem.href = 'peca.html?id=' + getHomePecaId();
 
+    var navAria = (I.getLang && I.getLang() === 'en') ? 'Main navigation' : 'Navegação principal';
+
     var nav = document.createElement('nav');
     nav.className = 'ma-bottom-nav';
-    nav.setAttribute('aria-label', 'Navegação principal');
+    nav.setAttribute('aria-label', navAria);
     nav.innerHTML = ITEMS.map(function (item) {
       return renderItem(item, pathname);
     }).join('');

@@ -106,7 +106,7 @@
   }
 
   function preencherParceiro(parceiro, todasAsPecas) {
-    document.title = parceiro.nome + ' | Parceiro | Meat Azores';
+    document.title = parceiro.nome + ' | Parceiro | MeatAzores';
 
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && parceiro.descricao_curta) metaDesc.setAttribute('content', parceiro.descricao_curta);

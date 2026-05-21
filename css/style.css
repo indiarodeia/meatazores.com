@@ -2953,6 +2953,20 @@ body:has(#restaurante-nome) .element-producer .text-wrapper-34 {
     white-space: normal;
 }
 
+body:has(#peca-titulo) .element-product .text-wrapper-21,
+body:has(#produtor-nome) .element-producer .text-wrapper-34,
+body:has(#raca-nome) .element-producer .text-wrapper-34,
+body:has(#restaurante-nome) .element-producer .text-wrapper-34,
+.peca-raca-card .text-wrapper-21,
+.element-producer .text-wrapper-34 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 body:has(#peca-titulo) .element-product .certificacao-dop {
     border: 1px solid rgba(1, 72, 56, 0.1);
     border-radius: var(--ma-card-radius);
@@ -4059,5 +4073,257 @@ body:has(#peca-titulo) .element-product #peca-descricao {
 body:has(#peca-titulo) .element-product #peca-disponibilidade {
     white-space: pre-line;
 }
+
+/* PRODUTOR - FRASE DESTAQUE, FICHA RÁPIDA, SISTEMA, ALIMENTAÇÃO, CITAÇÃO */
+
+body:has(#produtor-nome) .element-producer .produtor-localizacao-detalhe {
+    margin: 4px 0 0 28px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.35;
+    color: var(--ma-muted);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-localizacao-detalhe[hidden] {
+    display: none;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-frase-destaque {
+    margin: 16px 0 0;
+    padding: 16px 18px;
+    background: rgba(1, 72, 56, 0.05);
+    border-left: 4px solid var(--ma-trust);
+    border-radius: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-frase-destaque[hidden] {
+    display: none;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-frase-destaque__texto {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin-top: 4px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida[hidden] {
+    display: none;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__title {
+    margin: 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.3;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    width: 100%;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 14px;
+    background: #fff;
+    border: 1px solid var(--ma-line);
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(10, 37, 51, 0.05);
+    min-height: 92px;
+    box-sizing: border-box;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__icon {
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 2px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__label {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.3;
+    color: var(--ma-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-ficha-rapida__valor {
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-sistema__grid {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-sistema__item {
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 14px;
+    line-height: 1.4;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-sistema__label {
+    font-weight: 600;
+    color: var(--ma-muted);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-sistema__valor {
+    font-weight: 500;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-sistema__descricao {
+    margin: 8px 0 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-alimentacao__grupo + .produtor-alimentacao__grupo {
+    margin-top: 12px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-alimentacao__titulo {
+    margin: 0 0 6px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ma-ink);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-alimentacao__chips {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+body:has(#produtor-nome) .element-producer .produtor-alimentacao__chip {
+    padding: 4px 10px;
+    background: #f1f5f5;
+    border-radius: 999px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 13px;
+    color: var(--ma-trust);
+}
+
+body:has(#produtor-nome) .element-producer .produtor-alimentacao__nota {
+    margin: 10px 0 0;
+    font-family: 'Sofia Pro', Helvetica;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--ma-muted);
+}
+
+body:has(#produtor-nome) .element-producer #produtor-historia {
+    white-space: pre-line;
+}
+
+body:has(#produtor-nome) .element-producer .peca-citacao__autor {
+    display: block;
+    margin-top: 8px;
+    font-family: 'Sofia Pro', Helvetica;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--ma-muted);
+}
+
+body:has(#produtor-nome) .element-producer .peca-citacao__autor[hidden] {
+    display: none;
+}
+
+/* LANGUAGE TOGGLE PT | EN */
+
+.lang-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid var(--ma-line);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(10, 37, 51, 0.08);
+    font-family: 'Sofia Pro', Helvetica;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1;
+    backdrop-filter: blur(6px);
+}
+
+.lang-toggle__btn {
+    color: var(--ma-muted);
+    text-decoration: none;
+    padding: 4px 6px;
+    border-radius: 999px;
+    transition: color 0.15s ease;
+}
+
+.lang-toggle__btn:hover {
+    color: var(--ma-ink);
+}
+
+.lang-toggle__btn.is-active {
+    color: var(--ma-trust);
+    font-weight: 800;
+}
+
+.lang-toggle__sep {
+    color: var(--ma-line);
+    user-select: none;
+}
+
+/* Variantes de posicionamento */
+.lang-toggle-inline {
+    align-self: flex-end;
+    margin-bottom: 8px;
+}
+
+.lang-toggle-fixed {
+    /* Quando colocado dentro do .scanning > header (peca/produtor/raca/restaurante) */
+    margin-left: auto;
+}
+
+/* Toggle no canto da landing (index) */
+.lang-toggle-fixed--dark {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 10;
+}
+
+
 
 

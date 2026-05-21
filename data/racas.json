@@ -3,64 +3,186 @@
     {
       "id": "ramo-grande-dop",
       "nome": "Ramo Grande DOP",
-      "tipo": "Raça bovina autóctone dos Açores",
-      "localizacao": "Açores, com forte ligação à ilha Terceira",
+      "tipo": {
+        "pt": "Raça bovina autóctone dos Açores",
+        "en": "Azorean autochthonous cattle breed"
+      },
+      "localizacao": {
+        "pt": "Açores, com forte ligação à ilha Terceira",
+        "en": "Azores, with strong links to Terceira Island"
+      },
       "logo": "assets/logo-ramo-grande-dop.png",
       "logoAlt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
-      "descricao_curta": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
+      "descricao_curta": {
+        "pt": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
+        "en": "Azorean autochthonous cattle breed, deeply linked to Terceira Island and Azorean agricultural heritage."
+      },
       "hero": "assets/bg-ramo-grande-dop.jpg",
       "imagem": "assets/ramo-grande-dop.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Açores, Portugal", "bandeira": "🇵🇹" },
-        { "label": "Aptidão", "valor": "Carne, com denominação de origem protegida" },
-        { "label": "Porte", "valor": "Médio" },
-        { "label": "Pelagem", "valor": "Variável, típica da raça autóctone" },
-        { "label": "Sistema comum", "valor": "Exploração familiar tradicional" },
-        { "label": "Presença na Meat Azores", "valor": "Peças certificadas DOP de produtores açorianos" }
+        {
+          "label": "Origem",
+          "valor": "Açores, Portugal",
+          "bandeira": "🇵🇹"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Carne, com denominação de origem protegida"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Variável, típica da raça autóctone"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Exploração familiar tradicional"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Peças certificadas DOP de produtores açorianos"
+        }
       ],
-      "introducao": "A Ramo Grande DOP é uma raça bovina autóctone dos Açores, com uma ligação particularmente forte à ilha Terceira. Representa uma parte importante do património agrícola açoriano e da história das explorações familiares que mantiveram esta raça presente no território.",
-      "origem_territorio": "A Ramo Grande DOP está associada à história rural da ilha Terceira e à forma como várias gerações de produtores açorianos trabalharam a terra, o pasto e o gado. A sua valorização passa também por comunicar a origem, o maneio e os produtores que mantêm viva esta ligação.",
-      "valor_patrimonial": "Mais do que uma raça bovina, a Ramo Grande DOP representa continuidade, identidade agrícola e memória familiar. Ao tornar a sua origem visível, a Meat Azores contribui para aproximar o consumidor do território e das pessoas que estão por trás do produto.",
+      "introducao": {
+        "pt": "A Ramo Grande DOP é uma raça bovina autóctone dos Açores, com uma ligação particularmente forte à ilha Terceira. Representa uma parte importante do património agrícola açoriano e da história das explorações familiares que mantiveram esta raça presente no território.",
+        "en": "Ramo Grande DOP is an autochthonous cattle breed from the Azores, with a particularly strong connection to Terceira Island. It represents an important part of Azorean agricultural heritage and the history of family farms that kept this breed alive in the territory."
+      },
+      "origem_territorio": {
+        "pt": "A Ramo Grande DOP está associada à história rural da ilha Terceira e à forma como várias gerações de produtores açorianos trabalharam a terra, o pasto e o gado. A sua valorização passa também por comunicar a origem, o maneio e os produtores que mantêm viva esta ligação.",
+        "en": "Ramo Grande DOP is associated with the rural history of Terceira Island and the way several generations of Azorean producers worked the land, the pasture and the cattle. Its valorization also involves communicating origin, husbandry and the producers who keep this connection alive."
+      },
+      "valor_patrimonial": {
+        "pt": "Mais do que uma raça bovina, a Ramo Grande DOP representa continuidade, identidade agrícola e memória familiar. Ao tornar a sua origem visível, a MeatAzores contribui para aproximar o consumidor do território e das pessoas que estão por trás do produto.",
+        "en": "More than a cattle breed, Ramo Grande DOP represents continuity, agricultural identity and family memory. By making its origin visible, MeatAzores helps bring the consumer closer to the territory and to the people behind the product."
+      },
       "caracteristicas": [
-        "Raça bovina autóctone dos Açores",
-        "Forte ligação à ilha Terceira",
-        "Valor patrimonial e cultural",
-        "Associada a explorações familiares e maneio tradicional",
-        "Produto com denominação de origem protegida"
+        {
+          "pt": "Raça bovina autóctone dos Açores",
+          "en": "Azorean autochthonous cattle breed"
+        },
+        {
+          "pt": "Forte ligação à ilha Terceira",
+          "en": "Strong links to Terceira Island"
+        },
+        {
+          "pt": "Valor patrimonial e cultural",
+          "en": "Heritage and cultural value"
+        },
+        {
+          "pt": "Associada a explorações familiares e maneio tradicional",
+          "en": "Associated with family farms and traditional husbandry"
+        },
+        {
+          "pt": "Produto com denominação de origem protegida",
+          "en": "Product with protected designation of origin"
+        }
       ],
-      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"],
-      "produtores_associados": ["emiliano-meneses"],
-      "galeria": ["assets/ramo-grande-dop-pasto.jpg"]
+      "pecas_associadas": [
+        "ramo-grande-dop-peter-cafe-sport"
+      ],
+      "produtores_associados": [
+        "emiliano-meneses"
+      ],
+      "galeria": [
+        "assets/ramo-grande-dop-pasto.jpg"
+      ]
     },
     {
       "id": "catrina",
       "nome": "Catrina",
-      "tipo": "Raça bovina autóctone portuguesa",
-      "localizacao": "Ilha Terceira, Açores",
-      "descricao_curta": "Raça bovina autóctone portuguesa com raízes na ilha Terceira, intimamente ligada ao património genético, cultural e paisagístico dos Açores.",
+      "tipo": {
+        "pt": "Raça bovina autóctone portuguesa",
+        "en": "Portuguese autochthonous cattle breed"
+      },
+      "localizacao": {
+        "pt": "Ilha Terceira, Açores",
+        "en": "Terceira Island, Azores"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina autóctone portuguesa com raízes na ilha Terceira, intimamente ligada ao património genético, cultural e paisagístico dos Açores.",
+        "en": "Portuguese autochthonous cattle breed with roots in Terceira Island, intimately linked to the Azorean genetic, cultural and landscape heritage."
+      },
       "hero": "assets/bg-catrina.jpg",
       "imagem": "assets/catrina.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Ilha Terceira, Açores", "bandeira": "🇵🇹" },
-        { "label": "Aptidão", "valor": "Múltipla (carne, leite, trabalho)" },
-        { "label": "Porte", "valor": "Pequeno, perfil longilíneo" },
-        { "label": "Pelagem", "valor": "Variável, típica da raça autóctone" },
-        { "label": "Sistema comum", "valor": "Extensivo, pastagens de média e alta altitude" },
-        { "label": "Presença na Meat Azores", "valor": "Raça rara — cerca de 75 animais registados" }
+        {
+          "label": "Origem",
+          "valor": "Ilha Terceira, Açores",
+          "bandeira": "🇵🇹"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Múltipla (carne, leite, trabalho)"
+        },
+        {
+          "label": "Porte",
+          "valor": "Pequeno, perfil longilíneo"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Variável, típica da raça autóctone"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Extensivo, pastagens de média e alta altitude"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Raça rara — cerca de 75 animais registados"
+        }
       ],
-      "introducao": "A Catrina tem as suas raízes na ilha Terceira, estando intimamente ligada ao património genético, cultural e paisagístico dos Açores. Está particularmente bem adaptada a zonas de média e alta altitude.",
-      "origem_territorio": "A história da Catrina está ligada ao mundo rural terceirense desde os primeiros tempos do povoamento. Estima-se que raças portuguesas introduzidas nos Açores por volta de 1427 tenham estado na base genética das populações bovinas açorianas. A Catrina diferenciou-se das restantes populações, mantendo características próprias associadas ao regime de criação e ao contexto rural da Terceira.",
-      "valor_patrimonial": "As raças autóctones são um ativo vivo, património cultural e genético. Preservá-las é essencial não só por integrarem o ecossistema da região e contribuírem para o equilíbrio da biodiversidade animal, mas também pelo seu papel na sustentabilidade ambiental e socioeconómica, na valorização de boas práticas alimentares e na preservação de atividades culturais.",
+      "introducao": {
+        "pt": "A Catrina tem as suas raízes na ilha Terceira, estando intimamente ligada ao património genético, cultural e paisagístico dos Açores. Está particularmente bem adaptada a zonas de média e alta altitude.",
+        "en": "Catrina has its roots in Terceira Island, intimately linked to the genetic, cultural and landscape heritage of the Azores. It is particularly well adapted to mid and high altitude zones."
+      },
+      "origem_territorio": {
+        "pt": "A história da Catrina está ligada ao mundo rural terceirense desde os primeiros tempos do povoamento. Estima-se que raças portuguesas introduzidas nos Açores por volta de 1427 tenham estado na base genética das populações bovinas açorianas. A Catrina diferenciou-se das restantes populações, mantendo características próprias associadas ao regime de criação e ao contexto rural da Terceira.",
+        "en": "Catrina's history is linked to the rural world of Terceira since the earliest times of settlement. Portuguese breeds introduced to the Azores around 1427 are believed to have been the genetic base of Azorean cattle populations. Catrina differentiated itself from the others, retaining specific characteristics linked to the farming regime and rural context of Terceira."
+      },
+      "valor_patrimonial": {
+        "pt": "As raças autóctones são um ativo vivo, património cultural e genético. Preservá-las é essencial não só por integrarem o ecossistema da região e contribuírem para o equilíbrio da biodiversidade animal, mas também pelo seu papel na sustentabilidade ambiental e socioeconómica, na valorização de boas práticas alimentares e na preservação de atividades culturais.",
+        "en": "Autochthonous breeds are a living asset, cultural and genetic heritage. Preserving them is essential not only because they integrate the regional ecosystem and contribute to animal biodiversity balance, but also for their role in environmental and socio-economic sustainability, the valorization of good food practices and the preservation of cultural activities."
+      },
       "caracteristicas": [
-        "Raça bovina autóctone portuguesa",
-        "Raízes na ilha Terceira",
-        "Adaptada a zonas de média e alta altitude",
-        "Porte pequeno",
-        "Perfil longilíneo",
-        "Temperamento nervoso",
-        "Muito rústica",
-        "Andamentos fáceis, enérgicos e corretos",
-        "Efetivo registado muito reduzido, cerca de 75 animais"
+        {
+          "pt": "Raça bovina autóctone portuguesa",
+          "en": "Portuguese autochthonous cattle breed"
+        },
+        {
+          "pt": "Raízes na ilha Terceira",
+          "en": "Roots in Terceira Island"
+        },
+        {
+          "pt": "Adaptada a zonas de média e alta altitude",
+          "en": "Adapted to mid and high altitude"
+        },
+        {
+          "pt": "Porte pequeno",
+          "en": "Small size"
+        },
+        {
+          "pt": "Perfil longilíneo",
+          "en": "Slender profile"
+        },
+        {
+          "pt": "Temperamento nervoso",
+          "en": "Nervous temperament"
+        },
+        {
+          "pt": "Muito rústica",
+          "en": "Very rustic"
+        },
+        {
+          "pt": "Andamentos fáceis, enérgicos e corretos",
+          "en": "Easy, energetic and correct gaits"
+        },
+        {
+          "pt": "Efetivo registado muito reduzido, cerca de 75 animais",
+          "en": "Very small registered population, around 75 animals"
+        }
       ],
       "secoes_extra": [
         {
@@ -80,29 +202,72 @@
           "texto": "A origem do nome Catrina apresenta várias teorias. Uma das versões recolhidas no meio rural aponta para um touro conhecido como \"Catrina Velho\", ligado ao Porto Judeu, que teria sido usado para cobrir vacas locais. As crias passaram a ser designadas por \"Catrinas\"."
         }
       ],
-      "pecas_associadas": ["catrina-19-anos"],
-      "produtores_associados": ["manuel-lucas"],
-      "galeria": ["assets/img-catrina.jpg"]
+      "pecas_associadas": [
+        "catrina-19-anos"
+      ],
+      "produtores_associados": [
+        "manuel-lucas"
+      ],
+      "galeria": [
+        "assets/img-catrina.jpg"
+      ]
     },
     {
       "id": "aberdeen-angus",
       "nome": "Aberdeen-Angus",
-      "tipo": "Raça bovina de carne",
-      "localizacao": "Origem escocesa, com presença em Portugal",
-      "descricao_curta": "Raça bovina de aptidão carne, reconhecida pela qualidade da carne, precocidade, rusticidade, facilidade de maneio e boa adaptação a diferentes sistemas de produção.",
+      "tipo": {
+        "pt": "Raça bovina de carne",
+        "en": "Beef cattle breed"
+      },
+      "localizacao": {
+        "pt": "Origem escocesa, com presença em Portugal",
+        "en": "Scottish origin, with presence in Portugal"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina de aptidão carne, reconhecida pela qualidade da carne, precocidade, rusticidade, facilidade de maneio e boa adaptação a diferentes sistemas de produção.",
+        "en": "Beef cattle breed, recognized for meat quality, precocity, rusticity, ease of husbandry and good adaptation to different production systems."
+      },
       "hero": "assets/bg-aberdeen-angus.jpg",
       "imagem": "assets/aberdeen-angus.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Escócia, Reino Unido", "bandeira": "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
-        { "label": "Aptidão", "valor": "Carne" },
-        { "label": "Porte", "valor": "Médio" },
-        { "label": "Pelagem", "valor": "Preta, com variedade vermelha" },
-        { "label": "Sistema comum", "valor": "Pastagem e forragem, regime extensivo" },
-        { "label": "Presença na Meat Azores", "valor": "Ficha informativa — sem peça associada de momento" }
+        {
+          "label": "Origem",
+          "valor": "Escócia, Reino Unido",
+          "bandeira": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Carne"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Preta, com variedade vermelha"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Pastagem e forragem, regime extensivo"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Ficha informativa — sem peça associada de momento"
+        }
       ],
-      "introducao": "A Aberdeen-Angus é uma raça bovina de aptidão carne, de médio porte, reconhecida internacionalmente pela qualidade da carne. É uma raça precoce, rústica, de fácil maneio e bem adaptada a diferentes condições de criação.",
-      "origem_territorio": "A Aberdeen-Angus é uma raça nativa da Escócia, associada à região nordeste do país, incluindo os condados de Aberdeenshire e Angus. A sua expansão internacional tornou-a uma das raças de carne mais reconhecidas a nível mundial.",
-      "valor_patrimonial": "A Aberdeen-Angus é hoje uma referência na produção de carne de qualidade. A sua presença na Meat Azores permite valorizar a rastreabilidade, a origem e o modo de criação de cada peça, aproximando o consumidor da história do animal, do produtor e do restaurante onde a carne é servida.",
+      "introducao": {
+        "pt": "A Aberdeen-Angus é uma raça bovina de aptidão carne, de médio porte, reconhecida internacionalmente pela qualidade da carne. É uma raça precoce, rústica, de fácil maneio e bem adaptada a diferentes condições de criação.",
+        "en": "Aberdeen-Angus is a medium-sized beef cattle breed, internationally recognized for meat quality. It is precocious, rustic, easy to manage and well adapted to different raising conditions."
+      },
+      "origem_territorio": {
+        "pt": "A Aberdeen-Angus é uma raça nativa da Escócia, associada à região nordeste do país, incluindo os condados de Aberdeenshire e Angus. A sua expansão internacional tornou-a uma das raças de carne mais reconhecidas a nível mundial.",
+        "en": "Aberdeen-Angus is a Scottish native breed, associated with the northeast region of the country, including Aberdeenshire and Angus counties. Its international expansion made it one of the most recognized beef breeds worldwide."
+      },
+      "valor_patrimonial": {
+        "pt": "A Aberdeen-Angus é hoje uma referência na produção de carne de qualidade. A sua presença na MeatAzores permite valorizar a rastreabilidade, a origem e o modo de criação de cada peça, aproximando o consumidor da história do animal, do produtor e do restaurante onde a carne é servida.",
+        "en": "Aberdeen-Angus is today a reference in quality meat production. Its presence in MeatAzores allows valuing traceability, origin and the way each piece was raised, bringing the consumer closer to the story of the animal, the producer and the restaurant serving the meat."
+      },
       "caracteristicas": [
         "Raça bovina de aptidão carne",
         "Médio porte",
@@ -127,31 +292,64 @@
           "texto": "A rusticidade, a precocidade e o fácil acabamento tornam a Aberdeen-Angus adequada a regimes de produção extensivos e sustentáveis, incluindo sistemas com forte componente de pastagem."
         },
         {
-          "titulo": "Presença na Meat Azores",
+          "titulo": "Presença na MeatAzores",
           "texto": "Esta página será atualizada quando existir uma peça Aberdeen-Angus associada a um restaurante parceiro. Até lá, funciona como ficha informativa da raça dentro da aplicação."
         }
       ],
       "pecas_associadas": [],
       "produtores_associados": [],
-      "galeria": ["assets/aberdeen-angus-pasto.jpg"]
+      "galeria": [
+        "assets/aberdeen-angus-pasto.jpg"
+      ]
     },
     {
       "id": "jersey",
       "nome": "Jersey",
-      "tipo": "Raça bovina leiteira",
-      "localizacao": "Ilha de Jersey, Ilhas do Canal",
-      "descricao_curta": "Raça leiteira originária da ilha de Jersey, reconhecida pela produção de leite rico e cremoso.",
+      "tipo": {
+        "pt": "Raça bovina leiteira",
+        "en": "Dairy cattle breed"
+      },
+      "localizacao": {
+        "pt": "Ilha de Jersey, Ilhas do Canal",
+        "en": "Jersey Island, Channel Islands"
+      },
+      "descricao_curta": {
+        "pt": "Raça leiteira originária da ilha de Jersey, reconhecida pela produção de leite rico e cremoso.",
+        "en": "Dairy breed originating from Jersey Island, recognized for its rich and creamy milk production."
+      },
       "hero": "assets/bg-jersey.jpg",
       "imagem": "assets/jersey.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Ilha de Jersey, Ilhas do Canal", "bandeira": "🇯🇪" },
-        { "label": "Aptidão", "valor": "Leiteira" },
-        { "label": "Porte", "valor": "Pequeno a médio" },
-        { "label": "Pelagem", "valor": "Fulva ou castanha, com variações de tom" },
-        { "label": "Sistema comum", "valor": "Exploração leiteira" },
-        { "label": "Presença na Meat Azores", "valor": "Associada a peças provenientes de explorações leiteiras" }
+        {
+          "label": "Origem",
+          "valor": "Ilha de Jersey, Ilhas do Canal",
+          "bandeira": "🇯🇪"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Leiteira"
+        },
+        {
+          "label": "Porte",
+          "valor": "Pequeno a médio"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Fulva ou castanha, com variações de tom"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Exploração leiteira"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Associada a peças provenientes de explorações leiteiras"
+        }
       ],
-      "historia": "A Jersey é uma raça bovina leiteira originária da ilha de Jersey, nas Ilhas do Canal. Desenvolveu-se num território insular onde a seleção ao longo de gerações fixou características próprias, tornando-a uma raça reconhecida internacionalmente.",
+      "historia": {
+        "pt": "A Jersey é uma raça bovina leiteira originária da ilha de Jersey, nas Ilhas do Canal. Desenvolveu-se num território insular onde a seleção ao longo de gerações fixou características próprias, tornando-a uma raça reconhecida internacionalmente.",
+        "en": "Jersey is a dairy cattle breed originating from Jersey Island in the Channel Islands. It developed on an island territory where generations of selection fixed unique characteristics, making it an internationally recognized breed."
+      },
       "caracteristicas": [
         "Produção de leite rico e cremoso",
         "Porte mais pequeno do que muitas raças leiteiras",
@@ -160,29 +358,69 @@
         "Face delicada e ossatura refinada",
         "Boa adaptação a diferentes sistemas de produção"
       ],
-      "contexto_meatazores": "Na Meat Azores, a Jersey permite explicar a ligação entre produção leiteira, território e valorização da carne de animais com origem conhecida. Em animais provenientes de explorações leiteiras, a idade, o maneio, a alimentação e o percurso produtivo ajudam a compreender melhor a carne.",
+      "contexto_meatazores": {
+        "pt": "Na MeatAzores, a Jersey permite explicar a ligação entre produção leiteira, território e valorização da carne de animais com origem conhecida. Em animais provenientes de explorações leiteiras, a idade, o maneio, a alimentação e o percurso produtivo ajudam a compreender melhor a carne.",
+        "en": "At MeatAzores, Jersey helps explain the link between dairy production, territory and the valuation of meat from animals with known origin. For animals from dairy farms, age, husbandry, feeding and productive path help better understand the meat."
+      },
       "pecas_associadas": [],
       "produtores_associados": [],
       "galeria": []
     },
     {
       "id": "holstein-frisia",
-      "nome": "Holstein-Frísia",
-      "tipo": "Raça bovina leiteira",
-      "localizacao": "Frísia, norte da Europa",
-      "descricao_curta": "Raça bovina leiteira de origem europeia, reconhecida pela elevada aptidão para produção de leite.",
+      "nome": {
+        "pt": "Holstein-Frísia",
+        "en": "Holstein-Friesian"
+      },
+      "tipo": {
+        "pt": "Raça bovina leiteira",
+        "en": "Dairy cattle breed"
+      },
+      "localizacao": {
+        "pt": "Frísia, norte da Europa",
+        "en": "Frisia, northern Europe"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina leiteira de origem europeia, reconhecida pela elevada aptidão para produção de leite.",
+        "en": "European-origin dairy cattle breed, recognized for high milk production capacity."
+      },
       "hero": "assets/bg-holstein-frisia.jpg",
       "imagem": "assets/holstein-frisia.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Frísia, norte da Europa", "bandeira": "🇳🇱" },
-        { "label": "Aptidão", "valor": "Leiteira" },
-        { "label": "Porte", "valor": "Médio a grande" },
-        { "label": "Pelagem", "valor": "Habitualmente preta e branca; também vermelha e branca" },
-        { "label": "Sistema comum", "valor": "Exploração leiteira" },
-        { "label": "Presença na Meat Azores", "valor": "Animais de origem leiteira e cruzamentos rastreados" }
+        {
+          "label": "Origem",
+          "valor": "Frísia, norte da Europa",
+          "bandeira": "🇳🇱"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Leiteira"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio a grande"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Habitualmente preta e branca; também vermelha e branca"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Exploração leiteira"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Animais de origem leiteira e cruzamentos rastreados"
+        }
       ],
-      "historia": "A Holstein-Frísia tem origem na região da Frísia, no norte da Europa, entre os atuais Países Baixos e Alemanha. Ao longo do tempo, foi selecionada pela sua aptidão leiteira, tornando-se uma das raças bovinas leiteiras mais reconhecidas e difundidas no mundo.",
-      "nota_educativa": "Embora muitas vezes seja chamada apenas “Frísia” no uso comum, a designação técnica mais completa é Holstein-Frísia.",
+      "historia": {
+        "pt": "A Holstein-Frísia tem origem na região da Frísia, no norte da Europa, entre os atuais Países Baixos e Alemanha. Ao longo do tempo, foi selecionada pela sua aptidão leiteira, tornando-se uma das raças bovinas leiteiras mais reconhecidas e difundidas no mundo.",
+        "en": "Holstein-Friesian has its origin in the Frisia region of northern Europe, between present-day Netherlands and Germany. Over time, it was selected for its dairy aptitude, becoming one of the most recognized and widespread dairy cattle breeds in the world."
+      },
+      "nota_educativa": {
+        "pt": "Embora muitas vezes seja chamada apenas “Frísia” no uso comum, a designação técnica mais completa é Holstein-Frísia.",
+        "en": "Although often called just \"Friesian\" in common usage, the more complete technical designation is Holstein-Friesian."
+      },
       "caracteristicas": [
         "Elevada aptidão leiteira",
         "Raça muito presente em explorações de leite",
@@ -191,28 +429,66 @@
         "Forte presença em sistemas leiteiros modernos",
         "Pode integrar cruzamentos com outras raças"
       ],
-      "contexto_meatazores": "Na Meat Azores, a Holstein-Frísia ajuda a enquadrar animais provenientes de explorações leiteiras. Quando está associada a cruzamentos, a página do animal deve explicar o cruzamento e ligar separadamente às raças envolvidas.",
-      "pecas_associadas": ["brahman-holstein-frisia-restaurante-rocha"],
-      "produtores_associados": ["antonio-azera"],
+      "contexto_meatazores": {
+        "pt": "Na MeatAzores, a Holstein-Frísia ajuda a enquadrar animais provenientes de explorações leiteiras. Quando está associada a cruzamentos, a página do animal deve explicar o cruzamento e ligar separadamente às raças envolvidas.",
+        "en": "At MeatAzores, Holstein-Friesian helps contextualize animals from dairy farms. When associated with crossbreeding, the animal page should explain the crossbreed and link separately to the breeds involved."
+      },
+      "pecas_associadas": [
+        "brahman-holstein-frisia-restaurante-rocha"
+      ],
+      "produtores_associados": [
+        "antonio-azera"
+      ],
       "galeria": []
     },
     {
       "id": "brahman",
       "nome": "Brahman",
-      "tipo": "Raça bovina de origem zebuína",
-      "localizacao": "Desenvolvida a partir de gado zebuíno de origem indiana",
-      "descricao_curta": "Raça bovina reconhecida pela rusticidade, resistência ao calor e adaptação a condições exigentes.",
+      "tipo": {
+        "pt": "Raça bovina de origem zebuína",
+        "en": "Zebu-origin cattle breed"
+      },
+      "localizacao": {
+        "pt": "Desenvolvida a partir de gado zebuíno de origem indiana",
+        "en": "Developed from Indian-origin zebu cattle"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina reconhecida pela rusticidade, resistência ao calor e adaptação a condições exigentes.",
+        "en": "Cattle breed recognized for rusticity, heat resistance and adaptation to demanding conditions."
+      },
       "hero": "assets/bg-brahman.jpg",
       "imagem": "assets/brahman.png",
       "ficha_rapida": [
-        { "label": "Origem", "valor": "Origem zebuína, com influência indiana", "bandeira": "🇮🇳" },
-        { "label": "Aptidão", "valor": "Carne e cruzamentos" },
-        { "label": "Porte", "valor": "Médio a grande" },
-        { "label": "Pelagem", "valor": "Variável, frequentemente cinzenta ou avermelhada" },
-        { "label": "Sistema comum", "valor": "Sistemas extensivos e cruzamentos" },
-        { "label": "Presença na Meat Azores", "valor": "Cruzamentos com raças leiteiras ou de carne" }
+        {
+          "label": "Origem",
+          "valor": "Origem zebuína, com influência indiana",
+          "bandeira": "🇮🇳"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Carne e cruzamentos"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio a grande"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Variável, frequentemente cinzenta ou avermelhada"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Sistemas extensivos e cruzamentos"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Cruzamentos com raças leiteiras ou de carne"
+        }
       ],
-      "historia": "A Brahman desenvolveu-se a partir de gado zebuíno, com influência de raças indianas. Tornou-se particularmente valorizada em regiões tropicais e subtropicais pela sua rusticidade, resistência ao calor e capacidade de adaptação.",
+      "historia": {
+        "pt": "A Brahman desenvolveu-se a partir de gado zebuíno, com influência de raças indianas. Tornou-se particularmente valorizada em regiões tropicais e subtropicais pela sua rusticidade, resistência ao calor e capacidade de adaptação.",
+        "en": "Brahman was developed from zebu cattle, with influence from Indian breeds. It became particularly valued in tropical and subtropical regions for its rusticity, heat resistance and adaptability."
+      },
       "caracteristicas": [
         "Boa tolerância ao calor",
         "Rusticidade elevada",
@@ -221,9 +497,16 @@
         "Adaptação a sistemas extensivos",
         "Perfil corporal característico das raças zebuínas"
       ],
-      "contexto_meatazores": "Na Meat Azores, a Brahman deve ser apresentada sobretudo no contexto de cruzamentos. No caso de animais cruzados, a página do animal deve mostrar o cruzamento e ligar separadamente às raças envolvidas.",
-      "pecas_associadas": ["brahman-holstein-frisia-restaurante-rocha"],
-      "produtores_associados": ["antonio-azera"],
+      "contexto_meatazores": {
+        "pt": "Na MeatAzores, a Brahman deve ser apresentada sobretudo no contexto de cruzamentos. No caso de animais cruzados, a página do animal deve mostrar o cruzamento e ligar separadamente às raças envolvidas.",
+        "en": "At MeatAzores, Brahman should be presented mostly in the context of crossbreeding. For crossbred animals, the animal page should show the crossbreed and link separately to the breeds involved."
+      },
+      "pecas_associadas": [
+        "brahman-holstein-frisia-restaurante-rocha"
+      ],
+      "produtores_associados": [
+        "antonio-azera"
+      ],
       "galeria": []
     }
   ]

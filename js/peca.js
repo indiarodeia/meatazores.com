@@ -5,6 +5,16 @@
   const RACAS_JSON = 'data/racas.json';
   const ASSETS_EM_FALTA = new Set();
 
+  const U = (window.MA && window.MA.utils) || {};
+  const hasValue = U.hasValue || function (v) { return v != null && v !== ''; };
+  const hasArrayItems = U.hasArrayItems || function (v) { return Array.isArray(v) && v.length > 0; };
+
+  const I = (window.MA && window.MA.i18n) || {};
+  const t = I.t || function (v) { return typeof v === 'string' ? v : (v && v.pt) || ''; };
+  const tValue = I.tValue || function (v) { return typeof v === 'string' ? v : t(v); };
+  const label = I.label || function (s) { return s; };
+  const withLang = I.withLang || function (u) { return u; };
+
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');
   }
@@ -14,8 +24,8 @@
     if (!main) return;
     main.innerHTML =
       '<div style="padding: 40px 24px; text-align: center;">' +
-        '<p style="font-family: sans-serif; color: #444; margin-bottom: 24px;">' + esc(mensagem) + '</p>' +
-        '<a href="index.html" style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 4px;">Voltar ao início</a>' +
+        '<p style="font-family: sans-serif; color: #444; margin-bottom: 24px;">' + esc(label(mensagem)) + '</p>' +
+        '<a href="' + esc(withLang('index.html')) + '" style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 4px;">' + esc(label('Voltar ao início')) + '</a>' +
       '</div>';
   }
 
@@ -54,8 +64,8 @@
   function renderWebsiteButton(url) {
     if (!url) return '';
     return (
-      '<a href="' + esc(url) + '" class="button-arrow-right peca-website-link" target="_blank" rel="noopener noreferrer" aria-label="Visitar website (abre num novo separador)">' +
-        '<span class="text-wrapper-20">Visitar website</span>' +
+      '<a href="' + esc(url) + '" class="button-arrow-right peca-website-link" target="_blank" rel="noopener noreferrer" aria-label="' + esc(label('Visitar website')) + '">' +
+        '<span class="text-wrapper-20">' + esc(label('Visitar website')) + '</span>' +
         '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
       '</a>'
     );
@@ -103,10 +113,14 @@
   }
 
   function renderCaracteristicas(items) {
+    // Filtrar items sem label/valor para evitar campos vazios na grelha
+    const filtrados = items.filter(function (it) {
+      return hasValue(it) && hasValue(it.label) && hasValue(it.valor);
+    });
     let html = '';
-    for (let i = 0; i < items.length; i += 2) {
-      const a = items[i];
-      const b = items[i + 1];
+    for (let i = 0; i < filtrados.length; i += 2) {
+      const a = filtrados[i];
+      const b = filtrados[i + 1];
       html += '<div class="frame-4">';
       html += renderCaracteristicaItem(a);
       if (b) html += renderCaracteristicaItem(b);
@@ -116,12 +130,17 @@
   }
 
   function renderCaracteristicaItem(item) {
+    const iconHtml = hasValue(item.icone)
+      ? '<img class="icon" src="' + esc(item.icone) + '" alt="" />'
+      : '';
+    var labelTxt = label(t(item.label));
+    var valorTxt = tValue(t(item.valor));
     return (
       '<div class="fats">' +
-        '<img class="icon" src="' + esc(item.icone) + '" alt="" />' +
+        iconHtml +
         '<div class="frame-5">' +
-          '<div class="text-wrapper-6">' + esc(item.label) + '</div>' +
-          '<div class="text-wrapper-8">' + esc(item.valor) + '</div>' +
+          '<div class="text-wrapper-6">' + esc(labelTxt) + '</div>' +
+          '<div class="text-wrapper-8">' + esc(valorTxt) + '</div>' +
         '</div>' +
       '</div>'
     );
@@ -133,7 +152,7 @@
         '<div class="hugeicons-eco-power">' +
           '<img class="img" src="' + esc(item.icone) + '" alt="" />' +
         '</div>' +
-        '<div class="bem-estar-animal">' + esc(item.texto) + '</div>' +
+        '<div class="bem-estar-animal">' + esc(tValue(t(item.texto))) + '</div>' +
       '</div>'
     );
   }
@@ -145,7 +164,7 @@
       ? (
         '<div class="frame-wrapper">' +
           '<div class="frame-10">' +
-            '<h3 class="text-wrapper-13">Fase de Acabamento</h3>' +
+            '<h3 class="text-wrapper-13">' + esc(label('Fase de Acabamento')) + '</h3>' +
             '<div class="fats-4">' + acabamento + '</div>' +
           '</div>' +
         '</div>'
@@ -153,12 +172,12 @@
       : '';
     return (
       '<div class="group">' +
-        '<h2 id="sec-criacao-alimentacao" class="heading-xl">Criação e Alimentação</h2>' +
-        '<p class="text-wrapper-12">' + esc(criacao.descricao) + '</p>' +
+        '<h2 id="sec-criacao-alimentacao" class="heading-xl">' + esc(label('Criação e Alimentação')) + '</h2>' +
+        '<p class="text-wrapper-12">' + esc(t(criacao.descricao)) + '</p>' +
       '</div>' +
       '<div class="frame-wrapper">' +
         '<div class="frame-10">' +
-          '<h3 class="text-wrapper-13">Alimentação Regular</h3>' +
+          '<h3 class="text-wrapper-13">' + esc(label('Alimentação Regular')) + '</h3>' +
           '<div class="frame-11">' + regular + '</div>' +
         '</div>' +
       '</div>' +
@@ -168,14 +187,14 @@
 
   function renderCertificacaoDop(cert) {
     var logoHtml = cert.logo
-      ? '<img class="certificacao-dop__logo" src="' + esc(cert.logo) + '" alt="' + esc(cert.logoAlt || '') + '" onerror="this.hidden=true" />'
+      ? '<img class="certificacao-dop__logo" src="' + esc(cert.logo) + '" alt="' + esc(t(cert.logoAlt) || '') + '" onerror="this.hidden=true" />'
       : '';
 
-    var criteriosHtml = cert.criterios.map(function (c) {
+    var criteriosHtml = (cert.criterios || []).map(function (c) {
       return (
         '<div class="certificacao-dop__item">' +
-          '<span class="certificacao-dop__label">' + esc(c.label) + '</span>' +
-          '<span class="certificacao-dop__value">' + esc(c.valor) + '</span>' +
+          '<span class="certificacao-dop__label">' + esc(label(t(c.label))) + '</span>' +
+          '<span class="certificacao-dop__value">' + esc(tValue(t(c.valor))) + '</span>' +
         '</div>'
       );
     }).join('');
@@ -184,52 +203,55 @@
       '<div class="certificacao-dop">' +
         '<div class="certificacao-dop__header">' +
           logoHtml +
-          '<div class="certificacao-dop__title">' + esc(cert.titulo) + '</div>' +
+          '<div class="certificacao-dop__title">' + esc(t(cert.titulo)) + '</div>' +
         '</div>' +
-        '<div class="certificacao-dop__badge">' + esc(cert.estado) + '</div>' +
+        '<div class="certificacao-dop__badge">' + esc(tValue(t(cert.estado))) + '</div>' +
         '<div class="certificacao-dop__codigo">' + esc(cert.codigoAnimal) + '</div>' +
-        '<p class="certificacao-dop__text">' + esc(cert.texto) + '</p>' +
+        '<p class="certificacao-dop__text">' + esc(t(cert.texto)) + '</p>' +
         '<div class="certificacao-dop__grid">' + criteriosHtml + '</div>' +
-        (cert.nota ? '<p class="certificacao-dop__note">' + esc(cert.nota) + '</p>' : '') +
+        (cert.nota ? '<p class="certificacao-dop__note">' + esc(t(cert.nota)) + '</p>' : '') +
       '</div>'
     );
   }
 
   function renderOQueEsperar(items) {
-    return items.map(function (item) { return '• ' + esc(item); }).join('<br />');
+    return items.map(function (item) { return '• ' + esc(t(item)); }).join('<br />');
   }
 
   function renderPecaRara(pecaRara) {
     let html = '';
-    pecaRara.bullets.forEach(function (b) {
-      if (b.label) {
-        html += '<span class="text-wrapper-15">• ' + esc(b.label) + ': </span>';
-        html += '<span class="text-wrapper-16">' + esc(b.texto) + '<br /></span>';
+    (pecaRara.bullets || []).forEach(function (b) {
+      var bLabel = t(b.label);
+      var bTexto = t(b.texto);
+      if (bLabel) {
+        html += '<span class="text-wrapper-15">• ' + esc(bLabel) + ': </span>';
+        html += '<span class="text-wrapper-16">' + esc(bTexto) + '<br /></span>';
       } else {
-        html += '<span class="text-wrapper-16">• ' + esc(b.texto) + '<br /></span>';
+        html += '<span class="text-wrapper-16">• ' + esc(bTexto) + '<br /></span>';
       }
     });
     if (pecaRara.nota_final) {
       const n = pecaRara.nota_final;
-      html += '<span class="text-wrapper-16">• ' + esc(n.prefixo) + ' </span>';
-      html += '<span class="text-wrapper-15">' + esc(n.destaque) + '</span>';
-      html += '<span class="text-wrapper-16"> ' + esc(n.sufixo) + '</span>';
+      html += '<span class="text-wrapper-16">• ' + esc(t(n.prefixo)) + ' </span>';
+      html += '<span class="text-wrapper-15">' + esc(t(n.destaque)) + '</span>';
+      html += '<span class="text-wrapper-16"> ' + esc(t(n.sufixo)) + '</span>';
     }
     return html;
   }
 
   function renderProdutorCard(produtor) {
+    var nome = t(produtor.nome);
     const img = produtor.imagem
-      ? '<img class="clip-path-group" data-src="' + esc(produtor.imagem) + '" alt="Fotografia do produtor ' + esc(produtor.nome) + '" />'
+      ? '<img class="clip-path-group" data-src="' + esc(produtor.imagem) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
       : '';
-    const href = 'produtor.html?id=' + esc(produtor.id);
+    const href = withLang('produtor.html?id=' + esc(produtor.id));
     return (
       img +
       '<div class="frame-14">' +
-        '<div class="text-wrapper-18">' + esc(produtor.nome) + '</div>' +
-        '<p class="text-wrapper-21">' + esc(produtor.descricao) + '</p>' +
-        '<a href="' + href + '" class="button-arrow-right" aria-label="Conhecer o produtor ' + esc(produtor.nome) + '">' +
-          '<span class="text-wrapper-20">Conhecer o produtor</span>' +
+        '<div class="text-wrapper-18">' + esc(nome) + '</div>' +
+        '<p class="text-wrapper-21">' + esc(t(produtor.descricao)) + '</p>' +
+        '<a href="' + href + '" class="button-arrow-right" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
+          '<span class="text-wrapper-20">' + esc(label('Conhecer o produtor')) + '</span>' +
           '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
         '</a>' +
         renderWebsiteButton(produtor.website) +
@@ -238,16 +260,17 @@
   }
 
   function renderRestauranteCard(restaurante) {
+    var nome = t(restaurante.nome);
     const img = restaurante.imagem
-      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(restaurante.nome) + '" /></div>'
+      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(nome) + '" /></div>'
       : '';
     return (
       img +
       '<div class="frame-16">' +
-        '<div class="text-wrapper-18">' + esc(restaurante.nome) + '</div>' +
-        '<p class="text-wrapper-21">' + esc(restaurante.descricao) + '</p>' +
-        '<a href="restaurante.html?id=' + esc(restaurante.id) + '" class="button-arrow-right" aria-label="Conhecer o destino gastronómico ' + esc(restaurante.nome) + '">' +
-          '<span class="text-wrapper-20">Conhecer o restaurante</span>' +
+        '<div class="text-wrapper-18">' + esc(nome) + '</div>' +
+        '<p class="text-wrapper-21">' + esc(t(restaurante.descricao)) + '</p>' +
+        '<a href="' + esc(withLang('restaurante.html?id=' + esc(restaurante.id))) + '" class="button-arrow-right" aria-label="' + esc(label('Conhecer o restaurante') + ' ' + nome) + '">' +
+          '<span class="text-wrapper-20">' + esc(label('Conhecer o restaurante')) + '</span>' +
           '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
         '</a>' +
         renderWebsiteButton(restaurante.website) +
@@ -256,18 +279,19 @@
   }
 
   function renderRacaCard(raca) {
+    var nome = t(raca.nome);
     const img = raca.imagem
-      ? '<div class="image-wrapper image-wrapper--raca"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
+      ? '<div class="image-wrapper image-wrapper--raca"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" /></div>'
       : '';
-    const descricao = raca.descricao || raca.descricao_curta || '';
+    const descricao = t(raca.descricao || raca.descricao_curta || '');
     return (
       '<div class="peca-raca-card">' +
         img +
         '<div class="frame-16">' +
-          '<div class="text-wrapper-18">' + esc(raca.nome) + '</div>' +
+          '<div class="text-wrapper-18">' + esc(nome) + '</div>' +
           (descricao ? '<p class="text-wrapper-21">' + esc(descricao) + '</p>' : '') +
-          '<a href="raca.html?id=' + esc(raca.id) + '" class="button-arrow-right" aria-label="Conhecer a raça ' + esc(raca.nome) + '">' +
-            '<span class="text-wrapper-20">Conhecer a raça</span>' +
+          '<a href="' + esc(withLang('raca.html?id=' + esc(raca.id))) + '" class="button-arrow-right" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
+            '<span class="text-wrapper-20">' + esc(label('Conhecer a raça')) + '</span>' +
             '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
           '</a>' +
         '</div>' +
@@ -278,7 +302,7 @@
   function renderDadosMatadouroNota(dados) {
     return (
       '<span class="peca-dados-matadouro-nota__icon" aria-hidden="true">ℹ️</span> ' +
-      '<span>Dados técnicos oficiais em atualização.</span>'
+      '<span>' + esc(label('Dados técnicos oficiais em atualização.')) + '</span>'
     );
   }
 
@@ -296,37 +320,47 @@
   }
 
   function preencherPeca(peca, todasAsRacas) {
-    document.title = peca.titulo + (peca.subtitulo ? ' | ' + peca.subtitulo : '') + ' | Meat Azores';
+    var titulo = t(peca.titulo);
+    var subtitulo = t(peca.subtitulo);
+    document.title = titulo + (subtitulo ? ' | ' + subtitulo : '') + ' | MeatAzores';
 
     const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && peca.descricao) metaDesc.setAttribute('content', peca.descricao);
+    if (metaDesc && peca.descricao) metaDesc.setAttribute('content', t(peca.descricao));
 
     const imgEl = document.querySelector('.element-product .image');
     if (imgEl && peca.imagem_bg) imgEl.style.backgroundImage = 'url("' + peca.imagem_bg + '")';
 
-    if (peca.secao_titulo) setText('sec-esta-peca', peca.secao_titulo);
+    if (peca.secao_titulo) setText('sec-esta-peca', t(peca.secao_titulo));
 
-    setText('peca-titulo', peca.titulo);
+    setText('peca-titulo', titulo);
+
+    // Atualizar labels fixos visíveis no DOM (estes existem como text fixo no HTML)
+    document.querySelectorAll('[id^="sec-"]').forEach(function(){});
 
     const subtituloEl = document.getElementById('peca-subtitulo');
     if (subtituloEl) {
-      if (peca.subtitulo) subtituloEl.textContent = peca.subtitulo;
+      if (subtitulo) subtituloEl.textContent = subtitulo;
       else subtituloEl.hidden = true;
     }
+
+    // Labels "Selecionado por" e "Confeccionado por" são spans com texto PT no HTML — atualizar
+    document.querySelectorAll('#peca-selecionado-wrapper .span').forEach(function(s){ s.textContent = label('Selecionado por') + ' '; });
+    document.querySelectorAll('#peca-confeccionado-wrapper .span').forEach(function(s){ s.textContent = label('Confeccionado por') + ' '; });
 
     const selecionadoWrapper = document.getElementById('peca-selecionado-wrapper');
     if (selecionadoWrapper) {
       var selecionadoEl = document.getElementById('peca-selecionado-por');
       if (peca.selecionador && peca.selecionador.nome && selecionadoEl) {
-        var linkSelecionador = peca.selecionador.link || (peca.selecionador.id ? 'parceiro.html?id=' + esc(peca.selecionador.id) : null);
+        var linkSelecionador = peca.selecionador.link || (peca.selecionador.id ? withLang('parceiro.html?id=' + esc(peca.selecionador.id)) : null);
+        var nomeSelecionador = t(peca.selecionador.nome);
         if (linkSelecionador) {
           var extAttr = isUrlExterno(linkSelecionador) ? ' target="_blank" rel="noopener noreferrer"' : '';
-          selecionadoEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkSelecionador) + '"' + extAttr + '>' + esc(peca.selecionador.nome) + '</a>';
+          selecionadoEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkSelecionador) + '"' + extAttr + '>' + esc(nomeSelecionador) + '</a>';
         } else {
-          selecionadoEl.textContent = peca.selecionador.nome;
+          selecionadoEl.textContent = nomeSelecionador;
         }
       } else if (peca.selecionado_por) {
-        setText('peca-selecionado-por', peca.selecionado_por);
+        setText('peca-selecionado-por', t(peca.selecionado_por));
       } else {
         selecionadoWrapper.hidden = true;
       }
@@ -334,7 +368,7 @@
 
     const confeccionadoWrapper = document.getElementById('peca-confeccionado-wrapper');
     if (confeccionadoWrapper) {
-      if (peca.confeccionado_por) setText('peca-confeccionado-por', peca.confeccionado_por);
+      if (peca.confeccionado_por) setText('peca-confeccionado-por', t(peca.confeccionado_por));
       else confeccionadoWrapper.hidden = true;
     }
 
@@ -342,17 +376,39 @@
     const cruzamentoWrapper = document.getElementById('peca-cruzamento-wrapper');
     if (cruzamentoWrapper) {
       if (peca.cruzamento) {
-        setText('peca-cruzamento-valor', peca.cruzamento);
+        // Aplicar label traduzido no rótulo
+        var crLabelEl = cruzamentoWrapper.querySelector('.peca-cruzamento__label');
+        if (crLabelEl) crLabelEl.textContent = label('Cruzamento') + ':';
+        setText('peca-cruzamento-valor', t(peca.cruzamento));
         cruzamentoWrapper.hidden = false;
       } else {
         cruzamentoWrapper.hidden = true;
       }
     }
 
-    setText('peca-descricao', peca.descricao);
+    // Headings fixos da HTML — traduzir
+    var hEstaPeca = document.getElementById('sec-esta-peca');
+    if (hEstaPeca && !peca.secao_titulo) hEstaPeca.textContent = label('Esta peça');
+    var hCaracs = document.getElementById('sec-caracteristicas');
+    if (hCaracs) hCaracs.textContent = label('Características');
+    var hOQueEsperar = document.getElementById('sec-o-que-esperar');
+    if (hOQueEsperar) hOQueEsperar.textContent = label('O que poderá esperar') || 'O que poderá esperar';
+    var hDisp = document.getElementById('sec-disponibilidade');
+    if (hDisp) hDisp.textContent = label('Disponibilidade');
+    var hProdutor = document.querySelector('#sec-produtor-secao .heading-xl');
+    if (hProdutor) hProdutor.textContent = label('Produtor');
+    var hRest = document.querySelector('#sec-restaurante-secao .heading-xl');
+    if (hRest) hRest.textContent = label('Destino gastronómico');
 
-    if (peca.caracteristicas && peca.caracteristicas.length) {
-      setHTML('peca-caracteristicas', renderCaracteristicas(peca.caracteristicas));
+    setText('peca-descricao', t(peca.descricao));
+
+    if (hasArrayItems(peca.caracteristicas)) {
+      const caracHtml = renderCaracteristicas(peca.caracteristicas);
+      if (caracHtml) {
+        setHTML('peca-caracteristicas', caracHtml);
+      } else {
+        esconderSecao('sec-caracteristicas-secao');
+      }
     } else {
       esconderSecao('sec-caracteristicas-secao');
     }
@@ -369,7 +425,7 @@
     }
 
     if (peca.certificacaoDop) {
-      setText('sec-certificacao', peca.certificacaoDop.titulo);
+      setText('sec-certificacao', t(peca.certificacaoDop.titulo));
       setHTML('peca-certificacao', renderCertificacaoDop(peca.certificacaoDop));
     } else {
       esconderSecao('sec-certificacao-secao');
@@ -392,14 +448,14 @@
     }
 
     if (peca.terroir) {
-      setText('peca-terroir-titulo', peca.terroir.titulo);
-      setText('peca-terroir-texto', peca.terroir.texto);
+      setText('peca-terroir-titulo', t(peca.terroir.titulo));
+      setText('peca-terroir-texto', t(peca.terroir.texto));
     } else {
       esconderSecao('sec-terroir-secao');
     }
 
     if (peca.peca_rara) {
-      setText('peca-rara-titulo', peca.peca_rara.titulo);
+      setText('peca-rara-titulo', t(peca.peca_rara.titulo));
       setHTML('peca-rara-conteudo', renderPecaRara(peca.peca_rara));
     } else {
       esconderSecao('sec-rara-secao');
@@ -407,7 +463,7 @@
 
     // Citação
     if (peca.citacao) {
-      setText('peca-citacao', '“' + peca.citacao + '”');
+      setText('peca-citacao', '“' + t(peca.citacao) + '”');
       mostrarSecao('sec-citacao-secao');
     } else {
       esconderSecao('sec-citacao-secao');
@@ -415,7 +471,7 @@
 
     // Disponibilidade
     if (peca.disponibilidade) {
-      setText('peca-disponibilidade', peca.disponibilidade);
+      setText('peca-disponibilidade', t(peca.disponibilidade));
       mostrarSecao('sec-disponibilidade-secao');
     } else {
       esconderSecao('sec-disponibilidade-secao');
@@ -433,7 +489,7 @@
     if (racasResolvidas.length === 0) {
       esconderSecao('sec-raca-secao');
     } else {
-      if (racaTituloEl) racaTituloEl.textContent = racasResolvidas.length > 1 ? 'Raças associadas' : 'Raça';
+      if (racaTituloEl) racaTituloEl.textContent = racasResolvidas.length > 1 ? label('Raças associadas') : label('Raça');
       setHTML('peca-raca', racasResolvidas.map(renderRacaCard).join(''));
     }
 
@@ -444,31 +500,33 @@
     }
 
     if (peca.feedback) {
-      if (peca.feedback.titulo) setText('sec-feedback', peca.feedback.titulo);
+      if (peca.feedback.titulo) setText('sec-feedback', t(peca.feedback.titulo));
       if (peca.feedback.mostrar_estrela === false) {
         var starEl = document.querySelector('.vuesax-bold-star');
         if (starEl) starEl.hidden = true;
       }
-      setText('peca-feedback-texto', peca.feedback.texto);
+      setText('peca-feedback-texto', t(peca.feedback.texto));
       const btnFeedback = document.getElementById('btn-feedback');
       const btnHeaderFeedback = document.getElementById('btn-header-feedback');
-      const labelBotao = peca.feedback.botao || 'Avaliar a experiência';
+      const labelBotao = t(peca.feedback.botao) || label('Avaliar a experiência');
+      var feedbackUrl = peca.feedback.url;
+      if (feedbackUrl && !isUrlExterno(feedbackUrl)) feedbackUrl = withLang(feedbackUrl);
       if (btnFeedback) {
-        if (peca.feedback.url) {
-          configurarLink(btnFeedback, peca.feedback.url);
+        if (feedbackUrl) {
+          configurarLink(btnFeedback, feedbackUrl);
         } else {
           btnFeedback.hidden = true;
         }
-        if (peca.feedback.botao) btnFeedback.textContent = peca.feedback.botao;
-        btnFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(peca.feedback.url) ? ' (abre num novo separador)' : ''));
+        if (labelBotao) btnFeedback.textContent = labelBotao;
+        btnFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(feedbackUrl) ? ' (abre num novo separador)' : ''));
       }
       if (btnHeaderFeedback) {
-        if (peca.feedback.url) {
-          configurarLink(btnHeaderFeedback, peca.feedback.url);
+        if (feedbackUrl) {
+          configurarLink(btnHeaderFeedback, feedbackUrl);
         } else {
           btnHeaderFeedback.hidden = true;
         }
-        btnHeaderFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(peca.feedback.url) ? ' (abre num novo separador)' : ''));
+        btnHeaderFeedback.setAttribute('aria-label', labelBotao + (isUrlExterno(feedbackUrl) ? ' (abre num novo separador)' : ''));
       }
     } else {
       esconderSecao('sec-feedback-secao');

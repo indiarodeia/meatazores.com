@@ -3,24 +3,65 @@
     {
       "id": "emiliano-meneses",
       "nome": "Emiliano Meneses",
-      "tipo": "Criador de Ramo Grande DOP",
-      "localizacao": "Ilha Terceira, Açores",
-      "descricao_curta": "Criador de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
+      "tipo": {
+        "pt": "Produtor de Ramo Grande DOP",
+        "en": "Ramo Grande DOP producer"
+      },
+      "localizacao": {
+        "pt": "Ilha Terceira, Açores",
+        "en": "Terceira Island, Azores"
+      },
+      "descricao_curta": {
+        "pt": "Produtor de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
+        "en": "Ramo Grande DOP producer from Terceira Island, linked to a family farm where the relationship with this breed spans generations."
+      },
       "hero": "assets/bg-emiliano-meneses.jpg",
       "thumb": "assets/thumb-emiliano-meneses.png",
-      "historia": "A exploração de Emiliano Meneses é marcada por uma ligação antiga à Ramo Grande DOP. A história familiar remonta ao seu trisavô, que já criava esta raça, mantendo viva uma tradição profundamente ligada à agricultura e à pecuária da ilha Terceira.",
-      "exploracao": "Com cerca de 30 cabeças e uma área aproximada de 100 alqueires, maioritariamente propriedade da exploração, o maneio privilegia o espaço, o pasto e a relação próxima com os animais. Cada animal dispõe, em média, de cerca de 3.000 m² de pastagem.",
+      "historia": {
+        "pt": "A exploração de Emiliano Meneses é marcada por uma ligação antiga à Ramo Grande DOP. A história familiar remonta ao seu trisavô, que já criava esta raça, mantendo viva uma tradição profundamente ligada à agricultura e à pecuária da ilha Terceira.",
+        "en": "Emiliano Meneses's farm is marked by a long connection to Ramo Grande DOP. The family history goes back to his great-great-grandfather, who already raised this breed, keeping alive a tradition deeply linked to the agriculture and livestock of Terceira Island."
+      },
+      "exploracao": {
+        "pt": "Com cerca de 30 cabeças e uma área aproximada de 100 alqueires, maioritariamente propriedade da exploração, o maneio privilegia o espaço, o pasto e a relação próxima com os animais. Cada animal dispõe, em média, de cerca de 3.000 m² de pastagem.",
+        "en": "With about 30 head of cattle and an area of approximately 100 alqueires, mostly farm-owned, husbandry favours space, pasture and a close relationship with the animals. Each animal has, on average, about 3,000 m² of pasture."
+      },
       "numeros": [
-        { "label": "Rebanho (efetivo)", "valor": "30 cabeças" },
-        { "label": "Área de pastoreio", "valor": "100 alqueires" },
-        { "label": "Pasto por animal", "valor": "3.000 m²" },
-        { "label": "Localização", "valor": "Ilha Terceira, Açores" }
+        {
+          "label": "Rebanho (efetivo)",
+          "valor": "30 cabeças"
+        },
+        {
+          "label": "Área de pastoreio",
+          "valor": "100 alqueires"
+        },
+        {
+          "label": "Pasto por animal",
+          "valor": "3.000 m²"
+        },
+        {
+          "label": "Localização",
+          "valor": "Ilha Terceira, Açores"
+        }
       ],
-      "maneio_alimentacao": "As pastagens incluem trevos, luzerna, azevém e capim, elementos que fazem parte da alimentação natural dos animais e refletem a riqueza agrícola da ilha. Na fase de acabamento, a alimentação é complementada com farinha de milho e azevém fresco.",
-      "ligacao_raca_titulo": "Ligação à Ramo Grande DOP",
-      "ligacao_raca": "A ligação da família de Emiliano Meneses à Ramo Grande DOP atravessa gerações. Esta continuidade representa conhecimento prático, património agrícola e uma forma de criação profundamente ligada ao território.",
-      "nota_especial": "O animal selecionado para o Peter Café Sport tem um significado especial: foi o último animal criado pelo pai de Emiliano Meneses, tornando esta peça também uma memória familiar.",
-      "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"],
+      "maneio_alimentacao": {
+        "pt": "As pastagens incluem trevos, luzerna, azevém e capim, elementos que fazem parte da alimentação natural dos animais e refletem a riqueza agrícola da ilha. Na fase de acabamento, a alimentação é complementada com farinha de milho e azevém fresco.",
+        "en": "Pastures include clover, alfalfa, ryegrass and capim, elements that are part of the natural diet of the animals and reflect the agricultural richness of the island. In the finishing phase, the feeding is complemented with corn flour and fresh ryegrass."
+      },
+      "ligacao_raca_titulo": {
+        "pt": "Ligação à Ramo Grande DOP",
+        "en": "Connection to Ramo Grande DOP"
+      },
+      "ligacao_raca": {
+        "pt": "A ligação da família de Emiliano Meneses à Ramo Grande DOP atravessa gerações. Esta continuidade representa conhecimento prático, património agrícola e uma forma de criação profundamente ligada ao território.",
+        "en": "Emiliano Meneses's family connection to Ramo Grande DOP spans generations. This continuity represents practical knowledge, agricultural heritage and a way of raising cattle deeply linked to the territory."
+      },
+      "nota_especial": {
+        "pt": "O animal selecionado para o Peter Café Sport tem um significado especial: foi o último animal criado pelo pai de Emiliano Meneses, tornando esta peça também uma memória familiar.",
+        "en": "The animal selected for Peter Café Sport has a special meaning: it was the last animal raised by Emiliano Meneses's father, making this piece also a family memory."
+      },
+      "pecas_associadas": [
+        "ramo-grande-dop-peter-cafe-sport"
+      ],
       "galeria": [
         "assets/emiliano-meneses-01.jpg",
         "assets/emiliano-meneses-antiga-01.jpg",
@@ -30,52 +71,202 @@
     {
       "id": "manuel-lucas",
       "nome": "Manuel Lucas",
-      "tipo": "Produtor de gado Catrina",
-      "localizacao": "Vila Nova, Terceira",
-      "descricao_curta": "Produtor de gado Catrina da ilha Terceira, dedicado à criação em regime extensivo e à valorização de uma raça autóctone portuguesa com raízes na Terceira.",
+      "tipo": {
+        "pt": "Produtor de gado Catrina",
+        "en": "Catrina cattle producer"
+      },
+      "localizacao": {
+        "pt": "Vila Nova, Terceira",
+        "en": "Vila Nova, Terceira"
+      },
+      "descricao_curta": {
+        "pt": "Produtor de gado Catrina da ilha Terceira, dedicado à criação em regime extensivo e à valorização de uma raça autóctone portuguesa com raízes na Terceira.",
+        "en": "Catrina cattle producer from Terceira Island, dedicated to extensive farming and to the valuation of a Portuguese autochthonous breed with roots in Terceira."
+      },
       "hero": "assets/bg-manuel.jpg",
       "thumb": "assets/thumb-manuel.png",
-      "historia": "A exploração começou de forma gradual e com aprendizagem prática. A vaca que marcou a primeira degustação Meat Azores foi comprada ao seu tio, João Ângelo, e foi a segunda vaca da exploração. A primeira tentativa não resultou e a decisão de continuar acabou por definir o caminho do produtor. Ao longo destes anos, a prioridade manteve-se: criar com tempo, consistência e respeito pelo animal e pelo território.",
-      "exploracao": "Produtor desde 2003, Manuel Lucas dedica-se à criação de bovinos Catrina em regime extensivo, com uma gestão assente no pasto e no respeito pelo ritmo natural dos animais. A manada é mantida com maneio simples e consistente, valorizando a origem e a qualidade do que se produz na ilha.",
+      "historia": {
+        "pt": "A exploração começou de forma gradual e com aprendizagem prática. A vaca que marcou a primeira degustação MeatAzores foi comprada ao seu tio, João Ângelo, e foi a segunda vaca da exploração. A primeira tentativa não resultou e a decisão de continuar acabou por definir o caminho do produtor. Ao longo destes anos, a prioridade manteve-se: criar com tempo, consistência e respeito pelo animal e pelo território.",
+        "en": "The farm started gradually and through hands-on learning. The cow that marked the first MeatAzores tasting was bought from his uncle, João Ângelo, and was the second cow of the farm. The first attempt did not work out and the decision to continue ended up defining the producer's path. Through these years, the priority has remained: to raise with time, consistency and respect for animal and territory."
+      },
+      "exploracao": {
+        "pt": "Produtor desde 2003, Manuel Lucas dedica-se à criação de bovinos Catrina em regime extensivo, com uma gestão assente no pasto e no respeito pelo ritmo natural dos animais. A manada é mantida com maneio simples e consistente, valorizando a origem e a qualidade do que se produz na ilha.",
+        "en": "A producer since 2003, Manuel Lucas dedicates himself to raising Catrina cattle under an extensive system, with management based on pasture and respect for the natural rhythm of the animals. The herd is kept with simple, consistent husbandry, valuing the origin and the quality of what is produced on the island."
+      },
       "numeros": [
-        { "label": "Rebanho", "valor": "16 animais" },
-        { "label": "Raça criada", "valor": "Catrina" },
-        { "label": "Área de pastoreio", "valor": "38 alqueires" },
-        { "label": "Sistema de produção", "valor": "Extensivo" },
-        { "label": "Média de abates por ano", "valor": "2" },
-        { "label": "Produtor desde", "valor": "2003" }
+        {
+          "label": "Rebanho",
+          "valor": "16 animais"
+        },
+        {
+          "label": "Raça criada",
+          "valor": "Catrina"
+        },
+        {
+          "label": "Área de pastoreio",
+          "valor": "38 alqueires"
+        },
+        {
+          "label": "Sistema de produção",
+          "valor": "Extensivo"
+        },
+        {
+          "label": "Média de abates por ano",
+          "valor": "2"
+        },
+        {
+          "label": "Produtor desde",
+          "valor": "2003"
+        }
       ],
       "alimentacao": [
-        { "label": "Alimentação regular", "valor": "Erva fresca" },
-        { "label": "Alimentação regular", "valor": "Erva de rolo" },
-        { "label": "Fase de acabamento", "valor": "Farinha de milho" }
+        {
+          "label": "Alimentação regular",
+          "valor": "Erva fresca"
+        },
+        {
+          "label": "Alimentação regular",
+          "valor": "Erva de rolo"
+        },
+        {
+          "label": "Fase de acabamento",
+          "valor": "Farinha de milho"
+        }
       ],
-      "maneio_alimentacao": "A alimentação regular assenta em erva fresca e erva de rolo. Na fase de acabamento, é complementada com farinha de milho, mantendo uma ligação direta ao maneio tradicional e ao aproveitamento dos recursos disponíveis.",
-      "ligacao_raca": "A ligação de Manuel Lucas à Catrina reforça a importância de preservar raças autóctones raras, valorizando produtores que mantêm vivo este património genético, cultural e rural da ilha Terceira.",
-      "nota_especial": "A Catrina tem um efetivo muito reduzido, o que torna particularmente importante o trabalho dos produtores que continuam a criar e preservar esta raça.",
-      "pecas_associadas": ["catrina-19-anos"],
-      "racas_associadas": ["catrina"],
-      "galeria": ["assets/img-catrina.jpg"]
+      "maneio_alimentacao": {
+        "pt": "A alimentação regular assenta em erva fresca e erva de rolo. Na fase de acabamento, é complementada com farinha de milho, mantendo uma ligação direta ao maneio tradicional e ao aproveitamento dos recursos disponíveis.",
+        "en": "Regular feeding is based on fresh grass and silage grass. In the finishing phase it is complemented with corn flour, maintaining a direct link to traditional husbandry and the use of available resources."
+      },
+      "ligacao_raca": {
+        "pt": "A ligação de Manuel Lucas à Catrina reforça a importância de preservar raças autóctones raras, valorizando produtores que mantêm vivo este património genético, cultural e rural da ilha Terceira.",
+        "en": "Manuel Lucas's connection to Catrina reinforces the importance of preserving rare autochthonous breeds, valuing producers who keep this genetic, cultural and rural heritage of Terceira Island alive."
+      },
+      "nota_especial": {
+        "pt": "A Catrina tem um efetivo muito reduzido, o que torna particularmente importante o trabalho dos produtores que continuam a criar e preservar esta raça.",
+        "en": "Catrina has a very small effective population, which makes the work of producers who continue to breed and preserve this breed particularly important."
+      },
+      "pecas_associadas": [
+        "catrina-19-anos"
+      ],
+      "racas_associadas": [
+        "catrina"
+      ],
+      "galeria": [
+        "assets/img-catrina.jpg"
+      ]
     },
     {
       "id": "antonio-azera",
       "nome": "António Azera",
-      "tipo": "Produtor ligado a exploração de leite",
-      "localizacao": "Quatro Ribeiras, Ilha Terceira, Açores",
-      "descricao_curta": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
+      "tipo": {
+        "pt": "Produtor ligado a exploração de leite",
+        "en": "Producer linked to a dairy farm"
+      },
+      "localizacao": {
+        "pt": "Quatro Ribeiras, Ilha Terceira, Açores",
+        "en": "Quatro Ribeiras, Terceira Island, Azores"
+      },
+      "frase_destaque": {
+        "pt": "Das Quatro Ribeiras, junto ao mar, nasce uma ligação antiga ao gado e ao território.",
+        "en": "From Quatro Ribeiras, by the sea, an old connection to cattle and territory is born."
+      },
+      "descricao_curta": {
+        "pt": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
+        "en": "Producer from Quatro Ribeiras, linked to a family dairy farm and a livestock tradition that spans generations."
+      },
       "hero": "assets/bg-antonio-azera.jpg",
       "thumb": "assets/antonio-azera.jpg",
-      "historia": "António Azera representa uma ligação familiar antiga à criação de gado na ilha Terceira. A relação da família com a pecuária atravessa várias gerações, estando atualmente na quinta geração ligada ao trabalho com gado.\n\nNa sua exploração de leite, nas Quatro Ribeiras, o maneio reflete uma prática próxima do território, com animais criados em regime extensivo e uma forte ligação ao pasto, ao mar e à tradição pecuária local.",
-      "numeros": [
-        { "label": "Geração ligada ao gado", "valor": "5.ª geração" },
-        { "label": "Tipo de exploração", "valor": "Exploração de leite" },
-        { "label": "Localização", "valor": "Quatro Ribeiras, Ilha Terceira" },
-        { "label": "Pasto por animal", "valor": "Média de 7 alqueires" }
+      "localizacao_detalhe": {
+        "ilha": "Terceira",
+        "freguesia": "Quatro Ribeiras",
+        "zona": "Junto à beira-mar",
+        "regiao": "Açores"
+      },
+      "ficha_rapida": [
+        {
+          "label": "Geração ligada ao gado",
+          "valor": "5.ª geração"
+        },
+        {
+          "label": "Tipo de exploração",
+          "valor": "Exploração de leite"
+        },
+        {
+          "label": "Sistema",
+          "valor": "Regime extensivo"
+        },
+        {
+          "label": "Localização",
+          "valor": "Quatro Ribeiras, Ilha Terceira"
+        },
+        {
+          "label": "Contexto",
+          "valor": "Junto à beira-mar"
+        },
+        {
+          "label": "Pasto por animal",
+          "valor": "Média de 7 alqueires"
+        }
       ],
-      "citacao": "Na altura em que não havia adubos nem rações, dizia-se que o melhor gado da ilha era o das Quatro Ribeiras.",
-      "pecas_associadas": ["brahman-holstein-frisia-restaurante-rocha"],
-      "racas_associadas": ["brahman", "holstein-frisia"],
-      "galeria": []
+      "historia": {
+        "pt": "António Azera representa uma ligação familiar antiga à criação de gado na ilha Terceira. A relação da família com a pecuária atravessa várias gerações, estando atualmente na quinta geração ligada ao trabalho com gado.\n\nNa sua exploração de leite, nas Quatro Ribeiras, o maneio reflete uma prática próxima do território, com animais criados em regime extensivo e uma forte ligação ao pasto, ao mar e à tradição pecuária local.",
+        "en": "António Azera represents an old family connection to cattle raising on Terceira Island. The family relationship with livestock farming spans several generations, currently in the fifth generation linked to working with cattle.\n\nOn his dairy farm in Quatro Ribeiras, husbandry reflects a practice close to the territory, with animals raised under an extensive regime and a strong link to pasture, sea and local livestock tradition."
+      },
+      "sistema_producao": {
+        "tipo": "Exploração de leite",
+        "regime": "Extensivo",
+        "descricao": {
+          "pt": "Maneio típico de uma exploração leiteira da ilha Terceira, com ligação ao pasto, ao mar e ao território.",
+          "en": "Husbandry typical of a dairy farm on Terceira Island, with connection to pasture, sea and territory."
+        }
+      },
+      "alimentacao": {
+        "regular": [
+          "Azevém",
+          "Silo de milho",
+          "Silo de erva",
+          "Ração de leite"
+        ],
+        "acabamento": [],
+        "nota": {
+          "pt": "A alimentação reflete o maneio de uma exploração leiteira local.",
+          "en": "Feeding reflects the husbandry of a local dairy farm."
+        }
+      },
+      "citacao": {
+        "texto": {
+          "pt": "Na altura em que não havia adubos nem rações, dizia-se que o melhor gado da ilha era o das Quatro Ribeiras.",
+          "en": "In a time when there were no fertilizers or feed, it was said that the best cattle on the island were those from Quatro Ribeiras."
+        },
+        "autor": "António Azera"
+      },
+      "tags": [
+        "Exploração de leite",
+        "Regime extensivo",
+        "Quatro Ribeiras",
+        "Beira-mar",
+        "5.ª geração"
+      ],
+      "pecas_associadas": [
+        "brahman-holstein-frisia-restaurante-rocha"
+      ],
+      "racas_associadas": [
+        "brahman",
+        "holstein-frisia"
+      ],
+      "galeria": [],
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotos do produtor",
+          "Fotos da exploração",
+          "Foto confirmada do animal"
+        ]
+      },
+      "privacidade": {
+        "ocultar_numero_cabecas": true,
+        "ocultar_area_total": true
+      }
     }
   ]
 }

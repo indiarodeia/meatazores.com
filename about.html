@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>About | Meat Azores</title>
-    <meta name="description" content="Saiba mais sobre a Meat Azores, transparência de origem à mesa e rastreabilidade da carne açoriana." />
+    <title>About | MeatAzores</title>
+    <meta name="description" content="Saiba mais sobre a MeatAzores, transparência de origem à mesa e rastreabilidade da carne açoriana." />
     <meta name="robots" content="noindex,follow" />
     <meta name="googlebot" content="noindex,follow" />
     <meta name="theme-color" content="#014838" />
@@ -26,33 +26,61 @@
 <body>
     <main class="app-page">
         <header class="app-page__header">
-            <img class="app-page__logo" src="assets/logo-meatzores.svg" alt="Logótipo Meat Azores" />
-            <p class="app-page__eyebrow">Sobre</p>
-            <h1 class="app-page__title">Meat Azores</h1>
-            <p class="app-page__text">A Meat Azores é uma app recente, ainda em desenvolvimento, criada para aproximar quem prova carne açoriana da sua origem.</p>
+            <div id="lang-toggle" class="lang-toggle-inline"></div>
+            <img class="app-page__logo" src="assets/logo-meatzores.svg" alt="Logótipo MeatAzores" />
+            <p class="app-page__eyebrow" data-pt="Sobre" data-en="About">Sobre</p>
+            <h1 class="app-page__title">MeatAzores</h1>
+            <p class="app-page__text"
+               data-pt="A MeatAzores é uma app recente, ainda em desenvolvimento, criada para aproximar quem prova carne açoriana da sua origem."
+               data-en="MeatAzores is a recent app, still under development, created to bring people who taste Azorean beef closer to its origin.">A MeatAzores é uma app recente, ainda em desenvolvimento, criada para aproximar quem prova carne açoriana da sua origem.</p>
         </header>
 
         <section class="app-card">
-            <h2>O que é</h2>
-            <p>A Meat Azores dá contexto à peça servida à mesa: raça, produtor, território, modo de criação e história. O propósito é reforçar a transparência de origem à mesa, a rastreabilidade e a valorização de produtores, raças e território.</p>
+            <h2 data-pt="O que é" data-en="What it is">O que é</h2>
+            <p data-pt="A MeatAzores dá contexto à peça servida à mesa: raça, produtor, território, modo de criação e história. O propósito é reforçar a transparência de origem à mesa, a rastreabilidade e a valorização de produtores, raças e território."
+               data-en="MeatAzores gives context to the piece served at the table: breed, producer, territory, farming system and story. Its purpose is to strengthen origin transparency from farm to table, traceability and the value of producers, breeds and territory.">A MeatAzores dá contexto à peça servida à mesa: raça, produtor, território, modo de criação e história. O propósito é reforçar a transparência de origem à mesa, a rastreabilidade e a valorização de produtores, raças e território.</p>
         </section>
 
         <section class="app-card">
-            <h2>Como nasceu</h2>
-            <p>O projeto nasceu de experiências piloto ligadas à carne açoriana e ao contacto direto entre produtor, talho, restaurante e consumidor. Esta primeira fase ajuda a testar informação, experiência e utilidade em contexto real.</p>
+            <h2 data-pt="Como nasceu" data-en="How it started">Como nasceu</h2>
+            <p data-pt="O projeto nasceu de experiências piloto ligadas à carne açoriana e ao contacto direto entre produtor, talho, restaurante e consumidor. Esta primeira fase ajuda a testar informação, experiência e utilidade em contexto real."
+               data-en="The project was born from pilot experiences linked to Azorean beef and direct contact between producer, butcher, restaurant and consumer. This first phase helps test information, experience and usefulness in a real context.">O projeto nasceu de experiências piloto ligadas à carne açoriana e ao contacto direto entre produtor, talho, restaurante e consumidor. Esta primeira fase ajuda a testar informação, experiência e utilidade em contexto real.</p>
         </section>
 
         <section class="app-card">
-            <h2>Contacto</h2>
-            <p>Quer saber mais, acompanhar o projeto ou colaborar com a Meat Azores?</p>
+            <h2 data-pt="Contacto" data-en="Contact">Contacto</h2>
+            <p data-pt="Quer saber mais, acompanhar o projeto ou colaborar com a MeatAzores?"
+               data-en="Want to know more, follow the project or collaborate with MeatAzores?">Quer saber mais, acompanhar o projeto ou colaborar com a MeatAzores?</p>
             <a class="app-link" href="mailto:info@meatazores.com">info@meatazores.com</a>
             <div class="app-social">
-                <a class="app-social__link" href="https://www.instagram.com/meatazores" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Meat Azores (abre num novo separador)">Instagram</a>
-                <a class="app-social__link" href="https://www.facebook.com/meatazores" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Meat Azores (abre num novo separador)">Facebook</a>
+                <a class="app-social__link" href="https://www.instagram.com/meatazores" target="_blank" rel="noopener noreferrer" aria-label="Instagram MeatAzores">Instagram</a>
+                <a class="app-social__link" href="https://www.facebook.com/meatazores" target="_blank" rel="noopener noreferrer" aria-label="Facebook MeatAzores">Facebook</a>
             </div>
         </section>
     </main>
 
+    <script src="js/utils.js"></script>
+    <script src="js/i18n.js"></script>
+    <script>
+        (function () {
+            function applyLang() {
+                var lang = (window.MA && window.MA.i18n && window.MA.i18n.getLang) ? window.MA.i18n.getLang() : 'pt';
+                if (lang !== 'en') return;
+                document.querySelectorAll('[data-en]').forEach(function (el) {
+                    var en = el.getAttribute('data-en');
+                    if (en) el.textContent = en;
+                });
+                document.title = 'About | MeatAzores';
+                var md = document.querySelector('meta[name="description"]');
+                if (md) md.setAttribute('content', 'Learn more about MeatAzores: origin transparency from farm to table and traceability of Azorean beef.');
+            }
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', applyLang);
+            } else {
+                applyLang();
+            }
+        })();
+    </script>
     <script src="js/nav.js"></script>
 </body>
 

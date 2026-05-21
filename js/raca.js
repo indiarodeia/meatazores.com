@@ -5,13 +5,23 @@
   const PECAS_JSON = 'data/pecas.json';
   const PRODUTORES_JSON = 'data/produtores.json';
 
+  const U = (window.MA && window.MA.utils) || {};
+  const hasValue = U.hasValue || function (v) { return v != null && v !== ''; };
+  const hasArrayItems = U.hasArrayItems || function (v) { return Array.isArray(v) && v.length > 0; };
+
+  const I = (window.MA && window.MA.i18n) || {};
+  const t = I.t || function (v) { return typeof v === 'string' ? v : (v && v.pt) || ''; };
+  const tValue = I.tValue || function (v) { return typeof v === 'string' ? v : t(v); };
+  const label = I.label || function (s) { return s; };
+  const withLang = I.withLang || function (u) { return u; };
+
   const EMOJI_FICHA_RAPIDA = {
     'Origem': '📍',
     'Aptidão': '🐄',
     'Porte': '📏',
     'Pelagem': '🎨',
     'Sistema comum': '🌾',
-    'Presença na Meat Azores': '⭐'
+    'Presença na MeatAzores': '⭐'
   };
 
   function getIdFromURL() {
@@ -24,8 +34,8 @@
     if (!main) return;
     main.innerHTML =
       '<div style="padding: 60px 24px; text-align: center;">' +
-        '<p style="font-family: sans-serif; color: #444; margin-bottom: 24px;">' + esc(mensagem) + '</p>' +
-        '<a href="index.html" style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 4px;">Voltar ao início</a>' +
+        '<p style="font-family: sans-serif; color: #444; margin-bottom: 24px;">' + esc(label(mensagem)) + '</p>' +
+        '<a href="' + esc(withLang('index.html')) + '" style="display: inline-block; padding: 12px 24px; background: #000; color: #fff; text-decoration: none; border-radius: 4px;">' + esc(label('Voltar ao início')) + '</a>' +
       '</div>';
   }
 
@@ -85,14 +95,17 @@
   }
 
   function renderFichaRapida(itens) {
-    return itens.map(function (item) {
-      var emoji = EMOJI_FICHA_RAPIDA[item.label] || '•';
-      var bandeira = item.bandeira ? '<span class="raca-ficha-rapida__bandeira" aria-hidden="true">' + esc(item.bandeira) + '</span> ' : '';
+    return itens.filter(function (item) {
+      return hasValue(item) && hasValue(item.label) && hasValue(item.valor);
+    }).map(function (item) {
+      var labelPt = typeof item.label === 'string' ? item.label : (item.label && item.label.pt) || '';
+      var emoji = EMOJI_FICHA_RAPIDA[labelPt] || '•';
+      var bandeira = hasValue(item.bandeira) ? '<span class="raca-ficha-rapida__bandeira" aria-hidden="true">' + esc(item.bandeira) + '</span> ' : '';
       return (
         '<div class="raca-ficha-rapida__card">' +
           '<span class="raca-ficha-rapida__icon" aria-hidden="true">' + esc(emoji) + '</span>' +
-          '<span class="raca-ficha-rapida__label">' + esc(item.label) + '</span>' +
-          '<span class="raca-ficha-rapida__valor">' + bandeira + esc(item.valor) + '</span>' +
+          '<span class="raca-ficha-rapida__label">' + esc(label(t(item.label))) + '</span>' +
+          '<span class="raca-ficha-rapida__valor">' + bandeira + esc(tValue(t(item.valor))) + '</span>' +
         '</div>'
       );
     }).join('');
@@ -100,22 +113,24 @@
 
   function renderCaracteristicas(items) {
     return items.map(function (item) {
-      return '<li class="raca-caracteristicas__item">' + esc(item) + '</li>';
+      return '<li class="raca-caracteristicas__item">' + esc(tValue(t(item))) + '</li>';
     }).join('');
   }
 
   function renderPecaCard(peca) {
+    var titulo = t(peca.titulo);
+    var subtitulo = t(peca.subtitulo);
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
         imgHtml +
         '<div class="frame-28">' +
-          '<div class="text-wrapper-33">' + esc(peca.titulo) + '</div>' +
-          (peca.subtitulo ? '<p class="text-wrapper-34">' + esc(peca.subtitulo) + '</p>' : '') +
-          '<a href="peca.html?id=' + esc(peca.id) + '" class="button-arrow-right-2" aria-label="Ver peça ' + esc(peca.titulo) + '">' +
-            '<span class="text-wrapper-35">Ver peça</span>' +
+          '<div class="text-wrapper-33">' + esc(titulo) + '</div>' +
+          (subtitulo ? '<p class="text-wrapper-34">' + esc(subtitulo) + '</p>' : '') +
+          '<a href="' + esc(withLang('peca.html?id=' + esc(peca.id))) + '" class="button-arrow-right-2" aria-label="' + esc(label('Ver peça') + ' ' + titulo) + '">' +
+            '<span class="text-wrapper-35">' + esc(label('Ver peça')) + '</span>' +
             '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
           '</a>' +
         '</div>' +
@@ -124,17 +139,18 @@
   }
 
   function renderProdutorCard(produtor) {
+    var nome = t(produtor.nome);
     const imgHtml = produtor.thumb
-      ? '<img class="clip-path-group-2" data-src="' + esc(produtor.thumb) + '" alt="Fotografia do produtor ' + esc(produtor.nome) + '" />'
+      ? '<img class="clip-path-group-2" data-src="' + esc(produtor.thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
       : '';
     return (
       '<div class="frame-27">' +
         imgHtml +
         '<div class="frame-28">' +
-          '<div class="text-wrapper-33">' + esc(produtor.nome) + '</div>' +
-          (produtor.descricao_curta ? '<p class="text-wrapper-34">' + esc(produtor.descricao_curta) + '</p>' : '') +
-          '<a href="produtor.html?id=' + esc(produtor.id) + '" class="button-arrow-right-2" aria-label="Conhecer o produtor ' + esc(produtor.nome) + '">' +
-            '<span class="text-wrapper-35">Conhecer o produtor</span>' +
+          '<div class="text-wrapper-33">' + esc(nome) + '</div>' +
+          (produtor.descricao_curta ? '<p class="text-wrapper-34">' + esc(t(produtor.descricao_curta)) + '</p>' : '') +
+          '<a href="' + esc(withLang('produtor.html?id=' + esc(produtor.id))) + '" class="button-arrow-right-2" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
+            '<span class="text-wrapper-35">' + esc(label('Conhecer o produtor')) + '</span>' +
             '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
           '</a>' +
         '</div>' +
@@ -143,14 +159,15 @@
   }
 
   function renderOutraRacaCard(raca) {
+    var nome = t(raca.nome);
     var imgHtml = raca.imagem
-      ? '<div class="outras-racas__thumb"><img class="outras-racas__img" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(raca.nome) + '" /></div>'
+      ? '<div class="outras-racas__thumb"><img class="outras-racas__img" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" /></div>'
       : '<div class="outras-racas__thumb" aria-hidden="true"></div>';
 
     return (
-      '<a class="outras-racas__card" href="raca.html?id=' + esc(raca.id) + '" aria-label="Conhecer a raça ' + esc(raca.nome) + '">' +
+      '<a class="outras-racas__card" href="' + esc(withLang('raca.html?id=' + esc(raca.id))) + '" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
         imgHtml +
-        '<span class="outras-racas__nome">' + esc(raca.nome) + '</span>' +
+        '<span class="outras-racas__nome">' + esc(nome) + '</span>' +
       '</a>'
     );
   }
@@ -184,9 +201,9 @@
       return (
         '<section class="frame-22">' +
           '<div class="creators-4">' +
-            '<h2 class="text-wrapper-31">' + esc(s.titulo) + '</h2>' +
+            '<h2 class="text-wrapper-31">' + esc(t(s.titulo)) + '</h2>' +
           '</div>' +
-          '<p class="text-wrapper-32">' + esc(s.texto) + '</p>' +
+          '<p class="text-wrapper-32">' + esc(t(s.texto)) + '</p>' +
         '</section>' +
         '<img class="separator-3" src="assets/separator.svg" alt="" />'
       );
@@ -244,18 +261,42 @@
   }
 
   function preencherRaca(raca, todasAsPecas, todosProdutores, todasAsRacas) {
-    document.title = raca.nome + ' | Meat Azores';
+    var nome = t(raca.nome);
+    document.title = nome + ' | MeatAzores';
 
     var metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc && raca.descricao_curta) {
-      metaDesc.setAttribute('content', raca.descricao_curta);
+      metaDesc.setAttribute('content', t(raca.descricao_curta));
+    }
+
+    // Traduzir headings fixos
+    var headings = {
+      'sec-sobre': 'Sobre a raça',
+      'sec-ficha-rapida': 'Ficha rápida',
+      'sec-historia': 'História e origem',
+      'sec-caracteristicas': 'Características',
+      'sec-contexto': 'Na MeatAzores',
+      'sec-pecas': 'Peças associadas',
+      'sec-produtores': 'Produtores associados',
+      'sec-galeria': 'Galeria',
+      'sec-outras-racas': 'Outras raças'
+    };
+    for (var key in headings) {
+      var hEl = document.getElementById(key);
+      if (hEl) hEl.textContent = label(headings[key]);
+    }
+    // "Ver todas" link
+    var verTodasEl = document.querySelector('.outras-racas__ver-todas');
+    if (verTodasEl) {
+      verTodasEl.textContent = label('Ver todas');
+      verTodasEl.href = withLang('racas.html');
     }
 
     // Hero
     var heroImg = document.getElementById('raca-hero');
     if (heroImg) {
       if (raca.hero) {
-        heroImg.alt = 'Imagem de capa da raça ' + raca.nome;
+        heroImg.alt = 'Imagem de capa da raça ' + nome;
         setImagemSeExistir(heroImg, raca.hero, function () { esconderSecao('raca-hero-wrapper'); });
       } else {
         esconderSecao('raca-hero-wrapper');
@@ -266,7 +307,7 @@
     var imagemEl = document.getElementById('raca-imagem');
     if (imagemEl) {
       if (raca.imagem) {
-        imagemEl.alt = 'Imagem representativa da raça ' + raca.nome;
+        imagemEl.alt = 'Imagem representativa da raça ' + nome;
         setImagemSeExistir(imagemEl, raca.imagem, function () { imagemEl.hidden = true; });
       } else {
         imagemEl.hidden = true;
@@ -274,9 +315,9 @@
     }
 
     // Cabeçalho
-    setText('raca-tipo', raca.tipo);
-    setText('raca-nome', raca.nome);
-    setText('raca-localizacao', raca.localizacao);
+    setText('raca-tipo', t(raca.tipo));
+    setText('raca-nome', nome);
+    setText('raca-localizacao', tValue(t(raca.localizacao)));
 
     // Logotipo oficial (opcional)
     var logoContainer = document.getElementById('raca-logo-container');
@@ -295,12 +336,17 @@
     }
 
     // Sobre
-    setText('raca-descricao-curta', raca.descricao_curta);
+    setText('raca-descricao-curta', t(raca.descricao_curta));
 
     // Ficha rápida
-    if (Array.isArray(raca.ficha_rapida) && raca.ficha_rapida.length) {
-      setHTML('raca-ficha-rapida', renderFichaRapida(raca.ficha_rapida));
-      mostrarSecao('sec-ficha-rapida-secao');
+    if (hasArrayItems(raca.ficha_rapida)) {
+      var fichaHtml = renderFichaRapida(raca.ficha_rapida);
+      if (fichaHtml) {
+        setHTML('raca-ficha-rapida', fichaHtml);
+        mostrarSecao('sec-ficha-rapida-secao');
+      } else {
+        esconderSecao('sec-ficha-rapida-secao');
+      }
     } else {
       esconderSecao('sec-ficha-rapida-secao');
     }
@@ -308,29 +354,34 @@
     // História e origem (com fallback para introducao + origem_territorio)
     var historiaTexto = montarHistoriaTexto(raca);
     if (historiaTexto) {
-      setText('raca-historia', historiaTexto);
+      setText('raca-historia', t(historiaTexto));
     } else {
       esconderSecao('sec-historia-secao');
     }
 
     // Características gerais
-    if (raca.caracteristicas && raca.caracteristicas.length) {
-      setHTML('raca-caracteristicas', renderCaracteristicas(raca.caracteristicas));
+    if (hasArrayItems(raca.caracteristicas)) {
+      var filtradas = raca.caracteristicas.filter(hasValue);
+      if (filtradas.length) {
+        setHTML('raca-caracteristicas', renderCaracteristicas(filtradas));
+      } else {
+        esconderSecao('sec-caracteristicas-secao');
+      }
     } else {
       esconderSecao('sec-caracteristicas-secao');
     }
 
-    // Carne e contexto Meat Azores (com fallback para valor_patrimonial)
+    // Carne e contexto MeatAzores (com fallback para valor_patrimonial)
     var contextoTexto = montarContextoTexto(raca);
     if (contextoTexto) {
-      setText('raca-contexto', contextoTexto);
+      setText('raca-contexto', t(contextoTexto));
     } else {
       esconderSecao('sec-contexto-secao');
     }
 
     // Nota educativa (opcional)
     if (raca.nota_educativa) {
-      setText('raca-nota-educativa', raca.nota_educativa);
+      setText('raca-nota-educativa', t(raca.nota_educativa));
       mostrarSecao('sec-nota-educativa');
     } else {
       esconderSecao('sec-nota-educativa');
@@ -382,7 +433,7 @@
     var id = getIdFromURL();
 
     if (!id) {
-      mostrarErro('Nenhuma raça foi indicada. Por favor, verifique o endereço utilizado.');
+      mostrarErro(label('A raça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.'));
       return;
     }
 
@@ -400,13 +451,13 @@
     ]).then(function (resultados) {
       var raca = resultados[0].racas.find(function (r) { return r.id === id; });
       if (!raca) {
-        mostrarErro('A raça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.');
+        mostrarErro(label('A raça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.'));
         return;
       }
       preencherRaca(raca, resultados[1].pecas || [], resultados[2].produtores || [], resultados[0].racas || []);
     }).catch(function (err) {
       console.error('[raca.js]', err);
-      mostrarErro('Não foi possível carregar os dados desta raça. Tente novamente mais tarde.');
+      mostrarErro(label('Não foi possível carregar os dados desta raça. Tente novamente mais tarde.'));
     });
   }
 

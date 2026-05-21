@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Produtores | Meat Azores</title>
-    <meta name="description" content="Explore os produtores disponíveis na Meat Azores." />
+    <title>Produtores | MeatAzores</title>
+    <meta name="description" content="Explore os produtores disponíveis na MeatAzores." />
     <meta name="robots" content="noindex,follow" />
     <meta name="googlebot" content="noindex,follow" />
     <meta name="theme-color" content="#014838" />
@@ -26,15 +26,18 @@
 <body>
     <main class="app-page">
         <header class="app-page__header">
-            <img class="app-page__logo" src="assets/logo-meatzores.svg" alt="Logótipo Meat Azores" />
+            <div id="lang-toggle" class="lang-toggle-inline"></div>
+            <img class="app-page__logo" src="assets/logo-meatzores.svg" alt="Logótipo MeatAzores" />
             <p class="app-page__eyebrow">Explorar</p>
             <h1 class="app-page__title">Produtores</h1>
-            <p class="app-page__text">Conheça quem cria, preserva e dá origem às peças Meat Azores.</p>
+            <p class="app-page__text">Conheça quem cria, preserva e dá origem às peças MeatAzores.</p>
         </header>
 
         <div id="produtores-lista" class="catalog-list" aria-label="Lista de produtores"></div>
     </main>
 
+    <script src="js/utils.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/listas.js"></script>
     <script src="js/nav.js"></script>
 </body>

@@ -5,8 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Produtor | Meat Azores</title>
-    <meta name="description" content="Conheça este produtor Meat Azores: história, exploração, maneio, alimentação e peças associadas." />
+    <title>Produtor | MeatAzores</title>
+    <meta name="description" content="Conheça este produtor MeatAzores: história, exploração, maneio, alimentação e peças associadas." />
 
     <!-- Não indexar esta página -->
     <meta name="robots" content="noindex,follow" />
@@ -55,16 +55,28 @@
                                 <p class="text-wrapper-25" id="produtor-localizacao"></p>
                             </div>
                         </div>
+                        <p class="produtor-localizacao-detalhe" id="produtor-localizacao-detalhe" hidden></p>
                     </div>
                 </div>
             </header>
 
+            <!-- Frase destaque (opcional) -->
+            <section id="sec-frase-destaque-secao" class="produtor-frase-destaque" aria-label="Frase em destaque" hidden>
+                <p class="produtor-frase-destaque__texto" id="produtor-frase-destaque"></p>
+            </section>
+
             <!-- Sobre o produtor -->
-            <section class="group-2" aria-labelledby="sec-sobre">
+            <section id="sec-sobre-secao" class="group-2" aria-labelledby="sec-sobre">
                 <div class="frame-21">
                     <h2 id="sec-sobre" class="text-wrapper-26">Sobre o produtor</h2>
                     <p class="text-wrapper-27" id="produtor-descricao-curta"></p>
                 </div>
+            </section>
+
+            <!-- Ficha rápida (opcional, cards) -->
+            <section id="sec-ficha-rapida-secao" class="produtor-ficha-rapida" aria-labelledby="sec-ficha-rapida" hidden>
+                <h2 id="sec-ficha-rapida" class="produtor-ficha-rapida__title">Ficha rápida</h2>
+                <div id="produtor-ficha-rapida" class="produtor-ficha-rapida__grid"></div>
             </section>
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
@@ -79,7 +91,15 @@
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
 
-            <!-- Exploração em números -->
+            <!-- Sistema de produção (opcional) -->
+            <section id="sec-sistema-secao" class="frame-22" aria-labelledby="sec-sistema" hidden>
+                <div class="creators-4">
+                    <h2 id="sec-sistema" class="text-wrapper-31">Sistema de produção</h2>
+                </div>
+                <div id="produtor-sistema-producao"></div>
+            </section>
+
+            <!-- Exploração em números (antigo, opcional) -->
             <section id="sec-numeros-secao" class="frame-22" aria-labelledby="sec-numeros">
                 <div class="creators-3">
                     <div class="frame-23">
@@ -91,12 +111,20 @@
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
 
-            <!-- Maneio e alimentação -->
+            <!-- Maneio e alimentação (texto antigo) -->
             <section id="sec-maneio-secao" class="frame-22" aria-labelledby="sec-maneio">
                 <div class="creators-4">
                     <h2 id="sec-maneio" class="text-wrapper-31">Maneio e Alimentação</h2>
                 </div>
                 <p class="text-wrapper-32" id="produtor-maneio"></p>
+            </section>
+
+            <!-- Alimentação estruturada (opcional) -->
+            <section id="sec-alimentacao-secao" class="frame-22 produtor-alimentacao" aria-labelledby="sec-alimentacao" hidden>
+                <div class="creators-4">
+                    <h2 id="sec-alimentacao" class="text-wrapper-31">Alimentação</h2>
+                </div>
+                <div id="produtor-alimentacao"></div>
             </section>
 
             <img class="separator-3" src="assets/separator.svg" alt="" />
@@ -114,6 +142,7 @@
             <!-- Citação -->
             <section id="sec-citacao-secao" class="peca-citacao" aria-label="Citação" hidden>
                 <blockquote class="peca-citacao__texto" id="produtor-citacao"></blockquote>
+                <cite class="peca-citacao__autor" id="produtor-citacao-autor" hidden></cite>
             </section>
 
             <!-- Nota especial -->
@@ -161,6 +190,7 @@
         <!-- Barra de ações -->
         <div class="scanning">
             <header class="header" aria-label="Ações">
+                <div id="lang-toggle" class="lang-toggle-fixed"></div>
                 <a href="index.html" class="button-cancel" aria-label="Fechar">
                     <span class="img-wrapper">
                         <img class="close-square" src="assets/back.svg" alt="" />
@@ -177,6 +207,8 @@
         <img class="lightbox__img" src="" alt="" />
     </div>
 
+    <script src="js/utils.js"></script>
+    <script src="js/i18n.js"></script>
     <script src="js/lightbox.js"></script>
     <script src="js/produtor.js"></script>
     <script src="js/nav.js"></script>
