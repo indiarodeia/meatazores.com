@@ -154,6 +154,8 @@
     'Sobre o restaurante': 'About the restaurant',
     'Sobre a raça': 'About the breed',
     'Sobre': 'About',
+    'Como reconhecer': 'How to recognise',
+    'Imagem representativa do corpo e pelagem da raça': 'Representative image of the body and coat of the breed',
     'Ficha rápida': 'Quick facts',
     'Disponibilidade': 'Availability',
     'Alimentação': 'Feeding',

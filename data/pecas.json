@@ -111,7 +111,7 @@
         "id": "catrina",
         "nome": "Catrina",
         "descricao": "Raça bovina autóctone portuguesa, com as suas raízes na Ilha Terceira.",
-        "imagem": "assets/catrina.png"
+        "imagem": "assets/catrina-face.png"
       },
       "feedback": {
         "url": "https://us16.list-manage.com/survey?u=c62a3f7be2b0eff368aa1394e&id=0d9fdff0dd&attribution=false",
@@ -372,7 +372,7 @@
         "id": "ramo-grande-dop",
         "nome": "Ramo Grande DOP",
         "descricao": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
-        "imagem": "assets/ramo-grande-dop.png"
+        "imagem": "assets/ramogrande-face.png"
       },
       "restaurante": {
         "id": "peter-cafe-sport",

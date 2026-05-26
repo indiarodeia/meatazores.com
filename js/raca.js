@@ -272,6 +272,7 @@
     // Traduzir headings fixos
     var headings = {
       'sec-sobre': 'Sobre a raça',
+      'sec-aparencia': 'Como reconhecer',
       'sec-ficha-rapida': 'Ficha rápida',
       'sec-historia': 'História e origem',
       'sec-caracteristicas': 'Características',
@@ -337,6 +338,18 @@
 
     // Sobre
     setText('raca-descricao-curta', t(raca.descricao_curta));
+
+    // Aparência (imagem de corpo)
+    var corpoImg = document.getElementById('raca-corpo');
+    if (corpoImg) {
+      if (raca.imagem_corpo) {
+        corpoImg.alt = label('Imagem representativa do corpo e pelagem da raça') + ' ' + nome;
+        setImagemSeExistir(corpoImg, raca.imagem_corpo, function () { esconderSecao('sec-aparencia-secao'); });
+        document.getElementById('sec-aparencia-secao').hidden = false;
+      } else {
+        esconderSecao('sec-aparencia-secao');
+      }
+    }
 
     // Ficha rápida
     if (hasArrayItems(raca.ficha_rapida)) {

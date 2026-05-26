@@ -18,7 +18,8 @@
         "en": "Azorean autochthonous cattle breed, deeply linked to Terceira Island and Azorean agricultural heritage."
       },
       "hero": "assets/bg-ramo-grande-dop.jpg",
-      "imagem": "assets/ramo-grande-dop.png",
+      "imagem": "assets/ramogrande-face.png",
+      "imagem_corpo": "assets/ramogrande-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -106,7 +107,8 @@
         "en": "Portuguese autochthonous cattle breed with roots in Terceira Island, intimately linked to the Azorean genetic, cultural and landscape heritage."
       },
       "hero": "assets/bg-catrina.jpg",
-      "imagem": "assets/catrina.png",
+      "imagem": "assets/catrina-face.png",
+      "imagem_corpo": "assets/catrina-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -228,7 +230,8 @@
         "en": "Beef cattle breed, recognized for meat quality, precocity, rusticity, ease of husbandry and good adaptation to different production systems."
       },
       "hero": "assets/bg-aberdeen-angus.jpg",
-      "imagem": "assets/aberdeen-angus.png",
+      "imagem": "assets/angus-face.png",
+      "imagem_corpo": "assets/angus-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -318,7 +321,8 @@
         "en": "Dairy breed originating from Jersey Island, recognized for its rich and creamy milk production."
       },
       "hero": "assets/bg-jersey.jpg",
-      "imagem": "assets/jersey.png",
+      "imagem": "assets/jersey-face.png",
+      "imagem_corpo": "assets/jersey-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -385,7 +389,8 @@
         "en": "European-origin dairy cattle breed, recognized for high milk production capacity."
       },
       "hero": "assets/bg-holstein-frisia.jpg",
-      "imagem": "assets/holstein-frisia.png",
+      "imagem": "assets/frisia-face.png",
+      "imagem_corpo": "assets/frisia-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -457,7 +462,8 @@
         "en": "Cattle breed recognized for rusticity, heat resistance and adaptation to demanding conditions."
       },
       "hero": "assets/bg-brahman.jpg",
-      "imagem": "assets/brahman.png",
+      "imagem": "assets/brahman-face.png",
+      "imagem_corpo": "assets/brahman-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
