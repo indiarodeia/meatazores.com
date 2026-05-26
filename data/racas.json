@@ -11,15 +11,15 @@
         "pt": "Açores, com forte ligação à ilha Terceira",
         "en": "Azores, with strong links to Terceira Island"
       },
-      "logo": "assets/logo-ramo-grande-dop.png",
+      "logo": "assets/raca/ramo-grande-dop/logo-ramo-grande-dop.png",
       "logoAlt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
       "descricao_curta": {
         "pt": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
         "en": "Azorean autochthonous cattle breed, deeply linked to Terceira Island and Azorean agricultural heritage."
       },
-      "hero": "assets/bg-ramo-grande-dop.jpg",
-      "imagem": "assets/ramogrande-face.png",
-      "imagem_corpo": "assets/ramogrande-body.png",
+      "hero": "assets/raca/ramo-grande-dop/bg-ramo-grande-dop.jpg",
+      "imagem": "assets/raca/ramo-grande-dop/ramogrande-face.png",
+      "imagem_corpo": "assets/raca/ramo-grande-dop/ramogrande-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -88,7 +88,7 @@
         "emiliano-meneses"
       ],
       "galeria": [
-        "assets/ramo-grande-dop-pasto.jpg"
+        "assets/raca/ramo-grande-dop/ramo-grande-dop-pasto.jpg"
       ]
     },
     {
@@ -106,9 +106,9 @@
         "pt": "Raça bovina autóctone portuguesa com raízes na ilha Terceira, intimamente ligada ao património genético, cultural e paisagístico dos Açores.",
         "en": "Portuguese autochthonous cattle breed with roots in Terceira Island, intimately linked to the Azorean genetic, cultural and landscape heritage."
       },
-      "hero": "assets/bg-catrina.jpg",
-      "imagem": "assets/catrina-face.png",
-      "imagem_corpo": "assets/catrina-body.png",
+      "hero": "assets/raca/catrina/bg-catrina.jpg",
+      "imagem": "assets/raca/catrina/catrina-face.png",
+      "imagem_corpo": "assets/raca/catrina/catrina-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -211,7 +211,7 @@
         "manuel-lucas"
       ],
       "galeria": [
-        "assets/img-catrina.jpg"
+        "assets/raca/catrina/img-catrina.jpg"
       ]
     },
     {
@@ -229,9 +229,9 @@
         "pt": "Raça bovina de aptidão carne, reconhecida pela qualidade da carne, precocidade, rusticidade, facilidade de maneio e boa adaptação a diferentes sistemas de produção.",
         "en": "Beef cattle breed, recognized for meat quality, precocity, rusticity, ease of husbandry and good adaptation to different production systems."
       },
-      "hero": "assets/bg-aberdeen-angus.jpg",
-      "imagem": "assets/angus-face.png",
-      "imagem_corpo": "assets/angus-body.png",
+      "hero": "assets/raca/aberdeen-angus/bg-aberdeen-angus.jpg",
+      "imagem": "assets/raca/aberdeen-angus/angus-face.png",
+      "imagem_corpo": "assets/raca/aberdeen-angus/angus-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -302,7 +302,7 @@
       "pecas_associadas": [],
       "produtores_associados": [],
       "galeria": [
-        "assets/aberdeen-angus-pasto.jpg"
+        "assets/raca/aberdeen-angus/aberdeen-angus-pasto.jpg"
       ]
     },
     {
@@ -320,9 +320,9 @@
         "pt": "Raça leiteira originária da ilha de Jersey, reconhecida pela produção de leite rico e cremoso.",
         "en": "Dairy breed originating from Jersey Island, recognized for its rich and creamy milk production."
       },
-      "hero": "assets/bg-jersey.jpg",
-      "imagem": "assets/jersey-face.png",
-      "imagem_corpo": "assets/jersey-body.png",
+      "hero": "assets/raca/jersey/bg-jersey.jpg",
+      "imagem": "assets/raca/jersey/jersey-face.png",
+      "imagem_corpo": "assets/raca/jersey/jersey-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -388,9 +388,9 @@
         "pt": "Raça bovina leiteira de origem europeia, reconhecida pela elevada aptidão para produção de leite.",
         "en": "European-origin dairy cattle breed, recognized for high milk production capacity."
       },
-      "hero": "assets/bg-holstein-frisia.jpg",
-      "imagem": "assets/frisia-face.png",
-      "imagem_corpo": "assets/frisia-body.png",
+      "hero": "assets/raca/holstein-frisia/bg-holstein-frisia.jpg",
+      "imagem": "assets/raca/holstein-frisia/frisia-face.png",
+      "imagem_corpo": "assets/raca/holstein-frisia/frisia-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -461,9 +461,9 @@
         "pt": "Raça bovina reconhecida pela rusticidade, resistência ao calor e adaptação a condições exigentes.",
         "en": "Cattle breed recognized for rusticity, heat resistance and adaptation to demanding conditions."
       },
-      "hero": "assets/bg-brahman.jpg",
-      "imagem": "assets/brahman-face.png",
-      "imagem_corpo": "assets/brahman-body.png",
+      "hero": "assets/raca/brahman/bg-brahman.jpg",
+      "imagem": "assets/raca/brahman/brahman-face.png",
+      "imagem_corpo": "assets/raca/brahman/brahman-body.png",
       "ficha_rapida": [
         {
           "label": "Origem",
@@ -513,6 +513,136 @@
       "produtores_associados": [
         "antonio-azera"
       ],
+      "galeria": []
+    },
+    {
+      "id": "fleckvieh",
+      "nome": "Fleckvieh",
+      "tipo": {
+        "pt": "Raça bovina de aptidão mista (carne e leite)",
+        "en": "Dual-purpose cattle breed (beef and dairy)"
+      },
+      "localizacao": {
+        "pt": "Originária dos Alpes, com forte presença na Alemanha e Áustria",
+        "en": "Originating in the Alps, with strong presence in Germany and Austria"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina de aptidão mista, reconhecida pela combinação entre boa produção de leite e excelente qualidade de carne.",
+        "en": "Dual-purpose cattle breed, recognized for combining good milk production with excellent meat quality."
+      },
+      "imagem": "assets/raca/fleckvieh/fleckvieh-face.png",
+      "imagem_corpo": "assets/raca/fleckvieh/fleckvieh-body.png",
+      "ficha_rapida": [
+        {
+          "label": "Origem",
+          "valor": "Alpes (Alemanha e Áustria)",
+          "bandeira": "🇩🇪"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Mista (carne e leite)"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio a grande"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Malhada vermelha e branca, cabeça habitualmente branca"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Explorações mistas e sistemas extensivos"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Ficha informativa — sem peça associada de momento"
+        }
+      ],
+      "historia": {
+        "pt": "A Fleckvieh tem origem nos Alpes, sendo descendente do tronco Simmental suíço. Difundiu-se sobretudo pela Alemanha e Áustria, onde foi selecionada para combinar produção de leite com boa aptidão para a carne, tornando-se uma das raças de duplo propósito mais difundidas na Europa.",
+        "en": "Fleckvieh originates in the Alps, descending from the Swiss Simmental lineage. It spread mainly through Germany and Austria, where it was selected to combine milk production with good meat aptitude, becoming one of the most widespread dual-purpose breeds in Europe."
+      },
+      "caracteristicas": [
+        "Aptidão mista para carne e leite",
+        "Pelagem malhada vermelha e branca",
+        "Cabeça habitualmente branca",
+        "Porte médio a grande, boa musculatura",
+        "Rusticidade e longevidade",
+        "Boa eficiência alimentar",
+        "Adaptação a sistemas extensivos e mistos"
+      ],
+      "contexto_meatazores": {
+        "pt": "Na MeatAzores, a Fleckvieh permite valorizar animais provenientes de explorações mistas, onde a carne resulta de um percurso que combina aptidão leiteira e produção de carne com qualidade reconhecida.",
+        "en": "At MeatAzores, Fleckvieh helps value animals from mixed farms, where the meat is the result of a path combining dairy aptitude and beef production of recognized quality."
+      },
+      "pecas_associadas": [],
+      "produtores_associados": [],
+      "galeria": []
+    },
+    {
+      "id": "limousine",
+      "nome": "Limousine",
+      "tipo": {
+        "pt": "Raça bovina de carne",
+        "en": "Beef cattle breed"
+      },
+      "localizacao": {
+        "pt": "Região do Limousin, centro-oeste de França",
+        "en": "Limousin region, central-western France"
+      },
+      "descricao_curta": {
+        "pt": "Raça bovina de aptidão carne, reconhecida pelo elevado rendimento de carcaça e pela qualidade da carne magra e tenra.",
+        "en": "Beef cattle breed, recognized for high carcass yield and the quality of its lean, tender meat."
+      },
+      "imagem": "assets/raca/limousine/limousine-face.png",
+      "imagem_corpo": "assets/raca/limousine/limousine-body.png",
+      "ficha_rapida": [
+        {
+          "label": "Origem",
+          "valor": "Limousin, França",
+          "bandeira": "🇫🇷"
+        },
+        {
+          "label": "Aptidão",
+          "valor": "Carne"
+        },
+        {
+          "label": "Porte",
+          "valor": "Médio a grande"
+        },
+        {
+          "label": "Pelagem",
+          "valor": "Trigo dourado a vermelho-acastanhado, uniforme"
+        },
+        {
+          "label": "Sistema comum",
+          "valor": "Pastagem e regime extensivo"
+        },
+        {
+          "label": "Presença na MeatAzores",
+          "valor": "Ficha informativa — sem peça associada de momento"
+        }
+      ],
+      "historia": {
+        "pt": "A Limousine é originária da região do Limousin, no centro-oeste de França, onde foi selecionada ao longo de gerações em pastagens de relevo acidentado. Hoje é uma das raças de carne mais reconhecidas internacionalmente, valorizada pelo rendimento de carcaça e pelo equilíbrio entre rusticidade e produtividade.",
+        "en": "Limousine originates in the Limousin region of central-western France, where it was selected over generations on rugged pastureland. Today it is one of the most internationally recognized beef breeds, valued for carcass yield and the balance between rusticity and productivity."
+      },
+      "caracteristicas": [
+        "Raça especializada na produção de carne",
+        "Pelagem uniforme em tons trigo a vermelho-acastanhado",
+        "Excelente conformação muscular",
+        "Elevado rendimento de carcaça",
+        "Carne magra, tenra e saborosa",
+        "Facilidade de parto",
+        "Boa adaptação a regime extensivo"
+      ],
+      "contexto_meatazores": {
+        "pt": "Na MeatAzores, a Limousine surge como referência de carne especializada de qualidade. A sua presença permite ligar o consumidor à origem geográfica, ao maneio e à reputação internacional de uma raça com forte identidade produtiva.",
+        "en": "At MeatAzores, Limousine appears as a reference for specialized quality meat. Its presence connects the consumer to geographic origin, husbandry and the international reputation of a breed with strong productive identity."
+      },
+      "pecas_associadas": [],
+      "produtores_associados": [],
       "galeria": []
     }
   ]

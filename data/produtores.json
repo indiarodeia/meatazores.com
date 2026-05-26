@@ -15,8 +15,8 @@
         "pt": "Produtor de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
         "en": "Ramo Grande DOP producer from Terceira Island, linked to a family farm where the relationship with this breed spans generations."
       },
-      "hero": "assets/bg-emiliano-meneses.jpg",
-      "thumb": "assets/thumb-emiliano-meneses.png",
+      "hero": "assets/produtor/emiliano-meneses/bg-emiliano-meneses.jpg",
+      "thumb": "assets/produtor/emiliano-meneses/thumb-emiliano-meneses.png",
       "historia": {
         "pt": "A exploração de Emiliano Meneses é marcada por uma ligação antiga à Ramo Grande DOP. A história familiar remonta ao seu trisavô, que já criava esta raça, mantendo viva uma tradição profundamente ligada à agricultura e à pecuária da ilha Terceira.",
         "en": "Emiliano Meneses's farm is marked by a long connection to Ramo Grande DOP. The family history goes back to his great-great-grandfather, who already raised this breed, keeping alive a tradition deeply linked to the agriculture and livestock of Terceira Island."
@@ -63,9 +63,9 @@
         "ramo-grande-dop-peter-cafe-sport"
       ],
       "galeria": [
-        "assets/emiliano-meneses-01.jpg",
-        "assets/emiliano-meneses-antiga-01.jpg",
-        "assets/emiliano-meneses-antiga-02.jpg"
+        "assets/produtor/emiliano-meneses/emiliano-meneses-01.jpg",
+        "assets/produtor/emiliano-meneses/emiliano-meneses-antiga-01.jpg",
+        "assets/produtor/emiliano-meneses/emiliano-meneses-antiga-02.jpg"
       ]
     },
     {
@@ -83,8 +83,8 @@
         "pt": "Produtor de gado Catrina da ilha Terceira, dedicado à criação em regime extensivo e à valorização de uma raça autóctone portuguesa com raízes na Terceira.",
         "en": "Catrina cattle producer from Terceira Island, dedicated to extensive farming and to the valuation of a Portuguese autochthonous breed with roots in Terceira."
       },
-      "hero": "assets/bg-manuel.jpg",
-      "thumb": "assets/thumb-manuel.png",
+      "hero": "assets/produtor/manuel-lucas/bg-manuel.jpg",
+      "thumb": "assets/produtor/manuel-lucas/thumb-manuel.png",
       "historia": {
         "pt": "A exploração começou de forma gradual e com aprendizagem prática. A vaca que marcou a primeira degustação MeatAzores foi comprada ao seu tio, João Ângelo, e foi a segunda vaca da exploração. A primeira tentativa não resultou e a decisão de continuar acabou por definir o caminho do produtor. Ao longo destes anos, a prioridade manteve-se: criar com tempo, consistência e respeito pelo animal e pelo território.",
         "en": "The farm started gradually and through hands-on learning. The cow that marked the first MeatAzores tasting was bought from his uncle, João Ângelo, and was the second cow of the farm. The first attempt did not work out and the decision to continue ended up defining the producer's path. Through these years, the priority has remained: to raise with time, consistency and respect for animal and territory."
@@ -152,7 +152,7 @@
         "catrina"
       ],
       "galeria": [
-        "assets/img-catrina.jpg"
+        "assets/raca/catrina/img-catrina.jpg"
       ]
     },
     {
@@ -174,8 +174,8 @@
         "pt": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
         "en": "Producer from Quatro Ribeiras, linked to a family dairy farm and a livestock tradition that spans generations."
       },
-      "hero": "assets/bg-antonio-azera.jpg",
-      "thumb": "assets/antonio-azera.jpg",
+      "hero": "assets/produtor/antonio-azera/bg-antonio-azera.jpg",
+      "thumb": "assets/produtor/antonio-azera/antonio-azera.jpg",
       "localizacao_detalhe": {
         "ilha": "Terceira",
         "freguesia": "Quatro Ribeiras",

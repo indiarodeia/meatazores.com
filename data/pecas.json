@@ -8,45 +8,45 @@
       "selecionado_por": "Talho Rocha",
       "confeccionado_por": "Restaurante Associação Agrícola da Ilha Terceira",
       "descricao": "Esta é uma degustação rara: carne proveniente de uma fêmea Catrina com um percurso longo e completo, criada em regime extensivo. A experiência não se trata apenas de um prato, trata-se de reconhecer tempo, território e património vivo.",
-      "imagem_bg": "assets/bg-degustacao.jpg",
+      "imagem_bg": "assets/peca/catrina-19-anos/bg-degustacao.jpg",
       "caracteristicas": [
         {
-          "icone": "assets/icon-1.svg",
+          "icone": "assets/ui/icon-1.svg",
           "label": "Identificação",
           "valor": "PT593418923"
         },
         {
-          "icone": "assets/icon-2.svg",
+          "icone": "assets/ui/icon-2.svg",
           "label": "Classificação",
           "valor": "O-4"
         },
         {
-          "icone": "assets/icon-3.svg",
+          "icone": "assets/ui/icon-3.svg",
           "label": "Sexo",
           "valor": "Fêmea"
         },
         {
-          "icone": "assets/icon-4.svg",
+          "icone": "assets/ui/icon-4.svg",
           "label": "Idade",
           "valor": "19 anos"
         },
         {
-          "icone": "assets/icon-5.svg",
+          "icone": "assets/ui/icon-5.svg",
           "label": "Livro Genealógico",
           "valor": "0044"
         },
         {
-          "icone": "assets/icon-6.svg",
+          "icone": "assets/ui/icon-6.svg",
           "label": "Pelagem",
           "valor": "Tipo Sara"
         },
         {
-          "icone": "assets/icon-7.svg",
+          "icone": "assets/ui/icon-7.svg",
           "label": "Peso a frio",
           "valor": "211kg"
         },
         {
-          "icone": "assets/icon-8.svg",
+          "icone": "assets/ui/icon-8.svg",
           "label": "Último parto registado",
           "valor": "19/08/2023"
         }
@@ -55,17 +55,17 @@
         "descricao": "Pastoreio em área de aproximadamente 38 alqueires. No último ano, esteve a pastar sozinha.",
         "alimentacao_regular": [
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Erva fresca"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Erva de rolo"
           }
         ],
         "fase_acabamento": [
           {
-            "icone": "assets/farinha.svg",
+            "icone": "assets/ui/farinha.svg",
             "texto": "Farinha de Milho"
           }
         ]
@@ -105,13 +105,13 @@
         "id": "manuel-lucas",
         "nome": "Manuel Lucas",
         "descricao": "Produtor de gado Catrina da Ilha Terceira.",
-        "imagem": "assets/thumb-manuel.png"
+        "imagem": "assets/produtor/manuel-lucas/thumb-manuel.png"
       },
       "raca": {
         "id": "catrina",
         "nome": "Catrina",
         "descricao": "Raça bovina autóctone portuguesa, com as suas raízes na Ilha Terceira.",
-        "imagem": "assets/catrina-face.png"
+        "imagem": "assets/raca/catrina/catrina-face.png"
       },
       "feedback": {
         "url": "https://us16.list-manage.com/survey?u=c62a3f7be2b0eff368aa1394e&id=0d9fdff0dd&attribution=false",
@@ -146,13 +146,13 @@
         "pt": "Esta peça provém de uma vaca Ramo Grande DOP, raça bovina autóctone dos Açores, criada na ilha Terceira, numa exploração familiar onde a ligação a esta raça atravessa gerações. Com 10 anos de idade e 8 crias ao longo da sua vida produtiva, representa mais do que uma peça de carne: representa património genético, maneio tradicional e a continuidade de uma forma açoriana de criar gado.",
         "en": "This piece comes from a Ramo Grande DOP cow — an autochthonous Azorean bovine breed — raised on Terceira Island, on a family farm where the connection to this breed spans generations. At 10 years old and with 8 offspring during her productive life, she represents more than a piece of meat: she represents genetic heritage, traditional husbandry and the continuity of an Azorean way of raising cattle."
       },
-      "imagem_bg": "assets/bg-ramo-grande-dop-peter.jpg",
+      "imagem_bg": "assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg",
       "certificacaoDop": {
         "titulo": {
           "pt": "Certificação Carne Ramo Grande DOP",
           "en": "Ramo Grande DOP Beef Certification"
         },
-        "logo": "assets/logo-ramo-grande-dop.png",
+        "logo": "assets/raca/ramo-grande-dop/logo-ramo-grande-dop.png",
         "logoAlt": {
           "pt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
           "en": "Official logo of the Ramo Grande DOP Bovine Breed"
@@ -219,42 +219,42 @@
       },
       "caracteristicas": [
         {
-          "icone": "assets/icon-1.svg",
+          "icone": "assets/ui/icon-1.svg",
           "label": "Identificação",
           "valor": "PT717001037"
         },
         {
-          "icone": "assets/icon-3.svg",
+          "icone": "assets/ui/icon-3.svg",
           "label": "Sexo",
           "valor": "Fêmea"
         },
         {
-          "icone": "assets/icon-4.svg",
+          "icone": "assets/ui/icon-4.svg",
           "label": "Idade",
           "valor": "10 anos"
         },
         {
-          "icone": "assets/icon-7.svg",
+          "icone": "assets/ui/icon-7.svg",
           "label": "Peso a frio",
           "valor": "406,10 kg"
         },
         {
-          "icone": "assets/icon-2.svg",
+          "icone": "assets/ui/icon-2.svg",
           "label": "Classificação",
           "valor": "R.4."
         },
         {
-          "icone": "assets/icon-6.svg",
+          "icone": "assets/ui/icon-6.svg",
           "label": "pH da carne",
           "valor": "5,56"
         },
         {
-          "icone": "assets/icon-8.svg",
+          "icone": "assets/ui/icon-8.svg",
           "label": "Data de abate",
           "valor": "10/04/2026"
         },
         {
-          "icone": "assets/icon-3.svg",
+          "icone": "assets/ui/icon-3.svg",
           "label": "Número de crias",
           "valor": "8"
         }
@@ -263,33 +263,33 @@
         "descricao": "Exploração familiar na ilha Terceira, com cerca de 30 cabeças e aproximadamente 100 alqueires, maioritariamente propriedade da exploração. Cada animal dispõe, em média, de cerca de 3.000 m² de pasto.",
         "alimentacao_regular": [
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Pastagem com leguminosas"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Trevos"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Luzerna"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Azevém"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Capim"
           }
         ],
         "fase_acabamento": [
           {
-            "icone": "assets/farinha.svg",
+            "icone": "assets/ui/farinha.svg",
             "texto": "Farinha de milho"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Azevém fresco"
           }
         ]
@@ -366,19 +366,19 @@
         "id": "emiliano-meneses",
         "nome": "Emiliano Meneses",
         "descricao": "Produtor de Ramo Grande DOP da ilha Terceira, ligado a uma exploração familiar onde a relação com esta raça atravessa gerações.",
-        "imagem": "assets/thumb-emiliano-meneses.png"
+        "imagem": "assets/produtor/emiliano-meneses/thumb-emiliano-meneses.png"
       },
       "raca": {
         "id": "ramo-grande-dop",
         "nome": "Ramo Grande DOP",
         "descricao": "Raça bovina autóctone dos Açores, profundamente ligada à ilha Terceira e ao património agrícola açoriano.",
-        "imagem": "assets/ramogrande-face.png"
+        "imagem": "assets/raca/ramo-grande-dop/ramogrande-face.png"
       },
       "restaurante": {
         "id": "peter-cafe-sport",
         "nome": "Peter Café Sport",
         "descricao": "Destino gastronómico desta peça Ramo Grande DOP, no Faial.",
-        "imagem": "assets/peter-cafe-sport.png"
+        "imagem": "assets/restaurante/peter-cafe-sport/peter-cafe-sport.png"
       },
       "feedback": {
         "titulo": {
@@ -425,7 +425,7 @@
         "pt": "Esta peça provém de uma fêmea cruzada de Brahman x Holstein-Frísia, criada pelo Sr. António Azera na freguesia das Quatro Ribeiras, junto ao mar, na ilha Terceira.\n\nCom 4 anos de idade, foi criada numa exploração de leite em regime extensivo, junto das vacas leiteiras. Produzia cerca de 2 litros de leite por dia, não sendo viável para produção leiteira, e deu uma cria em 2024.\n\nA carne distingue-se pela cor rosada/vermelho-rubi, pela concentração de marmoreio e pela tonalidade dourada da gordura, resultando numa carne saborosa e suculenta.",
         "en": "This piece comes from a crossbred Brahman x Holstein-Friesian female, raised by Mr. António Azera in the parish of Quatro Ribeiras, by the sea, on Terceira Island.\n\nAt 4 years old, she was raised on a dairy farm under an extensive regime, alongside dairy cows. She produced about 2 litres of milk per day, not viable for dairy production, and had one offspring in 2024.\n\nThe meat is distinguished by its rosé/ruby-red colour, the concentration of marbling and the golden hue of the fat, resulting in flavourful and juicy meat."
       },
-      "imagem_bg": "assets/bg-brahman-holstein-frisia-rocha.jpg",
+      "imagem_bg": "assets/peca/brahman-holstein-frisia-restaurante-rocha/bg-brahman-holstein-frisia-rocha.jpg",
       "cruzamento": {
         "pt": "Brahman x Holstein-Frísia",
         "en": "Brahman x Holstein-Friesian"
@@ -436,57 +436,57 @@
       ],
       "caracteristicas": [
         {
-          "icone": "assets/icon-5.svg",
+          "icone": "assets/ui/icon-5.svg",
           "label": "Cruzamento",
           "valor": "Brahman x Holstein-Frísia"
         },
         {
-          "icone": "assets/icon-3.svg",
+          "icone": "assets/ui/icon-3.svg",
           "label": "Sexo",
           "valor": "Fêmea"
         },
         {
-          "icone": "assets/icon-4.svg",
+          "icone": "assets/ui/icon-4.svg",
           "label": "Idade",
           "valor": "4 anos"
         },
         {
-          "icone": "assets/icon-1.svg",
+          "icone": "assets/ui/icon-1.svg",
           "label": "Origem",
           "valor": "Quatro Ribeiras, Ilha Terceira"
         },
         {
-          "icone": "assets/icon-6.svg",
+          "icone": "assets/ui/icon-6.svg",
           "label": "Produtor",
           "valor": "António Azera"
         },
         {
-          "icone": "assets/icon-2.svg",
+          "icone": "assets/ui/icon-2.svg",
           "label": "Sistema de criação",
           "valor": "Regime extensivo"
         },
         {
-          "icone": "assets/icon-2.svg",
+          "icone": "assets/ui/icon-2.svg",
           "label": "Tipo de exploração",
           "valor": "Exploração de leite"
         },
         {
-          "icone": "assets/icon-7.svg",
+          "icone": "assets/ui/icon-7.svg",
           "label": "Produção de leite",
           "valor": "~2 litros/dia"
         },
         {
-          "icone": "assets/icon-3.svg",
+          "icone": "assets/ui/icon-3.svg",
           "label": "Cria",
           "valor": "1 (em 2024)"
         },
         {
-          "icone": "assets/icon-8.svg",
+          "icone": "assets/ui/icon-8.svg",
           "label": "Temperamento",
           "valor": "Agressivo"
         },
         {
-          "icone": "assets/icon-7.svg",
+          "icone": "assets/ui/icon-7.svg",
           "label": "Peso referido",
           "valor": "~415 kg"
         }
@@ -495,19 +495,19 @@
         "descricao": "Criada numa exploração de leite nas Quatro Ribeiras, esta fêmea beneficiava de um regime extensivo e de uma área média de cerca de 7 alqueires por cabeça. O maneio reflete a realidade de muitas explorações leiteiras da ilha Terceira, onde o pasto, os silos e a alimentação complementar fazem parte do quotidiano produtivo.",
         "alimentacao_regular": [
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Azevém"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Silo de milho"
           },
           {
-            "icone": "assets/erva.svg",
+            "icone": "assets/ui/erva.svg",
             "texto": "Silo de erva"
           },
           {
-            "icone": "assets/farinha.svg",
+            "icone": "assets/ui/farinha.svg",
             "texto": "Ração de leite"
           }
         ],
@@ -602,13 +602,13 @@
         "id": "antonio-azera",
         "nome": "António Azera",
         "descricao": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
-        "imagem": "assets/antonio-azera.jpg"
+        "imagem": "assets/produtor/antonio-azera/antonio-azera.jpg"
       },
       "restaurante": {
         "id": "restaurante-rocha",
         "nome": "Restaurante Rocha",
         "descricao": "Restaurante no Porto Judeu, Ilha Terceira, destino gastronómico desta peça.",
-        "imagem": "assets/restaurante-rocha.jpg",
+        "imagem": "assets/restaurante/restaurante-rocha/restaurante-rocha.jpg",
         "website": "https://www.restauranterocha.pt/"
       },
       "feedback": {

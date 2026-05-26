@@ -205,7 +205,7 @@
           '</div>' +
           '<p class="text-wrapper-32">' + esc(t(s.texto)) + '</p>' +
         '</section>' +
-        '<img class="separator-3" src="assets/separator.svg" alt="" />'
+        '<img class="separator-3" src="assets/ui/separator.svg" alt="" />'
       );
     }).join('');
   }
