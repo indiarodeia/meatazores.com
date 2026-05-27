@@ -602,7 +602,7 @@
         "id": "antonio-azera",
         "nome": "António Azera",
         "descricao": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
-        "imagem": "assets/produtor/antonio-azera/antonio-azera.jpg"
+        "imagem": "assets/ui/avatar-produtor-meatazores.png"
       },
       "restaurante": {
         "id": "restaurante-rocha",
@@ -621,6 +621,115 @@
         "texto": {
           "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
           "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
+      }
+    },
+    {
+      "id": "aberdeen-angus-restaurante-associacao-agricola",
+      "estado": "em-validacao",
+      "titulo": {
+        "pt": "Aberdeen-Angus · Restaurante da Associação Agrícola",
+        "en": "Aberdeen-Angus · Agricultural Association Restaurant"
+      },
+      "subtitulo": {
+        "pt": "Peça Aberdeen-Angus com origem na ilha Graciosa",
+        "en": "Aberdeen-Angus piece from Graciosa Island"
+      },
+      "secao_titulo": {
+        "pt": "Esta peça",
+        "en": "This piece"
+      },
+      "selecionador": {
+        "nome": "Talho Rocha",
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
+      },
+      "confeccionado_por": {
+        "pt": "Restaurante da Associação Agrícola, Ilha Terceira",
+        "en": "Agricultural Association Restaurant, Terceira Island"
+      },
+      "descricao": {
+        "pt": "Esta peça provém de um animal Aberdeen-Angus criado por André Teixeira Bettencourt, na ilha Graciosa. Criado em regime extensivo e com alimentação à base de erva e pastagem, este animal representa uma origem diferente dentro da MeatAzores, ligando a carne servida à mesa a uma exploração fora da ilha Terceira, mas integrada na realidade agrícola dos Açores. Selecionada pelo Talho Rocha para o Restaurante da Associação Agrícola, esta peça valoriza a rastreabilidade, a origem e o trabalho de quem cria gado em contexto insular.",
+        "en": "This piece comes from an Aberdeen-Angus animal raised by André Teixeira Bettencourt on Graciosa Island. Raised in an extensive system and fed mainly on grass and pasture, this animal represents a different origin within MeatAzores, connecting the beef served at the table to a farm outside Terceira Island, but still rooted in the agricultural reality of the Azores. Selected by Talho Rocha for the Agricultural Association Restaurant, this piece values traceability, origin and the work of those who raise cattle in an island context."
+      },
+      "imagem_bg": "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg",
+      "caracteristicas": [
+        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Identificação", "en": "Identification" }, "valor": "PT322903706" },
+        { "label": { "pt": "Raça", "en": "Breed" }, "valor": "Aberdeen-Angus" },
+        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Idade", "en": "Age" }, "valor": { "pt": "77 meses", "en": "77 months" } },
+        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Peso a frio", "en": "Cold carcass weight" }, "valor": "421,19 kg" },
+        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Classificação", "en": "Classification" }, "valor": "R4+" },
+        { "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "10/04/2026" },
+        { "icone": "assets/ui/localizacao.svg", "label": { "pt": "Origem", "en": "Origin" }, "valor": { "pt": "Ilha Graciosa, Açores", "en": "Graciosa Island, Azores" } },
+        { "label": { "pt": "Produtor", "en": "Producer" }, "valor": "André Teixeira Bettencourt" },
+        { "label": { "pt": "Fornecedor registado", "en": "Registered supplier" }, "valor": "Adriano Miguel Pereira Lima" }
+      ],
+      "criacao": {
+        "descricao": {
+          "pt": "Criado em regime extensivo na ilha Graciosa, com alimentação à base de erva e pastagem. Este sistema de criação valoriza o espaço, o tempo de crescimento e a ligação direta ao território.",
+          "en": "Raised in an extensive system on Graciosa Island, with a diet based on grass and pasture. This farming system values space, time and a direct connection to the territory."
+        },
+        "alimentacao_regular": [
+          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Erva", "en": "Grass" } },
+          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Pastagem", "en": "Pasture" } }
+        ],
+        "fase_acabamento": []
+      },
+      "mostrar_o_que_esperar": false,
+      "peca_rara": {
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
+        "bullets": [
+          { "pt": "Animal Aberdeen-Angus criado na ilha Graciosa", "en": "Aberdeen-Angus animal raised on Graciosa Island" },
+          { "pt": "Produzido por André Teixeira Bettencourt", "en": "Raised by André Teixeira Bettencourt" },
+          { "pt": "Criado em regime extensivo", "en": "Raised in an extensive system" },
+          { "pt": "Alimentação à base de erva e pastagem", "en": "Fed mainly on grass and pasture" },
+          { "pt": "Selecionado pelo Talho Rocha", "en": "Selected by Talho Rocha" },
+          { "pt": "Destinado ao Restaurante da Associação Agrícola", "en": "Prepared for the Agricultural Association Restaurant" },
+          { "pt": "Peça com origem rastreada e ligação ao território açoriano", "en": "A traceable piece connected to the Azorean territory" }
+        ]
+      },
+      "produtor": {
+        "id": "andre-teixeira-bettencourt",
+        "nome": "André Teixeira Bettencourt",
+        "descricao": {
+          "pt": "Produtor da ilha Graciosa, associado à criação de bovinos Aberdeen-Angus em regime extensivo.",
+          "en": "Producer from Graciosa Island, associated with Aberdeen-Angus cattle raised in an extensive farming system."
+        },
+        "imagem": "assets/ui/avatar-produtor-meatazores.png"
+      },
+      "racas": ["aberdeen-angus"],
+      "restaurante": {
+        "id": "restaurante-associacao-agricola",
+        "nome": {
+          "pt": "Restaurante da Associação Agrícola",
+          "en": "Agricultural Association Restaurant"
+        },
+        "descricao": {
+          "pt": "Destino gastronómico desta peça Aberdeen-Angus, na Ilha Terceira.",
+          "en": "Gastronomic destination for this Aberdeen-Angus piece, on Terceira Island."
+        },
+        "imagem": "assets/restaurante/restaurante-associacao-agricola/restaurante-associacao-agricola.png"
+      },
+      "galeria": [
+        "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg"
+      ],
+      "feedback": {
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
+        "mostrar_estrela": false,
+        "url": "about.html",
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was created to connect producers, butchers, restaurants and consumers through traceability. Each piece tells a story of origin, territory and selection."
         },
         "botao": {
           "pt": "Saber mais sobre a MeatAzores",

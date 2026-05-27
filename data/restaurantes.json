@@ -58,6 +58,46 @@
       "pecas_associadas": [
         "brahman-holstein-frisia-restaurante-rocha"
       ]
+    },
+    {
+      "id": "restaurante-associacao-agricola",
+      "nome": {
+        "pt": "Restaurante da Associação Agrícola",
+        "en": "Agricultural Association Restaurant"
+      },
+      "tipo": {
+        "pt": "Restaurante",
+        "en": "Restaurant"
+      },
+      "localizacao": {
+        "pt": "Ilha Terceira, Açores",
+        "en": "Terceira Island, Azores"
+      },
+      "descricao_curta": {
+        "pt": "Restaurante associado à Associação Agrícola, destino gastronómico desta peça Aberdeen-Angus selecionada pelo Talho Rocha.",
+        "en": "Restaurant associated with the Agricultural Association, gastronomic destination for this Aberdeen-Angus piece selected by Talho Rocha."
+      },
+      "hero": "assets/restaurante/restaurante-associacao-agricola/bg-restaurante-associacao-agricola.jpg",
+      "imagem": "assets/restaurante/restaurante-associacao-agricola/restaurante-associacao-agricola.png",
+      "texto_principal": {
+        "pt": "O Restaurante da Associação Agrícola recebe esta peça Aberdeen-Angus como parte de uma experiência que valoriza a origem, a rastreabilidade e a ligação entre produtores, talhos, restaurantes e consumidores.",
+        "en": "The Agricultural Association Restaurant receives this Aberdeen-Angus piece as part of an experience that values origin, traceability and the connection between producers, butchers, restaurants and consumers."
+      },
+      "cta": {
+        "pt": "Conheça a origem da peça Aberdeen-Angus · Restaurante da Associação Agrícola.",
+        "en": "Discover the origin of the Aberdeen-Angus · Agricultural Association Restaurant piece."
+      },
+      "pecas_associadas": [
+        "aberdeen-angus-restaurante-associacao-agricola"
+      ],
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotografia do restaurante",
+          "Website ou redes sociais",
+          "Localização mais específica"
+        ]
+      }
     }
   ]
 }

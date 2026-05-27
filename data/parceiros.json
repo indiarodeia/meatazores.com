@@ -17,8 +17,8 @@
         "Seleção cuidada de carne local",
         "Ligação entre produtor, talho, restaurante e consumidor"
       ],
-      "imagem": "assets/parceiro/talho-rocha/talho-rocha.jpg",
-      "logo": "assets/parceiro/talho-rocha/logo-rocha.svg",
+      "imagem": "assets/parceiro/talho-rocha/bg-talho-rocha.jpg",
+      "logo": "assets/parceiro/talho-rocha/logo-talho-rocha.jpg",
       "pecas_associadas": ["ramo-grande-dop-peter-cafe-sport"]
     }
   ]

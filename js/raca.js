@@ -247,16 +247,16 @@
   }
 
   function montarHistoriaTexto(raca) {
-    if (raca.historia) return raca.historia;
+    if (raca.historia) return t(raca.historia);
     var partes = [];
-    if (raca.introducao) partes.push(raca.introducao);
-    if (raca.origem_territorio) partes.push(raca.origem_territorio);
+    if (raca.introducao) partes.push(t(raca.introducao));
+    if (raca.origem_territorio) partes.push(t(raca.origem_territorio));
     return partes.join('\n\n');
   }
 
   function montarContextoTexto(raca) {
-    if (raca.contexto_meatazores) return raca.contexto_meatazores;
-    if (raca.valor_patrimonial) return raca.valor_patrimonial;
+    if (raca.contexto_meatazores) return t(raca.contexto_meatazores);
+    if (raca.valor_patrimonial) return t(raca.valor_patrimonial);
     return '';
   }
 

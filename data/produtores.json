@@ -175,7 +175,7 @@
         "en": "Producer from Quatro Ribeiras, linked to a family dairy farm and a livestock tradition that spans generations."
       },
       "hero": "assets/produtor/antonio-azera/bg-antonio-azera.jpg",
-      "thumb": "assets/produtor/antonio-azera/antonio-azera.jpg",
+      "thumb": "assets/ui/avatar-produtor-meatazores.png",
       "localizacao_detalhe": {
         "ilha": "Terceira",
         "freguesia": "Quatro Ribeiras",
@@ -266,6 +266,90 @@
       "privacidade": {
         "ocultar_numero_cabecas": true,
         "ocultar_area_total": true
+      }
+    },
+    {
+      "id": "andre-teixeira-bettencourt",
+      "nome": "André Teixeira Bettencourt",
+      "tipo": {
+        "pt": "Produtor de Aberdeen-Angus",
+        "en": "Aberdeen-Angus producer"
+      },
+      "localizacao": {
+        "pt": "Ilha Graciosa, Açores",
+        "en": "Graciosa Island, Azores"
+      },
+      "localizacao_detalhe": {
+        "ilha": { "pt": "Graciosa", "en": "Graciosa" },
+        "regiao": { "pt": "Açores", "en": "Azores" }
+      },
+      "descricao_curta": {
+        "pt": "Produtor da ilha Graciosa, associado à criação de bovinos Aberdeen-Angus em regime extensivo.",
+        "en": "Producer from Graciosa Island, associated with Aberdeen-Angus cattle raised in an extensive farming system."
+      },
+      "frase_destaque": {
+        "pt": "Da ilha Graciosa, uma origem Aberdeen-Angus ligada ao pasto e ao território.",
+        "en": "From Graciosa Island, an Aberdeen-Angus origin connected to pasture and territory."
+      },
+      "hero": "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg",
+      "thumb": "assets/ui/avatar-produtor-meatazores.png",
+      "historia": {
+        "pt": "André Teixeira Bettencourt é produtor na ilha Graciosa, onde cria bovinos Aberdeen-Angus em regime extensivo. A sua produção está ligada ao pasto, ao território e à valorização de animais com origem conhecida dentro do contexto agrícola açoriano.",
+        "en": "André Teixeira Bettencourt is a producer on Graciosa Island, where he raises Aberdeen-Angus cattle in an extensive farming system. His production is connected to pasture, territory and the value of animals with a known origin within the Azorean agricultural context."
+      },
+      "ficha_rapida": [
+        { "label": { "pt": "Raça criada", "en": "Breed raised" }, "valor": "Aberdeen-Angus" },
+        { "label": { "pt": "Sistema", "en": "System" }, "valor": { "pt": "Regime extensivo", "en": "Extensive farming system" } },
+        { "label": { "pt": "Localização", "en": "Location" }, "valor": { "pt": "Ilha Graciosa, Açores", "en": "Graciosa Island, Azores" } },
+        { "label": { "pt": "Alimentação", "en": "Feeding" }, "valor": { "pt": "Erva e pastagem", "en": "Grass and pasture" } }
+      ],
+      "sistema_producao": {
+        "tipo": {
+          "pt": "Produção de bovinos Aberdeen-Angus",
+          "en": "Aberdeen-Angus cattle production"
+        },
+        "regime": {
+          "pt": "Extensivo",
+          "en": "Extensive"
+        },
+        "descricao": {
+          "pt": "Criação em regime extensivo, com ligação ao pasto e ao território da ilha Graciosa.",
+          "en": "Extensive cattle raising, connected to pasture and the territory of Graciosa Island."
+        }
+      },
+      "alimentacao": {
+        "regular": [
+          { "pt": "Erva", "en": "Grass" },
+          { "pt": "Pastagem", "en": "Pasture" }
+        ],
+        "acabamento": [],
+        "nota": {
+          "pt": "A alimentação conhecida assenta em erva e pastagem.",
+          "en": "The known diet is based on grass and pasture."
+        }
+      },
+      "pecas_associadas": [
+        "aberdeen-angus-restaurante-associacao-agricola"
+      ],
+      "racas_associadas": [
+        "aberdeen-angus"
+      ],
+      "tags": [
+        "Aberdeen-Angus",
+        "Graciosa",
+        "Regime extensivo",
+        "Pastagem"
+      ],
+      "galeria": [
+        "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg"
+      ],
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotografia do produtor",
+          "Fotografias da exploração",
+          "Mais contexto sobre a exploração"
+        ]
       }
     }
   ]

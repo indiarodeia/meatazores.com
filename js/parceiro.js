@@ -3,9 +3,7 @@
 
   const PARCEIROS_JSON = 'data/parceiros.json';
   const PECAS_JSON = 'data/pecas.json';
-  const ASSETS_EM_FALTA = new Set([
-    'assets/parceiro/talho-rocha/talho-rocha.jpg'
-  ]);
+  const ASSETS_EM_FALTA = new Set();
 
   function getIdFromURL() {
     return new URLSearchParams(window.location.search).get('id');

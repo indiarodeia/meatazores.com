@@ -299,8 +299,12 @@
           "texto": "Esta página será atualizada quando existir uma peça Aberdeen-Angus associada a um restaurante parceiro. Até lá, funciona como ficha informativa da raça dentro da aplicação."
         }
       ],
-      "pecas_associadas": [],
-      "produtores_associados": [],
+      "pecas_associadas": [
+        "aberdeen-angus-restaurante-associacao-agricola"
+      ],
+      "produtores_associados": [
+        "andre-teixeira-bettencourt"
+      ],
       "galeria": [
         "assets/raca/aberdeen-angus/aberdeen-angus-pasto.jpg"
       ]
@@ -388,7 +392,7 @@
         "pt": "Raça bovina leiteira de origem europeia, reconhecida pela elevada aptidão para produção de leite.",
         "en": "European-origin dairy cattle breed, recognized for high milk production capacity."
       },
-      "hero": "assets/raca/holstein-frisia/bg-holstein-frisia.jpg",
+      "hero": "assets/raca/holstein-frisia/bg-frisia.jpg",
       "imagem": "assets/raca/holstein-frisia/frisia-face.png",
       "imagem_corpo": "assets/raca/holstein-frisia/frisia-body.png",
       "ficha_rapida": [
@@ -530,6 +534,7 @@
         "pt": "Raça bovina de aptidão mista, reconhecida pela combinação entre boa produção de leite e excelente qualidade de carne.",
         "en": "Dual-purpose cattle breed, recognized for combining good milk production with excellent meat quality."
       },
+      "hero": "assets/raca/fleckvieh/bg-fleckvieh.jpg",
       "imagem": "assets/raca/fleckvieh/fleckvieh-face.png",
       "imagem_corpo": "assets/raca/fleckvieh/fleckvieh-body.png",
       "ficha_rapida": [
@@ -595,6 +600,7 @@
         "pt": "Raça bovina de aptidão carne, reconhecida pelo elevado rendimento de carcaça e pela qualidade da carne magra e tenra.",
         "en": "Beef cattle breed, recognized for high carcass yield and the quality of its lean, tender meat."
       },
+      "hero": "assets/raca/limousine/bg-limousine.jpg",
       "imagem": "assets/raca/limousine/limousine-face.png",
       "imagem_corpo": "assets/raca/limousine/limousine-body.png",
       "ficha_rapida": [
