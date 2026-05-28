@@ -425,7 +425,7 @@
         "pt": "Esta peça provém de uma fêmea cruzada de Brahman x Holstein-Frísia, criada pelo Sr. António Azera na freguesia das Quatro Ribeiras, junto ao mar, na ilha Terceira.\n\nCom 4 anos de idade, foi criada numa exploração de leite em regime extensivo, junto das vacas leiteiras. Produzia cerca de 2 litros de leite por dia, não sendo viável para produção leiteira, e deu uma cria em 2024.\n\nA carne distingue-se pela cor rosada/vermelho-rubi, pela concentração de marmoreio e pela tonalidade dourada da gordura, resultando numa carne saborosa e suculenta.",
         "en": "This piece comes from a crossbred Brahman x Holstein-Friesian female, raised by Mr. António Azera in the parish of Quatro Ribeiras, by the sea, on Terceira Island.\n\nAt 4 years old, she was raised on a dairy farm under an extensive regime, alongside dairy cows. She produced about 2 litres of milk per day, not viable for dairy production, and had one offspring in 2024.\n\nThe meat is distinguished by its rosé/ruby-red colour, the concentration of marbling and the golden hue of the fat, resulting in flavourful and juicy meat."
       },
-      "imagem_bg": "assets/peca/brahman-holstein-frisia-restaurante-rocha/bg-brahman-holstein-frisia-rocha.jpg",
+      "imagem_bg": "assets/peca/brahman-holstein-frisia-restaurante-rocha/peca-rocha-cruzada.jpg",
       "cruzamento": {
         "pt": "Brahman x Holstein-Frísia",
         "en": "Brahman x Holstein-Friesian"
@@ -602,7 +602,7 @@
         "id": "antonio-azera",
         "nome": "António Azera",
         "descricao": "Produtor das Quatro Ribeiras, ligado a uma exploração de leite familiar e a uma tradição pecuária que atravessa gerações.",
-        "imagem": "assets/ui/avatar-produtor-meatazores.png"
+        "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
       },
       "restaurante": {
         "id": "restaurante-rocha",
@@ -702,7 +702,7 @@
           "pt": "Produtor da ilha Graciosa, associado à criação de bovinos Aberdeen-Angus em regime extensivo.",
           "en": "Producer from Graciosa Island, associated with Aberdeen-Angus cattle raised in an extensive farming system."
         },
-        "imagem": "assets/ui/avatar-produtor-meatazores.png"
+        "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
       },
       "racas": ["aberdeen-angus"],
       "restaurante": {
@@ -715,7 +715,7 @@
           "pt": "Destino gastronómico desta peça Aberdeen-Angus, na Ilha Terceira.",
           "en": "Gastronomic destination for this Aberdeen-Angus piece, on Terceira Island."
         },
-        "imagem": "assets/restaurante/restaurante-associacao-agricola/restaurante-associacao-agricola.png"
+        "imagem": "assets/restaurante/restaurante-associacao-agricola/logo-associacao-agricola.jpg"
       },
       "galeria": [
         "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg"

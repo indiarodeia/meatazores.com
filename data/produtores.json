@@ -175,7 +175,7 @@
         "en": "Producer from Quatro Ribeiras, linked to a family dairy farm and a livestock tradition that spans generations."
       },
       "hero": "assets/produtor/antonio-azera/bg-antonio-azera.jpg",
-      "thumb": "assets/ui/avatar-produtor-meatazores.png",
+      "thumb": "assets/ui/avatar-produtor-meatazores.jpg",
       "localizacao_detalhe": {
         "ilha": "Terceira",
         "freguesia": "Quatro Ribeiras",
@@ -292,7 +292,7 @@
         "en": "From Graciosa Island, an Aberdeen-Angus origin connected to pasture and territory."
       },
       "hero": "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg",
-      "thumb": "assets/ui/avatar-produtor-meatazores.png",
+      "thumb": "assets/ui/avatar-produtor-meatazores.jpg",
       "historia": {
         "pt": "André Teixeira Bettencourt é produtor na ilha Graciosa, onde cria bovinos Aberdeen-Angus em regime extensivo. A sua produção está ligada ao pasto, ao território e à valorização de animais com origem conhecida dentro do contexto agrícola açoriano.",
         "en": "André Teixeira Bettencourt is a producer on Graciosa Island, where he raises Aberdeen-Angus cattle in an extensive farming system. His production is connected to pasture, territory and the value of animals with a known origin within the Azorean agricultural context."
