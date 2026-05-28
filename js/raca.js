@@ -140,20 +140,29 @@
 
   function renderProdutorCard(produtor) {
     var nome = t(produtor.nome);
-    const imgHtml = produtor.thumb
-      ? '<img class="clip-path-group-2" data-src="' + esc(produtor.thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
-      : '';
+    var tipo = t(produtor.tipo);
+    var loc = tValue(t(produtor.localizacao));
+    var thumb = produtor.thumb || produtor.imagem;
+    var href = withLang('produtor.html?id=' + esc(produtor.id));
     return (
-      '<div class="frame-27">' +
-        imgHtml +
-        '<div class="frame-28">' +
-          '<div class="text-wrapper-33">' + esc(nome) + '</div>' +
-          (produtor.descricao_curta ? '<p class="text-wrapper-34">' + esc(t(produtor.descricao_curta)) + '</p>' : '') +
-          '<a href="' + esc(withLang('produtor.html?id=' + esc(produtor.id))) + '" class="button-arrow-right-2" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
-            '<span class="text-wrapper-35">' + esc(label('Conhecer o produtor')) + '</span>' +
-            '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
-          '</a>' +
-        '</div>' +
+      '<div class="raca-relacao-card">' +
+        '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
+          '<span class="catalog-card__thumb catalog-card__thumb--round">' +
+            (thumb
+              ? '<img class="catalog-card__img" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
+              : '') +
+          '</span>' +
+          '<span class="catalog-card__body">' +
+            '<span class="catalog-card__title">' + esc(nome) + '</span>' +
+            (tipo ? '<span class="catalog-card__meta">' + esc(tipo) + '</span>' : '') +
+            (loc ? '<span class="catalog-card__location">' + esc(loc) + '</span>' : '') +
+          '</span>' +
+          '<span class="catalog-card__arrow" aria-hidden="true">›</span>' +
+        '</a>' +
+        '<a href="' + href + '" class="button-arrow-right-2" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
+          '<span class="text-wrapper-35">' + esc(label('Conhecer o produtor')) + '</span>' +
+          '<span class="iconly-light-arrow-2" aria-hidden="true"></span>' +
+        '</a>' +
       '</div>'
     );
   }
@@ -219,6 +228,9 @@
 
     var total = imagens.length;
     var falhas = 0;
+    var items = imagens.map(function (src, i) {
+      return { src: src, alt: nomeRaca + ', fotografia ' + (i + 1) };
+    });
 
     imagens.forEach(function (src, i) {
       var btn = document.createElement('button');
@@ -227,13 +239,15 @@
       btn.setAttribute('aria-label', 'Ver fotografia ' + (i + 1) + ' de ' + nomeRaca + ' em tamanho maior');
 
       var img = document.createElement('img');
-      img.alt = nomeRaca + ', fotografia ' + (i + 1);
+      img.alt = items[i].alt;
 
       btn.appendChild(img);
       container.appendChild(btn);
 
       btn.addEventListener('click', function () {
-        if (window.MA && window.MA.abrirLightbox) {
+        if (window.MA && window.MA.abrirLightboxGaleria) {
+          window.MA.abrirLightboxGaleria(items, i);
+        } else if (window.MA && window.MA.abrirLightbox) {
           window.MA.abrirLightbox(src, img.alt);
         }
       });
@@ -272,7 +286,6 @@
     // Traduzir headings fixos
     var headings = {
       'sec-sobre': 'Sobre a raça',
-      'sec-aparencia': 'Como reconhecer',
       'sec-ficha-rapida': 'Ficha rápida',
       'sec-historia': 'História e origem',
       'sec-caracteristicas': 'Características',

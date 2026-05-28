@@ -101,10 +101,11 @@
   function renderLocalizacaoDetalhe(detalhe) {
     if (!hasValue(detalhe)) return '';
     var partes = [];
-    if (hasValue(detalhe.freguesia)) partes.push(detalhe.freguesia);
-    if (hasValue(detalhe.zona)) partes.push(detalhe.zona);
-    if (hasValue(detalhe.ilha)) partes.push('Ilha ' + detalhe.ilha);
-    if (hasValue(detalhe.regiao) && partes.indexOf(detalhe.regiao) === -1) partes.push(detalhe.regiao);
+    if (hasValue(detalhe.freguesia)) partes.push(t(detalhe.freguesia));
+    if (hasValue(detalhe.zona)) partes.push(t(detalhe.zona));
+    if (hasValue(detalhe.ilha)) partes.push(label('Ilha') + ' ' + t(detalhe.ilha));
+    var regiao = t(detalhe.regiao);
+    if (hasValue(regiao) && partes.indexOf(regiao) === -1) partes.push(regiao);
     return partes.join(' · ');
   }
 
@@ -234,6 +235,9 @@
 
     var total = imagens.length;
     var falhas = 0;
+    var items = imagens.map(function (src, i) {
+      return { src: src, alt: nomeProdutor + ', fotografia ' + (i + 1) };
+    });
 
     imagens.forEach(function (src, i) {
       var btn = document.createElement('button');
@@ -242,13 +246,15 @@
       btn.setAttribute('aria-label', 'Ver fotografia ' + (i + 1) + ' de ' + nomeProdutor + ' em tamanho maior');
 
       var img = document.createElement('img');
-      img.alt = nomeProdutor + ', fotografia ' + (i + 1);
+      img.alt = items[i].alt;
 
       btn.appendChild(img);
       container.appendChild(btn);
 
       btn.addEventListener('click', function () {
-        if (window.MA && window.MA.abrirLightbox) {
+        if (window.MA && window.MA.abrirLightboxGaleria) {
+          window.MA.abrirLightboxGaleria(items, i);
+        } else if (window.MA && window.MA.abrirLightbox) {
           window.MA.abrirLightbox(src, img.alt);
         }
       });
@@ -318,14 +324,8 @@
     setText('produtor-nome', nomeProd);
     if (hasValue(produtor.localizacao)) setText('produtor-localizacao', t(produtor.localizacao));
 
-    // Localização detalhe
-    var detalheTxt = renderLocalizacaoDetalhe(produtor.localizacao_detalhe);
-    if (detalheTxt) {
-      setText('produtor-localizacao-detalhe', detalheTxt);
-      showById('produtor-localizacao-detalhe');
-    } else {
-      hideById('produtor-localizacao-detalhe');
-    }
+    // Localização detalhe — escondida no header (informação já presente em produtor-localizacao)
+    hideById('produtor-localizacao-detalhe');
 
     // Frase destaque
     if (hasValue(produtor.frase_destaque)) {
@@ -458,11 +458,26 @@
         .map(function (id) { return todasAsRacas.find(function (r) { return r.id === id; }); })
         .filter(Boolean);
       if (racas.length) {
-        // Se houver mais de uma raça, ajustar o título
+        // Se houver mais de uma raça, ajustar o título e indicar cruzamento via chip
         var tituloEl = document.getElementById('sec-racas');
-        if (tituloEl) tituloEl.textContent = racas.length > 1 ? label('Raças associadas') : label('Raça');
+        if (tituloEl) {
+          if (racas.length > 1) {
+            tituloEl.textContent = '';
+            var span = document.createElement('span');
+            span.textContent = label('Raças associadas');
+            tituloEl.appendChild(span);
+            var chip = document.createElement('span');
+            chip.className = 'produtor-racas__chip-cruzamento';
+            chip.textContent = label('Cruzamento');
+            tituloEl.appendChild(chip);
+          } else {
+            tituloEl.textContent = label('Raça');
+          }
+        }
+        var produtorRacasEl = document.getElementById('produtor-racas');
+        if (produtorRacasEl) produtorRacasEl.classList.toggle('produtor-racas--multi', racas.length > 1);
         setHTML('produtor-racas', racas.map(renderRacaCard).join(''));
-        carregarImagensDiferidas(document.getElementById('produtor-racas'));
+        carregarImagensDiferidas(produtorRacasEl);
       } else {
         hideById('sec-racas-secao');
       }

@@ -73,13 +73,10 @@
                 </div>
             </section>
 
-            <!-- Aparência: foto de corpo (pelagem e porte) -->
-            <section id="sec-aparencia-secao" class="raca-aparencia" aria-labelledby="sec-aparencia" hidden>
-                <h2 id="sec-aparencia" class="raca-aparencia__title">Como reconhecer</h2>
-                <div class="raca-aparencia__visual">
-                    <img id="raca-corpo" class="raca-aparencia__img" src="" alt="" />
-                </div>
-            </section>
+            <!-- Aparência: foto de corpo (pelagem e porte) — apresentada inline a seguir ao "Sobre a raça" -->
+            <figure id="sec-aparencia-secao" class="raca-aparencia" aria-label="Como reconhecer" hidden>
+                <img id="raca-corpo" class="raca-aparencia__img" src="" alt="" />
+            </figure>
 
             <!-- Ficha rápida -->
             <section id="sec-ficha-rapida-secao" class="raca-ficha-rapida" aria-labelledby="sec-ficha-rapida" hidden>
@@ -186,6 +183,9 @@
     <!-- Lightbox -->
     <div id="lightbox" class="lightbox" hidden role="dialog" aria-modal="true" aria-label="Imagem ampliada">
         <button class="lightbox__close" aria-label="Fechar imagem">×</button>
+        <button class="lightbox__prev" type="button" aria-label="Imagem anterior" hidden>‹</button>
+        <button class="lightbox__next" type="button" aria-label="Imagem seguinte" hidden>›</button>
+        <span class="lightbox__counter" hidden></span>
         <img class="lightbox__img" src="" alt="" />
     </div>
 

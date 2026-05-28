@@ -119,20 +119,15 @@
           "valor": "2003"
         }
       ],
-      "alimentacao": [
-        {
-          "label": "Alimentação regular",
-          "valor": "Erva fresca"
-        },
-        {
-          "label": "Alimentação regular",
-          "valor": "Erva de rolo"
-        },
-        {
-          "label": "Fase de acabamento",
-          "valor": "Farinha de milho"
-        }
-      ],
+      "alimentacao": {
+        "regular": [
+          { "pt": "Erva fresca", "en": "Fresh grass" },
+          { "pt": "Erva de rolo", "en": "Silage grass" }
+        ],
+        "acabamento": [
+          { "pt": "Farinha de milho", "en": "Corn meal" }
+        ]
+      },
       "maneio_alimentacao": {
         "pt": "A alimentação regular assenta em erva fresca e erva de rolo. Na fase de acabamento, é complementada com farinha de milho, mantendo uma ligação direta ao maneio tradicional e ao aproveitamento dos recursos disponíveis.",
         "en": "Regular feeding is based on fresh grass and silage grass. In the finishing phase it is complemented with corn flour, maintaining a direct link to traditional husbandry and the use of available resources."

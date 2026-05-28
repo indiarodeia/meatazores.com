@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  const DEFAULT_PECA_ID = 'ramo-grande-dop-peter-cafe-sport';
-
   var I = (window.MA && window.MA.i18n) || {};
   var label = I.label || function (s) { return s; };
   var withLang = I.withLang || function (u) { return u; };
@@ -18,9 +16,9 @@
 
   function getHomePecaId() {
     try {
-      return localStorage.getItem('ma_peca_ativa') || DEFAULT_PECA_ID;
+      return localStorage.getItem('ma_peca_ativa') || '';
     } catch (e) {
-      return DEFAULT_PECA_ID;
+      return '';
     }
   }
 
@@ -101,7 +99,10 @@
     if (pathname === '/' || pathname === '/index.html') return;
 
     var homeItem = ITEMS.find(function (i) { return i.key === 'home'; });
-    if (homeItem) homeItem.href = 'peca.html?id=' + getHomePecaId();
+    if (homeItem) {
+      var pecaAtiva = getHomePecaId();
+      homeItem.href = pecaAtiva ? ('peca.html?id=' + pecaAtiva) : 'index.html';
+    }
 
     var navAria = (I.getLang && I.getLang() === 'en') ? 'Main navigation' : 'Navegação principal';
 
@@ -114,5 +115,44 @@
     document.body.appendChild(nav);
   }
 
-  document.addEventListener('DOMContentLoaded', init);
+  function isHomeHref(href) {
+    if (!href) return false;
+    return href === 'index.html'
+      || href === '/'
+      || href === '/index.html'
+      || href.indexOf('index.html?') === 0;
+  }
+
+  // Verifica se há uma página anterior do mesmo site no histórico
+  // (em vez de history.length, que é pouco fiável).
+  function podeVoltarParaSiteInterno() {
+    if (!document.referrer) return false;
+    try {
+      var ref = new URL(document.referrer);
+      // Mesmo origin E não é a mesma URL exacta (evita "voltar" para ti próprio em reloads)
+      return ref.origin === window.location.origin
+        && ref.href !== window.location.href;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function configurarBotaoVoltar() {
+    var botoes = document.querySelectorAll('.button-cancel');
+    botoes.forEach(function (btn) {
+      if (!isHomeHref(btn.getAttribute('href'))) return;
+      btn.addEventListener('click', function (e) {
+        if (podeVoltarParaSiteInterno()) {
+          e.preventDefault();
+          window.history.back();
+        }
+        // Senão: deixa o href original (index.html) servir como fallback
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    init();
+    configurarBotaoVoltar();
+  });
 })();

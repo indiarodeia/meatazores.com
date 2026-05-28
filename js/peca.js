@@ -3,6 +3,7 @@
 
   const PECAS_JSON = 'data/pecas.json';
   const RACAS_JSON = 'data/racas.json';
+  const PRODUTORES_JSON = 'data/produtores.json';
   const ASSETS_EM_FALTA = new Set();
 
   const U = (window.MA && window.MA.utils) || {};
@@ -221,8 +222,20 @@
   function renderPecaRara(pecaRara) {
     let html = '';
     (pecaRara.bullets || []).forEach(function (b) {
+      if (!b) return;
+      // Suporta dois formatos:
+      //   1) { label, texto } onde texto pode ser string ou {pt,en}
+      //   2) { pt, en } directo (a própria entrada é a string i18n)
       var bLabel = t(b.label);
-      var bTexto = t(b.texto);
+      var bTexto;
+      if (hasValue(b.texto)) {
+        bTexto = t(b.texto);
+      } else if (typeof b === 'string' || (b.pt || b.en)) {
+        bTexto = t(b);
+      } else {
+        bTexto = '';
+      }
+      if (!bTexto && !bLabel) return;
       if (bLabel) {
         html += '<span class="text-wrapper-15">• ' + esc(bLabel) + ': </span>';
         html += '<span class="text-wrapper-16">' + esc(bTexto) + '<br /></span>';
@@ -241,15 +254,25 @@
 
   function renderProdutorCard(produtor) {
     var nome = t(produtor.nome);
-    const img = produtor.imagem
-      ? '<img class="clip-path-group" data-src="' + esc(produtor.imagem) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
-      : '';
-    const href = withLang('produtor.html?id=' + esc(produtor.id));
+    var tipo = t(produtor.tipo);
+    var loc = tValue(t(produtor.localizacao));
+    var thumb = produtor.thumb || produtor.imagem;
+    var href = withLang('produtor.html?id=' + esc(produtor.id));
     return (
-      img +
-      '<div class="frame-14">' +
-        '<div class="text-wrapper-18">' + esc(nome) + '</div>' +
-        '<p class="text-wrapper-21">' + esc(t(produtor.descricao)) + '</p>' +
+      '<div class="peca-relacao-card">' +
+        '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
+          '<span class="catalog-card__thumb catalog-card__thumb--round">' +
+            (thumb
+              ? '<img class="catalog-card__img" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
+              : '') +
+          '</span>' +
+          '<span class="catalog-card__body">' +
+            '<span class="catalog-card__title">' + esc(nome) + '</span>' +
+            (tipo ? '<span class="catalog-card__meta">' + esc(tipo) + '</span>' : '') +
+            (loc ? '<span class="catalog-card__location">' + esc(loc) + '</span>' : '') +
+          '</span>' +
+          '<span class="catalog-card__arrow" aria-hidden="true">›</span>' +
+        '</a>' +
         '<a href="' + href + '" class="button-arrow-right" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
           '<span class="text-wrapper-20">' + esc(label('Conhecer o produtor')) + '</span>' +
           '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
@@ -280,22 +303,21 @@
 
   function renderRacaCard(raca) {
     var nome = t(raca.nome);
-    const img = raca.imagem
-      ? '<div class="image-wrapper image-wrapper--raca"><img class="image-2" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" /></div>'
-      : '';
-    const descricao = t(raca.descricao || raca.descricao_curta || '');
+    var tipo = t(raca.tipo);
+    var href = withLang('raca.html?id=' + esc(raca.id));
     return (
-      '<div class="peca-raca-card">' +
-        img +
-        '<div class="frame-16">' +
-          '<div class="text-wrapper-18">' + esc(nome) + '</div>' +
-          (descricao ? '<p class="text-wrapper-21">' + esc(descricao) + '</p>' : '') +
-          '<a href="' + esc(withLang('raca.html?id=' + esc(raca.id))) + '" class="button-arrow-right" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
-            '<span class="text-wrapper-20">' + esc(label('Conhecer a raça')) + '</span>' +
-            '<span class="iconly-light-arrow" aria-hidden="true"></span>' +
-          '</a>' +
-        '</div>' +
-      '</div>'
+      '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
+        '<span class="catalog-card__thumb">' +
+          (raca.imagem
+            ? '<img class="catalog-card__img" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" />'
+            : '') +
+        '</span>' +
+        '<span class="catalog-card__body">' +
+          '<span class="catalog-card__title">' + esc(nome) + '</span>' +
+          (tipo ? '<span class="catalog-card__meta">' + esc(tipo) + '</span>' : '') +
+        '</span>' +
+        '<span class="catalog-card__arrow" aria-hidden="true">›</span>' +
+      '</a>'
     );
   }
 
@@ -319,7 +341,7 @@
     return [];
   }
 
-  function preencherPeca(peca, todasAsRacas) {
+  function preencherPeca(peca, todasAsRacas, todosProdutores) {
     var titulo = t(peca.titulo);
     var subtitulo = t(peca.subtitulo);
     document.title = titulo + (subtitulo ? ' | ' + subtitulo : '') + ' | MeatAzores';
@@ -478,7 +500,9 @@
     }
 
     if (peca.produtor) {
-      setHTML('peca-produtor', renderProdutorCard(peca.produtor));
+      var produtorCompleto = (todosProdutores || []).find(function (p) { return p.id === peca.produtor.id; });
+      var produtorParaCard = produtorCompleto || peca.produtor;
+      setHTML('peca-produtor', renderProdutorCard(produtorParaCard));
     } else {
       esconderSecao('sec-produtor-secao');
     }
@@ -550,16 +574,20 @@
       }),
       fetch(RACAS_JSON)
         .then(function (r) { return r.json(); })
-        .catch(function () { return { racas: [] }; })
+        .catch(function () { return { racas: [] }; }),
+      fetch(PRODUTORES_JSON)
+        .then(function (r) { return r.json(); })
+        .catch(function () { return { produtores: [] }; })
     ]).then(function (resultados) {
       const dados = resultados[0];
       const racas = resultados[1].racas || [];
+      const produtores = resultados[2].produtores || [];
       const peca = dados.pecas.find(function (p) { return p.id === id; });
       if (!peca) {
         mostrarErro('A peça solicitada não foi encontrada. Por favor, verifique o endereço utilizado.');
         return;
       }
-      preencherPeca(peca, racas);
+      preencherPeca(peca, racas, produtores);
     }).catch(function (err) {
       console.error('[peca.js]', err);
       mostrarErro('Não foi possível carregar os dados desta peça. Tente novamente mais tarde.');
