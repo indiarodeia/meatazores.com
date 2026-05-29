@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Peças | MeatAzores</title>
-    <meta name="description" content="Listagem interna das peças registadas na MeatAzores." />
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="googlebot" content="noindex,nofollow" />
+    <meta name="description" content="As peças MeatAzores: explore a origem, o produtor e o destino gastronómico de cada uma." />
     <meta name="theme-color" content="#014838" />
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
@@ -29,18 +27,20 @@
 </head>
 
 <body>
+    <div id="lang-toggle" class="lang-toggle-fixed"></div>
     <main class="app-page">
         <header class="app-page__header">
             <img class="app-page__logo" src="assets/ui/logo-meatzores.svg" alt="Logótipo MeatAzores" />
-            <p class="app-page__eyebrow">Administração</p>
-            <h1 class="app-page__title">Peças</h1>
-            <p class="app-page__text">Listagem interna das peças registadas na MeatAzores.</p>
+            <h1 class="app-page__title" id="pecas-titulo">Peças</h1>
+            <p class="app-page__text" id="pecas-intro">Explore a origem, o produtor e o destino gastronómico de cada peça MeatAzores.</p>
         </header>
 
         <div id="pecas-lista" class="catalog-list" aria-label="Lista de peças"></div>
     </main>
 
     <script src="js/utils.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/nav.js"></script>
     <script src="js/admin-pecas.js"></script>
 </body>
 

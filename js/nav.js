@@ -14,14 +14,6 @@
     about: { pt: 'About', en: 'About' }
   };
 
-  function getHomePecaId() {
-    try {
-      return localStorage.getItem('ma_peca_ativa') || '';
-    } catch (e) {
-      return '';
-    }
-  }
-
   function navLabel(key) {
     var entry = NAV_LABELS[key];
     if (!entry) return '';
@@ -33,8 +25,8 @@
     {
       key: 'home',
       label: 'Home',
-      href: null,
-      paths: ['/', '/index.html', '/peca.html', '/restaurante.html', '/parceiro.html'],
+      href: 'pecas.html',
+      paths: ['/', '/index.html', '/pecas.html', '/peca.html', '/restaurante.html', '/parceiro.html'],
       icon: '<path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1v-9.5Z" />'
     },
     {
@@ -97,12 +89,6 @@
 
     var pathname = normalizarPath(window.location.pathname);
     if (pathname === '/' || pathname === '/index.html') return;
-
-    var homeItem = ITEMS.find(function (i) { return i.key === 'home'; });
-    if (homeItem) {
-      var pecaAtiva = getHomePecaId();
-      homeItem.href = pecaAtiva ? ('peca.html?id=' + pecaAtiva) : 'index.html';
-    }
 
     var navAria = (I.getLang && I.getLang() === 'en') ? 'Main navigation' : 'Navegação principal';
 
