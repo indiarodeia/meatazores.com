@@ -181,11 +181,6 @@
 
     // Estados / pieces
     'Publicado': 'Published',
-    'Provisório': 'Draft',
-    'Em validação': 'Under review',
-    'Dados oficiais pendentes': 'Official data pending',
-    'Dados técnicos oficiais em atualização': 'Official technical data being updated',
-    'Dados técnicos oficiais em atualização.': 'Official technical data being updated.',
     'Consulta interna das peças registadas na plataforma': 'Internal overview of pieces registered on the platform',
     'Controlo interno': 'Internal control',
 

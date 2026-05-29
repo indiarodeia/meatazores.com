@@ -321,13 +321,6 @@
     );
   }
 
-  function renderDadosMatadouroNota(dados) {
-    return (
-      '<span class="peca-dados-matadouro-nota__icon" aria-hidden="true">ℹ️</span> ' +
-      '<span>' + esc(label('Dados técnicos oficiais em atualização.')) + '</span>'
-    );
-  }
-
   function resolverRacas(peca, todasAsRacas) {
     // Suporta: 1) peca.racas array de IDs (novo), 2) peca.raca objecto único (existente)
     if (Array.isArray(peca.racas) && peca.racas.length) {
@@ -433,17 +426,6 @@
       }
     } else {
       esconderSecao('sec-caracteristicas-secao');
-    }
-
-    // Nota dados oficiais em atualização
-    const notaDadosEl = document.getElementById('peca-dados-matadouro-nota');
-    if (notaDadosEl) {
-      if (peca.dados_matadouro && peca.dados_matadouro.pendente) {
-        notaDadosEl.innerHTML = renderDadosMatadouroNota(peca.dados_matadouro);
-        notaDadosEl.hidden = false;
-      } else {
-        notaDadosEl.hidden = true;
-      }
     }
 
     if (peca.certificacaoDop) {

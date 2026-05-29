@@ -49,7 +49,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 60px;
+  gap: 20px;
   z-index: 2;
 }
 
@@ -2827,6 +2827,41 @@ body:has(#peca-titulo) .element-product .detail-content {
   padding-right: 20px;
 }
 
+/* Título: deixar o wrapper esticar para que o título possa fazer wrap dentro do ecrã */
+body:has(#peca-titulo) .element-product .top,
+body:has(#peca-titulo) .element-product .frame {
+  width: 100%;
+  align-self: stretch;
+}
+body:has(#peca-titulo) .element-product .frame {
+  display: flex;
+}
+body:has(#peca-titulo) .element-product .text-wrapper,
+body:has(#peca-titulo) .element-product .p {
+  width: 100%;
+  max-width: 100%;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Características: permitir que label/valor façam wrap em ecrãs estreitos */
+body:has(#peca-titulo) .element-product .fats {
+  min-width: 0;
+}
+body:has(#peca-titulo) .element-product .frame-5 {
+  width: auto;
+  flex: 1;
+  min-width: 0;
+}
+body:has(#peca-titulo) .element-product .text-wrapper-6,
+body:has(#peca-titulo) .element-product .text-wrapper-8 {
+  width: auto;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
 body:has(#peca-titulo) .element-product .text-wrapper,
 body:has(#produtor-nome) .element-producer .text-wrapper-24,
 body:has(#raca-nome) .element-producer .text-wrapper-24,
@@ -2906,9 +2941,6 @@ body:has(#restaurante-nome) .element-producer .header-2 {
   padding: 12px;
 }
 
-body:has(#produtor-nome) .element-producer .clip-path-group-2,
-body:has(#raca-nome) .element-producer .clip-path-group-2,
-body:has(#restaurante-nome) .element-producer .clip-path-group-2,
 body:has(#produtor-nome) .element-producer .image-4,
 body:has(#raca-nome) .element-producer .image-4,
 body:has(#restaurante-nome) .element-producer .image-4,
@@ -2925,8 +2957,18 @@ body:has(#restaurante-nome) .element-producer .image-5 {
   overflow: hidden;
 }
 
-body:has(#produtor-nome) .element-producer .clip-path-group-2 {
-  border-radius: 16px;
+/* Imagem "de perfil" no header de raça/produtor/restaurante:
+   sempre circular, e a imagem inteira visível (contain), nunca cortada. */
+body:has(#produtor-nome) .element-producer .clip-path-group-2,
+body:has(#raca-nome) .element-producer .clip-path-group-2,
+body:has(#restaurante-nome) .element-producer .clip-path-group-2 {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--neutralgrey-4, #f4f6f7);
+  overflow: hidden;
 }
 
 body:has(#peca-titulo) .element-product .frame-13,
@@ -3666,8 +3708,12 @@ body.is-lightbox-open {
   z-index: 2;
 }
 
-.lightbox__prev { left: 16px; }
-.lightbox__next { right: 16px; }
+.lightbox__prev {
+  left: 16px;
+}
+.lightbox__next {
+  right: 16px;
+}
 
 .lightbox__prev:hover,
 .lightbox__next:hover,
@@ -3844,11 +3890,20 @@ body:has(#parceiro-nome) .element-producer .produtor-de-carne {
   white-space: normal;
 }
 
-body:has(#parceiro-nome) .element-producer .clip-path-group-2,
 body:has(#parceiro-nome) .element-producer .image-4,
 body:has(#parceiro-nome) .element-producer .group-4,
 body:has(#parceiro-nome) .element-producer .image-5 {
   object-fit: cover;
+  overflow: hidden;
+}
+
+body:has(#parceiro-nome) .element-producer .clip-path-group-2 {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 50%;
+  object-fit: contain;
+  background: var(--neutralgrey-4, #f4f6f7);
   overflow: hidden;
 }
 
@@ -4122,30 +4177,6 @@ body:has(#peca-titulo) .element-product .peca-cruzamento__label {
 
 body:has(#peca-titulo) .element-product .peca-cruzamento__valor {
   font-weight: 700;
-}
-
-body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  margin: 12px 0 0;
-  padding: 10px 12px;
-  background: rgba(10, 37, 51, 0.04);
-  border-left: 3px solid rgba(10, 37, 51, 0.18);
-  border-radius: 6px;
-  font-family: "Sofia Pro", Helvetica;
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--ma-muted);
-}
-
-body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota[hidden] {
-  display: none;
-}
-
-body:has(#peca-titulo) .element-product .peca-dados-matadouro-nota__icon {
-  flex: 0 0 auto;
-  line-height: 1.2;
 }
 
 body:has(#peca-titulo) .element-product .peca-citacao,

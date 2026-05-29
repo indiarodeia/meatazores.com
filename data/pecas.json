@@ -580,24 +580,6 @@
         "pt": "Esta carne estará disponível no Restaurante Rocha até esgotar, sendo trabalhada pela cozinha em diferentes cortes e preparações.",
         "en": "This meat will be available at Restaurante Rocha until sold out, prepared by the kitchen in different cuts and preparations."
       },
-      "dados_matadouro": {
-        "pendente": true,
-        "nota": {
-          "pt": "Dados oficiais a atualizar após consulta da tabela do matadouro com a data de abate.",
-          "en": "Official data to be updated after consulting the slaughterhouse table with the slaughter date."
-        },
-        "campos": [
-          "Identificação oficial do animal",
-          "Data de abate",
-          "Peso a frio oficial",
-          "Classificação da carcaça",
-          "Estado aprovado",
-          "Fornecedor / operador",
-          "Produtor registado",
-          "Cliente / destino",
-          "Referência interna"
-        ]
-      },
       "produtor": {
         "id": "antonio-azera",
         "nome": "António Azera",
