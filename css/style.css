@@ -4530,3 +4530,94 @@ body:has(#produtor-nome) .element-producer .peca-citacao__autor[hidden] {
   right: 16px;
   z-index: 10;
 }
+
+/* SCAN PAGE */
+.scan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 0 16px 24px;
+  box-sizing: border-box;
+}
+
+.scan__area {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 22px;
+  overflow: hidden;
+  background: #0a2533;
+  box-shadow: 0 10px 28px rgba(10, 37, 51, 0.18);
+}
+
+.scan__reader {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.scan__reader video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  border-radius: 22px;
+}
+
+.scan__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(1, 72, 56, 0.85), rgba(10, 37, 51, 0.95));
+}
+.scan__placeholder-icon {
+  width: 96px;
+  height: 96px;
+  fill: none;
+  stroke: rgba(206, 241, 123, 0.9);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.scan__status {
+  width: 100%;
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-family: "Sofia Pro", Helvetica;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  background: rgba(10, 37, 51, 0.06);
+  color: #0a2533;
+}
+.scan__status--error {
+  background: rgba(176, 32, 32, 0.08);
+  color: #8a1f1f;
+}
+.scan__status--success {
+  background: rgba(1, 72, 56, 0.08);
+  color: #014838;
+}
+
+.scan__actions {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  justify-content: center;
+}
+
+.app-button--ghost {
+  background: transparent;
+  color: #014838;
+  border: 1px solid #014838;
+}
+.app-button--ghost:hover {
+  background: rgba(1, 72, 56, 0.06);
+}

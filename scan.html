@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Scan | MeatAzores</title>
-    <meta name="description" content="Leitura de QR Codes MeatAzores em desenvolvimento." />
-    <meta name="robots" content="noindex,follow" />
-    <meta name="googlebot" content="noindex,follow" />
+    <meta name="description" content="Leia o QR Code de uma peça MeatAzores com a câmara do seu telemóvel." />
     <meta name="theme-color" content="#014838" />
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
@@ -29,28 +27,43 @@
 </head>
 
 <body>
-    <main class="app-page app-page--center">
-        <section class="app-message" aria-labelledby="scan-titulo">
-            <span class="app-message__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" focusable="false">
-                    <path d="M6 8V6h2" />
-                    <path d="M16 6h2v2" />
-                    <path d="M18 16v2h-2" />
-                    <path d="M8 18H6v-2" />
-                    <path d="M8 12h8" />
-                    <path d="M12 8v8" />
-                </svg>
-            </span>
-            <p class="app-page__eyebrow">Scan</p>
-            <h1 id="scan-titulo" class="app-page__title">Funcionalidade em desenvolvimento</h1>
-            <p class="app-page__text">Em breve poderá usar a câmara para ler QR Codes MeatAzores. Por agora, utilize o QR Code disponível no restaurante ou no certificado da peça.</p>
-            <a class="app-button" href="peca.html?id=ramo-grande-dop-peter-cafe-sport">Voltar à peça ativa</a>
+    <div id="lang-toggle" class="lang-toggle-fixed"></div>
+    <main class="app-page scan-page" id="scan-page">
+        <header class="app-page__header">
+            <img class="app-page__logo" src="assets/ui/logo-meatzores.svg" alt="Logótipo MeatAzores" />
+            <h1 class="app-page__title" id="scan-titulo">Scan</h1>
+            <p class="app-page__text" id="scan-intro">Aponte a câmara ao QR Code da peça para conhecer a sua origem.</p>
+        </header>
+
+        <section class="scan" aria-labelledby="scan-titulo">
+            <div id="scan-area" class="scan__area" aria-live="polite">
+                <div id="scan-reader" class="scan__reader" hidden></div>
+                <div id="scan-placeholder" class="scan__placeholder">
+                    <svg class="scan__placeholder-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path d="M6 8V6h2" />
+                        <path d="M16 6h2v2" />
+                        <path d="M18 16v2h-2" />
+                        <path d="M8 18H6v-2" />
+                        <path d="M8 12h8" />
+                        <path d="M12 8v8" />
+                    </svg>
+                </div>
+            </div>
+
+            <p id="scan-status" class="scan__status" hidden></p>
+
+            <div class="scan__actions">
+                <button type="button" id="scan-start" class="app-button">Iniciar scan</button>
+                <button type="button" id="scan-stop" class="app-button app-button--ghost" hidden>Parar</button>
+            </div>
         </section>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
     <script src="js/utils.js"></script>
     <script src="js/i18n.js"></script>
     <script src="js/nav.js"></script>
+    <script src="js/scan.js"></script>
 </body>
 
 </html>
