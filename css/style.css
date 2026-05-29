@@ -2840,6 +2840,7 @@ body:has(#peca-titulo) .element-product .text-wrapper,
 body:has(#peca-titulo) .element-product .p {
   width: 100%;
   max-width: 100%;
+  white-space: normal;
   word-break: break-word;
   overflow-wrap: anywhere;
 }
