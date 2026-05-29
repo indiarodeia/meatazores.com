@@ -641,14 +641,12 @@
       "imagem_bg": "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg",
       "caracteristicas": [
         { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Identificação", "en": "Identification" }, "valor": "PT322903706" },
-        { "label": { "pt": "Raça", "en": "Breed" }, "valor": "Aberdeen-Angus" },
+        { "icone": "assets/ui/icon-5.svg", "label": { "pt": "Raça", "en": "Breed" }, "valor": "Aberdeen-Angus" },
         { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Idade", "en": "Age" }, "valor": { "pt": "77 meses", "en": "77 months" } },
         { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Peso a frio", "en": "Cold carcass weight" }, "valor": "421,19 kg" },
         { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Classificação", "en": "Classification" }, "valor": "R4+" },
-        { "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "10/04/2026" },
-        { "icone": "assets/ui/localizacao.svg", "label": { "pt": "Origem", "en": "Origin" }, "valor": { "pt": "Ilha Graciosa, Açores", "en": "Graciosa Island, Azores" } },
-        { "label": { "pt": "Produtor", "en": "Producer" }, "valor": "André Teixeira Bettencourt" },
-        { "label": { "pt": "Fornecedor registado", "en": "Registered supplier" }, "valor": "Adriano Miguel Pereira Lima" }
+        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "10/04/2026" },
+        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Produtor", "en": "Producer" }, "valor": "André Teixeira Bettencourt" }
       ],
       "criacao": {
         "descricao": {

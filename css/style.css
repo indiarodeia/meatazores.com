@@ -2957,10 +2957,9 @@ body:has(#restaurante-nome) .element-producer .image-5 {
   overflow: hidden;
 }
 
-/* Imagem "de perfil" no header de raça/produtor/restaurante:
-   sempre circular, e a imagem inteira visível (contain), nunca cortada. */
+/* Imagem "de perfil" no header de produtor/restaurante:
+   círculo com fundo cinzento claro e a imagem inteira visível (contain). */
 body:has(#produtor-nome) .element-producer .clip-path-group-2,
-body:has(#raca-nome) .element-producer .clip-path-group-2,
 body:has(#restaurante-nome) .element-producer .clip-path-group-2 {
   width: 80px;
   height: 80px;
@@ -2969,6 +2968,17 @@ body:has(#restaurante-nome) .element-producer .clip-path-group-2 {
   object-fit: contain;
   background: var(--neutralgrey-4, #f4f6f7);
   overflow: hidden;
+}
+
+/* Imagem da raça: PNG da cabeça do animal sem círculo nem fundo. */
+body:has(#raca-nome) .element-producer .clip-path-group-2 {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 80px;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  overflow: visible;
 }
 
 body:has(#peca-titulo) .element-product .frame-13,
