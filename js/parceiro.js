@@ -86,7 +86,7 @@
 
   function renderPecaCard(peca) {
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" loading="lazy" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(peca.titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -104,10 +104,26 @@
   }
 
   function preencherParceiro(parceiro, todasAsPecas) {
-    document.title = parceiro.nome + ' | Parceiro | MeatAzores';
+    var titulo = parceiro.nome + ' | Parceiro | MeatAzores';
+    var descricao = parceiro.descricao_curta || '';
 
-    var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && parceiro.descricao_curta) metaDesc.setAttribute('content', parceiro.descricao_curta);
+    var seo = window.MA && window.MA.seo;
+    if (seo && seo.applySeo) {
+      var ogImage = parceiro.imagem || parceiro.logo || null;
+      if (ogImage && ogImage.indexOf('http') !== 0) ogImage = seo.SITE_ORIGIN + '/' + ogImage.replace(/^\/+/, '');
+      seo.applySeo({
+        title: titulo,
+        description: descricao,
+        ogTitle: parceiro.nome,
+        ogDescription: descricao,
+        ogImage: ogImage,
+        ogType: 'website'
+      });
+    } else {
+      document.title = titulo;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && descricao) metaDesc.setAttribute('content', descricao);
+    }
 
     var heroImg = document.getElementById('parceiro-hero');
     setImagemSeExistir(heroImg, parceiro.imagem, function () { esconderSecao('parceiro-hero-wrapper'); });

@@ -263,7 +263,7 @@
         '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
           '<span class="catalog-card__thumb catalog-card__thumb--round">' +
             (thumb
-              ? '<img class="catalog-card__img" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
+              ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
               : '') +
           '</span>' +
           '<span class="catalog-card__body">' +
@@ -285,7 +285,7 @@
   function renderRestauranteCard(restaurante) {
     var nome = t(restaurante.nome);
     const img = restaurante.imagem
-      ? '<div class="image-wrapper"><img class="image-2" data-src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(nome) + '" /></div>'
+      ? '<div class="image-wrapper"><img class="image-2" loading="lazy" data-src="' + esc(restaurante.imagem) + '" alt="Fotografia de ' + esc(nome) + '" /></div>'
       : '';
     return (
       img +
@@ -309,7 +309,7 @@
       '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
         '<span class="catalog-card__thumb">' +
           (raca.imagem
-            ? '<img class="catalog-card__img" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" />'
+            ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" />'
             : '') +
         '</span>' +
         '<span class="catalog-card__body">' +
@@ -337,10 +337,28 @@
   function preencherPeca(peca, todasAsRacas, todosProdutores) {
     var titulo = t(peca.titulo);
     var subtitulo = t(peca.subtitulo);
-    document.title = titulo + (subtitulo ? ' | ' + subtitulo : '') + ' | MeatAzores';
+    var tituloCompleto = titulo + (subtitulo ? ' | ' + subtitulo : '') + ' | MeatAzores';
+    var descricao = peca.descricao ? t(peca.descricao) : '';
 
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && peca.descricao) metaDesc.setAttribute('content', t(peca.descricao));
+    // SEO dinâmico (title, description, OG, canonical, hreflang)
+    var seo = window.MA && window.MA.seo;
+    if (seo && seo.applySeo) {
+      var ogImage = peca.imagem_bg
+        ? (peca.imagem_bg.indexOf('http') === 0 ? peca.imagem_bg : seo.SITE_ORIGIN + '/' + peca.imagem_bg.replace(/^\/+/, ''))
+        : null;
+      seo.applySeo({
+        title: tituloCompleto,
+        description: descricao,
+        ogTitle: titulo + (subtitulo ? ' · ' + subtitulo : ''),
+        ogDescription: descricao,
+        ogImage: ogImage,
+        ogType: 'article'
+      });
+    } else {
+      document.title = tituloCompleto;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && descricao) metaDesc.setAttribute('content', descricao);
+    }
 
     const imgEl = document.querySelector('.element-product .image');
     if (imgEl && peca.imagem_bg) imgEl.style.backgroundImage = 'url("' + peca.imagem_bg + '")';

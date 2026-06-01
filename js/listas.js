@@ -62,7 +62,7 @@
       '<a class="catalog-card" href="' + esc(withLang('raca.html?id=' + esc(raca.id))) + '" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
         '<span class="catalog-card__thumb">' +
           (raca.imagem
-            ? '<img class="catalog-card__img" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" />'
+            ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" />'
             : '') +
         '</span>' +
         '<span class="catalog-card__body">' +
@@ -82,7 +82,7 @@
       '<a class="catalog-card" href="' + esc(withLang('produtor.html?id=' + esc(produtor.id))) + '" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
         '<span class="catalog-card__thumb catalog-card__thumb--round">' +
           (produtor.thumb
-            ? '<img class="catalog-card__img" data-src="' + esc(produtor.thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
+            ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(produtor.thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
             : '') +
         '</span>' +
         '<span class="catalog-card__body">' +

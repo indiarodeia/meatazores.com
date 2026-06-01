@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Top-level -->
+  <url>
+    <loc>https://meatazores.com/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meatazores.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meatazores.com/" />
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://meatazores.com/pecas</loc>
+    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/pecas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meatazores.com/pecas?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meatazores.com/pecas" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meatazores.com/racas</loc>
+    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/racas" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meatazores.com/racas?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meatazores.com/racas" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meatazores.com/produtores</loc>
+    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/produtores" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meatazores.com/produtores?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meatazores.com/produtores" />
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://meatazores.com/about</loc>
+    <xhtml:link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/about" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://meatazores.com/about?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://meatazores.com/about" />
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://meatazores.com/scan</loc>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Peças -->
+  <url><loc>https://meatazores.com/peca?id=catrina-19-anos</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/peca?id=ramo-grande-dop-peter-cafe-sport</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/peca?id=brahman-holstein-frisia-restaurante-rocha</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/peca?id=aberdeen-angus-restaurante-associacao-agricola</loc><priority>0.8</priority></url>
+
+  <!-- Raças -->
+  <url><loc>https://meatazores.com/raca?id=ramo-grande-dop</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/raca?id=catrina</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/raca?id=aberdeen-angus</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/raca?id=jersey</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/raca?id=holstein-frisia</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/raca?id=brahman</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/raca?id=fleckvieh</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/raca?id=limousine</loc><priority>0.7</priority></url>
+
+  <!-- Produtores -->
+  <url><loc>https://meatazores.com/produtor?id=emiliano-meneses</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/produtor?id=manuel-lucas</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/produtor?id=antonio-azera</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/produtor?id=andre-teixeira-bettencourt</loc><priority>0.7</priority></url>
+
+  <!-- Restaurantes -->
+  <url><loc>https://meatazores.com/restaurante?id=peter-cafe-sport</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/restaurante?id=restaurante-rocha</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/restaurante?id=restaurante-associacao-agricola</loc><priority>0.7</priority></url>
+
+  <!-- Parceiros -->
+  <url><loc>https://meatazores.com/parceiro?id=talho-rocha</loc><priority>0.6</priority></url>
+
+</urlset>

@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Páginas internas / redirects (já com noindex em meta)
+Disallow: /q/
+Disallow: /catrina.html
+Disallow: /degustacao.html
+
+Sitemap: https://meatazores.com/sitemap.xml

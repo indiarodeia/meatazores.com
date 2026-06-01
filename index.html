@@ -7,11 +7,31 @@
 
     <title>MeatAzores | Transparência de origem à mesa</title>
     <meta name="description"
-        content="Transparência de origem à mesa. Descubra a raça, o produtor e a história desta peça através do MeatAzores." />
+        content="Transparência de origem à mesa. Descubra a raça, o produtor e a história de cada peça de carne dos Açores através da MeatAzores." />
 
-    <!-- Não indexar esta página -->
-    <meta name="robots" content="noindex,follow" />
-    <meta name="googlebot" content="noindex,follow" />
+    <!-- Canonical & i18n -->
+    <link rel="canonical" href="https://meatazores.com/" />
+    <link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/" />
+    <link rel="alternate" hreflang="en" href="https://meatazores.com/?lang=en" />
+    <link rel="alternate" hreflang="x-default" href="https://meatazores.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MeatAzores" />
+    <meta property="og:title" content="MeatAzores — Transparência de origem à mesa" />
+    <meta property="og:description" content="Descubra a raça, o produtor e a história de cada peça de carne dos Açores." />
+    <meta property="og:url" content="https://meatazores.com/" />
+    <meta property="og:image" content="https://meatazores.com/assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:locale" content="pt_PT" />
+    <meta property="og:locale:alternate" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="MeatAzores — Transparência de origem à mesa" />
+    <meta name="twitter:description" content="Descubra a raça, o produtor e a história de cada peça de carne dos Açores." />
+    <meta name="twitter:image" content="https://meatazores.com/assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg" />
 
     <!-- Theme / ícones -->
     <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
@@ -31,6 +51,23 @@
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+
+    <!-- Structured data: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "MeatAzores",
+      "url": "https://meatazores.com/",
+      "logo": "https://meatazores.com/assets/ui/logo-meatzores.svg",
+      "description": "Transparência de origem à mesa. A história, a raça, o produtor e o território de cada peça de carne dos Açores.",
+      "areaServed": {
+        "@type": "Place",
+        "name": "Açores, Portugal"
+      },
+      "inLanguage": ["pt-PT", "en"]
+    }
+    </script>
 </head>
 
 <body>

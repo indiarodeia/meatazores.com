@@ -189,7 +189,7 @@
     var titulo = t(peca.titulo);
     var subtitulo = t(peca.subtitulo);
     const imgHtml = hasValue(peca.imagem_bg)
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" loading="lazy" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -209,7 +209,7 @@
   function renderRacaCard(raca) {
     var nome = t(raca.nome);
     const imgHtml = hasValue(raca.imagem)
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" loading="lazy" data-src="' + esc(raca.imagem) + '" alt="Imagem representativa da raça ' + esc(nome) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -270,11 +270,25 @@
   function preencherProdutor(produtor, todasAsPecas, todasAsRacas) {
     var nomeProd = t(produtor.nome);
     var tipoProd = t(produtor.tipo);
-    document.title = nomeProd + (hasValue(tipoProd) ? ' | ' + tipoProd : '') + ' | MeatAzores';
+    var tituloCompleto = nomeProd + (hasValue(tipoProd) ? ' | ' + tipoProd : '') + ' | MeatAzores';
+    var descricao = hasValue(produtor.descricao_curta) ? t(produtor.descricao_curta) : '';
 
-    var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && hasValue(produtor.descricao_curta)) {
-      metaDesc.setAttribute('content', t(produtor.descricao_curta));
+    var seo = window.MA && window.MA.seo;
+    if (seo && seo.applySeo) {
+      var ogImage = produtor.imagem || produtor.thumb || null;
+      if (ogImage && ogImage.indexOf('http') !== 0) ogImage = seo.SITE_ORIGIN + '/' + ogImage.replace(/^\/+/, '');
+      seo.applySeo({
+        title: tituloCompleto,
+        description: descricao,
+        ogTitle: nomeProd,
+        ogDescription: descricao,
+        ogImage: ogImage,
+        ogType: 'profile'
+      });
+    } else {
+      document.title = tituloCompleto;
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && descricao) metaDesc.setAttribute('content', descricao);
     }
 
     // Traduzir headings fixos do HTML

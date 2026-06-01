@@ -60,7 +60,7 @@
       '<a class="catalog-card" href="' + href + '" aria-label="' + esc(aria) + '">' +
         '<span class="catalog-card__thumb">' +
           (thumb
-            ? '<img class="catalog-card__img" data-src="' + esc(thumb) + '" alt="' + esc(titulo) + '" />'
+            ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(thumb) + '" alt="' + esc(titulo) + '" />'
             : '') +
         '</span>' +
         '<span class="catalog-card__body">' +

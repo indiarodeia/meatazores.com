@@ -92,7 +92,7 @@
     var titulo = t(peca.titulo);
     var subtitulo = t(peca.subtitulo);
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" loading="lazy" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -111,11 +111,24 @@
 
   function preencherRestaurante(restaurante, todasAsPecas) {
     var nome = t(restaurante.nome);
-    document.title = nome + ' | MeatAzores';
+    var descricao = restaurante.descricao_curta ? t(restaurante.descricao_curta) : '';
 
-    var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && restaurante.descricao_curta) {
-      metaDesc.setAttribute('content', t(restaurante.descricao_curta));
+    var seo = window.MA && window.MA.seo;
+    if (seo && seo.applySeo) {
+      var ogImage = restaurante.imagem_bg || restaurante.imagem || null;
+      if (ogImage && ogImage.indexOf('http') !== 0) ogImage = seo.SITE_ORIGIN + '/' + ogImage.replace(/^\/+/, '');
+      seo.applySeo({
+        title: nome + ' | MeatAzores',
+        description: descricao,
+        ogTitle: nome,
+        ogDescription: descricao,
+        ogImage: ogImage,
+        ogType: 'restaurant'
+      });
+    } else {
+      document.title = nome + ' | MeatAzores';
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && descricao) metaDesc.setAttribute('content', descricao);
     }
 
     // Traduzir headings fixos

@@ -121,7 +121,7 @@
     var titulo = t(peca.titulo);
     var subtitulo = t(peca.subtitulo);
     const imgHtml = peca.imagem_bg
-      ? '<div class="group-4"><img class="image-5" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
+      ? '<div class="group-4"><img class="image-5" loading="lazy" data-src="' + esc(peca.imagem_bg) + '" alt="' + esc(titulo) + '" /></div>'
       : '';
     return (
       '<div class="frame-27">' +
@@ -149,7 +149,7 @@
         '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer o produtor') + ' ' + nome) + '">' +
           '<span class="catalog-card__thumb catalog-card__thumb--round">' +
             (thumb
-              ? '<img class="catalog-card__img" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
+              ? '<img class="catalog-card__img" loading="lazy" data-src="' + esc(thumb) + '" alt="Fotografia do produtor ' + esc(nome) + '" />'
               : '') +
           '</span>' +
           '<span class="catalog-card__body">' +
@@ -276,11 +276,25 @@
 
   function preencherRaca(raca, todasAsPecas, todosProdutores, todasAsRacas) {
     var nome = t(raca.nome);
-    document.title = nome + ' | MeatAzores';
+    var descricao = raca.descricao_curta ? t(raca.descricao_curta) : (raca.tipo ? t(raca.tipo) : '');
 
-    var metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc && raca.descricao_curta) {
-      metaDesc.setAttribute('content', t(raca.descricao_curta));
+    var seo = window.MA && window.MA.seo;
+    if (seo && seo.applySeo) {
+      var ogImage = raca.imagem
+        ? (raca.imagem.indexOf('http') === 0 ? raca.imagem : seo.SITE_ORIGIN + '/' + raca.imagem.replace(/^\/+/, ''))
+        : null;
+      seo.applySeo({
+        title: nome + ' | MeatAzores',
+        description: descricao,
+        ogTitle: nome,
+        ogDescription: descricao,
+        ogImage: ogImage,
+        ogType: 'article'
+      });
+    } else {
+      document.title = nome + ' | MeatAzores';
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && descricao) metaDesc.setAttribute('content', descricao);
     }
 
     // Traduzir headings fixos
