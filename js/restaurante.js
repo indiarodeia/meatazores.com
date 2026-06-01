@@ -115,8 +115,7 @@
 
     var seo = window.MA && window.MA.seo;
     if (seo && seo.applySeo) {
-      var ogImage = restaurante.imagem_bg || restaurante.imagem || null;
-      if (ogImage && ogImage.indexOf('http') !== 0) ogImage = seo.SITE_ORIGIN + '/' + ogImage.replace(/^\/+/, '');
+      var ogImage = seo.absUrl(restaurante.imagem_bg || restaurante.imagem);
       seo.applySeo({
         title: nome + ' | MeatAzores',
         description: descricao,
@@ -124,6 +123,33 @@
         ogDescription: descricao,
         ogImage: ogImage,
         ogType: 'restaurant'
+      });
+
+      // JSON-LD Restaurant
+      var restaurantLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Restaurant',
+        name: nome
+      };
+      if (descricao) restaurantLd.description = descricao;
+      if (ogImage) restaurantLd.image = ogImage;
+      if (restaurante.website) restaurantLd.url = restaurante.website;
+      if (restaurante.telefone) restaurantLd.telephone = restaurante.telefone;
+      if (restaurante.localizacao) {
+        var loc = typeof restaurante.localizacao === 'string' ? restaurante.localizacao : t(restaurante.localizacao);
+        if (loc) restaurantLd.address = { '@type': 'PostalAddress', addressLocality: loc, addressCountry: 'PT' };
+      }
+      restaurantLd.servesCuisine = 'Açoriana';
+      seo.setJsonLd('jsonld-restaurant', restaurantLd);
+
+      // JSON-LD BreadcrumbList
+      seo.setJsonLd('jsonld-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'MeatAzores', item: seo.SITE_ORIGIN + '/' },
+          { '@type': 'ListItem', position: 2, name: nome }
+        ]
       });
     } else {
       document.title = nome + ' | MeatAzores';

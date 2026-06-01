@@ -137,6 +137,29 @@
     setLink('alternate', url, 'x-default');
   }
 
+  // Insere ou actualiza um bloco JSON-LD no <head>.
+  // id permite manter um único bloco por tipo (ex. 'jsonld-product', 'jsonld-breadcrumb').
+  function setJsonLd(id, data) {
+    if (!data) return;
+    var existing = document.getElementById(id);
+    if (existing) existing.remove();
+    var script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = id;
+    try {
+      script.textContent = JSON.stringify(data);
+    } catch (e) {
+      return;
+    }
+    document.head.appendChild(script);
+  }
+
+  function absUrl(pathOrUrl) {
+    if (!pathOrUrl) return null;
+    if (pathOrUrl.indexOf('http') === 0) return pathOrUrl;
+    return SITE_ORIGIN + '/' + String(pathOrUrl).replace(/^\/+/, '');
+  }
+
   window.MA = window.MA || {};
   window.MA.utils = {
     hasValue: hasValue,
@@ -148,5 +171,10 @@
     resolveCitacao: resolveCitacao,
     resolveAlimentacao: resolveAlimentacao
   };
-  window.MA.seo = { applySeo: applySeo, SITE_ORIGIN: SITE_ORIGIN };
+  window.MA.seo = {
+    applySeo: applySeo,
+    setJsonLd: setJsonLd,
+    absUrl: absUrl,
+    SITE_ORIGIN: SITE_ORIGIN
+  };
 })();

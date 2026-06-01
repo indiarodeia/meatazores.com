@@ -109,6 +109,24 @@
         }
         container.innerHTML = pecas.map(function (p) { return renderPecaCard(p, racas); }).join('');
         container.querySelectorAll('img[data-src]').forEach(carregarImagem);
+
+        var seo = window.MA && window.MA.seo;
+        if (seo && seo.setJsonLd) {
+          seo.setJsonLd('jsonld-itemlist', {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Peças MeatAzores',
+            numberOfItems: pecas.length,
+            itemListElement: pecas.map(function (p, i) {
+              return {
+                '@type': 'ListItem',
+                position: i + 1,
+                url: seo.SITE_ORIGIN + '/peca?id=' + encodeURIComponent(p.id),
+                name: (typeof p.titulo === 'string') ? p.titulo : ((p.titulo && p.titulo.pt) || p.id)
+              };
+            })
+          });
+        }
       })
       .catch(function () {
         mostrarErro(container, 'Não foi possível carregar as peças.');

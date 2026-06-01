@@ -342,10 +342,9 @@
 
     // SEO dinâmico (title, description, OG, canonical, hreflang)
     var seo = window.MA && window.MA.seo;
+    var ogImage = null;
     if (seo && seo.applySeo) {
-      var ogImage = peca.imagem_bg
-        ? (peca.imagem_bg.indexOf('http') === 0 ? peca.imagem_bg : seo.SITE_ORIGIN + '/' + peca.imagem_bg.replace(/^\/+/, ''))
-        : null;
+      ogImage = seo.absUrl(peca.imagem_bg);
       seo.applySeo({
         title: tituloCompleto,
         description: descricao,
@@ -353,6 +352,42 @@
         ogDescription: descricao,
         ogImage: ogImage,
         ogType: 'article'
+      });
+
+      // JSON-LD Product
+      var productLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Product',
+        name: titulo + (subtitulo ? ' · ' + subtitulo : ''),
+        sku: peca.id,
+        category: 'Carne bovina',
+        brand: { '@type': 'Brand', name: 'MeatAzores' }
+      };
+      if (descricao) productLd.description = descricao;
+      if (ogImage) productLd.image = ogImage;
+      if (peca.produtor && peca.produtor.nome) {
+        productLd.manufacturer = { '@type': 'Organization', name: t(peca.produtor.nome) };
+      }
+      if (Array.isArray(peca.racas) && peca.racas.length) {
+        var racaIds = peca.racas;
+        var nomesRacas = racaIds.map(function (id) {
+          var r = (todasAsRacas || []).find(function (x) { return x.id === id; });
+          return r ? t(r.nome) : '';
+        }).filter(Boolean);
+        if (nomesRacas.length) productLd.material = nomesRacas.join(' × ');
+      } else if (peca.raca && peca.raca.nome) {
+        productLd.material = t(peca.raca.nome);
+      }
+      seo.setJsonLd('jsonld-product', productLd);
+
+      // JSON-LD BreadcrumbList
+      seo.setJsonLd('jsonld-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Peças', item: seo.SITE_ORIGIN + '/pecas' },
+          { '@type': 'ListItem', position: 2, name: titulo }
+        ]
       });
     } else {
       document.title = tituloCompleto;

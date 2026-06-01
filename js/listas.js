@@ -118,6 +118,24 @@
         }
         container.innerHTML = racas.map(renderRacaCard).join('');
         container.querySelectorAll('img[data-src]').forEach(carregarImagem);
+
+        var seo = window.MA && window.MA.seo;
+        if (seo && seo.setJsonLd) {
+          seo.setJsonLd('jsonld-itemlist', {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Raças MeatAzores',
+            numberOfItems: racas.length,
+            itemListElement: racas.map(function (r, i) {
+              return {
+                '@type': 'ListItem',
+                position: i + 1,
+                url: seo.SITE_ORIGIN + '/raca?id=' + encodeURIComponent(r.id),
+                name: t(r.nome)
+              };
+            })
+          });
+        }
       })
       .catch(function () {
         mostrarErro(container, label('Não foi possível carregar as raças.'));
@@ -143,6 +161,24 @@
         }
         container.innerHTML = produtores.map(renderProdutorCard).join('');
         container.querySelectorAll('img[data-src]').forEach(carregarImagem);
+
+        var seo = window.MA && window.MA.seo;
+        if (seo && seo.setJsonLd) {
+          seo.setJsonLd('jsonld-itemlist', {
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Produtores MeatAzores',
+            numberOfItems: produtores.length,
+            itemListElement: produtores.map(function (p, i) {
+              return {
+                '@type': 'ListItem',
+                position: i + 1,
+                url: seo.SITE_ORIGIN + '/produtor?id=' + encodeURIComponent(p.id),
+                name: t(p.nome)
+              };
+            })
+          });
+        }
       })
       .catch(function () {
         mostrarErro(container, label('Não foi possível carregar os produtores.'));

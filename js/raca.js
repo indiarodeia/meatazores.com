@@ -280,9 +280,7 @@
 
     var seo = window.MA && window.MA.seo;
     if (seo && seo.applySeo) {
-      var ogImage = raca.imagem
-        ? (raca.imagem.indexOf('http') === 0 ? raca.imagem : seo.SITE_ORIGIN + '/' + raca.imagem.replace(/^\/+/, ''))
-        : null;
+      var ogImage = seo.absUrl(raca.imagem);
       seo.applySeo({
         title: nome + ' | MeatAzores',
         description: descricao,
@@ -290,6 +288,33 @@
         ogDescription: descricao,
         ogImage: ogImage,
         ogType: 'article'
+      });
+
+      // JSON-LD Article (raça)
+      var articleLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: nome,
+        author: { '@type': 'Organization', name: 'MeatAzores' },
+        publisher: {
+          '@type': 'Organization',
+          name: 'MeatAzores',
+          logo: { '@type': 'ImageObject', url: seo.SITE_ORIGIN + '/assets/ui/logo-meatzores.svg' }
+        }
+      };
+      if (descricao) articleLd.description = descricao;
+      if (ogImage) articleLd.image = ogImage;
+      if (raca.tipo) articleLd.about = t(raca.tipo);
+      seo.setJsonLd('jsonld-article', articleLd);
+
+      // JSON-LD BreadcrumbList
+      seo.setJsonLd('jsonld-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Raças', item: seo.SITE_ORIGIN + '/racas' },
+          { '@type': 'ListItem', position: 2, name: nome }
+        ]
       });
     } else {
       document.title = nome + ' | MeatAzores';

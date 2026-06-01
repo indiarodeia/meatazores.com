@@ -275,8 +275,7 @@
 
     var seo = window.MA && window.MA.seo;
     if (seo && seo.applySeo) {
-      var ogImage = produtor.imagem || produtor.thumb || null;
-      if (ogImage && ogImage.indexOf('http') !== 0) ogImage = seo.SITE_ORIGIN + '/' + ogImage.replace(/^\/+/, '');
+      var ogImage = seo.absUrl(produtor.imagem || produtor.thumb);
       seo.applySeo({
         title: tituloCompleto,
         description: descricao,
@@ -284,6 +283,32 @@
         ogDescription: descricao,
         ogImage: ogImage,
         ogType: 'profile'
+      });
+
+      // JSON-LD Person (produtor)
+      var personLd = {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: nomeProd
+      };
+      if (descricao) personLd.description = descricao;
+      if (ogImage) personLd.image = ogImage;
+      if (hasValue(tipoProd)) personLd.jobTitle = tipoProd;
+      if (hasValue(produtor.localizacao)) {
+        var loc = typeof produtor.localizacao === 'string' ? produtor.localizacao : t(produtor.localizacao);
+        if (loc) personLd.address = { '@type': 'PostalAddress', addressLocality: loc, addressCountry: 'PT' };
+      }
+      personLd.affiliation = { '@type': 'Organization', name: 'MeatAzores' };
+      seo.setJsonLd('jsonld-person', personLd);
+
+      // JSON-LD BreadcrumbList
+      seo.setJsonLd('jsonld-breadcrumb', {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Produtores', item: seo.SITE_ORIGIN + '/produtores' },
+          { '@type': 'ListItem', position: 2, name: nomeProd }
+        ]
       });
     } else {
       document.title = tituloCompleto;
