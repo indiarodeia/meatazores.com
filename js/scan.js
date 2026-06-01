@@ -5,7 +5,7 @@
   var label = I.label || function (s) { return s; };
 
   var scanner = null;
-  var ativo = false;
+  var processado = false; // evita disparar navegação duas vezes seguidas
 
   function el(id) { return document.getElementById(id); }
 
@@ -43,13 +43,12 @@
   }
 
   function navegarParaUrlSegura(textoLido) {
-    // Aceita só URLs same-origin. QR codes externos mostram aviso, sem redirecionar.
     var origemAtual = window.location.origin;
     var url;
     try {
-      // Permite URLs absolutas (http(s)://...) e relativas (path)
       url = new URL(textoLido, window.location.href);
     } catch (e) {
+      mostrarStatus('QR Code não é da MeatAzores.', 'error');
       return false;
     }
     if (url.origin !== origemAtual) {
@@ -62,17 +61,14 @@
   }
 
   function pararScanner() {
-    if (!scanner || !ativo) {
-      ativo = false;
+    if (!scanner) {
       atualizarUI(false);
       return Promise.resolve();
     }
     return scanner.stop().then(function () {
-      ativo = false;
       try { scanner.clear(); } catch (e) {}
       atualizarUI(false);
     }).catch(function () {
-      ativo = false;
       atualizarUI(false);
     });
   }
@@ -95,24 +91,16 @@
     }
     limparStatus();
     atualizarUI(true);
+    processado = false;
 
-    if (!scanner) scanner = new window.Html5Qrcode('scan-reader');
+    if (!scanner) scanner = new window.Html5Qrcode('scan-reader', /* verbose */ false);
 
-    var config = {
-      fps: 10,
-      qrbox: function (largura, altura) {
-        var menor = Math.min(largura, altura);
-        var tamanho = Math.floor(menor * 0.7);
-        return { width: tamanho, height: tamanho };
-      },
-      aspectRatio: 1.0
-    };
+    // Configuração simples — qrbox é tamanho fixo razoável; deixar a lib gerir o vídeo.
+    var config = { fps: 10, qrbox: 250 };
 
     scanner
       .start({ facingMode: 'environment' }, config, onScanSucesso, onScanErroSilencioso)
-      .then(function () { ativo = true; })
       .catch(function (err) {
-        ativo = false;
         atualizarUI(false);
         var msg = String(err && err.message ? err.message : err || '');
         if (/Permission|NotAllowed|denied/i.test(msg)) {
@@ -128,8 +116,9 @@
   }
 
   function onScanSucesso(textoLido) {
-    if (!ativo) return;
-    ativo = false;
+    if (processado) return;
+    processado = true;
+    // Para a câmara em paralelo; navegação não bloqueia
     if (scanner) {
       scanner.stop().then(function () {
         try { scanner.clear(); } catch (e) {}
