@@ -115,6 +115,8 @@
     'Fase de acabamento': 'Finishing phase',
     'Porque é uma peça especial?': 'Why is this piece special?',
     'Porque é uma peça rara?': 'Why is this piece rare?',
+    'Certificações': 'Certifications',
+    'Certificação': 'Certification',
     'Produtor': 'Producer',
     'Produtores': 'Producers',
     'Raça': 'Breed',

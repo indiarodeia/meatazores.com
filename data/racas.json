@@ -443,10 +443,12 @@
         "en": "At MeatAzores, Holstein-Friesian helps contextualize animals from dairy farms. When associated with crossbreeding, the animal page should explain the crossbreed and link separately to the breeds involved."
       },
       "pecas_associadas": [
-        "brahman-holstein-frisia-restaurante-rocha"
+        "brahman-holstein-frisia-restaurante-rocha",
+        "holstein-frisia-restaurante-rocha"
       ],
       "produtores_associados": [
-        "antonio-azera"
+        "antonio-azera",
+        "joao-pedro-ormonde-lopes"
       ],
       "galeria": []
     },

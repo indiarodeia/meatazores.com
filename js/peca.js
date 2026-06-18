@@ -215,6 +215,28 @@
     );
   }
 
+  function renderCertificacoes(items) {
+    return items.filter(function (c) {
+      return hasValue(c) && (hasValue(c.nome) || hasValue(c.texto));
+    }).map(function (c) {
+      var logoHtml = c.logo
+        ? '<img class="cert-card__logo" src="' + esc(c.logo) + '" alt="' + esc(t(c.logoAlt) || '') + '" onerror="this.hidden=true" />'
+        : '';
+      var nomeHtml = hasValue(c.nome)
+        ? '<div class="cert-card__title">' + esc(t(c.nome)) + '</div>'
+        : '';
+      var textoHtml = hasValue(c.texto)
+        ? '<p class="cert-card__text">' + esc(t(c.texto)) + '</p>'
+        : '';
+      return (
+        '<div class="cert-card">' +
+          logoHtml +
+          '<div class="cert-card__body">' + nomeHtml + textoHtml + '</div>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
   function renderOQueEsperar(items) {
     return items.map(function (item) { return '• ' + esc(t(item)); }).join('<br />');
   }
@@ -303,7 +325,7 @@
 
   function renderRacaCard(raca) {
     var nome = t(raca.nome);
-    var tipo = t(raca.tipo);
+    var meta = t(raca.descricao_curta) || t(raca.descricao) || t(raca.tipo);
     var href = withLang('raca.html?id=' + esc(raca.id));
     return (
       '<a class="catalog-card" href="' + href + '" aria-label="' + esc(label('Conhecer a raça') + ' ' + nome) + '">' +
@@ -314,7 +336,7 @@
         '</span>' +
         '<span class="catalog-card__body">' +
           '<span class="catalog-card__title">' + esc(nome) + '</span>' +
-          (tipo ? '<span class="catalog-card__meta">' + esc(tipo) + '</span>' : '') +
+          (meta ? '<span class="catalog-card__meta">' + esc(meta) + '</span>' : '') +
         '</span>' +
         '<span class="catalog-card__arrow" aria-hidden="true">›</span>' +
       '</a>'
@@ -436,8 +458,18 @@
 
     const confeccionadoWrapper = document.getElementById('peca-confeccionado-wrapper');
     if (confeccionadoWrapper) {
-      if (peca.confeccionado_por) setText('peca-confeccionado-por', t(peca.confeccionado_por));
-      else confeccionadoWrapper.hidden = true;
+      if (peca.confeccionado_por) {
+        var confEl = document.getElementById('peca-confeccionado-por');
+        var confTexto = t(peca.confeccionado_por);
+        if (confEl && peca.restaurante && peca.restaurante.id) {
+          var linkRestaurante = withLang('restaurante.html?id=' + esc(peca.restaurante.id));
+          confEl.innerHTML = '<a class="peca-inline-link" href="' + esc(linkRestaurante) + '">' + esc(confTexto) + '</a>';
+        } else {
+          setText('peca-confeccionado-por', confTexto);
+        }
+      } else {
+        confeccionadoWrapper.hidden = true;
+      }
     }
 
     // Cruzamento (label/badge visível, apenas para animais cruzados)
@@ -486,6 +518,19 @@
       setHTML('peca-certificacao', renderCertificacaoDop(peca.certificacaoDop));
     } else {
       esconderSecao('sec-certificacao-secao');
+    }
+
+    if (hasArrayItems(peca.certificacoes)) {
+      var certsHtml = renderCertificacoes(peca.certificacoes);
+      if (certsHtml) {
+        var certHeading = document.getElementById('sec-certificacoes');
+        if (certHeading) certHeading.textContent = label('Certificações');
+        setHTML('peca-certificacoes', certsHtml);
+      } else {
+        esconderSecao('sec-certificacoes-secao');
+      }
+    } else {
+      esconderSecao('sec-certificacoes-secao');
     }
 
     if (peca.criacao) {

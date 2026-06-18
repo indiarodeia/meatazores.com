@@ -346,6 +346,105 @@
           "Mais contexto sobre a exploração"
         ]
       }
+    },
+    {
+      "id": "joao-pedro-ormonde-lopes",
+      "nome": "João Pedro Ormonde Lopes",
+      "tipo": {
+        "pt": "Produtor ligado à exploração leiteira",
+        "en": "Producer connected to dairy farming"
+      },
+      "localizacao": {
+        "pt": "Quatro Ribeiras, Ilha Terceira, Açores",
+        "en": "Quatro Ribeiras, Terceira Island, Azores"
+      },
+      "localizacao_detalhe": {
+        "freguesia": { "pt": "Quatro Ribeiras", "en": "Quatro Ribeiras" },
+        "ilha": { "pt": "Ilha Terceira", "en": "Terceira Island" },
+        "regiao": { "pt": "Açores", "en": "Azores" }
+      },
+      "descricao_curta": {
+        "pt": "Produtor das Quatro Ribeiras, ligado à produção leiteira em regime extensivo e maneio em pasto rotativo.",
+        "en": "Producer from Quatro Ribeiras, connected to dairy farming in an extensive system with rotational grazing."
+      },
+      "frase_destaque": {
+        "pt": "Nas Quatro Ribeiras, uma exploração de terceira geração ligada ao pasto, ao bem-estar animal e à produção leiteira açoriana.",
+        "en": "In Quatro Ribeiras, a third-generation farm connected to pasture, animal welfare and Azorean dairy farming."
+      },
+      "hero": "assets/produtor/joao-pedro-ormonde-lopes/bg-joao.jpg",
+      "thumb": "assets/ui/avatar-produtor-meatazores.jpg",
+      "historia": {
+        "pt": "João Pedro Ormonde Lopes é produtor nas Quatro Ribeiras, ilha Terceira, e representa a terceira geração da sua família ligada ao cuidado de rebanhos. A sua exploração assenta num regime extensivo, com maneio em pasto rotativo, cerca de 5.000 m² por animal e certificação Welfair, reforçando a ligação entre origem, bem-estar animal e produção leiteira açoriana.",
+        "en": "João Pedro Ormonde Lopes is a producer in Quatro Ribeiras, Terceira Island, and represents the third generation of his family connected to herd management. His farm is based on an extensive system, with rotational grazing, around 5,000 m² per animal and Welfair certification, reinforcing the connection between origin, animal welfare and Azorean dairy farming."
+      },
+      "ficha_rapida": [
+        { "label": { "pt": "Tipo de exploração", "en": "Farm type" }, "valor": { "pt": "Exploração leiteira", "en": "Dairy farm" } },
+        { "label": { "pt": "Sistema", "en": "System" }, "valor": { "pt": "Regime extensivo", "en": "Extensive farming system" } },
+        { "label": { "pt": "Maneio", "en": "Management" }, "valor": { "pt": "Pasto rotativo", "en": "Rotational grazing" } },
+        { "label": { "pt": "Área por animal", "en": "Area per animal" }, "valor": "5.000 m²" },
+        { "label": { "pt": "Certificação", "en": "Certification" }, "valor": "Welfair" }
+      ],
+      "sistema_producao": {
+        "tipo": { "pt": "Exploração leiteira", "en": "Dairy farm" },
+        "regime": { "pt": "Extensivo", "en": "Extensive" },
+        "descricao": {
+          "pt": "Exploração de terceira geração, com maneio em pasto rotativo, cerca de 5.000 m² por animal e certificação Welfair.",
+          "en": "Third-generation farm, with rotational grazing, around 5,000 m² per animal and Welfair certification."
+        }
+      },
+      "alimentacao": {
+        "regular": [
+          { "pt": "Pasto", "en": "Pasture" },
+          { "pt": "Erva de rolo", "en": "Rolled grass" },
+          { "pt": "Silagem", "en": "Silage" },
+          { "pt": "Ração", "en": "Feed" }
+        ],
+        "acabamento": [
+          { "pt": "4 meses estabulada", "en": "4 months housed" },
+          { "pt": "Erva de rolo", "en": "Rolled grass" },
+          { "pt": "Silagem", "en": "Silage" },
+          { "pt": "Ração", "en": "Feed" }
+        ],
+        "nota": {
+          "pt": "O animal passou por um período de acabamento de 4 meses em estabulação, com erva de rolo, silagem e ração.",
+          "en": "The animal went through a 4-month housed finishing period, with rolled grass, silage and feed."
+        }
+      },
+      "certificacoes": [
+        {
+          "nome": "Welfair",
+          "logo": "assets/certificacao/welfair/logo-welfair.png",
+          "logoAlt": {
+            "pt": "Selo de certificação de bem-estar animal Welfair",
+            "en": "Welfair animal welfare certification seal"
+          },
+          "texto": {
+            "pt": "Exploração certificada Welfair®, um sistema europeu de avaliação do bem-estar animal baseado em indicadores observados nos próprios animais — alimentação, alojamento, saúde e comportamento.",
+            "en": "Welfair® certified farm — a European animal-welfare assessment scheme based on indicators observed in the animals themselves: feeding, housing, health and behaviour."
+          }
+        }
+      ],
+      "pecas_associadas": [
+        "holstein-frisia-restaurante-rocha"
+      ],
+      "racas_associadas": [
+        "holstein-frisia"
+      ],
+      "tags": [
+        "Holstein-Frísia",
+        "Quatro Ribeiras",
+        "Regime extensivo",
+        "Pasto rotativo",
+        "Welfair"
+      ],
+      "galeria": [],
+      "estado_conteudo": {
+        "estado": "em-validacao",
+        "faltam": [
+          "Retrato do produtor (thumb)",
+          "Fotografias da exploração (galeria)"
+        ]
+      }
     }
   ]
 }

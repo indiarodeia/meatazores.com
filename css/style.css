@@ -1171,6 +1171,68 @@
   margin: 0;
 }
 
+/* Cartão de certificação — logo à esquerda, título + descrição à direita.
+   Componente global, usado na página da peça e na do produtor. */
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  background: var(--white);
+  border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(10, 37, 51, 0.08);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cert-card + .cert-card {
+  margin-top: 12px;
+}
+
+.cert-card__logo {
+  flex: 0 0 auto;
+  width: 96px;
+  max-width: 30%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.cert-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cert-card__title {
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  color: var(--neutraldark);
+}
+
+.cert-card__text {
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--neutralgrey-1);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .cert-card {
+    gap: 14px;
+    padding: 16px;
+  }
+  .cert-card__logo {
+    width: 72px;
+  }
+}
+
 .element-product .certificacao-dop__grid {
   display: flex;
   flex-direction: column;
@@ -3004,6 +3066,20 @@ body:has(#restaurante-nome) .element-producer .frame-27 .frame-28 {
   width: auto;
   min-width: 0;
   margin-right: 0;
+}
+
+/* Containers de peças/raças/produtores associados: ocupar 100% da largura para
+   que os cards (width:100%) fiquem todos com a mesma largura, independente do
+   comprimento do texto. (produtor, raça e peça) */
+#produtor-pecas,
+#produtor-racas,
+#raca-pecas,
+#raca-produtores,
+#peca-produtor,
+#peca-raca,
+#peca-restaurante {
+  width: 100%;
+  align-self: stretch;
 }
 
 body:has(#peca-titulo) .element-product .frame-14,

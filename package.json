@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "@vercel/edge": "^1.2.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/indiarodeia/meatazores.com.git"

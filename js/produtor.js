@@ -24,10 +24,13 @@
     'Tipo de exploração': '🏡',
     'Sistema': '🌾',
     'Sistema de produção': '🌾',
+    'Maneio': '🔄',
     'Localização': '📍',
     'Contexto': '🌊',
     'Pasto por animal': '🐄',
     'Área de pastoreio': '📐',
+    'Área por animal': '📐',
+    'Certificação': '🏅',
     'Rebanho': '🐄',
     'Rebanho (efetivo)': '🐄',
     'Raça criada': '🐄',
@@ -172,6 +175,28 @@
     return html;
   }
 
+  function renderCertificacoes(items) {
+    return items.filter(function (c) {
+      return hasValue(c) && (hasValue(c.nome) || hasValue(c.texto));
+    }).map(function (c) {
+      var logoHtml = c.logo
+        ? '<img class="cert-card__logo" src="' + esc(c.logo) + '" alt="' + esc(t(c.logoAlt) || '') + '" onerror="this.hidden=true" />'
+        : '';
+      var nomeHtml = hasValue(c.nome)
+        ? '<div class="cert-card__title">' + esc(t(c.nome)) + '</div>'
+        : '';
+      var textoHtml = hasValue(c.texto)
+        ? '<p class="cert-card__text">' + esc(t(c.texto)) + '</p>'
+        : '';
+      return (
+        '<div class="cert-card">' +
+          logoHtml +
+          '<div class="cert-card__body">' + nomeHtml + textoHtml + '</div>' +
+        '</div>'
+      );
+    }).join('');
+  }
+
   function renderNumeros(numeros) {
     return numeros.filter(function (item) {
       return hasValue(item) && hasValue(item.label) && hasValue(item.valor);
@@ -267,6 +292,32 @@
     });
   }
 
+  // Esconde separadores órfãos: quando uma secção fica oculta (sem dados), o
+  // separador adjacente ficaria a flutuar. Mantém só um separador entre secções
+  // visíveis e remove duplicados/extremos.
+  function limparSeparadores() {
+    var seps = document.querySelectorAll('.element-producer img.separator-3');
+    if (!seps.length) return;
+    var container = seps[0].parentNode;
+    var seenSeccaoVisivel = false;
+    var ultimoVisivel = null;
+    Array.prototype.slice.call(container.children).forEach(function (el) {
+      if (el.tagName === 'IMG' && el.classList.contains('separator-3')) {
+        if (seenSeccaoVisivel) {
+          el.hidden = false;
+          ultimoVisivel = el;
+          seenSeccaoVisivel = false;
+        } else {
+          el.hidden = true;
+        }
+      } else if (el.tagName === 'SECTION' && !el.hidden) {
+        seenSeccaoVisivel = true;
+      }
+    });
+    // Separador final sem nenhuma secção visível depois → esconder
+    if (ultimoVisivel && !seenSeccaoVisivel) ultimoVisivel.hidden = true;
+  }
+
   function preencherProdutor(produtor, todasAsPecas, todasAsRacas) {
     var nomeProd = t(produtor.nome);
     var tipoProd = t(produtor.tipo);
@@ -325,6 +376,7 @@
       'sec-numeros': 'Exploração em números',
       'sec-maneio': 'Maneio e Alimentação',
       'sec-alimentacao': 'Alimentação',
+      'sec-certificacoes': 'Certificações',
       'sec-ligacao-titulo': 'Ligação à raça',
       'sec-nota': 'Nota especial',
       'sec-pecas': 'Peças associadas',
@@ -446,6 +498,19 @@
       hideById('sec-alimentacao-secao');
     }
 
+    // Certificações (ex.: bem-estar animal Welfair)
+    if (hasArrayItems(produtor.certificacoes)) {
+      var certHtml = renderCertificacoes(produtor.certificacoes);
+      if (certHtml) {
+        setHTML('produtor-certificacoes', certHtml);
+        showById('sec-certificacoes-secao');
+      } else {
+        hideById('sec-certificacoes-secao');
+      }
+    } else {
+      hideById('sec-certificacoes-secao');
+    }
+
     // Ligação à raça
     if (hasValue(produtor.ligacao_raca)) {
       if (hasValue(produtor.ligacao_raca_titulo)) setText('sec-ligacao-titulo', t(produtor.ligacao_raca_titulo));
@@ -526,6 +591,9 @@
 
     // Galeria
     renderGaleria(produtor.galeria, nomeProd);
+
+    // Limpar separadores órfãos das secções que ficaram ocultas
+    limparSeparadores();
 
     // Campos internos (estado_conteudo, privacidade) NUNCA são renderizados
   }

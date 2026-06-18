@@ -716,6 +716,136 @@
           "en": "Learn more about MeatAzores"
         }
       }
+    },
+    {
+      "id": "holstein-frisia-restaurante-rocha",
+      "estado": "em-validacao",
+      "titulo": {
+        "pt": "Holstein-Frísia · Restaurante Rocha",
+        "en": "Holstein-Friesian · Restaurante Rocha"
+      },
+      "subtitulo": {
+        "pt": "Peça Holstein-Frísia com origem nas Quatro Ribeiras",
+        "en": "Holstein-Friesian piece from Quatro Ribeiras"
+      },
+      "secao_titulo": {
+        "pt": "Esta peça",
+        "en": "This piece"
+      },
+      "selecionador": {
+        "nome": "Talho Rocha",
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
+      },
+      "confeccionado_por": {
+        "pt": "Restaurante Rocha, Porto Judeu",
+        "en": "Restaurante Rocha, Porto Judeu"
+      },
+      "descricao": {
+        "pt": "Peça de uma vaca Holstein-Frísia de função leiteira, criada por João Pedro Ormonde Lopes nas Quatro Ribeiras, ilha Terceira. Uma origem ligada ao pasto, ao bem-estar animal e à produção leiteira açoriana, agora valorizada à mesa através da rastreabilidade.",
+        "en": "A piece from a dairy Holstein-Friesian cow raised by João Pedro Ormonde Lopes in Quatro Ribeiras, Terceira Island. An origin rooted in pasture, animal welfare and Azorean dairy farming, now brought to the table through traceability."
+      },
+      "imagem_bg": "assets/peca/holstein-frisia-restaurante-rocha/peca-holstein-rocha.jpg",
+      "racas": [
+        "holstein-frisia"
+      ],
+      "caracteristicas": [
+        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Identificação", "en": "Identification" }, "valor": "PT023826700" },
+        { "icone": "assets/ui/icon-5.svg", "label": { "pt": "Raça", "en": "Breed" }, "valor": { "pt": "Holstein-Frísia", "en": "Holstein-Friesian" } },
+        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Função", "en": "Function" }, "valor": { "pt": "Leiteira", "en": "Dairy" } },
+        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Idade", "en": "Age" }, "valor": { "pt": "75 meses", "en": "75 months" } },
+        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Peso a frio", "en": "Cold carcass weight" }, "valor": "346,52 kg" },
+        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Classificação", "en": "Classification" }, "valor": "O+3+" },
+        { "icone": "assets/ui/icon-8.svg", "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "12/06/2026" },
+        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Origem", "en": "Origin" }, "valor": { "pt": "Quatro Ribeiras, Ilha Terceira", "en": "Quatro Ribeiras, Terceira Island" } },
+        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Produtor", "en": "Producer" }, "valor": "João Pedro Ormonde Lopes" },
+        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Sistema de criação", "en": "Farming system" }, "valor": { "pt": "Regime extensivo", "en": "Extensive farming system" } },
+        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Maneio", "en": "Management" }, "valor": { "pt": "Pasto rotativo", "en": "Rotational grazing" } },
+        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Área por animal", "en": "Area per animal" }, "valor": "5.000 m²" },
+        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Acabamento", "en": "Finishing" }, "valor": { "pt": "4 meses estabulada", "en": "4 months housed" } },
+        { "icone": "assets/ui/icon-8.svg", "label": { "pt": "Temperamento", "en": "Temperament" }, "valor": { "pt": "Calmo", "en": "Calm" } }
+      ],
+      "certificacoes": [
+        {
+          "nome": "Welfair",
+          "logo": "assets/certificacao/welfair/logo-welfair.png",
+          "logoAlt": {
+            "pt": "Selo de certificação de bem-estar animal Welfair",
+            "en": "Welfair animal welfare certification seal"
+          },
+          "texto": {
+            "pt": "Animal criado sob certificação Welfair®, um sistema de avaliação do bem-estar animal baseado em indicadores observados no próprio animal — alimentação, alojamento, saúde e comportamento. Reforça o compromisso com uma criação mais respeitadora ao longo da vida do animal.",
+            "en": "Animal raised under Welfair® certification, an animal-welfare assessment scheme based on indicators observed in the animal itself — feeding, housing, health and behaviour. It reinforces a commitment to more respectful husbandry throughout the animal's life."
+          }
+        }
+      ],
+      "criacao": {
+        "descricao": {
+          "pt": "Criado em regime extensivo nas Quatro Ribeiras, com maneio em pasto rotativo e cerca de 5.000 m² por animal. Nos últimos 4 meses antes do abate, o animal esteve em acabamento estabulado, com alimentação à base de erva de rolo, silagem e ração.",
+          "en": "Raised in an extensive system in Quatro Ribeiras, with rotational grazing and around 5,000 m² per animal. In the final 4 months before slaughter, the animal was housed for finishing, with a diet based on rolled grass, silage and feed."
+        },
+        "alimentacao_regular": [
+          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Pasto", "en": "Pasture" } }
+        ],
+        "fase_acabamento": [
+          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Erva de rolo", "en": "Rolled grass" } },
+          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Silagem", "en": "Silage" } },
+          { "icone": "assets/ui/farinha.svg", "texto": { "pt": "Ração", "en": "Feed" } }
+        ]
+      },
+      "mostrar_o_que_esperar": false,
+      "peca_rara": {
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
+        "bullets": [
+          { "pt": "Animal Holstein-Frísia com origem nas Quatro Ribeiras", "en": "Holstein-Friesian animal from Quatro Ribeiras" },
+          { "pt": "Criado por João Pedro Ormonde Lopes, produtor de terceira geração", "en": "Raised by João Pedro Ormonde Lopes, a third-generation producer" },
+          { "pt": "Exploração com cerca de 5.000 m² por animal", "en": "Farm with around 5,000 m² per animal" },
+          { "pt": "Maneio em pasto rotativo", "en": "Managed with rotational grazing" },
+          { "pt": "Acabamento de 4 meses com erva de rolo, silagem e ração", "en": "4-month finishing period with rolled grass, silage and feed" },
+          { "pt": "Temperamento calmo", "en": "Calm temperament" },
+          { "pt": "Certificação Welfair", "en": "Welfair certification" },
+          { "pt": "Selecionado pelo Talho Rocha para o Restaurante Rocha", "en": "Selected by Talho Rocha for Restaurante Rocha" },
+          { "pt": "Peça com origem rastreada e ligação à produção leiteira açoriana", "en": "A traceable piece connected to Azorean dairy farming" }
+        ]
+      },
+      "produtor": {
+        "id": "joao-pedro-ormonde-lopes",
+        "nome": "João Pedro Ormonde Lopes",
+        "descricao": {
+          "pt": "Produtor das Quatro Ribeiras, ligado à produção leiteira em regime extensivo e maneio em pasto rotativo.",
+          "en": "Producer from Quatro Ribeiras, connected to dairy farming in an extensive system with rotational grazing."
+        },
+        "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
+      },
+      "restaurante": {
+        "id": "restaurante-rocha",
+        "nome": "Restaurante Rocha",
+        "descricao": {
+          "pt": "Restaurante no Porto Judeu, Ilha Terceira, destino gastronómico desta peça.",
+          "en": "Restaurant in Porto Judeu, Terceira Island, gastronomic destination of this piece."
+        },
+        "imagem": "assets/restaurante/restaurante-rocha/restaurante-rocha.jpg",
+        "website": "https://www.restauranterocha.pt/"
+      },
+      "feedback": {
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
+        "mostrar_estrela": false,
+        "url": "about.html",
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was created to connect producers, butchers, restaurants and consumers through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
+      }
     }
   ]
 }
