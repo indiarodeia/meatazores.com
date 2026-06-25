@@ -40,6 +40,8 @@
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/catrina.js"></script>
 </head>
 
 <body>
@@ -62,7 +64,7 @@
                 <section class="group-6" aria-labelledby="sec-resumo">
                     <div class="frame-34">
                         <h2 id="sec-resumo" class="text-wrapper-40">Raça bovina autóctone portuguesa</h2>
-                        <p class="div-5">
+                        <p id="ct-desc-resumo" class="div-5">
                             A Catrina tem as suas raízes na Ilha Terceira, estando intimamente ligada ao património
                             genético,
                             cultural e paisagístico dos Açores. Está particularmente bem adaptada a zonas de média e
@@ -77,7 +79,7 @@
             <section class="group-7" aria-labelledby="sec-origem">
                 <div class="frame-34">
                     <h2 id="sec-origem" class="heading-xl">Origem</h2>
-                    <p class="div-5">
+                    <p id="ct-desc-origem" class="div-5">
                         <span class="text-wrapper-42">
                             A história da Catrina está ligada ao mundo rural terceirense desde os primeiros tempos do
                             povoamento.
@@ -96,7 +98,7 @@
 
             <section class="frame-35" aria-labelledby="sec-utilizacao">
                 <h2 id="sec-utilizacao" class="heading-xl">Utilização tradicional</h2>
-                <p class="historicamente-a">
+                <p id="ct-desc-utilizacao" class="historicamente-a">
                     <span class="text-wrapper-44">
                         Historicamente, a Catrina foi reconhecida pela sua aptidão múltipla, sendo utilizada em:<br />
                     </span>
@@ -116,7 +118,7 @@
 
             <section class="frame-35" aria-labelledby="sec-sistema">
                 <h2 id="sec-sistema" class="heading-xl">Sistema de criação</h2>
-                <p class="text-wrapper-46">
+                <p id="ct-desc-sistema" class="text-wrapper-46">
                     Criada maioritariamente em regime extensivo, em pastagens tradicionais de média e alta altitude,
                     com elevado aproveitamento forrageiro e enquadramento em sistemas de produção de baixo impacto
                     ambiental.
@@ -182,7 +184,7 @@
             <section class="group-9" aria-labelledby="sec-ativo-vivo">
                 <div class="frame-34">
                     <h2 id="sec-ativo-vivo" class="heading-xl">A Catrina como “ativo vivo”</h2>
-                    <p class="div-5">
+                    <p id="ct-desc-ativo-vivo" class="div-5">
                         <span class="text-wrapper-42">
                             As raças autóctones são descritas como um ativo vivo, património cultural e genético.
                         </span>
@@ -200,7 +202,7 @@
 
             <section class="frame-40" aria-labelledby="sec-conservacao">
                 <h2 id="sec-conservacao" class="heading-xl">Conservação</h2>
-                <p class="div-5">
+                <p id="ct-desc-conservacao" class="div-5">
                     <span class="text-wrapper-42">O efetivo registado é de cerca de </span>
                     <span class="text-wrapper-43">75 animais</span>
                     <span class="text-wrapper-42">
@@ -215,7 +217,7 @@
 
             <section class="frame-40" aria-labelledby="sec-curiosidade">
                 <h2 id="sec-curiosidade" class="heading-xl">Curiosidade: porque se chama Catrina?</h2>
-                <p class="div-5">
+                <p id="ct-desc-curiosidade" class="div-5">
                     <span class="text-wrapper-42">A origem do nome </span>
                     <span class="text-wrapper-43">Catrina</span>
                     <span class="text-wrapper-42">
@@ -246,7 +248,7 @@
 
                     <div class="frame-42">
                         <div class="text-wrapper-52">Manuel Lucas</div>
-                        <p class="text-wrapper-53">Produtor de gado Catrina da Ilha Terceira.</p>
+                        <p id="ct-desc-produtor" class="text-wrapper-53">Produtor de gado Catrina da Ilha Terceira.</p>
 
                         <a href="produtor" class="button-arrow-right-3" aria-label="Conhecer o produtor Manuel Lucas">
                             <span class="text-wrapper-54">Conhecer o produtor</span>
@@ -265,7 +267,7 @@
                 </div>
 
                 <div class="frame-44">
-                    <p class="text-wrapper-56">
+                    <p id="ct-desc-feedback" class="text-wrapper-56">
                         Esta degustação é especial e esta é a estreia do projeto MeatAzores. O seu feedback ajuda-nos a
                         melhorar
                         a experiência e a dar mais visibilidade a raças e produtores que importam para a ilha.
@@ -284,6 +286,7 @@
 
         <!-- Header de ações -->
         <div class="scanning">
+            <div id="lang-toggle" class="lang-toggle-fixed"></div>
             <header class="header" aria-label="Ações">
                 <a href="https://us16.list-manage.com/survey?u=c62a3f7be2b0eff368aa1394e&id=0d9fdff0dd&attribution=false"
                     class="button-love" target="_blank" rel="noopener noreferrer"

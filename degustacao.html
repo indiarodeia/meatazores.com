@@ -40,6 +40,8 @@
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="js/i18n.js"></script>
+    <script src="js/degustacao.js"></script>
 </head>
 
 <body>
@@ -71,7 +73,7 @@
 
                 <section class="frame-2" aria-labelledby="sec-esta-degustacao">
                     <h2 id="sec-esta-degustacao" class="heading-xl">Esta degustação</h2>
-                    <p class="text-wrapper-4">
+                    <p id="dg-desc-esta-degustacao" class="text-wrapper-4">
                         Esta é uma degustação rara: carne proveniente de uma fêmea Catrina com um percurso longo e
                         completo,
                         criada em regime extensivo. A experiência não se trata apenas de um prato, trata-se de
@@ -174,7 +176,7 @@
                     <div class="frame-9">
                         <div class="group">
                             <h2 id="sec-criacao-alimentacao" class="heading-xl">Criação e Alimentação</h2>
-                            <p class="text-wrapper-12">
+                            <p id="dg-desc-criacao" class="text-wrapper-12">
                                 Pastoreio em área de aproximadamente 38 alqueires. No último ano, esteve a pastar
                                 sozinha.
                             </p>
@@ -219,7 +221,7 @@
 
                 <section class="frame-8" aria-labelledby="sec-o-que-esperar">
                     <h2 id="sec-o-que-esperar" class="heading-xl">O que poderá esperar</h2>
-                    <p class="sabor-intenso-e">
+                    <p id="dg-desc-o-que-esperar" class="sabor-intenso-e">
                         • Sabor intenso e particular<br />
                         • Gordura tendencialmente amarelada<br />
                         • Suculenta (tem boa capacidade de infiltração de gordura na carne)
@@ -228,7 +230,7 @@
 
                 <section class="frame-12" aria-labelledby="sec-terroir">
                     <h2 id="sec-terroir" class="text-wrapper-14">É uma carne com terroir</h2>
-                    <p class="text-wrapper-4">
+                    <p id="dg-desc-terroir" class="text-wrapper-4">
                         Criada em pastagens da Terceira, esta carne expressa o território: o clima atlântico, a altitude
                         e o
                         maneio extensivo refletem-se num perfil mais autêntico e culturalmente ligado à ilha.
@@ -239,7 +241,7 @@
 
                 <section class="frame-12" aria-labelledby="sec-peca-rara">
                     <h2 id="sec-peca-rara" class="text-wrapper-14">Porque é uma peça rara?</h2>
-                    <p class="longevidade">
+                    <p id="dg-desc-peca-rara" class="longevidade">
                         <span class="text-wrapper-15">• Longevidade funcional: </span>
                         <span class="text-wrapper-16">vida reprodutiva ativa e regular ao longo dos anos<br /></span>
                         <span class="text-wrapper-15">• Finalidade zootécnica:</span>
@@ -266,7 +268,7 @@
 
                         <div class="frame-14">
                             <div class="text-wrapper-18">Manuel Lucas</div>
-                            <p class="text-wrapper-21">Produtor de gado Catrina da Ilha Terceira.</p>
+                            <p id="dg-desc-produtor" class="text-wrapper-21">Produtor de gado Catrina da Ilha Terceira.</p>
 
                             <a href="produtor" class="button-arrow-right" aria-label="Conhecer o produtor Manuel Lucas">
                                 <span class="text-wrapper-20">Conhecer o produtor</span>
@@ -290,7 +292,7 @@
 
                             <div class="frame-16">
                                 <div class="text-wrapper-18">Catrina</div>
-                                <p class="text-wrapper-21">
+                                <p id="dg-desc-raca" class="text-wrapper-21">
                                     Raça bovina autóctone portuguesa, com as suas raízes na Ilha Terceira.
                                 </p>
 
@@ -312,7 +314,7 @@
                     </div>
 
                     <div class="frame-18">
-                        <p class="text-wrapper-23">
+                        <p id="dg-desc-feedback" class="text-wrapper-23">
                             Esta degustação é especial e esta é a estreia do projeto MeatAzores. O seu feedback
                             ajuda-nos a
                             melhorar a experiência e a dar mais visibilidade a raças e produtores que importam para a
@@ -330,6 +332,7 @@
         </div>
 
         <div class="scanning">
+            <div id="lang-toggle" class="lang-toggle-fixed"></div>
             <header class="header" aria-label="Ações">
                 <a href="https://us16.list-manage.com/survey?u=c62a3f7be2b0eff368aa1394e&id=0d9fdff0dd&attribution=false"
                     class="button-love" target="_blank" rel="noopener noreferrer"
