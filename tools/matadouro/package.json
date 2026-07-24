@@ -1,0 +1,14 @@
+{
+  "name": "matadouro-sync",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fetches daily abate CSVs for our animals from matadouros.azores.gov.pt",
+  "type": "module",
+  "scripts": {
+    "fetch": "node fetch.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "playwright": "^1.48.0"
+  }
+}

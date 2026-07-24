@@ -1296,6 +1296,241 @@
   }
 }
 
+/* Classificação da carcaça (conformação + gordura, classificação EUROP) —
+   chip compacto integrado na grelha de "Características" + painel de detalhe
+   expansível, aberto pelo botão "ⓘ" junto ao código. */
+.element-product .carcaca-classif-chip__valor {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.element-product .carcaca-classif-chip__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--neutralgrey-4);
+  color: var(--neutralgrey-1);
+  line-height: 1;
+  cursor: pointer;
+  flex: 0 0 auto;
+  transition: background-color 150ms ease, color 150ms ease;
+}
+
+.element-product .carcaca-classif-chip__toggle svg {
+  display: block;
+  flex: 0 0 auto;
+}
+
+.element-product .carcaca-classif-chip__toggle:hover {
+  background-color: var(--neutralgrey-2);
+  color: var(--white);
+}
+
+.element-product .carcaca-classif-chip__toggle[aria-expanded="true"],
+.element-product .carcaca-classif-chip.is-aberto .carcaca-classif-chip__toggle {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.element-product .carcaca-classif-chip__toggle:focus-visible {
+  outline: 2px solid var(--dark-green);
+  outline-offset: 2px;
+}
+
+/* Painel de detalhe: fechado por omissão (hidden), anima com a técnica
+   grid-template-rows 0fr → 1fr enquanto está visível a abrir/fechar. */
+.element-product .carcaca-classif-painel {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 220ms ease, opacity 180ms ease;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 16px;
+}
+
+.element-product .carcaca-classif-painel.is-aberto {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+/* [hidden] tem de vencer o display:grid acima (especificidade de classe >
+   seletor de atributo da UA) para o elemento sair mesmo do fluxo quando fechado. */
+.element-product .carcaca-classif-painel[hidden] {
+  display: none;
+}
+
+.element-product .carcaca-classif-painel__inner {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.element-product .carcaca-classif-painel__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--neutralgrey-4);
+  border-radius: 16px;
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.element-product .carcaca-classif__titulo {
+  margin: 0;
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: var(--neutraldark);
+}
+
+.element-product .carcaca-classif__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.element-product .carcaca-classif__bloco {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--neutralgrey-4);
+}
+
+.element-product .carcaca-classif__bloco:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.element-product .carcaca-classif__bloco-label {
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--neutralgrey-2);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.element-product .carcaca-classif__descricao {
+  margin: 0;
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--neutralgrey-1);
+  line-height: 1.5;
+}
+
+.element-product .carcaca-classif__valor {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 12px;
+  background-color: rgba(1, 72, 56, 0.1);
+  border-radius: 20px;
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--dark-green);
+}
+
+.element-product .carcaca-classif__escala-label {
+  margin-top: 4px;
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--neutralgrey-2);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.element-product .carcaca-classif__escala {
+  display: flex;
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.element-product .carcaca-classif__ponto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 4px;
+  border-radius: 6px;
+  background-color: var(--neutralgrey-4);
+  color: var(--neutralgrey-2);
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.element-product .carcaca-classif__ponto--ativo {
+  background-color: var(--dark-green);
+  color: var(--white);
+}
+
+.element-product .carcaca-classif__codigo {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--neutralgrey-4);
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--neutralgrey-2);
+}
+
+.element-product .carcaca-classif__codigo strong {
+  color: var(--neutraldark);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.element-product .carcaca-classif__nota {
+  margin: 0;
+  font-family: "Sofia Pro", Helvetica;
+  font-weight: 400;
+  font-size: 12px;
+  color: var(--neutralgrey-2);
+  line-height: 1.5;
+}
+
+@media (min-width: 600px) {
+  .element-product .carcaca-classif__grid {
+    flex-direction: row;
+    gap: 24px;
+  }
+  .element-product .carcaca-classif__bloco {
+    flex: 1;
+    padding-top: 0;
+    border-top: none;
+    padding-left: 24px;
+    border-left: 1px solid var(--neutralgrey-4);
+  }
+  .element-product .carcaca-classif__bloco:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .element-product .carcaca-classif-painel {
+    transition: none;
+  }
+  .element-product .carcaca-classif-chip__toggle {
+    transition: none;
+  }
+}
+
 /* LOGOTIPO DE RAÇA */
 
 .element-producer #raca-logo-container {

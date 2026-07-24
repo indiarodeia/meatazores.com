@@ -640,13 +640,65 @@
       },
       "imagem_bg": "assets/peca/aberdeen-angus-restaurante-associacao-agricola/animal-angus-raait.jpg",
       "caracteristicas": [
-        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Identificação", "en": "Identification" }, "valor": "PT322903706" },
-        { "icone": "assets/ui/icon-5.svg", "label": { "pt": "Raça", "en": "Breed" }, "valor": "Aberdeen-Angus" },
-        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Idade", "en": "Age" }, "valor": { "pt": "77 meses", "en": "77 months" } },
-        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Peso a frio", "en": "Cold carcass weight" }, "valor": "421,19 kg" },
-        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Classificação", "en": "Classification" }, "valor": "R4+" },
-        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "10/04/2026" },
-        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Produtor", "en": "Producer" }, "valor": "André Teixeira Bettencourt" }
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": {
+            "pt": "Identificação",
+            "en": "Identification"
+          },
+          "valor": "PT322903706"
+        },
+        {
+          "icone": "assets/ui/icon-5.svg",
+          "label": {
+            "pt": "Raça",
+            "en": "Breed"
+          },
+          "valor": "Aberdeen-Angus"
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Idade",
+            "en": "Age"
+          },
+          "valor": {
+            "pt": "77 meses",
+            "en": "77 months"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": {
+            "pt": "Peso a frio",
+            "en": "Cold carcass weight"
+          },
+          "valor": "421,19 kg"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Classificação",
+            "en": "Classification"
+          },
+          "valor": "R4+"
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Data de abate",
+            "en": "Slaughter date"
+          },
+          "valor": "10/04/2026"
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": {
+            "pt": "Produtor",
+            "en": "Producer"
+          },
+          "valor": "André Teixeira Bettencourt"
+        }
       ],
       "criacao": {
         "descricao": {
@@ -654,8 +706,20 @@
           "en": "Raised in an extensive system on Graciosa Island, with a diet based on grass and pasture. This farming system values space, time and a direct connection to the territory."
         },
         "alimentacao_regular": [
-          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Erva", "en": "Grass" } },
-          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Pastagem", "en": "Pasture" } }
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Erva",
+              "en": "Grass"
+            }
+          },
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Pastagem",
+              "en": "Pasture"
+            }
+          }
         ],
         "fase_acabamento": []
       },
@@ -666,13 +730,34 @@
           "en": "Why is this piece special?"
         },
         "bullets": [
-          { "pt": "Animal Aberdeen-Angus criado na ilha Graciosa", "en": "Aberdeen-Angus animal raised on Graciosa Island" },
-          { "pt": "Produzido por André Teixeira Bettencourt", "en": "Raised by André Teixeira Bettencourt" },
-          { "pt": "Criado em regime extensivo", "en": "Raised in an extensive system" },
-          { "pt": "Alimentação à base de erva e pastagem", "en": "Fed mainly on grass and pasture" },
-          { "pt": "Selecionado pelo Talho Rocha", "en": "Selected by Talho Rocha" },
-          { "pt": "Destinado ao Restaurante da Associação Agrícola", "en": "Prepared for the Agricultural Association Restaurant" },
-          { "pt": "Peça com origem rastreada e ligação ao território açoriano", "en": "A traceable piece connected to the Azorean territory" }
+          {
+            "pt": "Animal Aberdeen-Angus criado na ilha Graciosa",
+            "en": "Aberdeen-Angus animal raised on Graciosa Island"
+          },
+          {
+            "pt": "Produzido por André Teixeira Bettencourt",
+            "en": "Raised by André Teixeira Bettencourt"
+          },
+          {
+            "pt": "Criado em regime extensivo",
+            "en": "Raised in an extensive system"
+          },
+          {
+            "pt": "Alimentação à base de erva e pastagem",
+            "en": "Fed mainly on grass and pasture"
+          },
+          {
+            "pt": "Selecionado pelo Talho Rocha",
+            "en": "Selected by Talho Rocha"
+          },
+          {
+            "pt": "Destinado ao Restaurante da Associação Agrícola",
+            "en": "Prepared for the Agricultural Association Restaurant"
+          },
+          {
+            "pt": "Peça com origem rastreada e ligação ao território açoriano",
+            "en": "A traceable piece connected to the Azorean territory"
+          }
         ]
       },
       "produtor": {
@@ -684,7 +769,9 @@
         },
         "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
       },
-      "racas": ["aberdeen-angus"],
+      "racas": [
+        "aberdeen-angus"
+      ],
       "restaurante": {
         "id": "restaurante-associacao-agricola",
         "nome": {
@@ -750,20 +837,142 @@
         "holstein-frisia"
       ],
       "caracteristicas": [
-        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Identificação", "en": "Identification" }, "valor": "PT023826700" },
-        { "icone": "assets/ui/icon-5.svg", "label": { "pt": "Raça", "en": "Breed" }, "valor": { "pt": "Holstein-Frísia", "en": "Holstein-Friesian" } },
-        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Função", "en": "Function" }, "valor": { "pt": "Leiteira", "en": "Dairy" } },
-        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Idade", "en": "Age" }, "valor": { "pt": "75 meses", "en": "75 months" } },
-        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Peso a frio", "en": "Cold carcass weight" }, "valor": "346,52 kg" },
-        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Classificação", "en": "Classification" }, "valor": "O+3+" },
-        { "icone": "assets/ui/icon-8.svg", "label": { "pt": "Data de abate", "en": "Slaughter date" }, "valor": "12/06/2026" },
-        { "icone": "assets/ui/icon-1.svg", "label": { "pt": "Origem", "en": "Origin" }, "valor": { "pt": "Quatro Ribeiras, Ilha Terceira", "en": "Quatro Ribeiras, Terceira Island" } },
-        { "icone": "assets/ui/icon-6.svg", "label": { "pt": "Produtor", "en": "Producer" }, "valor": "João Pedro Ormonde Lopes" },
-        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Sistema de criação", "en": "Farming system" }, "valor": { "pt": "Regime extensivo", "en": "Extensive farming system" } },
-        { "icone": "assets/ui/icon-2.svg", "label": { "pt": "Maneio", "en": "Management" }, "valor": { "pt": "Pasto rotativo", "en": "Rotational grazing" } },
-        { "icone": "assets/ui/icon-7.svg", "label": { "pt": "Área por animal", "en": "Area per animal" }, "valor": "5.000 m²" },
-        { "icone": "assets/ui/icon-4.svg", "label": { "pt": "Acabamento", "en": "Finishing" }, "valor": { "pt": "4 meses estabulada", "en": "4 months housed" } },
-        { "icone": "assets/ui/icon-8.svg", "label": { "pt": "Temperamento", "en": "Temperament" }, "valor": { "pt": "Calmo", "en": "Calm" } }
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": {
+            "pt": "Identificação",
+            "en": "Identification"
+          },
+          "valor": "PT023826700"
+        },
+        {
+          "icone": "assets/ui/icon-5.svg",
+          "label": {
+            "pt": "Raça",
+            "en": "Breed"
+          },
+          "valor": {
+            "pt": "Holstein-Frísia",
+            "en": "Holstein-Friesian"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": {
+            "pt": "Função",
+            "en": "Function"
+          },
+          "valor": {
+            "pt": "Leiteira",
+            "en": "Dairy"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Idade",
+            "en": "Age"
+          },
+          "valor": {
+            "pt": "75 meses",
+            "en": "75 months"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": {
+            "pt": "Peso a frio",
+            "en": "Cold carcass weight"
+          },
+          "valor": "346,52 kg"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Classificação",
+            "en": "Classification"
+          },
+          "valor": "O+3+"
+        },
+        {
+          "icone": "assets/ui/icon-8.svg",
+          "label": {
+            "pt": "Data de abate",
+            "en": "Slaughter date"
+          },
+          "valor": "12/06/2026"
+        },
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": {
+            "pt": "Origem",
+            "en": "Origin"
+          },
+          "valor": {
+            "pt": "Quatro Ribeiras, Ilha Terceira",
+            "en": "Quatro Ribeiras, Terceira Island"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": {
+            "pt": "Produtor",
+            "en": "Producer"
+          },
+          "valor": "João Pedro Ormonde Lopes"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Sistema de criação",
+            "en": "Farming system"
+          },
+          "valor": {
+            "pt": "Regime extensivo",
+            "en": "Extensive farming system"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Maneio",
+            "en": "Management"
+          },
+          "valor": {
+            "pt": "Pasto rotativo",
+            "en": "Rotational grazing"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": {
+            "pt": "Área por animal",
+            "en": "Area per animal"
+          },
+          "valor": "5.000 m²"
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Acabamento",
+            "en": "Finishing"
+          },
+          "valor": {
+            "pt": "4 meses estabulada",
+            "en": "4 months housed"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-8.svg",
+          "label": {
+            "pt": "Temperamento",
+            "en": "Temperament"
+          },
+          "valor": {
+            "pt": "Calmo",
+            "en": "Calm"
+          }
+        }
       ],
       "certificacoes": [
         {
@@ -785,12 +994,36 @@
           "en": "Raised in an extensive system in Quatro Ribeiras, with rotational grazing and around 5,000 m² per animal. In the final 4 months before slaughter, the animal was housed for finishing, with a diet based on rolled grass, silage and feed."
         },
         "alimentacao_regular": [
-          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Pasto", "en": "Pasture" } }
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Pasto",
+              "en": "Pasture"
+            }
+          }
         ],
         "fase_acabamento": [
-          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Erva de rolo", "en": "Rolled grass" } },
-          { "icone": "assets/ui/erva.svg", "texto": { "pt": "Silagem", "en": "Silage" } },
-          { "icone": "assets/ui/farinha.svg", "texto": { "pt": "Ração", "en": "Feed" } }
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Erva de rolo",
+              "en": "Rolled grass"
+            }
+          },
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Silagem",
+              "en": "Silage"
+            }
+          },
+          {
+            "icone": "assets/ui/farinha.svg",
+            "texto": {
+              "pt": "Ração",
+              "en": "Feed"
+            }
+          }
         ]
       },
       "mostrar_o_que_esperar": false,
@@ -800,15 +1033,42 @@
           "en": "Why is this piece special?"
         },
         "bullets": [
-          { "pt": "Animal Holstein-Frísia com origem nas Quatro Ribeiras", "en": "Holstein-Friesian animal from Quatro Ribeiras" },
-          { "pt": "Criado por João Pedro Ormonde Lopes, produtor de terceira geração", "en": "Raised by João Pedro Ormonde Lopes, a third-generation producer" },
-          { "pt": "Exploração com cerca de 5.000 m² por animal", "en": "Farm with around 5,000 m² per animal" },
-          { "pt": "Maneio em pasto rotativo", "en": "Managed with rotational grazing" },
-          { "pt": "Acabamento de 4 meses com erva de rolo, silagem e ração", "en": "4-month finishing period with rolled grass, silage and feed" },
-          { "pt": "Temperamento calmo", "en": "Calm temperament" },
-          { "pt": "Certificação Welfair", "en": "Welfair certification" },
-          { "pt": "Selecionado pelo Talho Rocha para o Restaurante Rocha", "en": "Selected by Talho Rocha for Restaurante Rocha" },
-          { "pt": "Peça com origem rastreada e ligação à produção leiteira açoriana", "en": "A traceable piece connected to Azorean dairy farming" }
+          {
+            "pt": "Animal Holstein-Frísia com origem nas Quatro Ribeiras",
+            "en": "Holstein-Friesian animal from Quatro Ribeiras"
+          },
+          {
+            "pt": "Criado por João Pedro Ormonde Lopes, produtor de terceira geração",
+            "en": "Raised by João Pedro Ormonde Lopes, a third-generation producer"
+          },
+          {
+            "pt": "Exploração com cerca de 5.000 m² por animal",
+            "en": "Farm with around 5,000 m² per animal"
+          },
+          {
+            "pt": "Maneio em pasto rotativo",
+            "en": "Managed with rotational grazing"
+          },
+          {
+            "pt": "Acabamento de 4 meses com erva de rolo, silagem e ração",
+            "en": "4-month finishing period with rolled grass, silage and feed"
+          },
+          {
+            "pt": "Temperamento calmo",
+            "en": "Calm temperament"
+          },
+          {
+            "pt": "Certificação Welfair",
+            "en": "Welfair certification"
+          },
+          {
+            "pt": "Selecionado pelo Talho Rocha para o Restaurante Rocha",
+            "en": "Selected by Talho Rocha for Restaurante Rocha"
+          },
+          {
+            "pt": "Peça com origem rastreada e ligação à produção leiteira açoriana",
+            "en": "A traceable piece connected to Azorean dairy farming"
+          }
         ]
       },
       "produtor": {
@@ -840,6 +1100,196 @@
         "texto": {
           "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
           "en": "MeatAzores was created to connect producers, butchers, restaurants and consumers through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
+      }
+    },
+    {
+      "id": "jersey-holstein-frisia-peter-cafe-sport",
+      "estado": "provisorio",
+      "titulo": {
+        "pt": "Jersey x Holstein-Frísia · Peter Café Sport",
+        "en": "Jersey x Holstein-Friesian · Peter Café Sport"
+      },
+      "subtitulo": {
+        "pt": "Último animal da exploração de José Luís Mendes",
+        "en": "Last animal from José Luís Mendes's farm"
+      },
+      "secao_titulo": {
+        "pt": "Esta peça",
+        "en": "This piece"
+      },
+      "selecionador": {
+        "nome": "Rocha - Talho e Mercado",
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
+      },
+      "confeccionado_por": {
+        "pt": "Peter Café Sport, Faial",
+        "en": "Peter Café Sport, Faial"
+      },
+      "descricao": {
+        "pt": "Esta peça provém de uma fêmea cruzada de Jersey com Holstein-Frísia, com 6 anos de idade, criada pelo Sr. José Luís Toste da Silva Mendes, lavrador a part-time e já reformado, na freguesia de São Sebastião, na zona sul da Ilha Terceira.\n\nO animal pastava livremente numa área de cerca de 10.000 m² de pastagem permanente. Por ser gémea de um macho, nunca teve capacidade reprodutiva, não tendo tido crias nem produzido leite ao longo da sua vida.\n\nEsta peça marca o fim da exploração do Sr. José Luís, que contava com cerca de 6 animais e está agora reduzida a este único animal, à medida que a atividade se aproxima do encerramento.",
+        "en": "This piece comes from a crossbred Jersey x Holstein-Friesian female, 6 years old, raised by Mr. José Luís Toste da Silva Mendes, a part-time and now retired farmer, in the parish of São Sebastião, in the south of Terceira Island.\n\nThe animal grazed freely on an area of about 10,000 m² of permanent pasture. Being a twin to a male, she never had reproductive capacity, having never had offspring nor produced milk throughout her life.\n\nThis piece marks the end of Mr. José Luís's farm, which had about 6 animals and is now down to this single animal, as the activity approaches its close."
+      },
+      "imagem_bg": "assets/peca/jersey-holstein-frisia-peter-cafe-sport/bg-jersey-holstein-frisia.png",
+      "cruzamento": {
+        "pt": "Jersey x Holstein-Frísia",
+        "en": "Jersey x Holstein-Friesian"
+      },
+      "racas": [
+        "jersey",
+        "holstein-frisia"
+      ],
+      "caracteristicas": [
+        {
+          "icone": "assets/ui/icon-5.svg",
+          "label": "Cruzamento",
+          "valor": "Jersey x Holstein-Frísia"
+        },
+        {
+          "icone": "assets/ui/icon-3.svg",
+          "label": "Sexo",
+          "valor": "Fêmea"
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": "Idade",
+          "valor": "6 anos"
+        },
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": "Identificação",
+          "valor": "PT723557870"
+        },
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": "Origem",
+          "valor": "São Sebastião, Ilha Terceira"
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": "Produtor",
+          "valor": "José Luís Toste da Silva Mendes"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": "Sistema de criação",
+          "valor": "Pastoreio livre em pastagem permanente"
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": "Peso a frio",
+          "valor": "355,93 kg"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": "Classificação",
+          "valor": "O+3+"
+        },
+        {
+          "icone": "assets/ui/icon-8.svg",
+          "label": "Data de abate",
+          "valor": "03/07/2026"
+        }
+      ],
+      "criacao": {
+        "descricao": "Criada em regime de pastoreio livre, numa área de aproximadamente 10.000 m² de pastagem permanente, na freguesia de São Sebastião, na zona sul da Ilha Terceira. A exploração do Sr. José Luís Mendes, composta por cerca de 6 animais, está atualmente reduzida a este único animal.",
+        "alimentacao_regular": [
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": "Pastagem permanente"
+          }
+        ],
+        "fase_acabamento": []
+      },
+      "mostrar_o_que_esperar": false,
+      "terroir": {
+        "titulo": {
+          "pt": "Criada em pastoreio livre no sul da Terceira",
+          "en": "Raised on free-range pasture in southern Terceira"
+        },
+        "texto": {
+          "pt": "Criada na freguesia de São Sebastião, na zona sul da Ilha Terceira, esta peça reflete o maneio de pequenas explorações familiares açorianas, onde o pastoreio livre em pastagem permanente marca a vida do animal do início ao fim.",
+          "en": "Raised in the parish of São Sebastião, in the south of Terceira Island, this piece reflects the husbandry of small Azorean family farms, where free-range grazing on permanent pasture marks the animal's life from beginning to end."
+        }
+      },
+      "peca_rara": {
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
+        "bullets": [
+          {
+            "label": null,
+            "texto": {
+              "pt": "Último animal da exploração do Sr. José Luís Toste da Silva Mendes",
+              "en": "Last animal from Mr. José Luís Toste da Silva Mendes's farm"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Fêmea cruzada de Jersey com Holstein-Frísia",
+              "en": "Crossbred Jersey x Holstein-Friesian female"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Criada em pastoreio livre em pastagem permanente na freguesia de São Sebastião",
+              "en": "Raised on free-range permanent pasture in the parish of São Sebastião"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Gémea de um macho, sem capacidade reprodutiva",
+              "en": "Twin to a male, with no reproductive capacity"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Nunca teve crias nem produziu leite",
+              "en": "Never had offspring nor produced milk"
+            }
+          },
+          {
+            "label": null,
+            "texto": {
+              "pt": "Marca o encerramento de uma pequena exploração familiar",
+              "en": "Marks the closing of a small family farm"
+            }
+          }
+        ],
+        "nota_final": null
+      },
+      "produtor": {
+        "id": "jose-luis-toste-da-silva-mendes",
+        "nome": "José Luís Toste da Silva Mendes",
+        "descricao": "Lavrador a part-time, já reformado, da freguesia de São Sebastião, Ilha Terceira. Este animal marca o fim da sua exploração.",
+        "imagem": "assets/produtor/jose-luis-toste-da-silva-mendes/thumb-jose-luis-mendes.png"
+      },
+      "restaurante": {
+        "id": "peter-cafe-sport",
+        "nome": "Peter Café Sport",
+        "descricao": "Destino gastronómico desta peça Jersey x Holstein-Frísia, no Faial.",
+        "imagem": "assets/restaurante/peter-cafe-sport/peter-cafe-sport.png"
+      },
+      "feedback": {
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
+        "mostrar_estrela": false,
+        "url": "about.html",
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
         },
         "botao": {
           "pt": "Saber mais sobre a MeatAzores",

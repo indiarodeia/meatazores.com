@@ -113,7 +113,11 @@
     });
   }
 
-  function renderCaracteristicas(items) {
+  // Cada item da grelha de "Características" é normalmente um par label/valor simples.
+  // A "Classificação" é a única exceção: quando o código é uma classificação EUROP
+  // reconhecível, ganha um botão de info que expande um painel de detalhe (ver
+  // renderCaracteristicaClassificacaoItem / renderClassificacaoDetalhe).
+  function renderCaracteristicas(items, classificacaoParsed) {
     // Filtrar items sem label/valor para evitar campos vazios na grelha
     const filtrados = items.filter(function (it) {
       return hasValue(it) && hasValue(it.label) && hasValue(it.valor);
@@ -123,11 +127,23 @@
       const a = filtrados[i];
       const b = filtrados[i + 1];
       html += '<div class="frame-4">';
-      html += renderCaracteristicaItem(a);
-      if (b) html += renderCaracteristicaItem(b);
+      html += renderItemDaGrelha(a, classificacaoParsed);
+      if (b) html += renderItemDaGrelha(b, classificacaoParsed);
       html += '</div>';
     }
     return html;
+  }
+
+  function isItemClassificacao(item) {
+    var labelPt = typeof item.label === 'string' ? item.label : (item.label && item.label.pt) || '';
+    return labelPt === 'Classificação';
+  }
+
+  function renderItemDaGrelha(item, classificacaoParsed) {
+    if (classificacaoParsed && isItemClassificacao(item)) {
+      return renderCaracteristicaClassificacaoItem(item, classificacaoParsed);
+    }
+    return renderCaracteristicaItem(item);
   }
 
   function renderCaracteristicaItem(item) {
@@ -145,6 +161,99 @@
         '</div>' +
       '</div>'
     );
+  }
+
+  // Versão compacta: mesmo padrão visual (ícone + label + valor) das restantes
+  // características, com um botão "ⓘ" junto ao código que abre o painel de detalhe.
+  function renderCaracteristicaClassificacaoItem(item, parsed) {
+    const iconHtml = hasValue(item.icone)
+      ? '<img class="icon" src="' + esc(item.icone) + '" alt="" />'
+      : '';
+    return (
+      '<div class="fats carcaca-classif-chip">' +
+        iconHtml +
+        '<div class="frame-5">' +
+          '<div class="text-wrapper-6">' + esc(label('Classificação da carcaça')) + '</div>' +
+          '<div class="text-wrapper-8 carcaca-classif-chip__valor">' +
+            '<span>' + esc(parsed.codigo) + '</span>' +
+            '<button type="button" class="carcaca-classif-chip__toggle" id="peca-classificacao-toggle" aria-expanded="false" aria-controls="peca-classificacao-painel" aria-label="' + esc(label('O que significa esta classificação?')) + '">' +
+              '<svg aria-hidden="true" viewBox="0 0 10 10" width="10" height="10"><circle cx="5" cy="2.1" r="1.15" fill="currentColor"/><rect x="4.1" y="4.2" width="1.8" height="4.6" rx="0.9" fill="currentColor"/></svg>' +
+            '</button>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
+  function renderEscalaClassificacao(escala, classeAtiva, tituloAcessivel) {
+    var pontos = escala.map(function (item) {
+      var ativo = item === classeAtiva;
+      return '<span class="carcaca-classif__ponto' + (ativo ? ' carcaca-classif__ponto--ativo' : '') + '">' + esc(item) + '</span>';
+    }).join('');
+    return '<div class="carcaca-classif__escala" role="img" aria-label="' + esc(tituloAcessivel) + '">' + pontos + '</div>';
+  }
+
+  // Conteúdo do painel expansível, com a explicação completa da classificação.
+  function renderClassificacaoDetalhe(parsed) {
+    var cc = U.classificacaoCarcaca || {};
+    var escalaConformacao = cc.escalaConformacao || ['S', 'E', 'U', 'R', 'O', 'P'];
+    var escalaGordura = cc.escalaGordura || ['1', '2', '3', '4', '5'];
+
+    var descConformacao = label(parsed.conformacao.descricao);
+    var descGordura = label(parsed.gordura.descricao);
+
+    return (
+      '<h3 class="carcaca-classif__titulo">' + esc(label('Características da carcaça')) + '</h3>' +
+      '<div class="carcaca-classif__grid">' +
+        '<div class="carcaca-classif__bloco">' +
+          '<span class="carcaca-classif__bloco-label">' + esc(label('Conformação')) + '</span>' +
+          (descConformacao ? '<p class="carcaca-classif__descricao">' + esc(descConformacao) + '</p>' : '') +
+          '<span class="carcaca-classif__valor">' + esc(parsed.conformacao.valor) + '</span>' +
+          '<span class="carcaca-classif__escala-label">' + esc(label('Escala:')) + '</span>' +
+          renderEscalaClassificacao(escalaConformacao, parsed.conformacao.classe, label('Conformação') + ': ' + parsed.conformacao.valor) +
+        '</div>' +
+        '<div class="carcaca-classif__bloco">' +
+          '<span class="carcaca-classif__bloco-label">' + esc(label('Cobertura de gordura')) + '</span>' +
+          (descGordura ? '<p class="carcaca-classif__descricao">' + esc(descGordura) + '</p>' : '') +
+          '<span class="carcaca-classif__valor">' + esc(parsed.gordura.valor) + '</span>' +
+          '<span class="carcaca-classif__escala-label">' + esc(label('Escala:')) + '</span>' +
+          renderEscalaClassificacao(escalaGordura, parsed.gordura.classe, label('Cobertura de gordura') + ': ' + parsed.gordura.valor) +
+        '</div>' +
+      '</div>' +
+      '<p class="carcaca-classif__codigo">' + esc(label('Classificação oficial:')) + ' <strong>' + esc(parsed.codigo) + '</strong></p>' +
+      '<p class="carcaca-classif__nota">' + esc(label("Esta classificação descreve a conformação e a cobertura de gordura da carcaça. Não representa uma avaliação global da qualidade, do sabor ou da tenrura da carne.")) + '</p>'
+    );
+  }
+
+  // Abre/fecha o painel de detalhe com uma transição curta. O elemento só sai de
+  // "hidden" enquanto está a animar — fechado, volta a "hidden" para não deixar
+  // um espaço vazio no fluxo da página.
+  function alternarPainelClassificacao() {
+    var toggle = document.getElementById('peca-classificacao-toggle');
+    var painel = document.getElementById('peca-classificacao-painel');
+    if (!toggle || !painel) return;
+    var aberto = toggle.getAttribute('aria-expanded') === 'true';
+    var chip = toggle.closest('.carcaca-classif-chip');
+
+    if (aberto) {
+      toggle.setAttribute('aria-expanded', 'false');
+      painel.setAttribute('aria-hidden', 'true');
+      if (chip) chip.classList.remove('is-aberto');
+      painel.classList.remove('is-aberto');
+      painel.addEventListener('transitionend', function onEnd(e) {
+        if (e.target !== painel) return;
+        painel.hidden = true;
+        painel.removeEventListener('transitionend', onEnd);
+      });
+    } else {
+      toggle.setAttribute('aria-expanded', 'true');
+      painel.setAttribute('aria-hidden', 'false');
+      if (chip) chip.classList.add('is-aberto');
+      painel.hidden = false;
+      // eslint-disable-next-line no-unused-expressions
+      painel.offsetHeight; // força reflow para a transição arrancar do estado fechado
+      painel.classList.add('is-aberto');
+    }
   }
 
   function renderAlimentacaoItem(item) {
@@ -502,8 +611,20 @@
 
     setText('peca-descricao', t(peca.descricao));
 
+    // Detetar o item "Classificação": quando o código for uma classificação EUROP
+    // reconhecível (ex. "O+3+"), fica na grelha normal mas ganha um botão de info
+    // que abre um painel de detalhe (ver renderCaracteristicaClassificacaoItem).
+    var classificacaoParsed = null;
     if (hasArrayItems(peca.caracteristicas)) {
-      const caracHtml = renderCaracteristicas(peca.caracteristicas);
+      peca.caracteristicas.some(function (it) {
+        if (!hasValue(it) || !hasValue(it.label) || !isItemClassificacao(it)) return false;
+        classificacaoParsed = U.classificacaoCarcaca ? U.classificacaoCarcaca.parse(t(it.valor)) : null;
+        return true;
+      });
+    }
+
+    if (hasArrayItems(peca.caracteristicas)) {
+      const caracHtml = renderCaracteristicas(peca.caracteristicas, classificacaoParsed);
       if (caracHtml) {
         setHTML('peca-caracteristicas', caracHtml);
       } else {
@@ -511,6 +632,21 @@
       }
     } else {
       esconderSecao('sec-caracteristicas-secao');
+    }
+
+    var painelClassificacao = document.getElementById('peca-classificacao-painel');
+    if (classificacaoParsed) {
+      setHTML('peca-classificacao-painel-conteudo', renderClassificacaoDetalhe(classificacaoParsed));
+      if (painelClassificacao) {
+        painelClassificacao.hidden = true;
+        painelClassificacao.classList.remove('is-aberto');
+        painelClassificacao.setAttribute('aria-hidden', 'true');
+      }
+      var toggleClassificacao = document.getElementById('peca-classificacao-toggle');
+      if (toggleClassificacao) toggleClassificacao.addEventListener('click', alternarPainelClassificacao);
+    } else if (painelClassificacao) {
+      painelClassificacao.hidden = true;
+      setHTML('peca-classificacao-painel-conteudo', '');
     }
 
     if (peca.certificacaoDop) {

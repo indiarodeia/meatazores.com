@@ -49,6 +49,7 @@
   <url><loc>https://meatazores.com/peca?id=brahman-holstein-frisia-restaurante-rocha</loc><priority>0.8</priority></url>
   <url><loc>https://meatazores.com/peca?id=aberdeen-angus-restaurante-associacao-agricola</loc><priority>0.8</priority></url>
   <url><loc>https://meatazores.com/peca?id=holstein-frisia-restaurante-rocha</loc><priority>0.8</priority></url>
+  <url><loc>https://meatazores.com/peca?id=jersey-holstein-frisia-peter-cafe-sport</loc><priority>0.8</priority></url>
 
   <!-- Raças -->
   <url><loc>https://meatazores.com/raca?id=ramo-grande-dop</loc><priority>0.8</priority></url>
@@ -66,6 +67,7 @@
   <url><loc>https://meatazores.com/produtor?id=antonio-azera</loc><priority>0.7</priority></url>
   <url><loc>https://meatazores.com/produtor?id=andre-teixeira-bettencourt</loc><priority>0.7</priority></url>
   <url><loc>https://meatazores.com/produtor?id=joao-pedro-ormonde-lopes</loc><priority>0.7</priority></url>
+  <url><loc>https://meatazores.com/produtor?id=jose-luis-toste-da-silva-mendes</loc><priority>0.7</priority></url>
 
   <!-- Restaurantes -->
   <url><loc>https://meatazores.com/restaurante?id=peter-cafe-sport</loc><priority>0.7</priority></url>

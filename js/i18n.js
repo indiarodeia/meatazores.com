@@ -250,7 +250,29 @@
     'Data de abate': 'Slaughter date',
     'pH da carne': 'Meat pH',
     'Temperamento': 'Temperament',
-    'Produção de leite': 'Milk production'
+    'Produção de leite': 'Milk production',
+
+    // Classificação da carcaça (conformação + gordura, classificação EUROP)
+    'Classificação da carcaça': 'Carcass classification',
+    'Características da carcaça': 'Carcass characteristics',
+    'Conformação': 'Conformation',
+    'Cobertura de gordura': 'Fat cover',
+    'Escala:': 'Scale:',
+    'Classificação oficial:': 'Official classification:',
+    'O que significa esta classificação?': 'What does this classification mean?',
+    'Esta classificação descreve a conformação e a cobertura de gordura da carcaça. Não representa uma avaliação global da qualidade, do sabor ou da tenrura da carne.':
+      "This classification describes the carcass's conformation and fat cover. It does not represent an overall assessment of the meat's quality, flavour or tenderness.",
+    'Desenvolvimento muscular excecional': 'Exceptional muscle development',
+    'Desenvolvimento muscular excelente': 'Excellent muscle development',
+    'Desenvolvimento muscular muito bom': 'Very good muscle development',
+    'Desenvolvimento muscular bom': 'Good muscle development',
+    'Desenvolvimento muscular moderado': 'Moderate muscle development',
+    'Desenvolvimento muscular reduzido': 'Reduced muscle development',
+    'Cobertura de gordura muito baixa': 'Very low fat cover',
+    'Cobertura de gordura baixa': 'Low fat cover',
+    'Cobertura de gordura média a moderadamente elevada': 'Medium to moderately high fat cover',
+    'Cobertura de gordura elevada': 'High fat cover',
+    'Cobertura de gordura muito elevada': 'Very high fat cover'
   };
 
   // Valores específicos (devolvem string EN sem alterar JSON)

@@ -370,8 +370,12 @@
         "pt": "Na MeatAzores, a Jersey permite explicar a ligação entre produção leiteira, território e valorização da carne de animais com origem conhecida. Em animais provenientes de explorações leiteiras, a idade, o maneio, a alimentação e o percurso produtivo ajudam a compreender melhor a carne.",
         "en": "At MeatAzores, Jersey helps explain the link between dairy production, territory and the valuation of meat from animals with known origin. For animals from dairy farms, age, husbandry, feeding and productive path help better understand the meat."
       },
-      "pecas_associadas": [],
-      "produtores_associados": [],
+      "pecas_associadas": [
+        "jersey-holstein-frisia-peter-cafe-sport"
+      ],
+      "produtores_associados": [
+        "jose-luis-toste-da-silva-mendes"
+      ],
       "galeria": []
     },
     {
@@ -444,11 +448,13 @@
       },
       "pecas_associadas": [
         "brahman-holstein-frisia-restaurante-rocha",
-        "holstein-frisia-restaurante-rocha"
+        "holstein-frisia-restaurante-rocha",
+        "jersey-holstein-frisia-peter-cafe-sport"
       ],
       "produtores_associados": [
         "antonio-azera",
-        "joao-pedro-ormonde-lopes"
+        "joao-pedro-ormonde-lopes",
+        "jose-luis-toste-da-silva-mendes"
       ],
       "galeria": []
     },

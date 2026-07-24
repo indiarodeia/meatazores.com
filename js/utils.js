@@ -64,6 +64,51 @@
     return null;
   }
 
+  // Classificação EUROP da carcaça (conformação + estado de gordura).
+  // Mapeamento centralizado: qualquer página que precise de explicar um código
+  // como "O+3+" deve usar parseClassificacaoCarcaca em vez de reimplementar.
+  var EUROP_CONFORMACAO_ORDEM = ['S', 'E', 'U', 'R', 'O', 'P'];
+  var EUROP_CONFORMACAO_DESCRICAO = {
+    S: 'Desenvolvimento muscular excecional',
+    E: 'Desenvolvimento muscular excelente',
+    U: 'Desenvolvimento muscular muito bom',
+    R: 'Desenvolvimento muscular bom',
+    O: 'Desenvolvimento muscular moderado',
+    P: 'Desenvolvimento muscular reduzido'
+  };
+  var EUROP_GORDURA_ORDEM = ['1', '2', '3', '4', '5'];
+  var EUROP_GORDURA_DESCRICAO = {
+    '1': 'Cobertura de gordura muito baixa',
+    '2': 'Cobertura de gordura baixa',
+    '3': 'Cobertura de gordura média a moderadamente elevada',
+    '4': 'Cobertura de gordura elevada',
+    '5': 'Cobertura de gordura muito elevada'
+  };
+
+  // Aceita formatos como "O+3+", "R4+", "R.4.", "U-3=", "P+4-".
+  // Devolve null se o código não corresponder a uma classificação EUROP reconhecível
+  // (nesse caso o chamador deve manter o valor tal como está, sem o novo componente).
+  function parseClassificacaoCarcaca(valor) {
+    if (!hasValue(valor)) return null;
+    var limpo = String(valor).toUpperCase().replace(/[.\s]/g, '');
+    var m = /^([SEUROP])([+-]?)([1-5])([+\-=]?)$/.exec(limpo);
+    if (!m) return null;
+    var letra = m[1], modLetra = m[2] || '', digito = m[3], modDigito = m[4] || '';
+    return {
+      codigo: String(valor).trim(),
+      conformacao: {
+        classe: letra,
+        valor: letra + modLetra,
+        descricao: EUROP_CONFORMACAO_DESCRICAO[letra] || ''
+      },
+      gordura: {
+        classe: digito,
+        valor: digito + modDigito,
+        descricao: EUROP_GORDURA_DESCRICAO[digito] || ''
+      }
+    };
+  }
+
   // SEO helpers — actualizam <title>/meta/canonical dinamicamente após carregar dados
   var SITE_ORIGIN = 'https://meatazores.com';
 
@@ -169,7 +214,12 @@
     hideById: hideById,
     showById: showById,
     resolveCitacao: resolveCitacao,
-    resolveAlimentacao: resolveAlimentacao
+    resolveAlimentacao: resolveAlimentacao,
+    classificacaoCarcaca: {
+      parse: parseClassificacaoCarcaca,
+      escalaConformacao: EUROP_CONFORMACAO_ORDEM,
+      escalaGordura: EUROP_GORDURA_ORDEM
+    }
   };
   window.MA.seo = {
     applySeo: applySeo,

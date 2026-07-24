@@ -445,6 +445,95 @@
           "Fotografias da exploração (galeria)"
         ]
       }
+    },
+    {
+      "id": "jose-luis-toste-da-silva-mendes",
+      "nome": "José Luís Toste da Silva Mendes",
+      "tipo": {
+        "pt": "Lavrador a part-time",
+        "en": "Part-time farmer"
+      },
+      "localizacao": {
+        "pt": "São Sebastião, Ilha Terceira, Açores",
+        "en": "São Sebastião, Terceira Island, Azores"
+      },
+      "frase_destaque": {
+        "pt": "Um animal que marca o fim de uma pequena exploração familiar na Ilha Terceira.",
+        "en": "An animal that marks the end of a small family farm on Terceira Island."
+      },
+      "descricao_curta": {
+        "pt": "Lavrador a part-time, já reformado, da freguesia de São Sebastião, na zona sul da Ilha Terceira. Este animal marca o encerramento da sua exploração.",
+        "en": "Part-time farmer, now retired, from the parish of São Sebastião, in the south of Terceira Island. This animal marks the closing of his farm."
+      },
+      "hero": "assets/produtor/jose-luis-toste-da-silva-mendes/bg-jose-luis-mendes.jpg",
+      "thumb": "assets/produtor/jose-luis-toste-da-silva-mendes/thumb-jose-luis-mendes.png",
+      "localizacao_detalhe": {
+        "ilha": "Terceira",
+        "freguesia": "São Sebastião",
+        "zona": "Zona sul da ilha",
+        "regiao": "Açores"
+      },
+      "ficha_rapida": [
+        {
+          "label": "Tipo de exploração",
+          "valor": "Exploração familiar (part-time)"
+        },
+        {
+          "label": "Localização",
+          "valor": "São Sebastião, Ilha Terceira"
+        },
+        {
+          "label": "Área de pastagem",
+          "valor": "10.000 m² (pastagem permanente)"
+        },
+        {
+          "label": "Rebanho (efetivo)",
+          "valor": "1 cabeça (em fase de cessação)"
+        }
+      ],
+      "historia": {
+        "pt": "José Luís Toste da Silva Mendes é lavrador a part-time e já reformado, na freguesia de São Sebastião, na zona sul da Ilha Terceira. A sua pequena exploração familiar chegou a contar com cerca de 6 animais, criados em regime de pastoreio livre em pastagem permanente.\n\nEste animal, uma fêmea cruzada de Jersey com Holstein-Frísia, é o último da exploração, que se aproxima agora do encerramento.",
+        "en": "José Luís Toste da Silva Mendes is a part-time and now retired farmer, from the parish of São Sebastião, in the south of Terceira Island. His small family farm once had about 6 animals, raised under a free-range regime on permanent pasture.\n\nThis animal, a crossbred Jersey x Holstein-Friesian female, is the last from the farm, which is now approaching its close."
+      },
+      "sistema_producao": {
+        "tipo": {
+          "pt": "Exploração familiar de pequena escala",
+          "en": "Small-scale family farm"
+        },
+        "regime": {
+          "pt": "Extensivo, pastoreio livre em pastagem permanente",
+          "en": "Extensive, free-range grazing on permanent pasture"
+        },
+        "descricao": {
+          "pt": "Maneio simples e de pequena escala, característico de muitas explorações familiares da Ilha Terceira, com os animais a pastar livremente em pastagem permanente.",
+          "en": "Simple, small-scale husbandry, characteristic of many family farms on Terceira Island, with animals grazing freely on permanent pasture."
+        }
+      },
+      "alimentacao": {
+        "regular": [
+          "Pastagem permanente"
+        ],
+        "acabamento": [],
+        "nota": {
+          "pt": "A alimentação baseia-se em pastoreio livre, sem regime de acabamento associado.",
+          "en": "Feeding is based on free-range grazing, with no associated finishing regime."
+        }
+      },
+      "nota_especial": {
+        "pt": "Este animal marca o fim da exploração do Sr. José Luís Toste da Silva Mendes, que contava com cerca de 6 animais e está agora reduzida a esta única fêmea, à medida que a atividade pecuária se aproxima do encerramento.",
+        "en": "This animal marks the end of Mr. José Luís Toste da Silva Mendes's farm, which had about 6 animals and is now down to this single female, as the farming activity comes to a close."
+      },
+      "pecas_associadas": [
+        "jersey-holstein-frisia-peter-cafe-sport"
+      ],
+      "racas_associadas": [
+        "jersey",
+        "holstein-frisia"
+      ],
+      "galeria": [
+        "assets/produtor/jose-luis-toste-da-silva-mendes/jose-luis-mendes-01.jpeg",
+        "assets/produtor/jose-luis-toste-da-silva-mendes/jose-luis-mendes-02.jpeg"
+      ]
     }
   ]
 }

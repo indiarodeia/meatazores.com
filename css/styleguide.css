@@ -61,7 +61,6 @@
     --body-normal-bold-letter-spacing: 0px;
     --body-normal-bold-line-height: 135%;
     --body-normal-bold-font-style: normal;
-    :root {
         --dark: rgba(10, 37, 51, 1);
         --neutralgrey-1: rgba(72, 82, 95, 1);
         --neutralgrey-4: rgba(230, 235, 242, 1);
@@ -113,5 +112,4 @@
         --heading-heading-3-line-height: 135%;
         --heading-heading-3-font-style: normal;
         --card-shadow: 0px 2px 16px 0px rgba(6, 51, 54, 0.1);
-    }
 }
