@@ -101,7 +101,7 @@
         .catch(function () { return { racas: [] }; })
     ])
       .then(function (resultados) {
-        var pecas = (resultados[0].pecas || []).filter(function (p) { return hasValue(p) && hasValue(p.id); });
+        var pecas = (resultados[0].pecas || []).filter(function (p) { return hasValue(p) && hasValue(p.id); }).reverse();
         var racas = resultados[1].racas || [];
         if (!pecas.length) {
           mostrarErro(container, 'Ainda não existem peças registadas.');

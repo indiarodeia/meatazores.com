@@ -58,7 +58,8 @@
       },
       "pecas_associadas": [
         "brahman-holstein-frisia-restaurante-rocha",
-        "holstein-frisia-restaurante-rocha"
+        "holstein-frisia-restaurante-rocha",
+        "ramo-grande-dop-restaurante-rocha"
       ]
     },
     {
@@ -100,6 +101,36 @@
           "Localização mais específica"
         ]
       }
+    },
+    {
+      "id": "mar-vinhas",
+      "nome": "Mar & Vinhas",
+      "tipo": {
+        "pt": "Restaurante",
+        "en": "Restaurant"
+      },
+      "localizacao": {
+        "pt": "Biscoitos, Ilha Terceira, Açores",
+        "en": "Biscoitos, Terceira Island, Azores"
+      },
+      "website": "https://restaurantemarvinhas.pt/",
+      "descricao_curta": {
+        "pt": "Restaurante nos Biscoitos, Ilha Terceira, destino gastronómico desta peça Ramo Grande DOP selecionada pelo Talho Rocha.",
+        "en": "Restaurant in Biscoitos, Terceira Island, gastronomic destination for this Ramo Grande DOP piece selected by Talho Rocha."
+      },
+      "hero": "assets/restaurante/mar-vinhas/bg-mar-vinhas.jpg",
+      "imagem": "assets/restaurante/mar-vinhas/logo-mar-vinhas.png",
+      "texto_principal": {
+        "pt": "O Mar & Vinhas recebe esta peça Ramo Grande DOP como parte de uma experiência que valoriza a origem, a rastreabilidade e a ligação entre produtores, talhos, restaurantes e consumidores açorianos.",
+        "en": "Mar & Vinhas receives this Ramo Grande DOP piece as part of an experience that values origin, traceability and the connection between producers, butchers, restaurants and Azorean consumers."
+      },
+      "cta": {
+        "pt": "Conheça a origem da peça Ramo Grande DOP · Mar & Vinhas.",
+        "en": "Discover the origin of the Ramo Grande DOP · Mar & Vinhas piece."
+      },
+      "pecas_associadas": [
+        "ramo-grande-dop-mar-vinhas"
+      ]
     }
   ]
 }

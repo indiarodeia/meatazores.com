@@ -38,7 +38,11 @@
     'Média de abates por ano': '📅',
     'Produtor desde': '📅',
     'Alimentação regular': '🌱',
-    'Fase de acabamento': '🌽'
+    'Fase de acabamento': '🌽',
+    'Nome no registo': '🪪',
+    'Localidade': '📍',
+    'Ilha': '🏝️',
+    'Tradição familiar': '👨‍👩‍👧'
   };
 
   function getIdFromURL() {

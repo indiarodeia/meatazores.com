@@ -534,6 +534,150 @@
         "assets/produtor/jose-luis-toste-da-silva-mendes/jose-luis-mendes-01.jpeg",
         "assets/produtor/jose-luis-toste-da-silva-mendes/jose-luis-mendes-02.jpeg"
       ]
+    },
+    {
+      "id": "alberto-bettencourt",
+      "nome": "Alberto Bettencourt",
+      "tipo": {
+        "pt": "Produtor de Ramo Grande DOP",
+        "en": "Ramo Grande DOP producer"
+      },
+      "localizacao": {
+        "pt": "Rosais, São Jorge, Açores",
+        "en": "Rosais, São Jorge, Azores"
+      },
+      "localizacao_detalhe": {
+        "ilha": {
+          "pt": "São Jorge",
+          "en": "São Jorge"
+        },
+        "regiao": {
+          "pt": "Açores",
+          "en": "Azores"
+        }
+      },
+      "descricao_curta": {
+        "pt": "Produtor de Ramo Grande DOP dos Rosais, São Jorge, quinta geração de uma família que cria estes bovinos para o trabalho tradicional, e não para leite ou reprodução.",
+        "en": "Ramo Grande DOP producer from Rosais, São Jorge, the fifth generation of a family that raises this cattle for traditional draft work, not for dairy or breeding."
+      },
+      "frase_destaque": {
+        "pt": "Bovinos Ramo Grande criados para o trabalho tradicional, não para leite ou reprodução.",
+        "en": "Ramo Grande cattle raised for traditional draft work, not for dairy or breeding."
+      },
+      "hero": "assets/produtor/alberto-bettencourt/bg-alberto-bettencourt.jpg",
+      "thumb": "assets/ui/avatar-produtor-meatazores.jpg",
+      "historia": {
+        "pt": "Nos Rosais, em São Jorge, Alberto Bettencourt representa a quinta geração de uma família dedicada à criação de bovinos da raça Ramo Grande.\n\nAtualmente, cria seis animais Ramo Grande em pastoreio extensivo, com cerca de dez alqueires de pastagem disponíveis por animal. É uma criação de pequena escala, profundamente ligada ao território e ao conhecimento transmitido entre gerações.\n\nA finalidade desta criação é o trabalho tradicional, e não a produção de leite nem a reprodução. Os animais são ensinados a puxar carros de bois e a trabalhar a terra, preservando práticas que fizeram parte da vida rural açoriana durante séculos. É só depois desta vida de trabalho que alguns destes animais dão origem a peças de Carne Ramo Grande DOP.",
+        "en": "In Rosais, São Jorge, Alberto Bettencourt represents the fifth generation of a family dedicated to raising Ramo Grande cattle.\n\nHe currently raises six Ramo Grande animals under an extensive grazing system, with about ten \"alqueires\" of pasture available per animal. It is a small-scale operation, deeply connected to the land and to knowledge passed down through generations.\n\nThe purpose of this farming is traditional draft work, not dairy production or breeding. The animals are trained to pull ox carts and work the land, preserving practices that were part of Azorean rural life for centuries. It is only after this working life that some of these animals give rise to Ramo Grande DOP Beef pieces."
+      },
+      "ficha_rapida": [
+        {
+          "label": {
+            "pt": "Nome no registo",
+            "en": "Registered name"
+          },
+          "valor": "Alberto Gonçalves Bettencourt"
+        },
+        {
+          "label": {
+            "pt": "Localidade",
+            "en": "Locality"
+          },
+          "valor": "Rosais"
+        },
+        {
+          "label": {
+            "pt": "Ilha",
+            "en": "Island"
+          },
+          "valor": "São Jorge"
+        },
+        {
+          "label": {
+            "pt": "Tradição familiar",
+            "en": "Family tradition"
+          },
+          "valor": {
+            "pt": "5.ª geração de criadores de Ramo Grande",
+            "en": "5th generation of Ramo Grande breeders"
+          }
+        }
+      ],
+      "sistema_producao": {
+        "tipo": {
+          "pt": "Criação de bovinos Ramo Grande para trabalho tradicional",
+          "en": "Ramo Grande cattle raised for traditional draft work"
+        },
+        "regime": {
+          "pt": "Extensivo",
+          "en": "Extensive"
+        },
+        "descricao": {
+          "pt": "Criação de pequena escala em pastoreio extensivo, nos Rosais, ilha de São Jorge, com a finalidade tradicional de trabalho, e não de produção de leite nem de reprodução.",
+          "en": "Small-scale farming under an extensive grazing system, in Rosais, São Jorge Island, for the traditional purpose of draft work, not dairy production or breeding."
+        }
+      },
+      "numeros": [
+        {
+          "label": "Efetivo atual",
+          "valor": "6 animais"
+        },
+        {
+          "label": "Raça criada",
+          "valor": "Ramo Grande"
+        },
+        {
+          "label": "Pastagem disponível",
+          "valor": "≈ 10 alqueires por animal"
+        },
+        {
+          "label": "Localização",
+          "valor": "Rosais, São Jorge, Açores"
+        }
+      ],
+      "certificacoes": [
+        {
+          "nome": {
+            "pt": "Carne Ramo Grande DOP",
+            "en": "Ramo Grande DOP Beef"
+          },
+          "logo": "assets/raca/ramo-grande-dop/logo-ramo-grande-dop.png",
+          "texto": {
+            "pt": "Certificação confirmada para a carne desta exploração. O produtor refere também ter certificação IGP, cujo âmbito específico ainda não está esclarecido.",
+            "en": "Confirmed certification for the meat from this farm. The producer also reports holding an IGP certification, whose specific scope is not yet clarified."
+          }
+        }
+      ],
+      "ligacao_raca_titulo": {
+        "pt": "Ligação à Ramo Grande",
+        "en": "Connection to Ramo Grande"
+      },
+      "ligacao_raca": {
+        "pt": "A ligação de Alberto Bettencourt à raça Ramo Grande atravessa cinco gerações da sua família nos Rosais, São Jorge. Esta continuidade representa conhecimento prático, património agrícola e uma forma de criação profundamente ligada ao território insular.",
+        "en": "Alberto Bettencourt's connection to the Ramo Grande breed spans five generations of his family in Rosais, São Jorge. This continuity represents practical knowledge, agricultural heritage and a way of raising cattle deeply linked to the island's territory."
+      },
+      "nota_especial": {
+        "pt": "Os animais desta exploração são criados para o trabalho tradicional, a puxar carros de bois e a lavrar a terra, e não para produção de leite ou reprodução, mantendo viva uma tradição açoriana transmitida entre gerações.",
+        "en": "The animals on this farm are raised for traditional draft work, pulling ox carts and working the land, and not for dairy production or breeding, keeping alive an Azorean tradition passed down through generations."
+      },
+      "pecas_associadas": [],
+      "racas_associadas": [
+        "ramo-grande-dop"
+      ],
+      "tags": [
+        "Ramo Grande",
+        "São Jorge",
+        "Pastoreio extensivo",
+        "5.ª geração",
+        "Trabalho tradicional"
+      ],
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotografia do produtor (retrato)",
+          "Esclarecer âmbito exato da certificação IGP mencionada pelo produtor"
+        ]
+      }
     }
   ]
 }

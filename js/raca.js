@@ -424,6 +424,20 @@
       esconderSecao('sec-historia-secao');
     }
 
+    // Foto histórica (opcional, embutida na secção "História e origem")
+    var figFotoHistorica = document.getElementById('raca-foto-historica');
+    if (figFotoHistorica) {
+      if (raca.foto_historica && raca.foto_historica.src) {
+        var imgFotoHistorica = document.getElementById('raca-foto-historica-img');
+        imgFotoHistorica.alt = label('Fotografia histórica da raça') + ' ' + nome;
+        setImagemSeExistir(imgFotoHistorica, raca.foto_historica.src, function () { figFotoHistorica.hidden = true; });
+        setText('raca-foto-historica-legenda', t(raca.foto_historica.legenda));
+        figFotoHistorica.hidden = false;
+      } else {
+        figFotoHistorica.hidden = true;
+      }
+    }
+
     // Características gerais
     if (hasArrayItems(raca.caracteristicas)) {
       var filtradas = raca.caracteristicas.filter(hasValue);

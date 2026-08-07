@@ -55,6 +55,13 @@
         "pt": "A Ramo Grande DOP está associada à história rural da ilha Terceira e à forma como várias gerações de produtores açorianos trabalharam a terra, o pasto e o gado. A sua valorização passa também por comunicar a origem, o maneio e os produtores que mantêm viva esta ligação.",
         "en": "Ramo Grande DOP is associated with the rural history of Terceira Island and the way several generations of Azorean producers worked the land, the pasture and the cattle. Its valorization also involves communicating origin, husbandry and the producers who keep this connection alive."
       },
+      "foto_historica": {
+        "src": "assets/raca/ramo-grande-dop/historico/carroca-lenha.jpg",
+        "legenda": {
+          "pt": "Carro de bois Ramo Grande a transportar lenha, Ilha Terceira, meados do séc. XX.",
+          "en": "Ramo Grande ox cart carrying firewood, Terceira Island, mid-20th century."
+        }
+      },
       "valor_patrimonial": {
         "pt": "Mais do que uma raça bovina, a Ramo Grande DOP representa continuidade, identidade agrícola e memória familiar. Ao tornar a sua origem visível, a MeatAzores contribui para aproximar o consumidor do território e das pessoas que estão por trás do produto.",
         "en": "More than a cattle breed, Ramo Grande DOP represents continuity, agricultural identity and family memory. By making its origin visible, MeatAzores helps bring the consumer closer to the territory and to the people behind the product."
@@ -82,13 +89,21 @@
         }
       ],
       "pecas_associadas": [
-        "ramo-grande-dop-peter-cafe-sport"
+        "ramo-grande-dop-peter-cafe-sport",
+        "ramo-grande-dop-mar-vinhas",
+        "ramo-grande-dop-restaurante-rocha"
       ],
       "produtores_associados": [
-        "emiliano-meneses"
+        "emiliano-meneses",
+        "alberto-bettencourt"
       ],
       "galeria": [
-        "assets/raca/ramo-grande-dop/ramo-grande-dop-pasto.jpg"
+        "assets/raca/ramo-grande-dop/ramo-grande-dop-pasto.jpg",
+        "assets/raca/ramo-grande-dop/historico/carroca-feno.jpg",
+        "assets/raca/ramo-grande-dop/historico/lavoura-campo.jpg",
+        "assets/raca/ramo-grande-dop/historico/comboio-carrocas.jpg",
+        "assets/raca/ramo-grande-dop/historico/festa-carro-paes.jpg",
+        "assets/raca/ramo-grande-dop/historico/festa-boi-enfeitado.jpg"
       ]
     },
     {

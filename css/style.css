@@ -174,7 +174,7 @@
   width: 100%;
   height: 397px;
   display: flex;
-  background-image: url(../assets/peca/catrina-19-anos/bg-degustacao.jpg);
+  background-color: #e8e8e8;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -3312,7 +3312,8 @@ body:has(#restaurante-nome) .element-producer .frame-27 .frame-28 {
 #raca-produtores,
 #peca-produtor,
 #peca-raca,
-#peca-restaurante {
+#peca-restaurante,
+#restaurante-pecas {
   width: 100%;
   align-self: stretch;
 }
@@ -3868,6 +3869,13 @@ body:has(#peca-titulo) .element-product #peca-raca.frame-15 {
   margin-top: 14px;
 }
 
+/* Múltiplas peças associadas (raça, produtor, restaurante): espaço entre cards */
+#raca-pecas .frame-27 + .frame-27,
+#produtor-pecas .frame-27 + .frame-27,
+#restaurante-pecas .frame-27 + .frame-27 {
+  margin-top: 14px;
+}
+
 /* Chip "Cruzamento" junto ao título Raças associadas */
 .produtor-racas__chip-cruzamento {
   display: inline-flex;
@@ -4397,6 +4405,27 @@ body:has(#raca-nome) .element-producer .raca-aparencia__img,
   max-width: 260px;
   max-height: 220px;
   object-fit: contain;
+}
+
+.raca-foto-historica {
+  width: 100%;
+  margin: 16px 0 0;
+}
+
+.raca-foto-historica__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  filter: sepia(0.15);
+}
+
+.raca-foto-historica__legenda {
+  margin-top: 8px;
+  font-family: "Sofia Pro", Helvetica;
+  font-size: 13px;
+  font-style: italic;
+  color: var(--neutralgrey-1);
 }
 
 body:has(#raca-nome) .element-producer .raca-caracteristicas {

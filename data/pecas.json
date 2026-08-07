@@ -1296,6 +1296,519 @@
           "en": "Learn more about MeatAzores"
         }
       }
+    },
+    {
+      "id": "ramo-grande-dop-mar-vinhas",
+      "estado": "em-validacao",
+      "titulo": {
+        "pt": "Ramo Grande DOP · Mar & Vinhas",
+        "en": "Ramo Grande DOP · Mar & Vinhas"
+      },
+      "subtitulo": {
+        "pt": "Uma tradição açoriana servida à mesa.",
+        "en": "An Azorean tradition served at the table."
+      },
+      "selecionador": {
+        "nome": "Talho Rocha",
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
+      },
+      "confeccionado_por": {
+        "pt": "Mar & Vinhas, Biscoitos, Ilha Terceira",
+        "en": "Mar & Vinhas, Biscoitos, Terceira Island"
+      },
+      "descricao": {
+        "pt": "A raça Ramo Grande tem origem nos bovinos trazidos para os Açores durante o povoamento, no século XV. Moldada pela insularidade e pela adaptação ao território, tornou-se uma raça autóctone profundamente ligada à história rural dos Açores, em particular à ilha Terceira.\n\nDurante séculos, estes animais desempenharam um papel essencial na vida açoriana, ajudando a trabalhar a terra e a transportar pessoas e bens.\n\nEste animal foi criado por Alberto Bettencourt nos Rosais, na ilha de São Jorge. Foi também ensinado para o trabalho e para puxar carros de bois, mantendo viva uma tradição açoriana transmitida entre gerações.",
+        "en": "The Ramo Grande breed originates from cattle brought to the Azores during the islands' settlement, in the 15th century. Shaped by insularity and adaptation to the territory, it became an autochthonous breed deeply linked to the rural history of the Azores, particularly Terceira Island.\n\nFor centuries, these animals played an essential role in Azorean life, helping to work the land and transport people and goods.\n\nThis animal was raised by Alberto Bettencourt in Rosais, on São Jorge Island. It was also trained for work and to pull ox carts, keeping alive an Azorean tradition passed down through generations."
+      },
+      "imagem_bg": "assets/peca/ramo-grande-dop-mar-vinhas/bg-ramo-grande-dop-mar-vinhas.jpg",
+      "caracteristicas": [
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": {
+            "pt": "Identificação",
+            "en": "Identification"
+          },
+          "valor": "PT033733692"
+        },
+        {
+          "icone": "assets/ui/icon-5.svg",
+          "label": {
+            "pt": "Raça",
+            "en": "Breed"
+          },
+          "valor": "Ramo Grande"
+        },
+        {
+          "icone": "assets/ui/icon-3.svg",
+          "label": {
+            "pt": "Sexo",
+            "en": "Sex"
+          },
+          "valor": {
+            "pt": "Macho",
+            "en": "Male"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Idade no abate",
+            "en": "Age at slaughter"
+          },
+          "valor": {
+            "pt": "39 meses",
+            "en": "39 months"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": {
+            "pt": "Peso da carcaça a frio",
+            "en": "Cold carcass weight"
+          },
+          "valor": "536,64 kg"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Classificação",
+            "en": "Classification"
+          },
+          "valor": "R+3-"
+        },
+        {
+          "icone": "assets/ui/icon-8.svg",
+          "label": {
+            "pt": "Data de abate",
+            "en": "Slaughter date"
+          },
+          "valor": "17/07/2026"
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": {
+            "pt": "Produtor",
+            "en": "Producer"
+          },
+          "valor": "Alberto Bettencourt"
+        }
+      ],
+      "criacao": {
+        "descricao": {
+          "pt": "Criado em regime de pastoreio extensivo nos Rosais, ilha de São Jorge, numa exploração familiar de pequena escala.",
+          "en": "Raised under an extensive grazing system in Rosais, São Jorge Island, on a small-scale family farm."
+        },
+        "alimentacao_regular": [
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Pastagem",
+              "en": "Pasture"
+            }
+          }
+        ],
+        "fase_acabamento": []
+      },
+      "mostrar_o_que_esperar": false,
+      "certificacaoDop": {
+        "titulo": {
+          "pt": "Certificação Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef Certification"
+        },
+        "logo": "assets/raca/ramo-grande-dop/logo-ramo-grande-dop.png",
+        "logoAlt": {
+          "pt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
+          "en": "Official logo of the Ramo Grande DOP Bovine Breed"
+        },
+        "designacaoOficial": {
+          "pt": "Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef"
+        },
+        "estado": {
+          "pt": "Certificação DOP confirmada",
+          "en": "DOP certification confirmed"
+        },
+        "codigoAnimal": "PT033733692",
+        "texto": {
+          "pt": "Esta peça provém de um animal Ramo Grande com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
+          "en": "This piece comes from a Ramo Grande animal with identified origin, raised in the Azores and accompanied by technical traceability data. The unique animal code allows associating the piece with its productive path, the producer, the slaughter and the carcass classification."
+        },
+        "criterios": [
+          {
+            "label": {
+              "pt": "Origem geográfica",
+              "en": "Geographical origin"
+            },
+            "valor": "Açores",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Local de criação",
+              "en": "Raising location"
+            },
+            "valor": "Rosais, ilha de São Jorge",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Ilha de abate",
+              "en": "Slaughter island"
+            },
+            "valor": "Terceira",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Estado sanitário",
+              "en": "Sanitary status"
+            },
+            "valor": {
+              "pt": "Aprovado",
+              "en": "Approved"
+            },
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Sistema de criação",
+              "en": "Raising system"
+            },
+            "valor": {
+              "pt": "Pastoreio extensivo",
+              "en": "Extensive grazing"
+            },
+            "estado": "confirmado"
+          }
+        ],
+        "nota": {
+          "pt": "Os dados de certificação e rastreabilidade são associados ao código único do animal.",
+          "en": "Certification and traceability data are associated with the animal's unique code."
+        }
+      },
+      "peca_rara": {
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
+        "bullets": [
+          {
+            "pt": "Animal Ramo Grande criado por Alberto Bettencourt, produtor de 5.ª geração",
+            "en": "Ramo Grande animal raised by Alberto Bettencourt, a 5th-generation producer"
+          },
+          {
+            "pt": "Criado nos Rosais, ilha de São Jorge",
+            "en": "Raised in Rosais, São Jorge Island"
+          },
+          {
+            "pt": "Também ensinado a puxar carro de bois, preservando uma tradição açoriana",
+            "en": "Also trained to pull an ox cart, keeping an Azorean tradition alive"
+          }
+        ]
+      },
+      "produtor": {
+        "id": "alberto-bettencourt",
+        "nome": "Alberto Bettencourt",
+        "descricao": {
+          "pt": "Alberto Bettencourt representa a quinta geração de uma família dedicada à criação de bovinos da raça Ramo Grande nos Rosais, em São Jorge.",
+          "en": "Alberto Bettencourt represents the fifth generation of a family dedicated to raising Ramo Grande cattle in Rosais, São Jorge."
+        },
+        "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
+      },
+      "racas": [
+        "ramo-grande-dop"
+      ],
+      "restaurante": {
+        "id": "mar-vinhas",
+        "nome": {
+          "pt": "Mar & Vinhas",
+          "en": "Mar & Vinhas"
+        },
+        "descricao": {
+          "pt": "Restaurante nos Biscoitos, Ilha Terceira",
+          "en": "Restaurant in Biscoitos, Terceira Island"
+        },
+        "imagem": "assets/restaurante/mar-vinhas/logo-mar-vinhas.png"
+      },
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotografia do produtor Alberto Bettencourt (retrato)",
+          "Esclarecer âmbito exato da certificação IGP mencionada pelo produtor"
+        ]
+      },
+      "feedback": {
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
+        "mostrar_estrela": false,
+        "url": "about.html",
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
+      }
+    },
+    {
+      "id": "ramo-grande-dop-restaurante-rocha",
+      "titulo": {
+        "pt": "Ramo Grande DOP · Restaurante Rocha",
+        "en": "Ramo Grande DOP · Restaurante Rocha"
+      },
+      "subtitulo": {
+        "pt": "Peça Ramo Grande DOP selecionada para o Restaurante Rocha",
+        "en": "Ramo Grande DOP piece selected for Restaurante Rocha"
+      },
+      "selecionador": {
+        "nome": "Talho Rocha",
+        "link": "https://talhorocha.com",
+        "mostrar_card": false
+      },
+      "confeccionado_por": {
+        "pt": "Restaurante Rocha, Porto Judeu",
+        "en": "Restaurante Rocha, Porto Judeu"
+      },
+      "descricao": {
+        "pt": "A raça Ramo Grande tem origem nos bovinos trazidos para os Açores durante o povoamento, no século XV. Moldada pela insularidade e pela adaptação ao território, tornou-se uma raça autóctone profundamente ligada à história rural dos Açores, em particular à ilha Terceira.\n\nDurante séculos, estes animais desempenharam um papel essencial na vida açoriana, ajudando a trabalhar a terra e a transportar pessoas e bens.\n\nEste animal foi criado por Alberto Bettencourt nos Rosais, na ilha de São Jorge. Foi também ensinado para o trabalho e para puxar carros de bois, mantendo viva uma tradição açoriana transmitida entre gerações.",
+        "en": "The Ramo Grande breed originates from cattle brought to the Azores during the islands' settlement, in the 15th century. Shaped by insularity and adaptation to the territory, it became an autochthonous breed deeply linked to the rural history of the Azores, particularly Terceira Island.\n\nFor centuries, these animals played an essential role in Azorean life, helping to work the land and transport people and goods.\n\nThis animal was raised by Alberto Bettencourt in Rosais, on São Jorge Island. It was also trained for work and to pull ox carts, keeping alive an Azorean tradition passed down through generations."
+      },
+      "imagem_bg": "assets/peca/ramo-grande-dop-restaurante-rocha/bg-ramo-grande-dop-restaurante-rocha.jpg",
+      "caracteristicas": [
+        {
+          "icone": "assets/ui/icon-1.svg",
+          "label": {
+            "pt": "Identificação",
+            "en": "Identification"
+          },
+          "valor": "PT634311037"
+        },
+        {
+          "icone": "assets/ui/icon-5.svg",
+          "label": {
+            "pt": "Raça",
+            "en": "Breed"
+          },
+          "valor": "Ramo Grande"
+        },
+        {
+          "icone": "assets/ui/icon-3.svg",
+          "label": {
+            "pt": "Sexo",
+            "en": "Sex"
+          },
+          "valor": {
+            "pt": "Macho",
+            "en": "Male"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-4.svg",
+          "label": {
+            "pt": "Idade no abate",
+            "en": "Age at slaughter"
+          },
+          "valor": {
+            "pt": "37 meses",
+            "en": "37 months"
+          }
+        },
+        {
+          "icone": "assets/ui/icon-7.svg",
+          "label": {
+            "pt": "Peso da carcaça a frio",
+            "en": "Cold carcass weight"
+          },
+          "valor": "524,10 kg"
+        },
+        {
+          "icone": "assets/ui/icon-2.svg",
+          "label": {
+            "pt": "Classificação",
+            "en": "Classification"
+          },
+          "valor": "O+3+"
+        },
+        {
+          "icone": "assets/ui/icon-8.svg",
+          "label": {
+            "pt": "Data de abate",
+            "en": "Slaughter date"
+          },
+          "valor": "17/07/2026"
+        },
+        {
+          "icone": "assets/ui/icon-6.svg",
+          "label": {
+            "pt": "Produtor",
+            "en": "Producer"
+          },
+          "valor": "Alberto Bettencourt"
+        }
+      ],
+      "criacao": {
+        "descricao": {
+          "pt": "Criado em regime de pastoreio extensivo nos Rosais, ilha de São Jorge, numa exploração familiar de pequena escala.",
+          "en": "Raised under an extensive grazing system in Rosais, São Jorge Island, on a small-scale family farm."
+        },
+        "alimentacao_regular": [
+          {
+            "icone": "assets/ui/erva.svg",
+            "texto": {
+              "pt": "Pastagem",
+              "en": "Pasture"
+            }
+          }
+        ],
+        "fase_acabamento": []
+      },
+      "mostrar_o_que_esperar": false,
+      "certificacaoDop": {
+        "titulo": {
+          "pt": "Certificação Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef Certification"
+        },
+        "logo": "assets/raca/ramo-grande-dop/logo-ramo-grande-dop.png",
+        "logoAlt": {
+          "pt": "Logotipo oficial da Raça Bovina Ramo Grande DOP",
+          "en": "Official logo of the Ramo Grande DOP Bovine Breed"
+        },
+        "designacaoOficial": {
+          "pt": "Carne Ramo Grande DOP",
+          "en": "Ramo Grande DOP Beef"
+        },
+        "estado": {
+          "pt": "Certificação DOP confirmada",
+          "en": "DOP certification confirmed"
+        },
+        "codigoAnimal": "PT634311037",
+        "texto": {
+          "pt": "Esta peça provém de um animal Ramo Grande com origem identificada, criado nos Açores e acompanhado por dados técnicos de rastreabilidade. O código único do animal permite associar a peça ao seu percurso produtivo, ao produtor, ao abate e à classificação da carcaça.",
+          "en": "This piece comes from a Ramo Grande animal with identified origin, raised in the Azores and accompanied by technical traceability data. The unique animal code allows associating the piece with its productive path, the producer, the slaughter and the carcass classification."
+        },
+        "criterios": [
+          {
+            "label": {
+              "pt": "Origem geográfica",
+              "en": "Geographical origin"
+            },
+            "valor": "Açores",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Local de criação",
+              "en": "Raising location"
+            },
+            "valor": "Rosais, ilha de São Jorge",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Ilha de abate",
+              "en": "Slaughter island"
+            },
+            "valor": "Terceira",
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Estado sanitário",
+              "en": "Sanitary status"
+            },
+            "valor": {
+              "pt": "Aprovado",
+              "en": "Approved"
+            },
+            "estado": "confirmado"
+          },
+          {
+            "label": {
+              "pt": "Sistema de criação",
+              "en": "Raising system"
+            },
+            "valor": {
+              "pt": "Pastoreio extensivo",
+              "en": "Extensive grazing"
+            },
+            "estado": "confirmado"
+          }
+        ],
+        "nota": {
+          "pt": "Os dados de certificação e rastreabilidade são associados ao código único do animal.",
+          "en": "Certification and traceability data are associated with the animal's unique code."
+        }
+      },
+      "peca_rara": {
+        "titulo": {
+          "pt": "Porque é uma peça especial?",
+          "en": "Why is this piece special?"
+        },
+        "bullets": [
+          {
+            "pt": "Animal Ramo Grande criado por Alberto Bettencourt, produtor de 5.ª geração",
+            "en": "Ramo Grande animal raised by Alberto Bettencourt, a 5th-generation producer"
+          },
+          {
+            "pt": "Criado nos Rosais, ilha de São Jorge",
+            "en": "Raised in Rosais, São Jorge Island"
+          },
+          {
+            "pt": "Também ensinado a puxar carro de bois, preservando uma tradição açoriana",
+            "en": "Also trained to pull an ox cart, keeping an Azorean tradition alive"
+          }
+        ]
+      },
+      "produtor": {
+        "id": "alberto-bettencourt",
+        "nome": "Alberto Bettencourt",
+        "descricao": {
+          "pt": "Alberto Bettencourt representa a quinta geração de uma família dedicada à criação de bovinos da raça Ramo Grande nos Rosais, em São Jorge.",
+          "en": "Alberto Bettencourt represents the fifth generation of a family dedicated to raising Ramo Grande cattle in Rosais, São Jorge."
+        },
+        "imagem": "assets/ui/avatar-produtor-meatazores.jpg"
+      },
+      "racas": [
+        "ramo-grande-dop"
+      ],
+      "restaurante": {
+        "id": "restaurante-rocha",
+        "nome": "Restaurante Rocha",
+        "descricao": {
+          "pt": "Restaurante no Porto Judeu, Ilha Terceira, destino gastronómico desta peça.",
+          "en": "Restaurant in Porto Judeu, Terceira Island, gastronomic destination of this piece."
+        },
+        "imagem": "assets/restaurante/restaurante-rocha/restaurante-rocha.jpg",
+        "website": "https://www.restauranterocha.pt/"
+      },
+      "estado_conteudo": {
+        "estado": "provisorio",
+        "faltam": [
+          "Fotografia do produtor Alberto Bettencourt (retrato)",
+          "Esclarecer âmbito exato da certificação IGP mencionada pelo produtor"
+        ]
+      },
+      "feedback": {
+        "titulo": {
+          "pt": "Conheça a MeatAzores",
+          "en": "Discover MeatAzores"
+        },
+        "mostrar_estrela": false,
+        "url": "about.html",
+        "texto": {
+          "pt": "A MeatAzores nasceu para aproximar produtores, talhos, restaurantes e consumidores através da rastreabilidade. Cada peça conta uma história de origem, território e seleção.",
+          "en": "MeatAzores was born to bring producers, butchers, restaurants and consumers closer through traceability. Each piece tells a story of origin, territory and selection."
+        },
+        "botao": {
+          "pt": "Saber mais sobre a MeatAzores",
+          "en": "Learn more about MeatAzores"
+        }
+      }
     }
   ]
 }
