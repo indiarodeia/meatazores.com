@@ -1,0 +1,64 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "peca"
+        }
+      ],
+      "destination": "/entrada",
+      "permanent": false
+    },
+    {
+      "source": "/index",
+      "has": [
+        {
+          "type": "query",
+          "key": "peca"
+        }
+      ],
+      "destination": "/entrada",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "en"
+        }
+      ],
+      "missing": [
+        {
+          "type": "query",
+          "key": "peca"
+        }
+      ],
+      "destination": "/en",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "query",
+          "key": "lang",
+          "value": "fr"
+        }
+      ],
+      "missing": [
+        {
+          "type": "query",
+          "key": "peca"
+        }
+      ],
+      "destination": "/en",
+      "permanent": false
+    }
+  ]
+}

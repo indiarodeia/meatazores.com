@@ -1,0 +1,6 @@
+# Ficheiros do repositório que não fazem parte do site público.
+tools/
+assets/landing/_nao-usadas/
+Screenshot*
+*.md
+.vscode/
