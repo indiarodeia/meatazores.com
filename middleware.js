@@ -1,15 +1,93 @@
 import { next } from '@vercel/edge';
 
-// Edge Middleware — injeta meta tags (title/description/OG/Twitter/canonical)
-// por ?id nas páginas de detalhe, ANTES de servir o HTML estático.
+// Edge Middleware, duas funções:
+// 1) Idioma automático: na primeira visita, encaminha para a língua do browser
+//    (landing: / → /en; aplicação: acrescenta ?lang=en). A escolha manual
+//    no seletor fica no cookie ma_lang e tem sempre prioridade. Bots e scrapers
+//    nunca são redirecionados, para indexarem e pré-visualizarem cada URL tal como é.
+// 2) Injeta meta tags (title/description/OG/Twitter/canonical)
+//    por ?id nas páginas de detalhe, ANTES de servir o HTML estático.
 // Necessário porque os scrapers sociais (WhatsApp, Facebook, LinkedIn) não
 // executam JS — sem isto, todos os links partilhados mostravam o mesmo preview.
 // Espelha a lógica de SEO que cada renderer (peca.js, raca.js, ...) já aplica
 // em runtime, por isso é idempotente com o JS do lado do cliente.
 
+const DETAIL = ['/peca', '/raca', '/produtor', '/restaurante', '/parceiro'];
+const APP = ['/entrada', '/pecas', '/racas', '/produtores', '/about', '/scan', '/catrina', '/degustacao'];
+
 export const config = {
-  matcher: ['/peca', '/raca', '/produtor', '/restaurante', '/parceiro'],
+  matcher: ['/', '/index'].concat(DETAIL, APP),
 };
+
+// ---------- Idioma ----------
+
+// Landing: PT e EN (FR em pausa: quem tem o browser em francês vê o inglês;
+// para reativar, trocar fr: '/en' por fr: '/fr'). A aplicação só tem PT e EN.
+const LANDING = { pt: '/', en: '/en', fr: '/en' };
+const BOT = /bot|crawl|spider|slurp|facebookexternalhit|facebot|whatsapp|telegram|slack|discord|linkedin|twitter|embedly|pinterest|preview|lighthouse|headless/i;
+
+// Devolve 'pt' | 'en' | 'fr', ou null quando não há sinal (bots, sem Accept-Language).
+function preferredLang(request) {
+  const cookie = (request.headers.get('cookie') || '').match(/(?:^|;\s*)ma_lang=(pt|en|fr)(?:;|$)/);
+  if (cookie) return cookie[1];
+  if (BOT.test(request.headers.get('user-agent') || '')) return null;
+  const header = request.headers.get('accept-language');
+  if (!header) return null;
+  const prefs = header
+    .split(',')
+    .map(function (part, i) {
+      const bits = part.trim().split(';');
+      const q = bits.slice(1).map(function (b) { return b.trim(); }).find(function (b) { return b.indexOf('q=') === 0; });
+      return { lang: bits[0].trim().toLowerCase().split('-')[0], q: q ? parseFloat(q.slice(2)) : 1, i: i };
+    })
+    .filter(function (p) { return p.lang && p.lang !== '*' && p.q > 0; })
+    .sort(function (a, b) { return b.q - a.q || a.i - b.i; });
+  for (const p of prefs) if (LANDING[p.lang]) return p.lang;
+  return prefs.length ? 'en' : null; // outra língua qualquer → inglês
+}
+
+function redirect(url) {
+  return new Response(null, {
+    status: 302,
+    headers: {
+      location: url.toString(),
+      'cache-control': 'private, no-store',
+      vary: 'Accept-Language, Cookie',
+    },
+  });
+}
+
+// Devolve um redirect se o pedido deve mudar de idioma; caso contrário, null.
+function langRedirect(request) {
+  const url = new URL(request.url);
+  const path = url.pathname.replace(/\.html$/, '');
+  const q = url.searchParams;
+
+  if (path === '/' || path === '/index') {
+    if (q.has('peca')) return null; // QR antigos: o vercel.json/entrada tratam disto
+    const asked = q.get('lang');
+    if (asked === 'en' || asked === 'fr') {
+      q.delete('lang');
+      url.pathname = LANDING[asked];
+      return redirect(url);
+    }
+    if (asked) return null; // ?lang=pt: fica em PT
+    const lang = preferredLang(request);
+    if (lang && lang !== 'pt') {
+      url.pathname = LANDING[lang];
+      return redirect(url);
+    }
+    return null;
+  }
+
+  if (q.has('lang') || q.has('__raw')) return null; // idioma já explícito no URL
+  const lang = preferredLang(request);
+  if (lang && lang !== 'pt') {
+    q.set('lang', 'en');
+    return redirect(url);
+  }
+  return null;
+}
 
 const SITE = 'https://meatazores.com';
 const FALLBACK_IMG = SITE + '/assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg';
@@ -133,6 +211,9 @@ export default async function middleware(request) {
 
   // Evita recursão: o fetch interno do HTML estático carrega __raw.
   if (url.searchParams.has('__raw')) return next();
+
+  const toLang = langRedirect(request);
+  if (toLang) return toLang;
 
   const type = url.pathname.replace(/^\/+/, '').replace(/\.html$/, '');
   const src = SOURCES[type];

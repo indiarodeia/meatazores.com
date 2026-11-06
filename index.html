@@ -1,7 +1,16 @@
 <!doctype html>
+<!-- GERADO por tools/landing/build.mjs a partir de tools/landing/content.mjs. Não editar à mão. -->
 <html lang="pt-PT">
 
 <head>
+  <script>
+    // QR já distribuídos: /q/... e links antigos chegam à raiz com ?peca=.
+    // Encaminha para o ecrã de entrada da aplicação (entrada.html), mantendo os parâmetros.
+    (function () {
+      var p = new URLSearchParams(window.location.search);
+      if (p.has('peca')) window.location.replace('/entrada' + window.location.search);
+    })();
+  </script>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-06H9C9G9KV"></script>
   <script>
@@ -10,101 +19,481 @@
     gtag('js', new Date());
     gtag('config', 'G-06H9C9G9KV');
   </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meat Azores | Da origem nasce o valor</title>
+  <meta name="description" content="A Meat Azores liga produto, produtor e território através de tecnologia, tornando a origem da carne açoriana acessível desde a produção até ao prato." />
+  <meta name="theme-color" content="#014838" />
 
-    <title>MeatAzores | Transparência de origem à mesa</title>
-    <meta name="description"
-        content="Transparência de origem à mesa. Descubra a raça, o produtor e a história de cada peça de carne dos Açores através da MeatAzores." />
+  <link rel="canonical" href="https://meatazores.com/" />
+  <link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/" />
+  <link rel="alternate" hreflang="en" href="https://meatazores.com/en" />
+  <link rel="alternate" hreflang="x-default" href="https://meatazores.com/" />
 
-    <!-- Canonical & i18n -->
-    <link rel="canonical" href="https://meatazores.com/" />
-    <link rel="alternate" hreflang="pt-pt" href="https://meatazores.com/" />
-    <link rel="alternate" hreflang="en" href="https://meatazores.com/?lang=en" />
-    <link rel="alternate" hreflang="x-default" href="https://meatazores.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Meat Azores" />
+  <meta property="og:title" content="Da origem nasce o valor." />
+  <meta property="og:description" content="A Meat Azores liga produto, produtor e território através de tecnologia, tornando a origem da carne açoriana acessível desde a produção até ao prato." />
+  <meta property="og:url" content="https://meatazores.com/" />
+  <meta property="og:image" content="https://meatazores.com/assets/landing/og-meatazores.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="pt_PT" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Da origem nasce o valor." />
+  <meta name="twitter:description" content="A Meat Azores liga produto, produtor e território através de tecnologia, tornando a origem da carne açoriana acessível desde a produção até ao prato." />
+  <meta name="twitter:image" content="https://meatazores.com/assets/landing/og-meatazores.jpg" />
 
-    <!-- Open Graph -->
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="MeatAzores" />
-    <meta property="og:title" content="MeatAzores — Transparência de origem à mesa" />
-    <meta property="og:description" content="Descubra a raça, o produtor e a história de cada peça de carne dos Açores." />
-    <meta property="og:url" content="https://meatazores.com/" />
-    <meta property="og:image" content="https://meatazores.com/assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg" />
-    <meta property="og:image:width" content="800" />
-    <meta property="og:image:height" content="600" />
-    <meta property="og:locale" content="pt_PT" />
-    <meta property="og:locale:alternate" content="en_US" />
+  <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Meat Azores" />
+  <link rel="manifest" href="/assets/favicon/site.webmanifest" />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="MeatAzores — Transparência de origem à mesa" />
-    <meta name="twitter:description" content="Descubra a raça, o produtor e a história de cada peça de carne dos Açores." />
-    <meta name="twitter:image" content="https://meatazores.com/assets/peca/ramo-grande-dop-peter-cafe-sport/bg-ramo-grande-dop-peter.jpg" />
+  <link rel="preload" href="/font/Sofia%20Pro%20Bold%20Az.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" as="image" type="image/webp" imagesrcset="/assets/landing/territorio-1200.webp 1200w, /assets/landing/territorio-2400.webp 2400w" imagesizes="100vw" />
+  <link rel="stylesheet" href="/css/styleguide.css" />
+  <link rel="stylesheet" href="/css/landing.css" />
 
-    <!-- Theme / ícones -->
-    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="MeatAzores" />
-    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/styleguide.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <!-- Vercel Analytics -->
-    <script>
-        window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
-    <script defer src="/_vercel/insights/script.js"></script>
-
-    <!-- Structured data: Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MeatAzores",
-      "url": "https://meatazores.com/",
-      "logo": "https://meatazores.com/assets/ui/logo-meatzores.svg",
-      "description": "Transparência de origem à mesa. A história, a raça, o produtor e o território de cada peça de carne dos Açores.",
-      "areaServed": {
-        "@type": "Place",
-        "name": "Açores, Portugal"
-      },
-      "inLanguage": ["pt-PT", "en"]
-    }
-    </script>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Meat Azores",
+  "url": "https://meatazores.com/",
+  "logo": "https://meatazores.com/assets/ui/logo-meatzores.svg",
+  "email": "info@meatazores.com",
+  "sameAs": [
+    "https://www.instagram.com/meatazores/"
+  ],
+  "description": "A Meat Azores liga produto, produtor e território através de tecnologia, tornando a origem da carne açoriana acessível desde a produção até ao prato.",
+  "areaServed": {
+    "@type": "Place",
+    "name": "Açores, Portugal"
+  },
+  "inLanguage": [
+    "pt-PT",
+    "en"
+  ]
+}
+  </script>
 </head>
 
-<body>
-    <div class="element-welcome">
-        <div id="lang-toggle" class="lang-toggle-fixed lang-toggle-fixed--dark"></div>
-        <div class="frame">
-            <img class="vector" src="assets/ui/bg-welcome.svg" alt="" />
-        </div>
+<body class="lp">
+  <a class="lp-skip" href="#conteudo">Saltar para o conteúdo</a>
 
-        <div class="container-welcome">
-            <div class="group-wrapper">
-                <img class="group-2" src="assets/ui/logo-meatzores.svg" alt="Logótipo MeatAzores" />
-            </div>
-            <div class="div-text-button">
-                <div class="frame-2">
-                    <h1 class="text-wrapper">Transparência de <br> origem à mesa</h1>
-                    <p class="p">Está prestes a conhecer a origem da carne que vai provar: a raça, o produtor, o território e a história desta peça.</p>
-                </div>
-
-                <a href="degustacao.html" class="button button-login" id="intro-cta"
-                    aria-label="Conhecer a origem da peça">Conhecer a origem da peça</a>
-            </div>
-            <img class="group-3" src="assets/parceiro/talho-rocha/logo-rocha.svg" alt="Logótipo Talho Rocha — parceiro MeatAzores" />
-        </div>
-
+  <header class="lp-header" data-lp-header>
+    <div class="lp-header__inner">
+      <a class="lp-header__logo" href="#inicio" aria-label="Meat Azores, início">
+        <img class="lp-logo lp-logo--light" src="/assets/landing/logo-meatazores-light.svg" alt="" width="156" height="17">
+        <img class="lp-logo lp-logo--dark" src="/assets/landing/logo-meatazores-dark.svg" alt="" width="156" height="17">
+      </a>
+      <nav class="lp-header__nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#exemplo">Exemplo real</a></li>
+          <li><a href="#visao">Visão</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="lp-header__actions">
+        <div class="lp-lang " role="group" aria-label="Idioma">
+        <a href="/" hreflang="pt-PT" lang="pt-PT" data-lang="pt" title="Português" aria-current="true">PT</a>
+        <span aria-hidden="true">|</span>
+        <a href="/en" hreflang="en" lang="en" data-lang="en" title="English">EN</a>
+      </div>
+        <a class="lp-btn lp-btn--outline lp-btn--sm lp-header__app" href="/pecas">Entrar na aplicação</a>
+        <button class="lp-header__menu" type="button" aria-expanded="false" aria-controls="lp-menu" data-lp-menu-open>
+          <span class="lp-burger" aria-hidden="true"></span><span class="lp-sr">Menu</span>
+        </button>
+      </div>
     </div>
-    <script src="js/utils.js"></script>
-    <script src="js/i18n.js"></script>
-    <script src="js/index.js"></script>
+    <div class="lp-progress" aria-hidden="true"><span data-lp-progress></span></div>
+  </header>
+
+  <div class="lp-menu" id="lp-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden data-lp-menu>
+    <div class="lp-menu__top">
+      <img src="/assets/landing/logo-meatazores-light.svg" alt="" width="156" height="17">
+      <button class="lp-menu__close" type="button" data-lp-menu-close><span aria-hidden="true">×</span><span class="lp-sr">Fechar menu</span></button>
+    </div>
+    <nav aria-label="Navegação principal">
+      <ul class="lp-menu__links">
+        <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#exemplo">Exemplo real</a></li>
+          <li><a href="#visao">Visão</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="lp-menu__bottom">
+      <a class="lp-btn lp-btn--outline" href="/pecas">Entrar na aplicação</a>
+      <a class="lp-menu__mail" href="mailto:info@meatazores.com">info@meatazores.com</a>
+      <div class="lp-lang lp-lang--lg" role="group" aria-label="Idioma">
+        <a href="/" hreflang="pt-PT" lang="pt-PT" data-lang="pt" title="Português" aria-current="true">PT</a>
+        <span aria-hidden="true">|</span>
+        <a href="/en" hreflang="en" lang="en" data-lang="en" title="English">EN</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- 1 · HERO -->
+    <section class="lp-hero" id="inicio" aria-labelledby="h-inicio" data-lp-hero>
+      <picture class="lp-hero__bg" data-parallax="0.3">
+      <source type="image/webp" srcset="/assets/landing/territorio-1200.webp 1200w, /assets/landing/territorio-2400.webp 2400w" sizes="100vw">
+      <img src="/assets/landing/territorio-1200.jpg" srcset="/assets/landing/territorio-1200.jpg 1200w, /assets/landing/territorio-2400.jpg 2400w" sizes="100vw" alt="Paisagem açoriana com pastagens divididas por muros de pedra junto ao mar." fetchpriority="high">
+    </picture>
+      <div class="lp-hero__shade" aria-hidden="true"></div>
+      <p class="lp-hero__coords" aria-hidden="true">Açores · 37°–40° N · 25°–31° W</p>
+      <div class="lp-wrap lp-hero__content" data-lp-hero-content>
+        <p class="lp-pill">Plataforma de rastreabilidade</p>
+        <h1 id="h-inicio" class="lp-hero__title">Da origem nasce o valor.</h1>
+        <p class="lp-hero__sub">A Meat Azores liga produto, produtor e território através de tecnologia, tornando a origem da carne açoriana acessível desde a produção até ao prato.</p>
+        <div class="lp-hero__ctas">
+          <a class="lp-btn lp-btn--lime" href="#como-funciona">Descobrir como funciona</a>
+          <a class="lp-btn lp-btn--outline" href="#contacto" data-motivo="">Falar connosco</a>
+        </div>
+      </div>
+      <picture class="lp-hero__peca">
+      <source type="image/webp" srcset="/assets/landing/qr-cartao-200.webp 200w, /assets/landing/qr-cartao-400.webp 400w" sizes="200px">
+      <img src="/assets/landing/qr-cartao-200.jpg" srcset="/assets/landing/qr-cartao-200.jpg 200w, /assets/landing/qr-cartao-400.jpg 400w" sizes="200px" alt="Cartão Meat Azores com QR numa mesa de restaurante." loading="lazy" decoding="async">
+    </picture>
+    </section>
+
+    <!-- 2 · PROBLEMA -->
+    <section class="lp-section lp-section--forest" id="problema" aria-labelledby="h-problema">
+      <div class="lp-wrap lp-split">
+        <div class="lp-split__text" data-reveal>
+          <p class="lp-eyebrow">O problema</p>
+          <h2 id="h-problema" class="lp-h2">Toda a carne tem uma história. A maioria <span class="lp-accent">perde-se</span> pelo caminho.</h2>
+          <p class="lp-body">Um animal criado num território específico. Um produtor que conhece cada detalhe da sua origem. Uma cadeia de decisões, cuidado e tempo.</p>
+          <p class="lp-body">Mas quando a carne chega ao talho ou ao prato, essa história já desapareceu. Fica um produto, sem rosto, sem lugar, sem percurso.</p>
+        </div>
+        <div class="lp-split__media lp-stack" data-reveal>
+          <div class="lp-clip" data-progress>
+          <picture class="lp-rounded">
+      <source type="image/webp" srcset="/assets/landing/pastagem-muros-700.webp 700w, /assets/landing/pastagem-muros-1200.webp 1200w" sizes="(min-width: 960px) 45vw, 100vw">
+      <img src="/assets/landing/pastagem-muros-700.jpg" srcset="/assets/landing/pastagem-muros-700.jpg 700w, /assets/landing/pastagem-muros-1200.jpg 1200w" sizes="(min-width: 960px) 45vw, 100vw" alt="Vista aérea de pastagens açorianas com gado e muros de pedra." loading="lazy" decoding="async">
+    </picture>
+          </div>
+          <span class="lp-stack__badge" aria-hidden="true"><svg class="lp-symbol " viewBox="-0.3 -0.3 17.6 17.6" aria-hidden="true" focusable="false">
+  <path class="lp-symbol__leaf" d="M15.9037 7.13491C16.677 2.46059 13.8402 -0.586641 9.06836 0.0984503C8.11327 4.7478 11.2921 7.70939 15.9001 7.13491H15.9037Z"/>
+  <path class="lp-symbol__leaf" d="M0.135423 7.13637C0.456163 7.17205 0.769774 7.18989 1.07269 7.19346C5.25656 7.28267 7.90801 4.53516 7.05983 0.0927728C6.62505 0.0321137 6.20809 0 5.80538 0C5.80182 0 5.79825 0 5.79469 0H0.958654C0.427652 0 0 0.428182 0 0.956274V5.77332C0 5.77332 0 5.79473 0 5.80544C0.0106913 6.23362 0.0498928 6.67607 0.13186 7.13637H0.135423Z"/>
+  <path class="lp-symbol__leaf" d="M9.06414 16.1663C13.5937 16.9263 16.9757 13.7114 15.732 9.19762C11.1668 8.50182 8.18389 11.6846 9.06414 16.1663Z"/>
+  <path class="lp-symbol__leaf" d="M0.259977 9.19795C-0.983779 13.7117 2.39824 16.9266 6.92779 16.1666C7.81161 11.685 4.82517 8.49858 0.259977 9.19795Z"/>
+  <path class="lp-symbol__dot" d="M8.02988 10.2075C9.17144 10.2075 10.0969 9.28089 10.0969 8.13791C10.0969 6.99493 9.17144 6.06836 8.02988 6.06836C6.88831 6.06836 5.96289 6.99493 5.96289 8.13791C5.96289 9.28089 6.88831 10.2075 8.02988 10.2075Z"/>
+</svg></span>
+        </div>
+      </div>
+      <p class="lp-wrap lp-closing lp-words" data-progress style="--n:7"><span class="lp-word" style="--i:0">E</span> <span class="lp-word" style="--i:1">se</span> <span class="lp-word" style="--i:2">essa</span> <span class="lp-word" style="--i:3">história</span> <span class="lp-word" style="--i:4">não</span> <span class="lp-word" style="--i:5">se</span> <span class="lp-word" style="--i:6">perdesse?</span></p>
+    </section>
+
+    <!-- 3 · SOLUÇÃO -->
+    <section class="lp-section lp-section--light" id="solucao" aria-labelledby="h-solucao">
+      <div class="lp-wrap lp-split lp-split--reverse">
+        <div class="lp-split__text" data-reveal>
+          <p class="lp-eyebrow">A solução</p>
+          <h2 id="h-solucao" class="lp-h2">Um QR. A porta de entrada para uma história real.</h2>
+          <p class="lp-body">A Meat Azores associa cada peça de carne a uma experiência digital. Ao fazer scan do QR, o consumidor acede a informação real sobre a origem e a cadeia do produto, produtor, raça, exploração, território e ponto de venda.</p>
+          <p class="lp-quote lp-words" data-progress style="--n:10"><span class="lp-word" style="--i:0">O</span> <span class="lp-word" style="--i:1">QR</span> <span class="lp-word" style="--i:2">não</span> <span class="lp-word" style="--i:3">é</span> <span class="lp-word" style="--i:4">o</span> <span class="lp-word" style="--i:5">produto,</span> <span class="lp-word" style="--i:6">é</span> <span class="lp-word" style="--i:7">apenas</span> <span class="lp-word" style="--i:8">o</span> <span class="lp-word" style="--i:9">acesso.</span></p>
+        </div>
+        <div class="lp-split__media" data-reveal>
+          <div class="lp-clip lp-clip--zoom" data-progress>
+          <picture class="lp-rounded lp-tall">
+      <source type="image/webp" srcset="/assets/landing/qr-mesa-1200.webp 1200w, /assets/landing/qr-mesa-2400.webp 2400w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/assets/landing/qr-mesa-1200.jpg" srcset="/assets/landing/qr-mesa-1200.jpg 1200w, /assets/landing/qr-mesa-2400.jpg 2400w" sizes="(min-width: 960px) 50vw, 100vw" alt="À mesa de um restaurante, uma pessoa consulta no telemóvel a página de origem da peça, ao lado do QR." loading="lazy" decoding="async">
+    </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · COMO FUNCIONA -->
+    <section class="lp-section lp-section--forest" id="como-funciona" aria-labelledby="h-como">
+      <div class="lp-wrap">
+        <div class="lp-head" data-reveal>
+          <p class="lp-eyebrow">Como funciona</p>
+          <h2 id="h-como" class="lp-h2">Da produção ao prato, sem perder o fio.</h2>
+          <p class="lp-body lp-body--lead">A Meat Azores organiza e liga a informação relevante da cadeia, tornando-a acessível a quem chega ao fim dela.</p>
+        </div>
+        <div class="lp-flow" data-lp-flow>
+          <div class="lp-flow__ends" aria-hidden="true"><span>Prado</span><span>Prato</span></div>
+          <ol class="lp-flow__list">
+          <li class="lp-flow__step" data-reveal data-step="0">
+            <span class="lp-flow__node" aria-hidden="true">01</span>
+            <h3>Produtor</h3>
+            <p>A origem, o território, a criação.</p>
+          </li>
+          <li class="lp-flow__step" data-reveal data-step="1">
+            <span class="lp-flow__node" aria-hidden="true">02</span>
+            <h3>Talho / transformação</h3>
+            <p>A peça é preparada e associada ao seu QR único.</p>
+          </li>
+          <li class="lp-flow__step" data-reveal data-step="2">
+            <span class="lp-flow__node" aria-hidden="true">03</span>
+            <h3>Restaurante / ponto de venda</h3>
+            <p>A história chega ao consumidor final.</p>
+          </li>
+          <li class="lp-flow__step" data-reveal data-step="3">
+            <span class="lp-flow__node" aria-hidden="true">04</span>
+            <h3>Consumidor</h3>
+            <p>Faz scan, acede, descobre.</p>
+          </li>
+          </ol>
+        </div>
+        <aside class="lp-tech" data-reveal>
+          <p class="lp-eyebrow">Por trás</p>
+          <p>Por trás deste fluxo simples está uma plataforma real: páginas dinâmicas geradas para cada produto, gestão de produtores e pontos de venda, e uma estrutura de dados preparada para crescer, inclusive para integração com sistemas externos.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- 5 · VALOR NA CADEIA -->
+    <section class="lp-section lp-section--light" id="valor" aria-labelledby="h-valor">
+      <div class="lp-wrap">
+        <div class="lp-head" data-reveal>
+          <p class="lp-eyebrow">Valor em toda a cadeia</p>
+          <h2 id="h-valor" class="lp-h2">Uma plataforma, valor para todos os elos.</h2>
+        </div>
+        <div class="lp-gen">
+          <div class="lp-gen__text" data-reveal>
+            <h3 class="lp-h3">Produtores</h3>
+            <p class="lp-body">Visibilidade direta junto do consumidor e valorização do trabalho por trás de cada peça.</p>
+            <p class="lp-tag">Ramo Grande DOP · três gerações na mesma exploração</p>
+            <a class="lp-link" href="/produtor?id=emiliano-meneses">Conhecer Emiliano Meneses <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="lp-gen__photos">
+            <figure class="lp-gen__fig lp-gen__fig--1" data-reveal>
+              <div class="lp-gen__frame" data-parallax="0.06">
+              <picture class="">
+      <source type="image/webp" srcset="/assets/landing/geracao-1-500.webp 500w, /assets/landing/geracao-1-900.webp 900w" sizes="(min-width: 960px) 30vw, 100vw">
+      <img src="/assets/landing/geracao-1-500.jpg" srcset="/assets/landing/geracao-1-500.jpg 500w, /assets/landing/geracao-1-900.jpg 900w" sizes="(min-width: 960px) 30vw, 100vw" alt="Fotografia antiga a preto e branco de um criador ao lado de um touro Ramo Grande." loading="lazy" decoding="async">
+    </picture>
+              </div>
+              <figcaption>Avô</figcaption>
+            </figure>
+            <figure class="lp-gen__fig lp-gen__fig--2" data-reveal>
+              <div class="lp-gen__frame" data-parallax="-0.05">
+              <picture class="">
+      <source type="image/webp" srcset="/assets/landing/geracao-2-500.webp 500w, /assets/landing/geracao-2-900.webp 900w" sizes="(min-width: 960px) 30vw, 100vw">
+      <img src="/assets/landing/geracao-2-500.jpg" srcset="/assets/landing/geracao-2-500.jpg 500w, /assets/landing/geracao-2-900.jpg 900w" sizes="(min-width: 960px) 30vw, 100vw" alt="Criador junto a um touro Ramo Grande numa pastagem." loading="lazy" decoding="async">
+    </picture>
+              </div>
+              <figcaption>Pai</figcaption>
+            </figure>
+            <figure class="lp-gen__fig lp-gen__fig--3" data-reveal>
+              <div class="lp-gen__frame" data-parallax="0.1">
+              <picture class="">
+      <source type="image/webp" srcset="/assets/landing/geracao-3-500.webp 500w, /assets/landing/geracao-3-900.webp 900w" sizes="(min-width: 960px) 30vw, 100vw">
+      <img src="/assets/landing/geracao-3-500.jpg" srcset="/assets/landing/geracao-3-500.jpg 500w, /assets/landing/geracao-3-900.jpg 900w" sizes="(min-width: 960px) 30vw, 100vw" alt="Produtor a acariciar um bovino Ramo Grande no pasto." loading="lazy" decoding="async">
+    </picture>
+              </div>
+              <figcaption>Filho</figcaption>
+            </figure>
+          </div>
+        </div>
+        <ul class="lp-rows">
+          <li class="lp-rows__item" data-reveal><h3>Talhos</h3><p>Diferenciação através da transparência, a origem comunica por si.</p></li>
+          <li class="lp-rows__item" data-reveal><h3>Restaurantes</h3><p>Storytelling incorporado na experiência, valorizando a carta sem a sobrecarregar.</p></li>
+          <li class="lp-rows__item" data-reveal><h3>Consumidores</h3><p>Acesso direto à origem do que comem, descoberta, não apenas informação.</p></li>
+          <li class="lp-rows__item" data-reveal><h3>Entidades / territórios</h3><p>Valorização de produtos regionais e uma ferramenta de identidade territorial.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 6 · EXEMPLO REAL -->
+    <section class="lp-section lp-section--mist" id="exemplo" aria-labelledby="h-exemplo">
+      <div class="lp-wrap lp-example">
+        <div class="lp-example__photos" data-reveal>
+          <picture class="lp-example__a lp-rounded" data-parallax="-0.04">
+      <source type="image/webp" srcset="/assets/landing/catrina-500.webp 500w, /assets/landing/catrina-900.webp 900w" sizes="(min-width: 960px) 36vw, 100vw">
+      <img src="/assets/landing/catrina-500.jpg" srcset="/assets/landing/catrina-500.jpg 500w, /assets/landing/catrina-900.jpg 900w" sizes="(min-width: 960px) 36vw, 100vw" alt="Bovinos Catrina numa pastagem da ilha Terceira." loading="lazy" decoding="async">
+    </picture>
+          <picture class="lp-example__b lp-rounded" data-parallax="0.06">
+      <source type="image/webp" srcset="/assets/landing/manuel-territorio-500.webp 500w, /assets/landing/manuel-territorio-900.webp 900w" sizes="(min-width: 960px) 36vw, 100vw">
+      <img src="/assets/landing/manuel-territorio-500.jpg" srcset="/assets/landing/manuel-territorio-500.jpg 500w, /assets/landing/manuel-territorio-900.jpg 900w" sizes="(min-width: 960px) 36vw, 100vw" alt="Pastagem com gado e montanhas ao fundo, na ilha Terceira." loading="lazy" decoding="async">
+    </picture>
+          <a class="lp-example__c lp-producer" href="/produtor?id=manuel-lucas">
+            <picture><source type="image/webp" srcset="/assets/landing/manuel-lucas-138.webp"><img src="/assets/landing/manuel-lucas-138.jpg" alt="" width="64" height="64" loading="lazy" decoding="async"></picture>
+            <span class="lp-producer__name">Manuel Lucas</span>
+            <span class="lp-producer__type">Produtor de gado Catrina</span>
+            <span class="lp-producer__meta">Produtor desde 2003 · regime extensivo</span>
+            <span class="lp-producer__link">Ver perfil do produtor <span aria-hidden="true">→</span></span>
+          </a>
+        </div>
+        <div class="lp-example__text" data-reveal>
+          <p class="lp-eyebrow">Exemplo real</p>
+          <h2 id="h-exemplo" class="lp-h2">Uma peça. Um produtor. Um lugar.</h2>
+          <p class="lp-body">Nos Açores, uma peça de carne carrega mais do que carne. Carrega o nome de quem a criou, o território onde pastou, e o lugar onde chegou a ser servida.</p>
+          <p class="lp-body">Este é um desses casos, com um produtor, um território e um lugar onde essa história é servida.</p>
+        </div>
+        <dl class="lp-facts" data-reveal>
+            <div data-reveal style="--i:0"><dt>Origem</dt><dd>Vila Nova, Terceira</dd></div>
+            <div data-reveal style="--i:1"><dt>Raça</dt><dd>Catrina</dd></div>
+            <div data-reveal style="--i:2"><dt>Produtor</dt><dd>Manuel Lucas</dd></div>
+            <div data-reveal style="--i:3"><dt>Ponto de venda</dt><dd>Restaurante da Associação Agrícola da Ilha Terceira</dd></div>
+        </dl>
+        <div class="lp-example__cta" data-reveal>
+          <a class="lp-btn lp-btn--lime" href="/peca?id=catrina-19-anos" target="_blank" rel="noopener">Ver a experiência<span class="lp-sr"> (abre num novo separador)</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · VISÃO -->
+    <section class="lp-vision" id="visao" aria-labelledby="h-visao">
+      <picture class="lp-vision__bg" data-parallax="0.18">
+      <source type="image/webp" srcset="/assets/landing/paisagem-hortenses-1200.webp 1200w, /assets/landing/paisagem-hortenses-2400.webp 2400w" sizes="100vw">
+      <img src="/assets/landing/paisagem-hortenses-1200.jpg" srcset="/assets/landing/paisagem-hortenses-1200.jpg 1200w, /assets/landing/paisagem-hortenses-2400.jpg 2400w" sizes="100vw" alt="Paisagem açoriana com hortênsias em primeiro plano e pastagens até ao mar." loading="lazy" decoding="async">
+    </picture>
+      <div class="lp-wrap lp-vision__inner">
+        <div class="lp-vision__panel" data-reveal>
+          <p class="lp-eyebrow">Visão</p>
+          <h2 id="h-visao" class="lp-h2">E se contássemos mais <span class="lp-accent">histórias</span> dos Açores?</h2>
+          <p class="lp-body">Começámos pela carne bovina. E se contássemos também a história de outros produtos açorianos e das famílias que, há gerações, os fazem?</p>
+          <p class="lp-body">Queremos que os produtos dos Açores sejam mais reconhecidos cá e lá fora, e que quem os produz tenha voz nos mercados onde são vendidos. Conhecer o lugar de onde vêm, a forma como são feitos e o trabalho de cada família ajuda a perceber o que os distingue.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · EXPANSÃO -->
+    <section class="lp-section lp-section--light" id="expansao" aria-labelledby="h-expansao">
+      <div class="lp-wrap lp-split">
+        <div class="lp-split__text" data-reveal>
+          <p class="lp-eyebrow">Além dos Açores</p>
+          <h2 id="h-expansao" class="lp-h2">Nascemos nos Açores. A tecnologia não fica por aqui.</h2>
+          <p class="lp-body">A lógica por trás da Meat Azores, identidade, origem, informação acessível, não está limitada a um produto ou a uma região. Pode adaptar-se a produtos DOP e IGP, cadeias agroalimentares premium, e territórios com uma identidade de origem forte para defender.</p>
+          
+          <p class="lp-question">À procura de ir além dos Açores?</p>
+          <a class="lp-btn lp-btn--forest" href="#contacto" data-motivo="parceria">Vamos conversar</a>
+        </div>
+        <figure class="lp-split__media lp-map" data-reveal data-progress>
+          <svg viewBox="0 0 600 420" role="img" aria-label="Representação esquemática: dos Açores para outros territórios e mercados.">
+            <defs><pattern id="lp-grid" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.5" class="lp-map__dot"/></pattern></defs>
+            <rect width="600" height="420" fill="url(#lp-grid)"/>
+            <mask id="lp-routes-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="420">
+              <g class="lp-map__draw">
+                <path pathLength="1" d="M150 250 C 260 120, 400 90, 520 110"/>
+                <path pathLength="1" d="M150 250 C 280 220, 420 230, 540 250"/>
+                <path pathLength="1" d="M150 250 C 250 330, 400 360, 500 370"/>
+                <path pathLength="1" d="M150 250 C 100 140, 60 90, 40 60"/>
+              </g>
+            </mask>
+            <g class="lp-map__routes" mask="url(#lp-routes-mask)">
+              <path d="M150 250 C 260 120, 400 90, 520 110"/>
+              <path d="M150 250 C 280 220, 420 230, 540 250"/>
+              <path d="M150 250 C 250 330, 400 360, 500 370"/>
+              <path d="M150 250 C 100 140, 60 90, 40 60"/>
+            </g>
+            <g class="lp-map__ends"><circle cx="520" cy="110" r="6" style="--i:0"/><circle cx="540" cy="250" r="6" style="--i:1"/><circle cx="500" cy="370" r="6" style="--i:2"/><circle cx="40" cy="60" r="6" style="--i:3"/></g>
+            <g class="lp-map__origin"><circle class="lp-map__pulse" cx="150" cy="250" r="22"/><circle cx="150" cy="250" r="22"/><circle cx="150" cy="250" r="8"/></g>
+            <text x="150" y="300" text-anchor="middle" class="lp-map__label">Açores</text>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 9 · SOBRE -->
+    <section class="lp-section lp-section--light lp-section--tight" id="sobre" aria-labelledby="h-sobre">
+      <div class="lp-wrap lp-split lp-split--reverse lp-about">
+        <div class="lp-split__text" data-reveal>
+          <p class="lp-eyebrow">Sobre</p>
+          <h2 id="h-sobre" class="lp-h2">Quando design e tecnologia encontram a origem.</h2>
+          <p class="lp-body">A Meat Azores nasceu da vontade de aplicar design, tecnologia e experiência digital a um problema concreto: tornar mais acessível a origem e o valor que existe por trás dos produtos açorianos. A fundadora traz uma base de design e tecnologia para um território onde identidade, produção e origem estão profundamente ligadas.</p>
+          <p class="lp-body">Nada disto existiria sem o <a href="https://talhorocha.com" target="_blank" rel="noopener">Talho Rocha<span class="lp-sr"> (abre num novo separador)</span></a>, casa familiar da Agualva, na ilha Terceira, com 36 anos de talho. Foi no contacto diário com restaurantes e clientes que a ideia nasceu: o talho conhecia a raça e a idade de cada animal, mas essa informação nem sempre chegava à mesa.</p>
+        </div>
+        <div class="lp-split__media" data-reveal>
+          <div class="lp-about__photos">
+            <figure class="lp-about__fig lp-about__fig--1">
+              <picture class="lp-rounded">
+      <source type="image/webp" srcset="/assets/landing/fundadora-500.webp 500w, /assets/landing/fundadora-900.webp 900w" sizes="(min-width: 960px) 240px, 45vw">
+      <img src="/assets/landing/fundadora-500.jpg" srcset="/assets/landing/fundadora-500.jpg 500w, /assets/landing/fundadora-900.jpg 900w" sizes="(min-width: 960px) 240px, 45vw" alt="A fundadora da Meat Azores a apresentar o projeto no Hack to Emerge 2025." loading="lazy" decoding="async">
+    </picture>
+              <figcaption>Hack to Emerge 2025</figcaption>
+            </figure>
+            <figure class="lp-about__fig lp-about__fig--2">
+              <picture class="lp-rounded">
+      <source type="image/webp" srcset="/assets/landing/sim-2026-500.webp 500w, /assets/landing/sim-2026-900.webp 900w" sizes="(min-width: 960px) 240px, 45vw">
+      <img src="/assets/landing/sim-2026-500.jpg" srcset="/assets/landing/sim-2026-500.jpg 500w, /assets/landing/sim-2026-900.jpg 900w" sizes="(min-width: 960px) 240px, 45vw" alt="India Rodeia e João Rocha no stand da Meat Azores na SIM Conference 2026." loading="lazy" decoding="async">
+    </picture>
+              <figcaption>SIM Conference 2026</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10 · CONTACTO -->
+    <section class="lp-section lp-section--forest" id="contacto" aria-labelledby="h-contacto">
+      <div class="lp-wrap lp-contact">
+        <div class="lp-contact__intro" data-reveal>
+          <p class="lp-eyebrow">Contacto</p>
+          <h2 id="h-contacto" class="lp-h2 lp-h2--xl">Vamos conversar.</h2>
+          <p class="lp-body">Seja para investir, criar uma parceria, testar um piloto, ou simplesmente saber mais, estamos disponíveis.</p>
+          <p class="lp-contact__email" data-reveal><span>Email</span><a href="mailto:info@meatazores.com">info@meatazores.com</a></p>
+        </div>
+        <!-- Destino do formulário A VALIDAR (validação 4): preencher data-endpoint com o URL do serviço.
+             Sem endpoint, o envio abre o email com a mensagem preenchida para info@meatazores.com. -->
+        <form class="lp-form" novalidate data-lp-form data-endpoint="" data-msgs="{&quot;sending&quot;:&quot;A enviar…&quot;,&quot;ok&quot;:&quot;Obrigado. Recebemos a sua mensagem e respondemos em breve.&quot;,&quot;fail&quot;:&quot;Não foi possível enviar. Tente novamente ou escreva para info@meatazores.com.&quot;,&quot;mailto&quot;:&quot;Vamos abrir o seu programa de email com a mensagem preenchida. Se não abrir, escreva para info@meatazores.com.&quot;,&quot;errRequired&quot;:&quot;Preencha este campo.&quot;,&quot;errEmail&quot;:&quot;Indique um email válido.&quot;,&quot;errMotivo&quot;:&quot;Escolha o motivo do contacto.&quot;,&quot;subject&quot;:&quot;Contacto pelo site&quot;,&quot;email&quot;:&quot;info@meatazores.com&quot;}">
+          <div class="lp-field">
+            <label for="f-nome">Nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required aria-describedby="f-nome-err">
+            <p class="lp-field__err" id="f-nome-err" aria-live="polite"></p>
+          </div>
+          <div class="lp-field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required aria-describedby="f-email-err">
+            <p class="lp-field__err" id="f-email-err" aria-live="polite"></p>
+          </div>
+          <div class="lp-field">
+            <label for="f-motivo">Motivo do contacto</label>
+            <select id="f-motivo" name="motivo" required aria-describedby="f-motivo-err">
+              <option value="">Escolha uma opção</option>
+                <option value="investimento">Investimento</option>
+                <option value="parceria">Parceria</option>
+                <option value="piloto">Piloto</option>
+                <option value="imprensa">Imprensa</option>
+                <option value="outro">Outro</option>
+            </select>
+            <p class="lp-field__err" id="f-motivo-err" aria-live="polite"></p>
+          </div>
+          <div class="lp-field">
+            <label for="f-mensagem">Mensagem <span class="lp-field__opt">(opcional)</span></label>
+            <textarea id="f-mensagem" name="mensagem" rows="4"></textarea>
+          </div>
+          <input class="lp-hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <button class="lp-btn lp-btn--lime lp-form__submit" type="submit">Enviar</button>
+          <p class="lp-form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="lp-footer">
+    <div class="lp-wrap lp-footer__inner">
+      <div class="lp-footer__brand">
+        <img src="/assets/landing/logo-meatazores-assinatura.svg" alt="Meat Azores, o sabor da origem." width="215" height="37">
+      </div>
+      <ul class="lp-footer__links">
+        <li><a href="mailto:info@meatazores.com">info@meatazores.com</a></li>
+        <li><a href="https://www.instagram.com/meatazores/" rel="noopener" target="_blank">Instagram @meatazores</a></li>
+        <li><a class="lp-btn lp-btn--outline lp-btn--sm" href="/pecas">Entrar na aplicação</a></li>
+      </ul>
+      <div class="lp-lang " role="group" aria-label="Idioma">
+        <a href="/" hreflang="pt-PT" lang="pt-PT" data-lang="pt" title="Português" aria-current="true">PT</a>
+        <span aria-hidden="true">|</span>
+        <a href="/en" hreflang="en" lang="en" data-lang="en" title="English">EN</a>
+      </div>
+      <p class="lp-footer__legal">© <span data-lp-year>2026</span> Meat Azores</p>
+    </div>
+  </footer>
+
+  <script src="/js/landing.js" defer></script>
 </body>
 
 </html>

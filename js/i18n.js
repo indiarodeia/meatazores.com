@@ -335,6 +335,8 @@
       btn.addEventListener('click', function (e) {
         e.preventDefault();
         var lang = btn.getAttribute('data-lang');
+        // Guarda a escolha: o middleware deixa de seguir a língua do browser.
+        document.cookie = 'ma_lang=' + lang + '; path=/; max-age=31536000; samesite=lax';
         var url = new URL(window.location.href);
         if (lang === 'pt') url.searchParams.delete('lang');
         else url.searchParams.set('lang', lang);
