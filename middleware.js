@@ -12,11 +12,13 @@ import { next } from '@vercel/edge';
 // Espelha a lógica de SEO que cada renderer (peca.js, raca.js, ...) já aplica
 // em runtime, por isso é idempotente com o JS do lado do cliente.
 
-const DETAIL = ['/peca', '/raca', '/produtor', '/restaurante', '/parceiro'];
-const APP = ['/entrada', '/pecas', '/racas', '/produtores', '/about', '/scan', '/catrina', '/degustacao'];
-
+// A Vercel lê este config sem executar o código: tem de ser uma lista literal (sem variáveis nem .concat).
 export const config = {
-  matcher: ['/', '/index'].concat(DETAIL, APP),
+  matcher: [
+    '/', '/index',
+    '/peca', '/raca', '/produtor', '/restaurante', '/parceiro',
+    '/entrada', '/pecas', '/racas', '/produtores', '/about', '/scan', '/catrina', '/degustacao',
+  ],
 };
 
 // ---------- Idioma ----------
