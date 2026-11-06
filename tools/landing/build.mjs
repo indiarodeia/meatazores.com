@@ -233,7 +233,6 @@ ${JSON.stringify(jsonLd, null, 2)}
           <a class="lp-btn lp-btn--outline" href="#contacto" data-motivo="">${esc(c.hero.cta2)}</a>
         </div>
       </div>
-      ${picture('qr-cartao', c.hero.qrAlt, { widths: [200, 400], sizes: '200px', cls: 'lp-hero__peca' })}
     </section>
 
     <!-- 2 · PROBLEMA -->

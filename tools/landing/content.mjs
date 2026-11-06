@@ -52,7 +52,6 @@ export const content = {
       cta2: 'Falar connosco',
       coords: 'Açores · 37°–40° N · 25°–31° W',
       imgAlt: 'Paisagem açoriana com pastagens divididas por muros de pedra junto ao mar.',
-      qrAlt: 'Cartão Meat Azores com QR numa mesa de restaurante.',
     },
     problema: {
       eyebrow: 'O problema',
@@ -232,7 +231,6 @@ export const content = {
       cta2: 'Get in touch',
       coords: 'Azores · 37°–40° N · 25°–31° W',
       imgAlt: 'Azorean landscape with pastures divided by stone walls by the sea.',
-      qrAlt: 'Meat Azores card with a QR code on a restaurant table.',
     },
     problema: {
       eyebrow: 'The problem',
@@ -411,7 +409,6 @@ export const content = {
       cta2: 'Nous contacter',
       coords: 'Açores · 37°–40° N · 25°–31° O',
       imgAlt: "Paysage des Açores, avec des pâturages séparés par des murets de pierre au bord de l'océan.",
-      qrAlt: 'Carte Meat Azores avec QR code sur une table de restaurant.',
     },
     problema: {
       eyebrow: 'Le problème',

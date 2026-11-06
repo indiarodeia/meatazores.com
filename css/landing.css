@@ -144,10 +144,8 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
 .lp-hero__sub { font-size: clamp(17px, 1.5vw, 21px); max-width: 46ch; color: rgba(255, 255, 255, 0.88); }
 .lp-hero__ctas { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
 .lp-hero__coords { position: absolute; top: 50%; right: var(--lp-gutter); transform: rotate(90deg) translateX(50%); transform-origin: right top; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255, 255, 255, 0.7); white-space: nowrap; }
-.lp-hero__peca { position: absolute; right: var(--lp-gutter); bottom: clamp(56px, 9vh, 104px); width: 200px; aspect-ratio: 4 / 5; margin-right: 40px; border-radius: var(--lp-radius); overflow: hidden; box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 255, 255, 0.35); }
-.lp-hero__peca img { display: block; width: 100%; height: 100%; object-fit: cover; }
 @media (max-width: 1023px) {
-  .lp-hero__peca, .lp-hero__coords { display: none; }
+  .lp-hero__coords { display: none; }
 }
 @media (max-width: 599px) {
   .lp-hero__ctas { flex-direction: column; }
@@ -358,7 +356,7 @@ html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   .lp-motion .lp-hero__content > :nth-child(2) { animation-delay: .28s; }
   .lp-motion .lp-hero__content > :nth-child(3) { animation-delay: .42s; }
   .lp-motion .lp-hero__content > :nth-child(4) { animation-delay: .56s; }
-  .lp-motion .lp-hero__peca, .lp-motion .lp-hero__coords { animation: lp-fade 1.4s .8s both; }
+  .lp-motion .lp-hero__coords { animation: lp-fade 1.4s .8s both; }
   .lp-motion .lp-hero__bg { will-change: transform; }
   .lp-motion .lp-hero__content { will-change: opacity, transform; }
 

@@ -34,3 +34,6 @@ build/
 .idea/
 .claude/
 
+
+# Imagens guardadas localmente mas não usadas no site
+assets/landing/_nao-usadas/
